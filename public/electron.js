@@ -21,9 +21,10 @@ if (isDev) {
 function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    minWidth:775,
+    minHeight:568.89,
     show:false,
+    resizable:false,
     icon:path.join(__dirname,"icon.png"),
     webPreferences: {
       nodeIntegration: true,
@@ -39,7 +40,7 @@ function createWindow() {
   })
   win.loadURL(
     isDev
-      ? 'http://localhost:3000'
+      ? 'https://www.facebook.com/'
       : `file://${path.join(__dirname, '../build/index.html')}`
   );
   // Open the DevTools.
