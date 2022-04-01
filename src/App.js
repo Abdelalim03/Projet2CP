@@ -1,8 +1,8 @@
-import Nom from "./pages/Nom";
+import EtesVous from "./pages/EtesVous";
 
 function App() {
   return (
-    <Nom />
+    <EtesVous />
   );
 }
 
