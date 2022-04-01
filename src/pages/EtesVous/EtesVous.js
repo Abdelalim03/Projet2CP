@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 function EtesVous() {
   console.log(__dirname);
@@ -38,7 +39,7 @@ function EtesVous() {
       />
       <img
         className="absolute w-10 right-[5%] top-[26%] "
-        src="/Group 58.png"
+        src="/nom/Group 58.png"
         alt="xxshape"
       />
       <img
@@ -86,33 +87,37 @@ function EtesVous() {
       />
 
 
-      <h1 className=" leading-10 font-bold text-black text-3xl lg:text-5xl p-16 lg:p-28">
+      <h1 className="main-title">
         Êtes vous un
       </h1>
 
       <div class="flex absolute ml-[35%] mb-[24%]">
-        <div class="relative hover:shadow-lg transform hover:scale-110 transition ease-out cursor-pointer">
-          <img className="w-40" src="/etesvous/CardElev.png" alt="Card_Elev" />
-          <img
-            className="w-24 inline-block absolute bottom-16 left-6"
-            src="/etesvous/Eleve.png"
-            alt="Eleve"
-          />
-          <div class="text-center font-semibold text-xl">
-            <span>Elève</span>
+        <Link to="/nom">
+          <div class="relative hover:shadow-lg transform hover:scale-110 transition ease-out cursor-pointer">
+            <img className="w-40" src="/etesvous/CardElev.png" alt="Card_Elev" />
+            <img
+              className="w-24 inline-block absolute bottom-16 left-6"
+              src="/etesvous/Eleve.png"
+              alt="Eleve"
+            />
+            <div class="text-center font-semibold text-xl">
+              <span>Elève</span>
+            </div>
           </div>
-        </div>
-        <div class="relative ml-28 hover:shadow-lg transform hover:scale-105 transition ease-out cursor-pointer">
-          <img className="w-40" src="/etesvous/Card_Ens.png" alt="Card_Ens" />
-          <img
-            className="w-32 inline-block absolute bottom-14 left-3"
-            src="/etesvous/Enseignant.png"
-            alt="Enseignant"
-          />
-          <div class="text-center font-semibold text-xl">
-            <span>Enseignant</span>
+        </Link>
+        <Link to="/enseignant">
+          <div class="relative ml-28 hover:shadow-lg transform hover:scale-105 transition ease-out cursor-pointer">
+            <img className="w-40" src="/etesvous/Card_Ens.png" alt="Card_Ens" />
+            <img
+              className="w-32 inline-block absolute bottom-14 left-3"
+              src="/etesvous/Enseignant.png"
+              alt="Enseignant"
+            />
+            <div class="text-center font-semibold text-xl">
+              <span>Enseignant</span>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );
