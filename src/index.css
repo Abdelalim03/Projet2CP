@@ -15,7 +15,9 @@ code {
   transition: all;
   transition-duration: 300ms;
 } */
-
+.main-title{
+  @apply leading-10 font-semibold text-[#194084] text-3xl lg:text-5xl p-16 lg:p-28;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
