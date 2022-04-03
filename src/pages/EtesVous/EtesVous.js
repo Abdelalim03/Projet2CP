@@ -9,7 +9,7 @@ function EtesVous() {
     <div className="relative w-screen h-screen ">
       <Absolute />
       <h1 className="main-title">Êtes vous un</h1>
-      <div class="flex gap-32 justify-center">
+      <div class="flex mt-3 gap-32 justify-center">
         <Link to="/nom">
             <Card path="/etesvous/Eleve.png" scale="scale-100" name="Elève" />
         </Link>
