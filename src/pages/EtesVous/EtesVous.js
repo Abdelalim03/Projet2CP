@@ -9,9 +9,7 @@ function EtesVous() {
   return (
     <div className="relative w-screen h-screen ">
       <Absolute />
-
       <h1 className="main-title">Êtes vous un</h1>
-
       <div class="flex absolute ml-[35%] mb-[24%]">
         <Link to="/nom">
           <div class="relative hover:shadow-md transform hover:scale-105 transition ease-out cursor-pointer">
