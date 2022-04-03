@@ -32,7 +32,7 @@ function EtesVous() {
               src="/etesvous/Enseignant.png"
               alt="Enseignant"
             />
-            <div class="text-center font-semibold text-xl">
+            <div class=" mt-3 text-center font-semibold text-xl">
               <span>Enseignant</span>
             </div>
           </div>
