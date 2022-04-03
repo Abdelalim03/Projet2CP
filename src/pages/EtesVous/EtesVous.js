@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import Absolute from "./Absolute";
+import Card from "./Card";
 
 function EtesVous() {
   console.log(__dirname);
@@ -13,29 +14,23 @@ function EtesVous() {
 
       <div class="flex absolute ml-[35%] mb-[24%]">
         <Link to="/nom">
-          <div class="relative hover:shadow-lg transform hover:scale-105 transition ease-out cursor-pointer">
-            <div class="inline-flex h-64 w-48 items-center justify-center">
-              <div class="flex h-full flex-1 -rotate-3 transform items-center justify-center rounded-2xl bg-[#C7DBFE] p-5">
-                <div class="h-full flex-1 rotate-3 rounded-2xl border-2 border-[#194084] bg-[#FFC5C1]" />
-              </div>
-            </div>
+          <div class="relative hover:shadow-md transform hover:scale-105 transition ease-out cursor-pointer">
+            <Card />
+
             <img
               className="w-28 inline-block absolute bottom-16 left-10"
               src="/etesvous/Eleve.png"
               alt="Eleve"
             />
-            <div class="text-center font-semibold text-xl">
+
+            <div class="mt-3 text-center font-semibold text-xl">
               <span>Elève</span>
             </div>
           </div>
         </Link>
         <Link to="/enseignant">
-          <div class="relative ml-32 hover:shadow-lg transform hover:scale-105 transition ease-out cursor-pointer">
-          <div class="inline-flex h-64 w-48 items-center justify-center">
-              <div class="flex h-full flex-1 -rotate-3 transform items-center justify-center rounded-2xl bg-[#C7DBFE] p-5">
-                <div class="h-full flex-1 rotate-3 rounded-2xl border-2 border-[#194084] bg-[#FFC5C1]" />
-              </div>
-            </div>
+          <div class="relative ml-32 hover:shadow-md transform hover:scale-105 transition ease-out cursor-pointer">
+            <Card />
             <img
               className="w-36 inline-block absolute bottom-14 left-5"
               src="/etesvous/Enseignant.png"
