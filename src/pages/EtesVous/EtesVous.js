@@ -14,13 +14,13 @@ function EtesVous() {
       <div class="flex absolute ml-[35%] mb-[24%]">
         <Link to="/nom">
           <div class="relative hover:shadow-lg transform hover:scale-110 transition ease-out cursor-pointer">
+            <div class="inline-flex h-64 w-48 items-center justify-center">
+              <div class="flex h-full flex-1 -rotate-3 transform items-center justify-center rounded-2xl bg-[#C7DBFE] p-5">
+                <div class="h-full flex-1 rotate-3 rounded-2xl border-2 border-[#194084] bg-[#FFC5C1]" />
+              </div>
+            </div>
             <img
-              className="w-40"
-              src="/etesvous/CardElev.png"
-              alt="Card_Elev"
-            />
-            <img
-              className="w-24 inline-block absolute bottom-16 left-6"
+              className="w-28 inline-block absolute bottom-16 left-10"
               src="/etesvous/Eleve.png"
               alt="Eleve"
             />
@@ -31,9 +31,13 @@ function EtesVous() {
         </Link>
         <Link to="/enseignant">
           <div class="relative ml-28 hover:shadow-lg transform hover:scale-105 transition ease-out cursor-pointer">
-            <img className="w-40" src="/etesvous/Card_Ens.png" alt="Card_Ens" />
+          <div class="inline-flex h-64 w-48 items-center justify-center">
+              <div class="flex h-full flex-1 -rotate-3 transform items-center justify-center rounded-2xl bg-[#C7DBFE] p-5">
+                <div class="h-full flex-1 rotate-3 rounded-2xl border-2 border-[#194084] bg-[#FFC5C1]" />
+              </div>
+            </div>
             <img
-              className="w-32 inline-block absolute bottom-14 left-3"
+              className="w-36 inline-block absolute bottom-14 left-5"
               src="/etesvous/Enseignant.png"
               alt="Enseignant"
             />
