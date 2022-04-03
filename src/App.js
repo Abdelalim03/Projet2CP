@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" >
           <Route index element={<Landing />} />
+          <Route path="choix" element={<EtesVous />} />
           <Route path="nom" element={<Nom />} />
           <Route path="*" element={<NoPage />} />
         </Route>
