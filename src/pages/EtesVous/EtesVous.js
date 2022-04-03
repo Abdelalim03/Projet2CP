@@ -16,13 +16,11 @@ function EtesVous() {
         <Link to="/nom">
           <div class="relative hover:shadow-md transform hover:scale-105 transition ease-out cursor-pointer">
             <Card />
-
             <img
               className="w-28 inline-block absolute bottom-16 left-10"
               src="/etesvous/Eleve.png"
               alt="Eleve"
             />
-
             <div class="mt-3 text-center font-semibold text-xl">
               <span>Elève</span>
             </div>
