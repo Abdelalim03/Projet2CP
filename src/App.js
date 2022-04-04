@@ -3,11 +3,17 @@ import Nom from "./pages/Nom/Nom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NoPage from "./pages/NoPage/NoPage";
 import Landing from "./pages/Landing/Landing";
-
+import Menu from "./pages/Menu/Menu";
+import SideBar from "./Components/SideBar";
 
 function App() {
   return (
-    <Router>
+    <div>
+      <Menu />
+      {/* <SideBar/> */}
+      {/* <Nom/> */}
+
+      {/* <Router>
       <Routes>
         <Route path="/" >
           <Route index element={<Landing />} />
@@ -16,8 +22,8 @@ function App() {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-    </Router>
-    
+    </Router> */}
+    </div>
   );
 }
 

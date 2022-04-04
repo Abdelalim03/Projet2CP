@@ -9,7 +9,7 @@ function Nom() {
     <div className="relative w-screen h-screen selection:bg-fuchsia-300">
 
         <Absolute />
-        <h1 className='main-title'>Veuillez introdure votre nom </h1>
+        <h1 className='main-title'>Veuillez introduire votre nom </h1>
         <div className='flex justify-center'>
             <div className="relative flex  justify-center items-center lg:-mt-4 h-52 lg:h-72 w-[55%] lg:w-[43%] bg-[url('./grid.png')] bg-[#80aaff12] border-4 border-[#0083CB] rounded-3xl ">
                 <img className='select-none absolute -left-7 -bottom-[6px] lg:-bottom-[7px] h-[72%] lg:-left-10' src='/nom/kateb.png'  alt='kateb'/>
