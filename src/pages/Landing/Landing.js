@@ -5,8 +5,11 @@ import AbsoluteLending from './AbsoluteLending'
 
 function Landing() {
   return (
-    <div className='w-screen h-screen selection:bg-fuchsia-300'>
+    <div className='relative w-screen h-screen selection:bg-fuchsia-300'>
         <div className='flex justify-start'>
+            <div className='absolute left-3 top-3 lg:top-5 font-light text-2xl lg:text-4xl'>
+              LOGO
+            </div>
             <div className='w-[40%] h-screen py-20 lg:py-32 flex flex-col '>
             <div className='flex flex-col h-[40%] ml-[10%]'>
               <div className='text-left font-normal text-6xl md:text-7xl lg:text-8xl mb-[10%]'>
@@ -21,7 +24,7 @@ function Landing() {
                   <h2 className='inline text-[#F47458]'> ?</h2>
               </div>
             </div>
-            <Link to="/choix" className='mt-14 lg:mt-20 flex flex-nowrap items-center justify-center text-center text-white font-bold text-base md:text-xl lg:text-2xl bg-[#7EABFFB2] hover:bg-[#466EB6B2] w-fit py-3 px-10 lg:px-16 h-13 lg:h-14 ml-8 lg:ml-16 rounded-2xl transition-transform hover:translate-y-[-3%]'>
+            <Link to="/choix" className='mt-14 lg:mt-24 flex flex-nowrap items-center justify-center text-center text-white font-bold text-base md:text-xl lg:text-2xl bg-[#7EABFFB2] hover:bg-[#466EB6B2] w-fit py-3 px-10 lg:px-16 h-13 lg:h-14 ml-8 lg:ml-16 rounded-2xl transition-transform hover:translate-y-[-3%]'>
               C'est parti
             </Link>
             </div>
