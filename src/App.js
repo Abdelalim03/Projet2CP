@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Langue from "./pages/Langue/Langue";
 import NoPage from "./pages/NoPage/NoPage";
+import Avatar from "./pages/Avatar/Avatar";
 import Landing from "./pages/Landing/Landing"
 import EtesVous from "./pages/EtesVous/EtesVous";
 import Nom from "./pages/Nom/Nom";
@@ -15,9 +16,9 @@ function App() {
             <Route path="arabe" element={<NoPage />} />
             <Route path="francais" element={<Landing />} />
           </Route>
-
           <Route path="choix" element={<EtesVous />} />
           <Route path="nom" element={<Nom />} />
+          <Route path="avatar" element={<Avatar />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

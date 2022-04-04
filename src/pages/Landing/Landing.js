@@ -7,8 +7,11 @@ function Landing() {
   
 
   return (
-    <div className='w-screen h-screen selection:bg-fuchsia-300'>
+    <div className='relative w-screen h-screen selection:bg-fuchsia-300'>
         <div className='flex justify-start'>
+            <div className='absolute left-3 top-3 lg:top-5 font-light text-2xl lg:text-4xl'>
+              LOGO
+            </div>
             <div className='w-[40%] h-screen py-20 lg:py-32 flex flex-col '>
             <div className='flex flex-col h-[40%] ml-[10%]'>
               <div className='text-left font-normal text-6xl md:text-7xl lg:text-8xl mb-[10%]'>
