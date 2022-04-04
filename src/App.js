@@ -1,8 +1,6 @@
-import EtesVous from "./pages/EtesVous/EtesVous";
-import Nom from "./pages/Nom/Nom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Langue from "./pages/Langue/Langue";
 import NoPage from "./pages/NoPage/NoPage";
-import Landing from "./pages/Landing/Landing";
 
 
 function App() {
@@ -10,9 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" >
-          <Route index element={<Landing />} />
-          <Route path="choix" element={<EtesVous />} />
-          <Route path="nom" element={<Nom />} />
+          <Route index element={<Langue />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
