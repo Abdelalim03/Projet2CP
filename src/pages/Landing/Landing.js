@@ -1,9 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import Absolute from '../Nom/Absolute'
 import AbsoluteLending from './AbsoluteLending'
 
 function Landing() {
+  
+
   return (
     <div className='w-screen h-screen selection:bg-fuchsia-300'>
         <div className='flex justify-start'>
