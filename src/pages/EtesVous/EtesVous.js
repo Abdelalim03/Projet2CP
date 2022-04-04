@@ -9,24 +9,12 @@ function EtesVous() {
     <div className="relative w-screen h-screen ">
       <Absolute />
       <h1 className="main-title">Êtes vous un</h1>
-      <div class="flex absolute ml-[35%] mb-[24%]">
+      <div class="flex mt-3 gap-32 justify-center">
         <Link to="/nom">
-          <div class="relative  transform hover:scale-105 transition ease-out cursor-pointer">
-            <Card path="/etesvous/Enseignant.png" />
-          
-            <div class="mt-3 text-center font-semibold text-xl">
-              <span>Elève</span>
-            </div>
-          </div>
+            <Card path="/etesvous/Eleve.png" scale="scale-100" name="Elève" />
         </Link>
         <Link to="/enseignant">
-          <div class="relative ml-32 transform hover:scale-105 transition ease-out cursor-pointer">
-            <Card path="/etesvous/Enseignant.png" />
-            
-            <div class=" mt-3 text-center font-semibold text-xl">
-              <span>Enseignant</span>
-            </div>
-          </div>
+            <Card path="/etesvous/Enseignant.png" scale="scale-125" name="Enseignant" />
         </Link>
       </div>
     </div>
