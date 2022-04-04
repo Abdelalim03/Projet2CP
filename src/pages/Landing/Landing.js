@@ -1,9 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import Absolute from '../Nom/Absolute'
 import AbsoluteLending from './AbsoluteLending'
 
 function Landing() {
+  
+
   return (
     <div className='relative w-screen h-screen selection:bg-fuchsia-300'>
         <div className='flex justify-start'>
@@ -24,7 +26,7 @@ function Landing() {
                   <h2 className='inline text-[#F47458]'> ?</h2>
               </div>
             </div>
-            <Link to="/choix" className='mt-14 lg:mt-24 flex flex-nowrap items-center justify-center text-center text-white font-bold text-base md:text-xl lg:text-2xl bg-[#7EABFFB2] hover:bg-[#466EB6B2] w-fit py-3 px-10 lg:px-16 h-13 lg:h-14 ml-8 lg:ml-16 rounded-2xl transition-transform hover:translate-y-[-3%]'>
+            <Link to="/choix" className='  mt-16 lg:mt-24 flex items-center justify-center text-center text-white font-bold text-base md:text-xl lg:text-2xl bg-[#7EABFFB2] hover:bg-[#466EB6B2] w-fit py-3 px-10 lg:px-16 h-13 lg:h-14 ml-8 lg:ml-16 rounded-2xl transition-transform hover:translate-y-[-3%]'>
               C'est parti
             </Link>
             </div>
