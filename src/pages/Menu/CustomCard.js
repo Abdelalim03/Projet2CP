@@ -20,7 +20,7 @@ export default function CustomCard(props) {
             Allons-y
           </button>
         </div>
-        <img className={`  ${props.imageProps}`} src={props.Image} />
+        <img className={`${props.imageProps}`} src={props.Image} />
       </div>
     </div>
   );

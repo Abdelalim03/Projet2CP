@@ -22,7 +22,8 @@ function Avatar() {
     // }, [image])
     
     function handleClick() {
-        navigate("/menu");
+        console.log(image);
+        navigate(`/menu/${image}`);
     }
   return (
 
@@ -53,7 +54,9 @@ function Avatar() {
                     <img className='h-[80%] w-[100%] mt-[20%] ' onClick={()=>{
                         setImage(path);
                         setanimate("animate-[avatar_2s_ease-in-out_1]");
-                        setTimeout(handleClick,5000);
+                        setTimeout(()=>{
+                            navigate(`/menu`);
+                        },2000);
                         }
                         } key={path} src={path} alt='avatrar'/>
                 </div>

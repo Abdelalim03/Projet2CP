@@ -1,7 +1,9 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import CustomCard from "./CustomCard";
 
 export default function Menu() {
+  
   return (
     <div className=" md:ml-24 lg:ml-48 mt-4 flex flex-col lg:gap-10 md:gap-2">
       <div className="flex items-center lg:gap-2 gap-1">
@@ -34,7 +36,7 @@ export default function Menu() {
               </div>
               <img
                 className="lg:h-72 lg:w-96 lg:mb-20 md:w-72 md:mb-14"
-                src="menu/ImageCours.svg"
+                src="/menu/ImageCours.svg"
               />
             </div>
           </div>
@@ -54,7 +56,7 @@ export default function Menu() {
             messageMotivant="Entrainez vous!"
             mainContent="Exercices"
             contentDescription="Tester vos connaissances"
-            Image="menu/ImageExos.svg"
+            Image="/menu/ImageExos.svg"
             imageProps="lg:h-40 lg:w-72 lg:mr-9 lg:mt-14 md:h-36 md:w-48 md:mr-12 md:mt-10 "
           />
           <CustomCard
@@ -62,7 +64,7 @@ export default function Menu() {
             messageMotivant="Shine Baby !"
             mainContent="Dessiner"
             contentDescription="Appliquez vos idées"
-            Image="menu/ImageDessiner.svg"
+            Image="/menu/ImageDessiner.svg"
             imageProps=" mt-3 mr-3 lg:h-48 md:h-32    "
           />
         </div>

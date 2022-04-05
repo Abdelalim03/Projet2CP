@@ -9,13 +9,10 @@ import Nom from "./pages/Nom/Nom";
 
 function App() {
   return (
-    <div>
-      <Menu />
-
       <Router>
       <Routes>
         <Route path="/" >
-          <Route index element={<Langue />} />
+          <Route index element={<Avatar />} />
           <Route path="welcome"  >
             <Route path="arabe" element={<NoPage />} />
             <Route path="francais" element={<Landing />} />
@@ -23,12 +20,13 @@ function App() {
           <Route path="choix" element={<EtesVous />} />
           <Route path="nom" element={<Nom />} />
           <Route path="avatar" element={<Avatar />} />
-          <Route path="menu" element={<Menu />} />
+          <Route path="menu" element={<Menu />}>
+          {/* <Route path=":avatarId" element={<Menu />} /> */}
+          </Route>
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </Router>
-    </div>
   );
 }
 
