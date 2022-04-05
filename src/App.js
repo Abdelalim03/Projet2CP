@@ -12,7 +12,7 @@ function App() {
       <Router>
       <Routes>
         <Route path="/" >
-          <Route index element={<Avatar />} />
+          <Route index element={<Langue />} />
           <Route path="welcome"  >
             <Route path="arabe" element={<NoPage />} />
             <Route path="francais" element={<Landing />} />
