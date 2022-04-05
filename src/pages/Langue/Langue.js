@@ -8,19 +8,11 @@ function Langue() {
       <Absolute />
         <div
           className="flex flex-col justify-center items-center gap-7 h-[56%] w-1/3 px-5 py-10 rounded-3xl bg-gradient-to-b from-[#eaf1ff] to-[#fce3de]">
-          <Link to="welcome/francais" >
-          <div
-            className="flex items-center justify-center h-1/3 w-5/6 rounded-lg bg-[#7EABFF] pb-2 transform hover:scale-110 shadow-sm transition ease-out cursor-pointer">
+          <Link className="flex items-center justify-center h-1/3 w-5/6 rounded-lg bg-[#7EABFF] pb-2 transform hover:scale-110 shadow-sm transition ease-out cursor-pointer" to="welcome/francais" >
             <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">Français</span>
-            
-          </div>
           </Link>
-          <Link to="welcome/arabe" >
-          <div
-            className="flex items-center justify-center h-1/3 w-5/6 rounded-lg bg-[#F47458] pb-2 transform hover:scale-110 transition ease-out cursor-pointer">
-            
+          <Link className="flex items-center justify-center h-1/3 w-5/6 rounded-lg bg-[#F47458] pb-2 transform hover:scale-110 transition ease-out cursor-pointer" to="welcome/arabe" > 
             <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">العربية</span>  
-          </div>
           </Link>
         </div>
     </div>
