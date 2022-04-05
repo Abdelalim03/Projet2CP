@@ -56,7 +56,7 @@ function Avatar() {
                         setanimate("animate-[avatar_2s_ease-in-out_1]");
                         setTimeout(()=>{
                             navigate(`/menu`);
-                        },2000);
+                        },5000);
                         }
                         } key={path} src={path} alt='avatrar'/>
                 </div>
