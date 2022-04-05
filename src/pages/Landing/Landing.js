@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
-import Absolute from '../Nom/Absolute'
+import { Link } from 'react-router-dom'
 import AbsoluteLending from './AbsoluteLending'
 
 function Landing() {
