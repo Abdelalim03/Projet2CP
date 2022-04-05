@@ -22,7 +22,7 @@ function Avatar() {
     // }, [image])
     
     function handleClick() {
-        navigate("page");
+        navigate("/menu");
     }
   return (
 
