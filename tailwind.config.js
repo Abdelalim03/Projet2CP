@@ -9,6 +9,15 @@ module.exports = {
         "symapp-blue-light-second": "#98BCFF",
         "symapp-pink-light": "#FDE3DE",
       },
+      animation: {
+        avatar: 'avatar 2s ease-in-out 1',
+      },
+      keyframes: {
+        avatar: {
+          '0%': { opacity:"0" },
+          '100%': { opacity: '1' },
+        }
+      }
     },
   },
   plugins: [],
