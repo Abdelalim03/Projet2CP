@@ -17,10 +17,14 @@ export default function Menu() {
       <div className="flex flex-col lg:gap-8 md:gap-3">
         <div className="flex flex-row lg:gap-10 md:gap-4">
           <div className="flex flex-col gap-3">
-            <p className="font-semibold text-black lg:text-2xl ml-4 text-lg ">Apprenez !</p>
+            <p className="font-semibold text-black lg:text-2xl ml-4 text-lg ">
+              Apprenez !
+            </p>
             <div className="container flex bg-symapp-purple lg:rounded-[40px] md:rounded-[30px] lg:h-[210px] md:h-40 lg:w-[595px] md:w-[400px] items-center justify-between  ">
               <div className="flex flex-col justify-evenly items-center lg:ml-10 lg:gap-2 md:gap-2 md:ml-2 ">
-                <h1 className="text-white font-bold lg:text-[43px] md:text-2xl ">Cours</h1>
+                <h1 className="text-white font-bold lg:text-[43px] md:text-2xl ">
+                  Cours
+                </h1>
                 <p className="text-white lg:text-base md:text-xs text-left lg:w-32  font-bold lg:ml-1 md:ml-5">
                   Symétrie axiale et centrale
                 </p>
@@ -28,11 +32,16 @@ export default function Menu() {
                   Allons-y
                 </button>
               </div>
-              <img className="lg:h-72 lg:w-96 lg:mb-20 md:w-72 md:mb-14" src="menu/ImageCours.svg" />
+              <img
+                className="lg:h-72 lg:w-96 lg:mb-20 md:w-72 md:mb-14"
+                src="menu/ImageCours.svg"
+              />
             </div>
           </div>
           <div className="flex flex-col gap-3  ">
-            <p className="font-semibold text-black lg:text-2xl md:text-lg lg:ml-4">Progrès</p>
+            <p className="font-semibold text-black lg:text-2xl md:text-lg lg:ml-4">
+              Progrès
+            </p>
             <div
               className={`container flex bg-symapp-pink-light lg:rounded-[40px] md:rounded-[30px] lg:h-[210px] lg:w-[380px] md:h-40 md:w-[270px] items-center justify-between  `}
             ></div>
