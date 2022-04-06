@@ -1,10 +1,14 @@
 const path = require('path');
-
+const Store = require("electron-store");
 const { app, BrowserWindow } = require('electron');
 const isDev = require('electron-is-dev');
 
 // Conditionally include the dev tools installer to load React Dev Tools
 let installExtension, REACT_DEVELOPER_TOOLS;
+
+const store = new Store();
+
+store.set("users",{});
 
 if (isDev) {
   const devTools = require("electron-devtools-installer");
@@ -21,8 +25,8 @@ if (isDev) {
 function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
-    minWidth:775,
-    minHeight:568.89,
+    minWidth:800,
+    minHeight:600,
     show:false,
     icon:path.join(__dirname,"icon.png"),
     webPreferences: {
@@ -76,3 +80,4 @@ app.on('activate', () => {
     createWindow();
   }
 });
+
