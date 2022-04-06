@@ -10,24 +10,25 @@ import Cours from "./pages/Cours/Cours";
 
 function App() {
   return (
-      <Router>
-      <Routes>
-        <Route path="/" >
-          <Route index element={<Cours />} />
-          <Route path="welcome"  >
-            <Route path="arabe" element={<NoPage />} />
-            <Route path="francais" element={<Landing />} />
-          </Route>
-          <Route path="choix" element={<EtesVous />} />
-          <Route path="nom" element={<Nom />} />
-          <Route path="avatar" element={<Avatar />} />
-          <Route path="menu" element={<Menu />}>
-          {/* <Route path=":avatarId" element={<Menu />} /> */}
-          </Route>
-          <Route path="*" element={<NoPage />} />
+    <Router>
+    <Routes>
+      <Route path="/" >
+        <Route index element={<Langue />} />
+        <Route path="welcome"  >
+          <Route path="arabe" element={<NoPage />} />
+          <Route path="francais" element={<Landing />} />
         </Route>
-      </Routes>
-    </Router>
+        <Route path="choix" element={<EtesVous />} />
+        <Route path="nom" element={<Nom />} />
+        <Route path="avatar" element={<Avatar />} />
+        <Route path="menu" element={<Menu />}>
+        {/* <Route path=":avatarId" element={<Menu />} /> */}
+        </Route>
+        <Route path="cours" element={<Cours />} />
+        <Route path="*" element={<NoPage />} />
+      </Route>
+    </Routes>
+  </Router>
   );
 }
 

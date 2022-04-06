@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import CustomCard from "./CustomCard";
 
 export default function Menu() {
@@ -30,9 +30,11 @@ export default function Menu() {
                 <p className="text-white lg:text-base md:text-xs text-left lg:w-32  font-bold lg:ml-1 md:ml-5">
                   Symétrie axiale et centrale
                 </p>
-                <button className="container bg-white lg:rounded-2xl md:rounded-xl lg:h-14 lg:w-36 md:h-10 md:w-28  lg:mt-4 md:mt-2 md:ml-2 lg:text-xl font-bold text-black text-center hover:bg-slate-200 shadow-2xl  ">
-                  Allons-y
-                </button>
+                <Link to="/cours">
+                  <button className="container bg-white lg:rounded-2xl md:rounded-xl lg:h-14 lg:w-36 md:h-10 md:w-28  lg:mt-4 md:mt-2 md:ml-2 lg:text-xl font-bold text-black text-center hover:bg-slate-200 shadow-2xl  ">
+                    Allons-y
+                  </button>
+                </Link>
               </div>
               <img
                 className="lg:h-72 lg:w-96 lg:mb-20 md:w-72 md:mb-14"
