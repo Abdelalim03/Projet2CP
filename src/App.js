@@ -5,13 +5,14 @@ import Avatar from "./pages/Avatar/Avatar";
 import Landing from "./pages/Landing/Landing"
 import EtesVous from "./pages/EtesVous/EtesVous";
 import Nom from "./pages/Nom/Nom";
+import Cours from "./pages/Cours/Cours";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" >
-          <Route index element={<Langue />} />
+          <Route index element={<Cours />} />
           <Route path="welcome"  >
             <Route path="arabe" element={<NoPage />} />
             <Route path="francais" element={<Landing />} />
