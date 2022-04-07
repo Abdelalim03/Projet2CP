@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Langue from "./pages/Langue/Langue";
 import NoPage from "./pages/NoPage/NoPage";
 import Landing from "./pages/Landing/Landing";
 import Menu from "./pages/Menu/Menu";
@@ -7,6 +6,7 @@ import Avatar from "./pages/Avatar/Avatar";
 import EtesVous from "./pages/EtesVous/EtesVous";
 import Nom from "./pages/Nom/Nom";
 import Cours from "./pages/Cours/Cours";
+import Quiz from "./pages/Quiz/Quiz";
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
         {/* <Route path=":avatarId" element={<Menu />} /> */}
         </Route>
         <Route path="cours" element={<Cours />} />
+        <Route path="quiz" element={<Quiz />} />
         <Route path="*" element={<NoPage />} />
       </Route>
     </Routes>
