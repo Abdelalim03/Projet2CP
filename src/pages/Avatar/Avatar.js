@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Absolute from './Absolute'
+
 
 function Avatar() {
     const paths = ["/avatar/Group-1.svg",
@@ -21,10 +22,10 @@ function Avatar() {
     // if (image!=='data:,') setTimeout(navigate("page"),5000);
     // }, [image])
     
-    function handleClick() {
-        console.log(image);
-        navigate(`/menu/${image}`);
-    }
+    // function handleClick() {
+    //     console.log(image);
+    //     navigate(`/menu/${image}`);
+    // }
   return (
 
   <div className='relative h-screen w-screen selection:bg-fuchsia-300'>

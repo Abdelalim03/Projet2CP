@@ -1,0 +1,33 @@
+<svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="56" cy="56" r="56" fill="#EDF0F4"/>
+<mask id="mask0_1423_13572" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="112" height="112">
+<circle cx="56" cy="56" r="56" fill="#EDF0F4"/>
+</mask>
+<g mask="url(#mask0_1423_13572)">
+<line x1="111.813" y1="114.248" x2="111.813" y2="-1.72133" stroke="black" stroke-opacity="0.1"/>
+<line x1="100.715" y1="114.248" x2="100.715" y2="-1.72133" stroke="black" stroke-opacity="0.1"/>
+<line x1="89.6161" y1="114.248" x2="89.6161" y2="-1.72133" stroke="black" stroke-opacity="0.1"/>
+<line x1="78.5179" y1="114.248" x2="78.5179" y2="-1.72133" stroke="black" stroke-opacity="0.1"/>
+<line x1="67.4195" y1="114.248" x2="67.4195" y2="-1.72133" stroke="black" stroke-opacity="0.1"/>
+<line x1="56.3213" y1="114.248" x2="56.3213" y2="-1.72133" stroke="black" stroke-opacity="0.1"/>
+<line x1="45.2229" y1="114.248" x2="45.2229" y2="-1.72133" stroke="black" stroke-opacity="0.1"/>
+<line x1="34.1245" y1="114.248" x2="34.1245" y2="-1.72133" stroke="black" stroke-opacity="0.1"/>
+<line x1="23.0263" y1="114.248" x2="23.0263" y2="-1.72133" stroke="black" stroke-opacity="0.1"/>
+<line x1="11.9279" y1="114.248" x2="11.9279" y2="-1.72133" stroke="black" stroke-opacity="0.1"/>
+<line x1="0.829498" y1="114.248" x2="0.829498" y2="-1.72133" stroke="black" stroke-opacity="0.1"/>
+<line x1="-30.1539" y1="7.57466" x2="132.925" y2="7.57466" stroke="black" stroke-opacity="0.1"/>
+<line x1="-30.1534" y1="17.2574" x2="132.925" y2="17.2574" stroke="black" stroke-opacity="0.1"/>
+<line x1="-30.1528" y1="26.9401" x2="132.926" y2="26.9401" stroke="black" stroke-opacity="0.1"/>
+<line x1="-30.1524" y1="36.6228" x2="132.926" y2="36.6228" stroke="black" stroke-opacity="0.1"/>
+<line x1="-30.1518" y1="46.3056" x2="132.927" y2="46.3056" stroke="black" stroke-opacity="0.1"/>
+<line x1="-30.1514" y1="55.9883" x2="132.927" y2="55.9883" stroke="black" stroke-opacity="0.1"/>
+<line x1="-30.1509" y1="65.671" x2="132.927" y2="65.671" stroke="black" stroke-opacity="0.1"/>
+<line x1="-30.1503" y1="75.3537" x2="132.928" y2="75.3537" stroke="black" stroke-opacity="0.1"/>
+<line x1="-30.1499" y1="85.0365" x2="132.929" y2="85.0365" stroke="black" stroke-opacity="0.1"/>
+<line x1="-30.1494" y1="94.7192" x2="132.929" y2="94.7192" stroke="black" stroke-opacity="0.1"/>
+<line x1="-30.1488" y1="104.402" x2="132.93" y2="104.402" stroke="black" stroke-opacity="0.1"/>
+</g>
+<circle cx="22.8308" cy="27.1385" r="4.73846" fill="black"/>
+<circle cx="90.0308" cy="85.7231" r="4.73846" fill="black"/>
+<circle cx="56.4308" cy="56.4308" r="3.01538" fill="#FC7F4F"/>
+</svg>
