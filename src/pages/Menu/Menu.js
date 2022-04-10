@@ -3,7 +3,9 @@ import CustomCard from "./CustomCard";
 
 export default function Menu() {
   return (
-    <div className=" md:ml-24 lg:ml-48 mt-4 flex flex-col lg:gap-10 md:gap-2">
+    // <div className=" bg-symapp-blue-light-second">
+
+    <div className=" md:pl-[20px] md:ml-16 lg:ml-20 lg:pl-[90px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-[50px] md:rounded-[30px] bg-white h-screen ">
       <div className="flex items-center lg:gap-2 gap-1">
         <div className=" flex justify-center items-center rounded-full lg:h-16 lg:w-16 md:h-12 md:w-12 lg:border-[3.5px] md:border-2 border-symapp-blue-light">
           <img
@@ -15,8 +17,8 @@ export default function Menu() {
       </div>
 
       <div className="flex flex-col lg:gap-8 md:gap-3">
-        <div className="flex flex-row lg:gap-10 md:gap-4">
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-row lg:gap-10 md:gap-4  ">
+          <div className="flex flex-col gap-3 ">
             <p className="font-semibold text-black lg:text-2xl ml-4 text-lg ">
               Apprenez !
             </p>
@@ -68,5 +70,6 @@ export default function Menu() {
         </div>
       </div>
     </div>
+    // </div>
   );
 }

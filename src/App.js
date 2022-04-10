@@ -9,6 +9,7 @@ import SideBar from "./Components/SideBar";
 function App() {
   return (
     <div>
+      <SideBar />
       <Menu />
       {/* <SideBar/> */}
       {/* <Nom/> */}
