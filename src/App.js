@@ -8,12 +8,24 @@ import SideBar from "./Components/SideBar";
 
 function App() {
   return (
-    <div>
-      <SideBar />
-      <Menu />
+    <div className="bg-symapp-blue-light-second">
+      <main>
+      <Router>
+        <div className="flex">
+        <SideBar />
+          <Routes>
+            <Route path="/" element={ <Menu/>} />
+            <Route path="/Nopage" element={ <NoPage />} />
+           
+          </Routes>
+        </div>
+          
+        </Router>
+      </main>
       {/* <SideBar/> */}
       {/* <Nom/> */}
-
+      {/* <EtesVous /> */}
+      {/* <Landing /> */}
       {/* <Router>
       <Routes>
         <Route path="/" >

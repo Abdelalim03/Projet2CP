@@ -21,3 +21,9 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components { 
+  .symapp-container { 
+    @apply  md:pl-[20px] lg:pl-[90px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen z-10
+  }
+}

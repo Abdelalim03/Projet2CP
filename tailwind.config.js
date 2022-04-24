@@ -8,6 +8,7 @@ module.exports = {
         "symapp-orange": "#FF946B",
         "symapp-blue-light-second": "#98BCFF",
         "symapp-pink-light": "#FDE3DE",
+        "symapp-pink": "#FFC5C1",
       },
     },
   },

@@ -5,8 +5,8 @@ export default function Menu() {
   return (
     // <div className=" bg-symapp-blue-light-second">
 
-    <div className=" md:pl-[20px] md:ml-16 lg:ml-20 lg:pl-[90px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-[50px] md:rounded-[30px] bg-white h-screen ">
-      <div className="flex items-center lg:gap-2 gap-1">
+    <div className=" symapp-container  ">
+      <div className="flex items-center lg:gap-2 gap-1 ">
         <div className=" flex justify-center items-center rounded-full lg:h-16 lg:w-16 md:h-12 md:w-12 lg:border-[3.5px] md:border-2 border-symapp-blue-light">
           <img
             className="rounded-full bg-symapp-blue-light lg:h-12 md:h-10 md:w-10 lg:w-12 pt-2 "
@@ -60,12 +60,12 @@ export default function Menu() {
             imageProps="lg:h-40 lg:w-72 lg:mr-9 lg:mt-14 md:h-36 md:w-48 md:mr-12 md:mt-10 "
           />
           <CustomCard
-            bgcolor="bg-symapp-blue-light-second"
-            messageMotivant="Shine Baby !"
+            bgcolor="bg-symapp-blue-light-second "
+            messageMotivant="Amusez vous!"
             mainContent="Dessiner"
             contentDescription="Appliquez vos idées"
             Image="menu/ImageDessiner.svg"
-            imageProps=" mt-3 mr-3 lg:h-48 md:h-32    "
+            imageProps=" mt-3 mr-3 lg:h-48 md:h-32 "
           />
         </div>
       </div>
