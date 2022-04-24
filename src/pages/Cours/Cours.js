@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import SideBar from '../../Components/SideBar'
 
 function Cours() {
@@ -39,7 +40,9 @@ function Cours() {
                 <div className='flex flex-row justify-center items-center rounded-3xl bg-[#98BCFF]'>
                     <div>
                         <h1 className='font-semibold text-base lg:text-2xl mb-3 lg:mb-6'> Quiz 01</h1>
-                        <button className='font-normal text-xs lg:text-xl text-center border-2 border-[#283D93] p-1 rounded-lg'>xx Exp</button>
+                        <Link to="/quiz">
+                            <button className='font-normal text-xs lg:text-xl text-center border-2 border-[#283D93] p-1 rounded-lg'>xx Exp</button>
+                        </Link>
                     </div>
                 </div>
                 <div className='bg-[#C29E9C] py-4 lg:py-5 rounded-3xl flex flex-row col-span-2'>

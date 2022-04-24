@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Quiz() {
   return (
@@ -6,9 +7,11 @@ function Quiz() {
       <div className="ml-20 flex flex-col justify-start gap-5">
         <div className="mt-1 p-5 flex flex-row items-center justify-between bg-[#3B52B5] rounded-tl-3xl rounded-tr-3xl">
           <div className="flex items-center gap-10">
-            <div className="flex justify-center items-center w-14 h-14 bg-[#FAE0B2] rounded-lg hover:cursor-pointer hover:scale-110 hover:shadow-sm">
-              <img className="w-fit" src="/quiz/return.svg" alt="" />
-            </div>
+            <Link to="/cours">
+              <div className="flex justify-center items-center w-14 h-14 bg-[#FAE0B2] rounded-lg hover:cursor-pointer hover:scale-110 hover:shadow-sm">
+                <img className="w-fit" src="/quiz/return.svg" alt="" />
+              </div>
+            </Link>
             <div className="flex flex-col gap-1 items-start">
               <h1 className="text-white font-bold text-3xl">Quiz 01</h1>
               <p className="text-white text-base text-left w-40 font-bold">
@@ -64,7 +67,7 @@ function Quiz() {
                   />
                   <label
                     className="form-check-label inline-block text-3xl font-bold text-gray-800"
-                    for="flexRadioDefault1"
+                    htmlFor="flexRadioDefault1"
                   >
                     Prop01
                   </label>
@@ -78,7 +81,7 @@ function Quiz() {
                   />
                   <label
                     className="form-check-label inline-block text-3xl font-bold text-gray-800"
-                    for="flexRadioDefault2"
+                    htmlFor="flexRadioDefault2"
                   >
                     Prop02
                   </label>
@@ -92,7 +95,7 @@ function Quiz() {
                   />
                   <label
                     className="form-check-label inline-block text-3xl font-bold text-gray-800"
-                    for="flexRadioDefault3"
+                    htmlFor="flexRadioDefault3"
                   >
                     Prop03
                   </label>

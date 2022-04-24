@@ -54,7 +54,7 @@
     ]
   },
   "build": {
-    "appId": "com.electron.symmetrio",
+    "appId": "symmetrio",
     "productName": "Symmetrio",
     "files": [
       "build/**/*",
@@ -71,6 +71,10 @@
     },
     "linux": {
       "target": "deb"
+    },"nsis": {
+      "oneClick": false,
+      "license":"license.md",
+      "allowToChangeInstallationDirectory": true
     }
   },
   "devDependencies": {

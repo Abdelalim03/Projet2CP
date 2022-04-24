@@ -15,6 +15,17 @@ code {
   transition: all;
   transition-duration: 300ms;
 } */
+/* Hide scrollbar for Chrome, Safari and Opera
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox 
+.no-scrollbar {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+} */
+
 .main-title{
   @apply leading-10 font-semibold text-[#194084] text-3xl lg:text-5xl p-16 lg:p-28;
 }
