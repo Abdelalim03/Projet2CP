@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function SideBar() {
   return (
-      <div className='flex flex-col fixed h-screen  left-0 top-0  justify-between items-center w-[8%] pt-14 lg:pt-16 px-3 lg:px-5'>
+      <div className='flex flex-col fixed h-screen left-0 top-0  justify-between items-center w-[8%] pt-14 lg:pt-16 px-3 lg:px-5'>
             <div >
                 <button className='mb-6 lg:mb-9'><img className='w-6 lg:w-8 h-5 lg:h-7' src='/Cours/side bar/MenuIcon.svg' alt='menuic' /></button>
             <Link to="/menu">
