@@ -3,7 +3,7 @@ import Chapitre from './Chapitre'
 import UserTitle from '../../Components/UserTitle'
 function Cours2() {
   return (
-    <div className='symapp-container '>
+    <div className=' md:pl-[70px] lg:pl-[90px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen '>
 
             <div className='w-[80%] h-32 mb-0 lg:mb-10'>
             <UserTitle userName = 'Amine' userImage='PersonPic'/>
