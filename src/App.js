@@ -5,7 +5,6 @@ import Menu from "./pages/Menu/Menu";
 import Avatar from "./pages/Avatar/Avatar";
 import EtesVous from "./pages/EtesVous/EtesVous";
 import Nom from "./pages/Nom/Nom";
-import Cours from "./pages/Cours/Cours";
 import Editeur from "./pages/Editeur/Editeur";
 
 import Exercices from "./pages/Exercices/Exercices";
@@ -36,7 +35,7 @@ function App() {
 
         <Route path="home" element={<Layout />} >
           <Route index element={<Menu />} />
-          <Route path="cours" element={<Cours />} />
+          <Route path="cours" element={<Cours2 />} />
           <Route path="courscontent" element={<CoursContent />} />
           <Route path="quiz" element={<Quiz />} />
           <Route path="exercices" element={<Exercices />} />
