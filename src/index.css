@@ -12,7 +12,13 @@ code {
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
 }
 
 /* Track */

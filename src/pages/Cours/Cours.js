@@ -18,7 +18,7 @@ function Cours() {
                 </div>
                 <p className='ml-2 lg:ml-3 font-semibold text-sm lg:text-base'>Apprenons quelque chose de nouveau aujourd'hui !</p>
             </div>
-            <div className='w-[80%]  grid grid-cols-3 gap-4 '>
+            <div className='w-[80%] grid grid-cols-3 gap-4 '>
             
                 <div className='bg-[#FFC5C1] py-4 lg:py-5 rounded-3xl flex flex-row col-span-2'>
                     <div className='w-[15%] flex flex-row justify-center items-center'>
