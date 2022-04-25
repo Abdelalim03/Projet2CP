@@ -58,7 +58,7 @@ export default function SideBar() {
 
               <li>
                 <Link
-                  to="#"
+                  to="../home/cours"
                   className="flex items-center hover:bg-symapp-pink  "
                 >
                   <img
@@ -82,7 +82,7 @@ export default function SideBar() {
 
               <li>
                 <Link
-                  to="#"
+                  to="../home/exercices"
                   className="flex items-center hover:bg-symapp-pink    "
                 >
                   <img
@@ -105,7 +105,7 @@ export default function SideBar() {
               </li>
               <li>
                 <Link
-                  to="#"
+                  to="../home/dessiner"
                   className="flex items-center hover:bg-symapp-pink   "
                 >
                   <img
@@ -128,7 +128,7 @@ export default function SideBar() {
               </li>
               <li className="lg:mt-20">
                 <Link
-                  to="#"
+                  to="../home/parametres"
                   className="flex items-center hover:bg-symapp-pink   "
                 >
                   <img

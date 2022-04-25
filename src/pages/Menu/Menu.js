@@ -15,7 +15,7 @@ export default function Menu() {
             src="/menu/PersonPic.svg"
           />
         </div>
-        <p className="lg:text-2xl md:text-base font-bold">Salut Amine!</p>
+        <p className="lg:text-2xl md:text-base font-bold">Salut Wail !</p>
       </div>
 
       <div className="flex flex-col lg:gap-8 md:gap-3">
