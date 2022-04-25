@@ -6,7 +6,6 @@ import Avatar from "./pages/Avatar/Avatar";
 import EtesVous from "./pages/EtesVous/EtesVous";
 import Nom from "./pages/Nom/Nom";
 import Editeur from "./pages/Editeur/Editeur";
-
 import Exercices from "./pages/Exercices/Exercices";
 import Langue from "./pages/Langue/Langue";
 import Quiz from "./pages/Quiz/Quiz";

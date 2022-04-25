@@ -8,8 +8,8 @@ export default function SideBar() {
     <div>
       <div
         className={`${
-          isOpen ? "lg:w-72 md:w-40" : "lg:w-32 md:w-20"
-        }  h-screen w-96 bg-symapp-blue-light-second ease-out duration-700 `}
+          isOpen ? "w-[150px] lg:w-64 " : "w-[66px] lg:w-24 "
+        }  h-screen  bg-symapp-blue-light-second ease-out duration-700 `}
       >
         <button onClick={showSidebar}>
           <div className="absolute lg:ml-4 lg:mt-10 md:ml-2 md:mt-4">
