@@ -8,6 +8,8 @@ module.exports = {
         "symapp-orange": "#FF946B",
         "symapp-blue-light-second": "#98BCFF",
         "symapp-pink-light": "#FDE3DE",
+        "symapp-pink": "#FFC5C1",
+        "symapp-blue": "#3B52B5",
       },
       animation: {
         avatar: 'avatar 2s ease-in-out 1',

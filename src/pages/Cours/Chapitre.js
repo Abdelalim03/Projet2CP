@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Chapitre(props) {
   return (
@@ -14,14 +15,20 @@ function Chapitre(props) {
                 </div>
             </div>
             <div className='w-[15%]  flex flex-row justify-center items-center'>
+                <Link to='../courscontent'>
                 <button className='bg-[#FAE0B2] flex justify-center items-center w-6 lg:w-9 h-6 lg:h-9'>
                     <img className='w-4 lg:w-7 h-4 lg:h-7' src='/Cours/Icons/chevron-right-svgrepo-com (1) 1.svg' alt='icon'/> 
                 </button>
+                </Link>
+             
             </div>
         </div>
         <div className='flex flex-col justify-center items-center pb-2 pt-4 lg:pt-5 w-[100px] lg:w-[140px] rounded-2xl lg:rounded-3xl bg-[#98BCFF]'>
                 <h1 className='font-semibold text-base lg:text-xl mb-3 lg:mb-6'>{props.nomQuiz}</h1>
-                <button className='w-[59px] lg:w-20 font-normal text-xs lg:text-base text-center border-2 border-[#283D93] p-1 rounded-lg'>{props.numExp} Exp</button>
+                <Link to='../quiz'>
+                <button className='w-[59px] font-normal text-xs lg:text-base text-center border-2 border-[#283D93] p-1 rounded-lg'>{props.numExp} Exp</button>
+
+                </Link>
         </div>
     </div>
   )
