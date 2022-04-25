@@ -13,6 +13,8 @@ import Langue from "./pages/Langue/Langue";
 import Quiz from "./pages/Quiz/Quiz";
 import Layout from "./Components/Layout";
 import CoursContent from "./pages/Cours/CoursContent";
+import Cours2 from "./pages/Cours/Cours2";
+import NoPage2 from "./pages/NoPage/NoPage2";
 
 function App() {
   return (
@@ -34,12 +36,12 @@ function App() {
 
         <Route path="home" element={<Layout />} >
           <Route index element={<Menu />} />
-          <Route path="cours" element={<Cours2 />} />
+          <Route path="cours" element={<Cours />} />
           <Route path="courscontent" element={<CoursContent />} />
           <Route path="quiz" element={<Quiz />} />
           <Route path="exercices" element={<Exercices />} />
           <Route path="dessiner" element={<Editeur />} />
-          <Route path="*" element={<NoPage />} />
+          <Route path="*" element={<NoPage2 />} />
         </Route>
       </Route>
         
