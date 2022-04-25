@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function CustomCard(props) {
   return (
@@ -16,9 +17,12 @@ export default function CustomCard(props) {
           <p className="text-white lg:text-base md:text-xs text-left lg:w-32 md:w-28 font-bold ">
             {props.contentDescription}
           </p>
+          <Link to={`${props.path}`}>
           <button className="container bg-white lg:rounded-2xl md:rounded-xl lg:h-12 lg:w-36 md:h-9 md:w-28  mt-4 lg:text-xl md: font-bold text-black text-center hover:bg-slate-200 shadow-2xl ">
             Allons-y
           </button>
+          </Link>
+         
         </div>
         <img className={`${props.imageProps}`} src={props.Image} />
       </div>

@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 function Quiz() {
   return (
-    <div className="w-screen h-screen">
-      <div className="ml-20 flex flex-col justify-start gap-5">
-        <div className="mt-1 p-5 flex flex-row items-center justify-between bg-[#3B52B5] rounded-tl-3xl rounded-tr-3xl">
+    <div className="flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen">
+      <div className=" flex flex-col justify-start gap-5">
+        <div className="bg-symapp-blue lg:h-40 md:h-20 lg:rounded-tl-[50px] md:rounded-tl-[30px] flex justify-between pl-4">
           <div className="flex items-center gap-10">
-            <Link to="/cours">
+            <Link to="../cours">
               <div className="flex justify-center items-center w-14 h-14 bg-[#FAE0B2] rounded-lg hover:cursor-pointer hover:scale-110 hover:shadow-sm">
                 <img className="w-fit" src="/quiz/return.svg" alt="" />
               </div>

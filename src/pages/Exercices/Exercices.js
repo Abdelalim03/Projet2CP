@@ -3,9 +3,8 @@ import SideBar from '../../Components/SideBar'
 
 function Exercices() {
   return (
-    <div className='relative bg-[#98BCFF] min-h-screen flex flex-row-reverse selection:bg-fuchsia-300'>
-      <SideBar />
-      <div className=' relative bg-white rounded-l-2xl lg:rounded-l-3xl py-7 lg:py-14  w-[92%] '>
+    <div className='symapp-container'>
+      <div className=' relative bg-white rounded-l-2xl lg:rounded-l-3xl   w-[92%] '>
           <img className='absolute left-36 top-16 w-[100px] h-[180px] py-9' src='/Exercices/flèche.jpg' alt='FlecheB'/>
           <div className='ml-[100px] pt-3 flex px-[160px]'>
                 <p className='font-semibold text-xl px-2 py-7'>Obtenez les clés en résolvant les exercices pour gagner </p>
