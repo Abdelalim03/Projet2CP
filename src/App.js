@@ -7,8 +7,7 @@ import EtesVous from "./pages/EtesVous/EtesVous";
 import Nom from "./pages/Nom/Nom";
 import Cours from "./pages/Cours/Cours";
 import Editeur from "./pages/Editeur/Editeur";
-import Cours2 from "./pages/Cours/Cours2";
-import Chapitre from "./pages/Cours/Chapitre";
+
 import Exercices from "./pages/Exercices/Exercices";
 import Langue from "./pages/Langue/Langue";
 import Quiz from "./pages/Quiz/Quiz";
