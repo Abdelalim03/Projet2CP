@@ -8,6 +8,7 @@ import Nom from "./pages/Nom/Nom";
 import Cours from "./pages/Cours/Cours";
 import Langue from "./pages/Langue/Langue";
 import Quiz from "./pages/Quiz/Quiz";
+import Layout from "./Components/Layout";
 
 function App() {
   return (
@@ -22,16 +23,22 @@ function App() {
         <Route path="choix" element={<EtesVous />} />
         <Route path="nom" element={<Nom />} />
         <Route path="avatar" element={<Avatar />} />
-        <Route path="menu" element={<Menu />}>
-        {/* <Route path=":avatarId" element={<Menu />} /> */}
-        </Route>
-        <Route path="cours" element={<Cours />} />
-        <Route path="quiz" element={<Quiz />} />
         <Route path="*" element={<NoPage />} />
+
+        <Route path="home" element={<Layout />} >
+          <Route index element={<Menu />} />
+          <Route path="cours" element={<Cours />} />
+          <Route path="quiz" element={<Quiz />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
       </Route>
+        
+        
+        
     </Routes>
   </Router>
   );
 }
+        
 
 export default App;
