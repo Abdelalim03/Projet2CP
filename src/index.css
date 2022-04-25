@@ -43,9 +43,26 @@ code {
   transition: all;
   transition-duration: 300ms;
 } */
+/* Hide scrollbar for Chrome, Safari and Opera
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox 
+.no-scrollbar {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+} */
+
 .main-title{
   @apply leading-10 font-semibold text-[#194084] text-3xl lg:text-5xl p-16 lg:p-28;
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components { 
+  .symapp-container { 
+    @apply  md:pl-[20px] lg:pl-[90px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen
+  }
+}
