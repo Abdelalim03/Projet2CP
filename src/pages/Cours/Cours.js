@@ -1,12 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import SideBar from '../../Components/SideBar'
 
 function Cours() {
     
   return (
-    <div className='relative bg-[#98BCFF] min-h-screen flex flex-row-reverse selection:bg-fuchsia-300 overflow-y-auto '>
-        <SideBar />
-        <div className='bg-white rounded-l-2xl lg:rounded-l-3xl  flex flex-col lg:py-14 items-center w-[92%] '>
+    <div className='relative   bg-[#98BCFF] min-h-screen flex flex-row-reverse selection:bg-fuchsia-300 overflow-y-auto '>
+        <div className='bg-white rounded-l-2xl lg:rounded-l-3xl  flex flex-col py-7 lg:py-14 items-center w-[92%] '>
             <div className='w-[80%] h-32 mb-0 lg:mb-5'>
                 <div className='flex'>
                     <div className='select-none h-16 lg:h-20 w-16 lg:w-20  p-2 rounded-[50%] border-2 border-[#C7DBFE] bg-white'>
@@ -39,7 +39,9 @@ function Cours() {
                 <div className='flex flex-row justify-center items-center rounded-3xl bg-[#98BCFF]'>
                     <div>
                         <h1 className='font-semibold text-base lg:text-2xl mb-3 lg:mb-6'> Quiz 01</h1>
-                        <button className='font-normal text-xs lg:text-xl text-center border-2 border-[#283D93] p-1 rounded-lg'>xx Exp</button>
+                        <Link to="../quiz">
+                            <button className='font-normal text-xs lg:text-xl text-center border-2 border-[#283D93] p-1 rounded-lg'>xx Exp</button>
+                        </Link>
                     </div>
                 </div>
                 <div className='bg-[#C29E9C] py-4 lg:py-5 rounded-3xl flex flex-row col-span-2'>

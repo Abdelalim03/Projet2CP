@@ -5,8 +5,10 @@ import CustomCard from "./CustomCard";
 export default function Menu() {
   
   return (
-    <div className=" md:ml-24 lg:ml-48 mt-4 flex flex-col lg:gap-10 md:gap-2">
-      <div className="flex items-center lg:gap-2 gap-1">
+    // <div className=" bg-symapp-blue-light-second">
+
+    <div className=" symapp-container  ">
+      <div className="flex items-center lg:gap-2 gap-1 ">
         <div className=" flex justify-center items-center rounded-full lg:h-16 lg:w-16 md:h-12 md:w-12 lg:border-[3.5px] md:border-2 border-symapp-blue-light">
           <img
             className="rounded-full bg-symapp-blue-light lg:h-12 md:h-10 md:w-10 lg:w-12 pt-2 "
@@ -17,8 +19,8 @@ export default function Menu() {
       </div>
 
       <div className="flex flex-col lg:gap-8 md:gap-3">
-        <div className="flex flex-row lg:gap-10 md:gap-4">
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-row lg:gap-10 md:gap-4  ">
+          <div className="flex flex-col gap-3 ">
             <p className="font-semibold text-black lg:text-2xl ml-4 text-lg ">
               Apprenez !
             </p>
@@ -30,7 +32,7 @@ export default function Menu() {
                 <p className="text-white lg:text-base md:text-xs text-left lg:w-32  font-bold lg:ml-1 md:ml-5">
                   Symétrie axiale et centrale
                 </p>
-                <Link to="/cours">
+                <Link to="./cours">
                   <button className="container bg-white lg:rounded-2xl md:rounded-xl lg:h-14 lg:w-36 md:h-10 md:w-28  lg:mt-4 md:mt-2 md:ml-2 lg:text-xl font-bold text-black text-center hover:bg-slate-200 shadow-2xl  ">
                     Allons-y
                   </button>
@@ -62,15 +64,16 @@ export default function Menu() {
             imageProps="lg:h-40 lg:w-72 lg:mr-9 lg:mt-14 md:h-36 md:w-48 md:mr-12 md:mt-10 "
           />
           <CustomCard
-            bgcolor="bg-symapp-blue-light-second"
-            messageMotivant="Shine Baby !"
+            bgcolor="bg-symapp-blue-light-second "
+            messageMotivant="Amusez vous!"
             mainContent="Dessiner"
             contentDescription="Appliquez vos idées"
             Image="/menu/ImageDessiner.svg"
-            imageProps=" mt-3 mr-3 lg:h-48 md:h-32    "
+            imageProps=" mt-3 mr-3 lg:h-48 md:h-32 "
           />
         </div>
       </div>
     </div>
+    // </div>
   );
 }
