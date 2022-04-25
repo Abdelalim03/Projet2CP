@@ -5,8 +5,10 @@ import SideBar from '../../Components/SideBar'
 function Cours() {
     
   return (
-    <div className='relative   bg-[#98BCFF] min-h-screen flex flex-row-reverse selection:bg-fuchsia-300 overflow-y-auto '>
-        <div className='bg-white rounded-l-2xl lg:rounded-l-3xl  flex flex-col py-7 lg:py-14 items-center w-[92%] '>
+      <div className='symapp-container'>
+
+    {/* <div className='relative   bg-[#98BCFF] min-h-screen flex flex-row-reverse selection:bg-fuchsia-300 overflow-y-auto '> */}
+        {/* <div className='bg-white rounded-l-2xl lg:rounded-l-3xl  flex flex-col py-7 lg:py-14 items-center w-[92%] '> */}
             <div className='w-[80%] h-32 mb-0 lg:mb-5'>
                 <div className='flex'>
                     <div className='select-none h-16 lg:h-20 w-16 lg:w-20  p-2 rounded-[50%] border-2 border-[#C7DBFE] bg-white'>
@@ -18,7 +20,7 @@ function Cours() {
                 </div>
                 <p className='ml-2 lg:ml-3 font-semibold text-sm lg:text-base'>Apprenons quelque chose de nouveau aujourd'hui !</p>
             </div>
-            <div className='w-[80%]  grid grid-cols-3 gap-4 '>
+            <div className='w-[80%] grid grid-cols-3 gap-4 '>
             
                 <div className='bg-[#FFC5C1] py-4 lg:py-5 rounded-3xl flex flex-row col-span-2'>
                     <div className='w-[15%] flex flex-row justify-center items-center'>
@@ -130,8 +132,10 @@ function Cours() {
                
                 
             </div>
-        </div>
+        {/* </div> */}
+    {/* </div> */}
     </div>
+
   )
 }
 

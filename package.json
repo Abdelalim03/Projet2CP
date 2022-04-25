@@ -20,7 +20,7 @@
     "font-awesome": "^4.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "^5.0.1",
     "scrollable-component": "^1.2.1",
     "web-vitals": "^2.1.4"
   },
@@ -72,9 +72,10 @@
     },
     "linux": {
       "target": "deb"
-    },"nsis": {
+    },
+    "nsis": {
       "oneClick": false,
-      "license":"license.md",
+      "license": "license.md",
       "allowToChangeInstallationDirectory": true
     }
   },

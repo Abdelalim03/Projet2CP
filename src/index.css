@@ -12,7 +12,13 @@ code {
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
 }
 
 /* Track */
@@ -57,6 +63,6 @@ code {
 
 @layer components { 
   .symapp-container { 
-    @apply  md:pl-[20px] lg:pl-[90px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen z-10
+    @apply  md:pl-[70px] lg:pl-[90px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen
   }
 }
