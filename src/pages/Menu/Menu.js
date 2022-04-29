@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import UserTitle from "../../Components/UserTitle";
 import CustomCard from "./CustomCard";
 

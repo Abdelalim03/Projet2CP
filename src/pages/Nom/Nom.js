@@ -1,20 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
 
-import Absolute from './Absolute';
-import InputCard from './InputCard';
+
+import NomAr from './NomAr';
+import NomFr from './NomFr';
 
 function Nom() {
-  
-  return (    
-    <div className="relative w-screen h-screen selection:bg-fuchsia-300">
-
-        <Absolute />
-        <h1 className='main-title'>Veuillez introduire votre nom </h1>
-        <div className='flex justify-center'>
-            <InputCard />
-        </div>
-    </div>
+  const [langue, setLangue] = useState("français");
+  console.log(langue);
+   return (    
+     <>
+{ (langue==="français")? <NomAr /> : <NomFr /> }
+     </>
+   
   )
+    
+  
 }
 
 export default Nom

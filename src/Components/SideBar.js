@@ -29,9 +29,9 @@ export default function SideBar() {
           </div>
         </button>
 
-        <div className=" flex flex-col  md:gap-4 md:mt-16 lg:mt-28  ">
+        <div className="  flex flex-col  md:gap-4 md:mt-16 lg:mt-28  ">
           <nav>
-            <ul className={`flex flex-col  gap-6  `}>
+            <ul className={`flex font-bold flex-col  gap-6  `}>
               <li>
                 <Link
                   to="../home"

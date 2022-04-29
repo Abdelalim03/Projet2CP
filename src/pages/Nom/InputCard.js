@@ -21,7 +21,7 @@ function InputCard() {
       if (e.keyCode===13 && username.trim()!==""){
         navigate("/avatar");
       }
-    }
+    } 
   return (
     <div className="relative flex  justify-center items-center lg:-mt-4 h-52 lg:h-72 w-[55%] lg:w-[43%] bg-[url('./grid.png')] bg-[#80aaff12] border-4 border-[#0083CB] rounded-3xl ">
                 <img className='select-none absolute -left-7 -bottom-[6px] lg:-bottom-[7px] h-[72%] lg:-left-10' src='/nom/kateb.png'  alt='kateb'/>

@@ -13,6 +13,7 @@ import Layout from "./Components/Layout";
 import CoursContent from "./pages/Cours/CoursContent";
 import Cours2 from "./pages/Cours/Cours2";
 import NoPage2 from "./pages/NoPage/NoPage2";
+import NomAr from "./pages/Nom/NomAr";
 
 function App() {
   return (
@@ -21,12 +22,9 @@ function App() {
       <Route path="/" >
       <Route index element={<Langue />} />
 
-        <Route path="welcome"  >
-          <Route path="arabe" element={<NoPage />} />
-          <Route path="francais" element={<Landing />} />
-        </Route>
+        <Route path="welcome" element={<Landing />} / >
         <Route path="choix" element={<EtesVous />} />
-        <Route path="nom" element={<Nom />} />
+        <Route path="nom" element={<NomAr />} />
         <Route path="avatar" element={<Avatar />} />
         <Route path="*" element={<NoPage />} />
         
