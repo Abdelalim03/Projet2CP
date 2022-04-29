@@ -5,11 +5,11 @@ import NomAr from './NomAr';
 import NomFr from './NomFr';
 
 function Nom() {
-  const [langue, setLangue] = useState("français");
-  console.log(langue);
-   return (    
+  const [langue, setLangue] = useState("arabe");
+
+  return (    
      <>
-{ (langue==="français")? <NomAr /> : <NomFr /> }
+{ (langue==="français")? <NomFr /> : <NomAr /> }
      </>
    
   )
