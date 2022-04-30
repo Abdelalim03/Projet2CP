@@ -21,7 +21,7 @@ function App() {
       <Route path="/" >
       <Route index element={<Langue />} />
 
-        <Route path="welcome" element={<Landing />} / >
+        <Route path="welcome" element={<Landing />} />
         <Route path="choix" element={<EtesVous />} />
         <Route path="nom" element={<Nom />} />
         <Route path="avatar/:id" element={<Avatar />} />

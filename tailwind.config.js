@@ -2,6 +2,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      scale: {
+        flip: '-1',
+      },
       colors: {
         "symapp-blue-light": "#C7DBFE",
         "symapp-purple": "#6A5CF7",
