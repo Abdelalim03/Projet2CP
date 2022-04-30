@@ -24,10 +24,10 @@ function App() {
         <Route path="welcome" element={<Landing />} / >
         <Route path="choix" element={<EtesVous />} />
         <Route path="nom" element={<Nom />} />
-        <Route path="avatar" element={<Avatar />} />
+        <Route path="avatar/:id" element={<Avatar />} />
         <Route path="*" element={<NoPage />} />
         
-        <Route path="home" element={<Layout />} >
+        <Route path="home/:id" element={<Layout />} >
           <Route index element={<Menu />} />
           <Route path="cours" element={<Cours2 />} />
           <Route path="courscontent" element={<CoursContent />} />

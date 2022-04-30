@@ -1,21 +1,19 @@
-import React,{useState} from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import GetLanguage from "../../Components/GetLanguage";
 import Absolute from "./Absolute";
 const axios = require('axios');
 
 function Langue() {
   const navigate = useNavigate();
-  const [langue, setLangue] = useState("");
+  if (GetLanguage()!=="") navigate("/welcome");
   const handleClick = (lang)=>{
-       setLangue(lang);
-       navigate("welcome");
-      // let doc = {type:lang}
-    // axios.post('http://localhost:3001/langue',JSON.stringify(doc) ).then(resp => {
-    //     console.log(resp.data);
-    //     Navigate("welcome")
-    // }).catch(error => {
-    //     console.log(error);
-    // });
+    axios.patch('http://localhost:5000/parametres',{"langue":lang} ).then(resp => {
+
+    navigate("welcome")
+    }).catch(error => {
+        console.log(error);
+    });
     }
   return (
     <div className="relative flex justify-center items-center w-screen h-screen">

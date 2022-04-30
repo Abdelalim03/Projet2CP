@@ -27,10 +27,11 @@
   },
   "scripts": {
     "start": " react-scripts start",
+    "server":"json-server --watch data/db.json --port 5000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently -k \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electronmon . && json-server --watch data/db.json --port 3001\"",
+    "dev": "concurrently -k \"cross-env BROWSER=none npm start\" \" npm run server \" \"wait-on http://localhost:3000 && electronmon . \"",
     "electron:package:mac": "npm run build && electron-builder -m -c.extraMetadata.main=build/electron.js",
     "electron:package:win": "npm run build && electron-builder -w -c.extraMetadata.main=build/electron.js",
     "electron:package:linux": "npm run build && electron-builder -l -c.extraMetadata.main=build/electron.js"
