@@ -58,6 +58,10 @@ code {
   @apply leading-10 font-semibold text-[#194084] text-3xl lg:text-5xl p-16 lg:p-28;
 }
 
+.flip-horizontal {
+  --transform-scale-x: -1;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
