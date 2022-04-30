@@ -14,6 +14,8 @@ import Langue from "./pages/Langue/Langue";
 import Quiz from "./pages/Quiz/Quiz";
 import Layout from "./Components/Layout";
 import CoursContent from "./pages/Cours/CoursContent";
+import Exercices2 from "./pages/Exercices/Exercices2";
+import BoxBloquee from "./pages/Exercices/BoxBloquee";
 
 function App() {
   return (
