@@ -126,7 +126,7 @@ export default function SideBar() {
                   </>
                 </Link>
               </li>
-              <li className="lg:mt-20">
+              <li className="lg:mt-10">
                 <Link
                   to="../home/parametres"
                   className="flex items-center hover:bg-symapp-pink   "

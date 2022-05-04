@@ -54,6 +54,94 @@ code {
   scrollbar-width: none;  
 } */
 
+.port {
+  z-index: 1;
+}
+
+.boxText {
+    z-index: 2;
+    text-shadow: 2px 2px 5px #0b054e;
+}
+
+.container:hover .toShow{
+  display: block;
+  text-shadow: 2px 2px 1px #6A5CF7;
+}
+
+.container:hover .toHide{
+  display: none;
+}
+
+.container:hover .littleKey{
+  display: none;
+}
+
+.container:hover .bigKey{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.container:hover .coin{
+  height: 25px;
+  width: 25px;
+}
+
+.container:hover .lock1{
+  display: none;
+}
+
+.container:hover .lock2{
+  display: flex;
+  justify-content: center;
+}
+
+.container:hover .toShow2{
+  display: block;
+  text-shadow: 2px 2px 1px #3528bb;
+  background-color: #FFDFD9;
+  border-radius: 20px;
+}
+
+.bouton:hover .boutonImg{
+  transform: rotate(-27deg);
+}
+
+.insPolygone:hover .insPolygoneContent{
+  display: block;
+}
+
+.insButton:hover{
+  background-color: #fff2f0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+input[type=number]::-webkit-outer-spin-button, 
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.rotateB1:hover .rotateImg1{
+  transform: rotate(-56deg);
+}
+
+.rotateB2:hover .rotateImg2{
+  transform: rotate(56deg);
+}
+
+.rotate:hover .rotateContent{
+  display: block;
+}
+
 .main-title{
   @apply leading-10 font-semibold text-[#194084] text-3xl lg:text-5xl p-16 lg:p-28;
 }
@@ -69,5 +157,8 @@ code {
 @layer components { 
   .symapp-container { 
     @apply  pl-[40px] lg:pl-[70px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen
+  }
+  .symapp-container-wail { 
+    @apply  md:pl-[20px] lg:pl-[50px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen
   }
 }
