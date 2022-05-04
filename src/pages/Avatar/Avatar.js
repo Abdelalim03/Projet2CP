@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import GetCurrentUser from '../../Components/GetCurrentUser';
 import Absolute from './Absolute'
 
 
@@ -26,6 +28,7 @@ function Avatar() {
     //     console.log(image);
     //     navigate(`/menu/${image}`);
     // }
+    const url = "http://localhost:5000/users/"+GetCurrentUser()
   return (
 
   <div className='relative h-screen w-screen selection:bg-fuchsia-300'>
@@ -56,6 +59,7 @@ function Avatar() {
                         setImage(path);
                         setanimate("animate-[avatar_2s_ease-in-out_1]");
                         setTimeout(()=>{
+                            axios.patch(url, {"avatar":path});
                             navigate(`/home`);
                         },1500);
                         }
