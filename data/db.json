@@ -1,0 +1,15 @@
+{
+  "parametres": {
+    "langue": "",
+    "currentUser": 0
+  },
+  "users": [
+    {
+      "id": 1,
+      "nom": "Amine",
+      "avatar": "",
+      "exercices": [],
+      "cours": ""
+    }
+  ]
+}

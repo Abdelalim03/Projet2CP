@@ -1,20 +1,21 @@
 import React from 'react'
+import GetLanguage from '../../Components/GetLanguage';
 
-import Absolute from './Absolute';
-import InputCard from './InputCard';
+
+import NomAr from './NomAr';
+import NomFr from './NomFr';
 
 function Nom() {
+  const language = GetLanguage();
+    return (    
+      <>
+ { (language==="français")&& <NomFr />  }
+ { (language==="arabe")&&  <NomAr /> }
+      </>
+    
+   )
+    }
   
-  return (    
-    <div className="relative w-screen h-screen selection:bg-fuchsia-300">
 
-        <Absolute />
-        <h1 className='main-title'>Veuillez introduire votre nom </h1>
-        <div className='flex justify-center'>
-            <InputCard />
-        </div>
-    </div>
-  )
-}
 
 export default Nom

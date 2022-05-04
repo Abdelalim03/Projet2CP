@@ -2,6 +2,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      scale: {
+        flip: '-1',
+      },
       colors: {
         "symapp-blue-light": "#C7DBFE",
         "symapp-purple": "#6A5CF7",
@@ -19,8 +22,9 @@ module.exports = {
           '0%': { opacity:"0" },
           '100%': { opacity: '1' },
         }
-      }
+      },
     },
+    
   },
   plugins: [],
 };

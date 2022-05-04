@@ -8,8 +8,8 @@ export default function SideBar() {
     <div>
       <div
         className={`${
-          isOpen ? "lg:w-72 md:w-40" : "lg:w-32 md:w-20"
-        }  h-screen w-96 bg-symapp-blue-light-second ease-out duration-700 `}
+          isOpen ? "w-[150px] lg:w-64 " : "w-[66px] lg:w-24 "
+        }  h-screen  bg-symapp-blue-light-second ease-out duration-700 `}
       >
         <button onClick={showSidebar}>
           <div className="absolute lg:ml-4 lg:mt-10 md:ml-2 md:mt-4">
@@ -29,9 +29,9 @@ export default function SideBar() {
           </div>
         </button>
 
-        <div className=" flex flex-col  md:gap-4 md:mt-16 lg:mt-28  ">
+        <div className="  flex flex-col  md:gap-4 md:mt-16 lg:mt-28  ">
           <nav>
-            <ul className={`flex flex-col  gap-6  `}>
+            <ul className={`flex font-bold flex-col  gap-6  `}>
               <li>
                 <Link
                   to="../home"
