@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import AbsoluteLandingAr from './AbsoluteLandingAr'
 import AbsoluteLending from './AbsoluteLending'
 
+
 function LandingAr() {
   return (
     <div className='relative w-screen h-screen selection:bg-fuchsia-300'>

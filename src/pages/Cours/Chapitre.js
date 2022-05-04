@@ -26,8 +26,7 @@ function Chapitre(props) {
         <div className='flex flex-col justify-center items-center pb-2 pt-4 lg:pt-5 w-[100px] lg:w-[140px] rounded-2xl lg:rounded-3xl bg-[#98BCFF]'>
                 <h1 className="font-semibold font-['Tajawal'] text-base lg:text-xl mb-3 lg:mb-6">{props.nomQuiz}</h1>
                 <Link to='../quiz'>
-                <button className='w-fit font-normal text-xs lg:text-base text-center border-2 border-[#283D93] py-1 px-2 rounded-lg'>{props.numExp} Exp</button>
-
+                <button className='w-[59px] lg:w-fit font-normal text-xs lg:text-base text-center border-2 border-[#283D93] p-1 rounded-lg'>{props.numExp} Exp</button>
                 </Link>
         </div>
     </div>

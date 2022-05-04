@@ -30,7 +30,7 @@ function QuizFr() {
         <div className="flex flex-row gap-5 justify-center">
           <div className="p-5 flex flex-col gap-5 justify-around bg-[#FAE0B2] rounded-3xl">
             <div className="flex justify-center">
-              <img className="h-60 lg:h-96 bg-white" src="/quiz/grille.png" alt="" />
+              <img className="h-60 lg:h-96 bg-white rounded-3xl" src="/quiz/grille.png" alt="" />
             </div>
 
             <p className="text-3xl font-bold">This is a question</p>
@@ -56,7 +56,6 @@ function QuizFr() {
               />
             </div>
 
-            <div className="flex justify-center">
               <div className="flex flex-col justify-center items-start gap-5">
                 <div className="form-check">
                   <input
@@ -101,8 +100,7 @@ function QuizFr() {
                   </label>
                 </div>
               </div>
-            </div>
-
+              
             <div className="flex flex-col justify-center items-start">
               <p className="text-4xl font-bold">Bravo! 🎉✨</p>
               <p className="text-base font-bold text-gray-400">
