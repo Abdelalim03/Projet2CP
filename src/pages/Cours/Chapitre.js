@@ -10,21 +10,21 @@ function Chapitre(props) {
             </div>
             <div className='w-[70%]'>
                 <div>
-                    <h1 className='font-semibold text-base lg:text-2xl'>{props.nomChapitre}</h1>
-                    <h2 className='font-normal text-xs lg:text-xl'>{props.titreChapitre}</h2>
+                    <h1 className="font-semibold font-['Tajawal'] text-base lg:text-2xl">{props.nomChapitre}</h1>
+                    <h2 className="font-normal font-['Tajawal'] text-xs lg:text-xl">{props.titreChapitre}</h2>
                 </div>
             </div>
             <div className='w-[15%]  flex flex-row justify-center items-center'>
                 <Link to='../courscontent'>
                 <button className='bg-[#FAE0B2] flex justify-center items-center w-6 lg:w-9 h-6 lg:h-9'>
-                    <img className='w-4 lg:w-7 h-4 lg:h-7' src='/Cours/Icons/chevron-right-svgrepo-com (1) 1.svg' alt='icon'/> 
+                    <img className='w-4 lg:w-7 h-4 lg:h-7' src={props.image2} alt='icon'/> 
                 </button>
                 </Link>
              
             </div>
         </div>
         <div className='flex flex-col justify-center items-center pb-2 pt-4 lg:pt-5 w-[100px] lg:w-[140px] rounded-2xl lg:rounded-3xl bg-[#98BCFF]'>
-                <h1 className='font-semibold text-base lg:text-xl mb-3 lg:mb-6'>{props.nomQuiz}</h1>
+                <h1 className="font-semibold font-['Tajawal'] text-base lg:text-xl mb-3 lg:mb-6">{props.nomQuiz}</h1>
                 <Link to='../quiz'>
                 <button className='w-fit font-normal text-xs lg:text-base text-center border-2 border-[#283D93] py-1 px-2 rounded-lg'>{props.numExp} Exp</button>
 

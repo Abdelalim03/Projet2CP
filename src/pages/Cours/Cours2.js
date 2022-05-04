@@ -12,13 +12,13 @@ function Cours2() {
             </div>
             <div className='h-[325px] lg:h-[450px] w-[600px] lg:w-[930px] overflow-auto '>
                 <Chapitre nomChapitre = "Chapitre 01" titreChapitre = "la symmetrie d’un point par rapport a un point"
-                nomQuiz = "Quiz 01" numExp = "xx" image = "/Cours/imgCours/CoursPic.svg" />
+                nomQuiz = "Quiz 01" numExp = "xx" image = "/Cours/imgCours/CoursPic.svg" image2="/Cours/Icons/chevron-right-svgrepo-com (1) 1.svg" />
                 <Chapitre nomChapitre = "Chapitre 02" titreChapitre = "la symmetrie d’un point par rapport a un point"
-                nomQuiz = "Quiz 02" numExp = "xx" image = "/Cours/imgCours/CoursPic.svg" />
+                nomQuiz = "Quiz 02" numExp = "xx" image = "/Cours/imgCours/CoursPic.svg" image2="/Cours/Icons/chevron-right-svgrepo-com (1) 1.svg"/>
                 <Chapitre nomChapitre = "Chapitre 03" titreChapitre = "la symmetrie d’un point par rapport a un point"
-                nomQuiz = "Quiz 03" numExp = "xx" image = "/Cours/imgCours/CoursPic.svg" />
+                nomQuiz = "Quiz 03" numExp = "xx" image = "/Cours/imgCours/CoursPic.svg" image2="/Cours/Icons/chevron-right-svgrepo-com (1) 1.svg"/>
                 <Chapitre nomChapitre = "Chapitre 04" titreChapitre = "la symmetrie d’un point par rapport a un point"
-                nomQuiz = "Quiz 04" numExp = "xx" image = "/Cours/imgCours/CoursPic.svg" />
+                nomQuiz = "Quiz 04" numExp = "xx" image = "/Cours/imgCours/CoursPic.svg" image2="/Cours/Icons/chevron-right-svgrepo-com (1) 1.svg"/>
             </div>
     </div>
   )

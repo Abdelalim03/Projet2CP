@@ -1,7 +1,7 @@
 {
   "parametres": {
-    "langue": "",
-    "currentUser": 0
+    "langue": "français",
+    "currentUser": 2
   },
   "users": [
     {
@@ -10,6 +10,13 @@
       "avatar": "",
       "exercices": [],
       "cours": ""
+    },
+    {
+      "nom": "nabil",
+      "avatar": "/avatar/Group-5.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 2
     }
   ]
 }
