@@ -56,7 +56,6 @@ function QuizFr() {
               />
             </div>
 
-            <div className="flex justify-center">
               <div className="flex flex-col justify-center items-start gap-5">
                 <div className="form-check">
                   <input
@@ -101,8 +100,7 @@ function QuizFr() {
                   </label>
                 </div>
               </div>
-            </div>
-
+              
             <div className="flex flex-col justify-center items-start">
               <p className="text-4xl font-bold">Bravo! 🎉✨</p>
               <p className="text-base font-bold text-gray-400">
