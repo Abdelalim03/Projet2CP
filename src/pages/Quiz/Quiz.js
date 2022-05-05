@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 function Quiz() {
   return (
-    <div className="w-screen h-screen">
+    <div className="symapp-container">
       <div className="ml-20 flex flex-col justify-start gap-5">
         <div className="mt-1 p-5 flex flex-row items-center justify-between bg-[#3B52B5] rounded-tl-3xl rounded-tr-3xl">
           <div className="flex items-center gap-10">
-            <Link to="/cours">
+            <Link to="../cours">
               <div className="flex justify-center items-center w-14 h-14 bg-[#FAE0B2] rounded-lg hover:cursor-pointer hover:scale-110 hover:shadow-sm">
                 <img className="w-fit" src="/quiz/return.svg" alt="" />
               </div>

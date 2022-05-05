@@ -1,17 +1,21 @@
-
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { Viewer } from "@react-pdf-viewer/core"; 
-import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout"; 
-import "@react-pdf-viewer/core/lib/styles/index.css";
-import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import WebViewer from "@pdftron/pdfjs-express-viewer";
 
-import SamplePdf from "./SymétrieCours.pdf";
-import { Worker } from "@react-pdf-viewer/core";
+// import SamplePdf from "./SymétrieCours.pdf";
 
 export default function CoursContent() {
-  const defaultLayoutPluginInstance = defaultLayoutPlugin();
-  const [PdfFile, setpdfFile] = useState(SamplePdf);
+  const viewer = useRef(null);
+  useEffect(() => {
+    WebViewer(
+      {
+        path: "/public/pdfjsviewer",
+        initialDoc: "/public/SymétrieCours.pdf",
+      },
+      viewer.current
+    ).then((instance) => {});
+  }, []);
+  // const [PdfFile, setpdfFile] = useState(SamplePdf);
 
   return (
     <div className=" flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen pb-10  ">
@@ -40,21 +44,12 @@ export default function CoursContent() {
           <input type="file" className="hidden" />
         </label>
       </div>
-      <div className="h-[100%] w-[100%] bg-slate-500 flex items-center justify-center">
-        {PdfFile && (
-          <>
-            <Worker workerUrl="https://unpkg.com/pdfjs-dist@latest/build/pdf.worker.min.js">
-              <Viewer
-                fileUrl={PdfFile}
-                plugins={[defaultLayoutPluginInstance]}
-              />
-            </Worker>
-          </>
-        )}
 
-        {/* if we dont have pdf or viewPdf state is null */}
-        {!PdfFile && <>No pdf file selected</>}
-      </div>
+      <div
+        className="h-[100%] w-[100%] bg-slate-500 flex items-center justify-center"
+        ref={viewer}
+      ></div>
     </div>
   );
 }
+

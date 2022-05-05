@@ -33,7 +33,7 @@ function App() {
           <Route path="*" element={<NoPage />} />
 
           <Route path="home" element={<Layout />}>
-            <Route index element={<MenuAr />} />
+            <Route index element={<Menu />} />
             <Route path="cours" element={<Cours2 />} />
             <Route path="courscontent" element={<CoursContent />} />
             <Route path="quiz" element={<Quiz />} />
