@@ -11,6 +11,8 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
+    "@react-pdf-viewer/core": "^3.3.1",
+    "@react-pdf-viewer/default-layout": "^3.3.1",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
@@ -20,7 +22,7 @@
     "font-awesome": "^4.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -71,9 +73,10 @@
     },
     "linux": {
       "target": "deb"
-    },"nsis": {
+    },
+    "nsis": {
       "oneClick": false,
-      "license":"license.md",
+      "license": "license.md",
       "allowToChangeInstallationDirectory": true
     }
   },

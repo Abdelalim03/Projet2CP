@@ -1,22 +1,14 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
+import UserTitle from "../../Components/UserTitle";
 import CustomCard from "./CustomCard";
 
 export default function Menu() {
-  
   return (
     // <div className=" bg-symapp-blue-light-second">
 
     <div className=" symapp-container  ">
-      <div className="flex items-center lg:gap-2 gap-1 ">
-        <div className=" flex justify-center items-center rounded-full lg:h-16 lg:w-16 md:h-12 md:w-12 lg:border-[3.5px] md:border-2 border-symapp-blue-light">
-          <img
-            className="rounded-full bg-symapp-blue-light lg:h-12 md:h-10 md:w-10 lg:w-12 pt-2 "
-            src="/menu/PersonPic.svg"
-          />
-        </div>
-        <p className="lg:text-2xl md:text-base font-bold">Salut Amine!</p>
-      </div>
+      <UserTitle message="Salut" userName="Amine" userImage="PersonPic" />
 
       <div className="flex flex-col lg:gap-8 md:gap-3">
         <div className="flex flex-row lg:gap-10 md:gap-4  ">
@@ -56,6 +48,7 @@ export default function Menu() {
 
         <div className="flex flex-row lg:gap-10 md:gap-2">
           <CustomCard
+            path="./exercices"
             bgcolor="bg-symapp-orange"
             messageMotivant="Entrainez vous!"
             mainContent="Exercices"
@@ -64,9 +57,10 @@ export default function Menu() {
             imageProps="lg:h-40 lg:w-72 lg:mr-9 lg:mt-14 md:h-36 md:w-48 md:mr-12 md:mt-10 "
           />
           <CustomCard
+            path="./dessiner"
             bgcolor="bg-symapp-blue-light-second "
             messageMotivant="Amusez vous!"
-            mainContent="Dessiner"
+            mainContent="Mode libre"
             contentDescription="Appliquez vos idées"
             Image="/menu/ImageDessiner.svg"
             imageProps=" mt-3 mr-3 lg:h-48 md:h-32 "

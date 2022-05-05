@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&display=swap');
 body {
   margin: 0;
   font-family: 'Kodchasan', sans-serif;
@@ -35,6 +36,9 @@ code {
 
 @layer components { 
   .symapp-container { 
-    @apply  md:pl-[20px] lg:pl-[90px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen z-10
+    @apply  md:pl-[40px] lg:pl-[70px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen
+  }
+  .symapp-container-Ar{
+    @apply  md:pr-[40px] lg:pr-[70px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen w-screen font-["Tajawal"]
   }
 }
