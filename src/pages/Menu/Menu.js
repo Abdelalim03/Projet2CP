@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import UserTitle from "../../Components/UserTitle";
 import CustomCard from "./CustomCard";
 
 export default function Menu() {
-  
+  console.log(useParams());
   return (
     // <div className=" bg-symapp-blue-light-second">
 

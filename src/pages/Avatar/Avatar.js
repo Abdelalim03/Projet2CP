@@ -1,11 +1,13 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
-import GetCurrentUser from '../../Components/GetCurrentUser';
+import { useNavigate, useParams } from 'react-router-dom';
 import Absolute from './Absolute'
 
 
 function Avatar() {
+    let params = useParams();
+
+    console.log(params);
     const paths = ["/avatar/Group-1.svg",
     "/avatar/Group-2.svg",
     "/avatar/Group-3.svg",
@@ -20,15 +22,8 @@ function Avatar() {
 
     const [image, setImage] = useState("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");
     const [animate, setanimate] = useState("")
-    // useEffect(() => {
-    // if (image!=='data:,') setTimeout(navigate("page"),5000);
-    // }, [image])
-    
-    // function handleClick() {
-    //     console.log(image);
-    //     navigate(`/menu/${image}`);
-    // }
-    const url = "http://localhost:5000/users/"+GetCurrentUser()
+
+    const url = "http://localhost:5000/users/"+params.id;
   return (
 
   <div className='relative h-screen w-screen selection:bg-fuchsia-300'>
@@ -40,9 +35,7 @@ function Avatar() {
           <div className='pt-10'>
                 <h1 className='text-[#194084] font-semibold text-2xl lg:text-4xl'>Choisissez votre personnage</h1>
                 <div className='flex justify-center p-10 lg:pt-16'>
-                    <div className='bg-[#F47458] bg-opacity-20 h-28 lg:h-36 w-28 lg:w-36 transition-all duration-500 rounded-[50%]'>
-                    {/* <img className='h-[80%] w-[100%] mt-[20%] '  src="" alt='avatrar'/> */}
-                    
+                    <div className='bg-[#F47458] bg-opacity-20 h-28 lg:h-36 w-28 lg:w-36 transition-all duration-500 rounded-[50%]'>                    
                     <div className='h-[100%] w-[100%] rounded-[50%] overflow-hidden  bg-[#C7DBFE]'>
                     <img className={'h-[80%] w-[100%] mt-[20%] '+animate} src={image} alt="aa" />
                      </div>
@@ -60,7 +53,7 @@ function Avatar() {
                         setanimate("animate-[avatar_2s_ease-in-out_1]");
                         setTimeout(()=>{
                             axios.patch(url, {"avatar":path});
-                            navigate(`/home`);
+                            navigate(`/home/${params.id}`);
                         },1500);
                         }
                         } key={path} src={path} alt='avatrar'/>

@@ -4,7 +4,7 @@ import QuizFr from './QuizFr';
 import QuizAr from './QuizAr';
 
 function Quiz() {
-  const [langue, setLangue] = useState("arabe");
+  const [langue, setLangue] = useState("");
 
   return (    
      <>
