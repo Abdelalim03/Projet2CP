@@ -1,10 +1,13 @@
+import axios from "axios";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import UserTitle from "../../Components/UserTitle";
 import CustomCard from "./CustomCard";
 
 export default function Menu() {
+  let {id} = useParams();
   return (
+    // <div className=" bg-symapp-blue-light-second">
     <div className=" symapp-container  ">
       <UserTitle message="Salut" userName="Amine" userImage="PersonPic" />
 
