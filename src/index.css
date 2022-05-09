@@ -54,6 +54,100 @@ code {
   scrollbar-width: none;  
 } */
 
+.port {
+  z-index: 1;
+}
+
+.boxText {
+    z-index: 2;
+    text-shadow: 2px 2px 5px #0b054e;
+}
+
+.container:hover .toShow{
+  display: block;
+  text-shadow: 2px 2px 1px #6A5CF7;
+}
+
+.container:hover .toHide{
+  display: none;
+}
+
+.container:hover .littleKey{
+  display: none;
+}
+
+.container:hover .bigKey{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container:hover .coin{
+  height: 19px;
+  width: 19px;
+}
+
+.container:hover .toShow2{
+  display: block;
+  text-shadow: -2px 0 #3528bb, 0 1px #3528bb, 1px 0 #3528bb, 0 -1px #3528bb;
+  background-color: #FFDFD9;
+}
+
+
+@media (min-width: 1024px) { 
+  .container:hover .coin{
+    height: 25px;
+    width: 25px;
+  }
+  
+  .container:hover .toShow2{
+    display: block;
+    text-shadow: 2px 2px 1px #3528bb;
+    background-color: #FFDFD9;
+  }
+  
+
+ }
+
+
+.container:hover .lock1{
+  display: none;
+}
+
+.container:hover .lock2{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.Fleche{
+  display: inline-block;
+}
+.Fleche .FlechePleine{
+  display: none;
+}
+.Fleche:hover .FlechePleine{
+  display: inline;
+}
+
+.LastGift{
+  display: inline-block;
+}
+.LastGift .locked{
+  display: none;
+}
+.LastGift:hover .locked{
+  display: inline;
+}
+.LastGift:hover .back{
+  border-width: 4px;
+  border-color: #3023b9;
+  background-color: rgb(100, 116, 139);
+  opacity: 0.6;
+}
+
 .main-title{
   @apply leading-10 font-semibold text-[#194084] text-3xl lg:text-5xl p-16 lg:p-28;
 }
@@ -63,6 +157,6 @@ code {
 
 @layer components { 
   .symapp-container { 
-    @apply  pl-[40px] lg:pl-[70px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen
+    @apply  md:pl-[20px] lg:pl-[50px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen
   }
 }
