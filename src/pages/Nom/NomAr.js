@@ -1,6 +1,5 @@
 import React from 'react'
 import AbsoluteAr from './AbsoluteAr'
-import InputCard from './InputCard'
 import InputCardAr from './InputCardAr'
 
 function NomAr() {
