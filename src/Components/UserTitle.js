@@ -9,7 +9,7 @@ export default function UserTitle(props) {
             src={`/menu/${props.userImage}.svg`}
           />
         </div>
-        <p className="lg:text-2xl md:text-base font-bold">Salut {props.userName} !</p>
+        <p className="lg:text-2xl md:text-base font-bold">{props.message} {props.userName} </p>
       </div>
     
   )

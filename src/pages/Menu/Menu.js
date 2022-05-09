@@ -9,7 +9,8 @@ export default function Menu() {
   return (
     // <div className=" bg-symapp-blue-light-second">
     <div className=" symapp-container  ">
-      <UserTitle userName = 'Amine' userImage='PersonPic'/>
+      <UserTitle message="Salut" userName="Amine" userImage="PersonPic" />
+
       <div className="flex flex-col lg:gap-8 md:gap-3">
         <div className="flex flex-row lg:gap-10 md:gap-4  ">
           <div className="flex flex-col gap-3 ">
@@ -48,7 +49,7 @@ export default function Menu() {
 
         <div className="flex flex-row lg:gap-10 md:gap-2">
           <CustomCard
-          path='./exercices'
+            path="./exercices"
             bgcolor="bg-symapp-orange"
             messageMotivant="Entrainez vous!"
             mainContent="Exercices"
@@ -57,10 +58,10 @@ export default function Menu() {
             imageProps="lg:h-40 lg:w-72 lg:mr-9 lg:mt-14 md:h-36 md:w-48 md:mr-12 md:mt-10 "
           />
           <CustomCard
-          path='./dessiner'
+            path="./dessiner"
             bgcolor="bg-symapp-blue-light-second "
             messageMotivant="Amusez vous!"
-            mainContent="Dessiner"
+            mainContent="Mode libre"
             contentDescription="Appliquez vos idées"
             Image="/menu/ImageDessiner.svg"
             imageProps=" mt-3 mr-3 lg:h-48 md:h-32 "
