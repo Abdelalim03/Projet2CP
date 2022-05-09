@@ -2,6 +2,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      scale: {
+        flip: '-1',
+      },
       colors: {
         "symapp-blue-light": "#C7DBFE",
         "symapp-purple": "#6A5CF7",
@@ -12,15 +15,16 @@ module.exports = {
         "symapp-blue": "#3B52B5",
       },
       animation: {
-        avatar: 'avatar 2s ease-in-out 1',
+        avatar: "avatar 2s ease-in-out 1",
       },
       keyframes: {
         avatar: {
           '0%': { opacity:"0" },
           '100%': { opacity: '1' },
         }
-      }
+      },
     },
+    
   },
   plugins: [],
 };

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@200;300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 body {
   margin: 0;
   font-family: 'Kodchasan', sans-serif;
@@ -38,21 +38,93 @@ code {
   background: rgba(120, 120, 120, 0.8); 
 }
 
-/* .suivant:hover:has(  .formul) {
-  border-color: #194084F2;
-  transition: all;
-  transition-duration: 300ms;
-} */
-/* Hide scrollbar for Chrome, Safari and Opera
-.no-scrollbar::-webkit-scrollbar {
+.port {
+  z-index: 1;
+}
+
+.boxText {
+    z-index: 2;
+    text-shadow: 2px 2px 5px #0b054e;
+}
+
+.container:hover .toShow{
+  display: block;
+  text-shadow: 2px 2px 1px #6A5CF7;
+}
+
+.container:hover .toHide{
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox 
-.no-scrollbar {
-  -ms-overflow-style: none;  
-  scrollbar-width: none;  
-} */
+.container:hover .littleKey{
+  display: none;
+}
+
+.container:hover .bigKey{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.container:hover .coin{
+  height: 25px;
+  width: 25px;
+}
+
+.container:hover .lock1{
+  display: none;
+}
+
+.container:hover .lock2{
+  display: flex;
+  justify-content: center;
+}
+
+.container:hover .toShow2{
+  display: block;
+  text-shadow: 2px 2px 1px #3528bb;
+  background-color: #FFDFD9;
+  border-radius: 20px;
+}
+
+.bouton:hover .boutonImg{
+  transform: rotate(-27deg);
+}
+
+.insPolygone:hover .insPolygoneContent{
+  display: block;
+}
+
+.insButton:hover{
+  background-color: #fff2f0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+input[type=number]::-webkit-outer-spin-button, 
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.rotateB1:hover .rotateImg1{
+  transform: rotate(-56deg);
+}
+
+.rotateB2:hover .rotateImg2{
+  transform: rotate(56deg);
+}
+
+.rotate:hover .rotateContent{
+  display: block;
+}
 
 .port {
   z-index: 1;
@@ -151,6 +223,49 @@ code {
 .main-title{
   @apply leading-10 font-semibold text-[#194084] text-3xl lg:text-5xl p-16 lg:p-28;
 }
+
+.flip-horizontal {
+  --transform-scale-x: -1;
+}
+
+.bouton:hover .boutonImg{
+  transform: rotate(-27deg);
+}
+
+.insPolygone:hover .insPolygoneContent{
+  display: block;
+}
+
+.insButton:hover{
+  background-color: #fff2f0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+input[type=number]::-webkit-outer-spin-button, 
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.rotateB1:hover .rotateImg1{
+  transform: rotate(-56deg);
+}
+
+.rotateB2:hover .rotateImg2{
+  transform: rotate(56deg);
+}
+
+.rotate:hover .rotateContent{
+  display: block;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -158,5 +273,11 @@ code {
 @layer components { 
   .symapp-container { 
     @apply  md:pl-[20px] lg:pl-[50px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen
+  }
+  .symapp-container-wail { 
+    @apply  md:pl-[20px] lg:pl-[50px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen
+  }
+  .symapp-container-Ar{
+    @apply  md:pr-[40px] lg:pr-[70px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen w-screen font-["Tajawal"]
   }
 }
