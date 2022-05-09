@@ -13,6 +13,7 @@ import Layout from "./Components/Layout";
 import CoursContent from "./pages/Cours/CoursContent";
 import Cours2 from "./pages/Cours/Cours2";
 import NoPage2 from "./pages/NoPage/NoPage2";
+import Exercices2 from "./pages/Exercices/Exercices2";
 import Landing from "./pages/Landing/Landing";
 
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="courscontent" element={<CoursContent />} />
           <Route path="quiz" element={<Quiz />} />
           <Route path="exercices" element={<Exercices />} />
+          <Route path="exercices2" element={<Exercices2 />} />
           <Route path="dessiner" element={<Editeur />} />
           <Route path="*" element={<NoPage2 />} />
         </Route>
