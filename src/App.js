@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NoPage from "./pages/NoPage/NoPage";
 import Landing from "./pages/Landing/Landing";
 import Menu from "./pages/Menu/Menu";
+import MenuAr from "./pages/Menu/MenuAr";
 import Avatar from "./pages/Avatar/Avatar";
 import EtesVous from "./pages/EtesVous/EtesVous";
 import Nom from "./pages/Nom/Nom";
@@ -28,7 +29,7 @@ function App() {
         <Route path="*" element={<NoPage />} />
         
         <Route path="home/:id" element={<Layout />} >
-          <Route index element={<Menu />} />
+          <Route index element={<MenuAr />} />
           <Route path="cours" element={<Cours2 />} />
           <Route path="courscontent" element={<CoursContent />} />
           <Route path="quiz" element={<Quiz />} />

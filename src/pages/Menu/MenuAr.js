@@ -8,7 +8,7 @@ export default function Menu() {
     // <div className=" bg-symapp-blue-light-second">
 
     <div className=" symapp-container-Ar items-end  ">
-      <UserTitleAr message =' ! اهلا' userName=" امين "  userImage="PersonPic" />
+      <UserTitleAr message =' اهلا' userName=" امين "  userImage="PersonPic" />
 
       <div className="flex flex-col lg:gap-8 md:gap-3  ">
         <div className="flex flex-row-reverse lg:gap-10 md:gap-4  ">
