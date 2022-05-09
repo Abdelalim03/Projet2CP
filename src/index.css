@@ -128,7 +128,7 @@ code {
 .Fleche .FlechePleine{
   display: none;
 }
-.Fleche:hover .FlechePleine{
+.Fleche:hover .FlechePleine{ 
   display: inline;
 }
 

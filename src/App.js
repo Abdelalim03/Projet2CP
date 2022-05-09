@@ -14,6 +14,7 @@ import CoursContent from "./pages/Cours/CoursContent";
 import Cours2 from "./pages/Cours/Cours2";
 import NoPage2 from "./pages/NoPage/NoPage2";
 import Exercices2 from "./pages/Exercices/Exercices2";
+import ExerciceAr from "./pages/Exercices/ExerciceAr";
 
 function App() {
   return (
@@ -21,7 +22,6 @@ function App() {
     <Routes>
       <Route path="/" >
       <Route index element={<Langue />} />
-
         <Route path="welcome"  >
           <Route path="arabe" element={<NoPage />} />
           <Route path="francais" element={<Landing />} />

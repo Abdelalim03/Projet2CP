@@ -18,7 +18,7 @@ function BoxBloquee(props) {
                  {props.numExoBloque}
             </div>
             <div className='toShow2 lg:mt-3 mt-2 hidden w-fit text-center lg:text-[21px] text-[14px] font-bold text-white m-auto lg:rounded-[20px] rounded-[15px] '>
-                Vous devez avoir la clé {props.numExoPrecedent}
+                Vous devez avoir la clé  {props.numExoPrecedent}
             </div>
             <div className='lock2 hidden w-[100%] lg:h-14 h-[42px] lg:mt-2 mt-[8px]'>
                 <img  className='w-[75%] h-[95%]' src='/Exercices/BLock.svg'/>
