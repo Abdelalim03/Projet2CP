@@ -11,20 +11,15 @@ import Langue from "./pages/Langue/Langue";
 import Quiz from "./pages/Quiz/Quiz";
 import Layout from "./Components/Layout";
 import CoursContent from "./pages/Cours/CoursContent";
-import Exercices2 from "./pages/Exercices/Exercices2";
-import BoxBloquee from "./pages/Exercices/BoxBloquee";
 import Cours2 from "./pages/Cours/Cours2";
 import NoPage2 from "./pages/NoPage/NoPage2";
-import AvatarAr from "./pages/Avatar/AvatarAr";
-
-
 
 function App() {
   return (
     <Router>
     <Routes>
       <Route path="/" >
-      <Route index element={<Langue />} />
+        <Route index element={<Langue />} />
 
         <Route path="welcome" element={<Landing />} />
         <Route path="choix" element={<EtesVous />} />
@@ -41,14 +36,10 @@ function App() {
           <Route path="dessiner" element={<Editeur />} />
           <Route path="*" element={<NoPage2 />} />
         </Route>
-      </Route>
-        
-        
-        
-    </Routes>
-  </Router>
+        </Route>
+      </Routes>
+    </Router>
   );
 }
-        
 
 export default App;

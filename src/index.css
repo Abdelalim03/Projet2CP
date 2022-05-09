@@ -183,4 +183,7 @@ input[type=number]::-webkit-inner-spin-button {
   .symapp-container-wail { 
     @apply  md:pl-[20px] lg:pl-[50px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen
   }
+  .symapp-container-Ar{
+    @apply  md:pr-[40px] lg:pr-[70px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen w-screen font-["Tajawal"]
+  }
 }

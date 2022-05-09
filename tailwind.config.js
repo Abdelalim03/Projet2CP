@@ -15,7 +15,7 @@ module.exports = {
         "symapp-blue": "#3B52B5",
       },
       animation: {
-        avatar: 'avatar 2s ease-in-out 1',
+        avatar: "avatar 2s ease-in-out 1",
       },
       keyframes: {
         avatar: {

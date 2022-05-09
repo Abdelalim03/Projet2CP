@@ -5,9 +5,8 @@ import Absolute from './Absolute'
 
 
 function Avatar() {
-    let params = useParams();
+    let {id} = useParams();
 
-    console.log(params);
     const paths = ["/avatar/Group-1.svg",
     "/avatar/Group-2.svg",
     "/avatar/Group-3.svg",
@@ -23,7 +22,7 @@ function Avatar() {
     const [image, setImage] = useState("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");
     const [animate, setanimate] = useState("")
 
-    const url = "http://localhost:5000/users/"+params.id;
+    const url = "http://localhost:5000/users/"+id;
   return (
 
   <div className='relative h-screen w-screen selection:bg-fuchsia-300'>
@@ -53,7 +52,7 @@ function Avatar() {
                         setanimate("animate-[avatar_2s_ease-in-out_1]");
                         setTimeout(()=>{
                             axios.patch(url, {"avatar":path});
-                            navigate(`/home/${params.id}`);
+                            navigate(`/home/${id}`);
                         },1500);
                         }
                         } key={path} src={path} alt='avatrar'/>
