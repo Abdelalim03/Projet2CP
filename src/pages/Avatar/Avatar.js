@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import GetCurrentUser from '../../Components/GetCurrentUser';
+import GetLanguage from '../../Components/GetLanguage';
 import Absolute from './Absolute'
 
 
@@ -16,6 +17,8 @@ function Avatar() {
     "/avatar/Group-8.svg",
     "/avatar/Group-9.svg",
     "/avatar/Group.svg"];
+
+    const language = GetLanguage();
     const navigate = useNavigate();
 
     const [image, setImage] = useState("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");
@@ -28,9 +31,11 @@ function Avatar() {
     //     console.log(image);
     //     navigate(`/menu/${image}`);
     // }
-    const url = "http://localhost:5000/users/"+GetCurrentUser()
+    
+    let { id } = useParams(); 
+    const url = "http://localhost:5000/users/"+id
   return (
-
+    
   <div className='relative h-screen w-screen selection:bg-fuchsia-300'>
       <Absolute/>
       
@@ -38,7 +43,8 @@ function Avatar() {
           
           <img className='absolute h-4 lg:h-6 w-4 lg:w-6 left-[20%] top-[42%] select-none' src='/avatar/Vector.svg' alt='vector' />
           <div className='pt-10'>
-                <h1 className='text-[#194084] font-semibold text-2xl lg:text-4xl'>Choisissez votre personnage</h1>
+                { (language==="français")&& <h1 className='text-[#194084] font-semibold text-2xl lg:text-4xl'>Choisissez votre personnage</h1>  }
+                { (language==="arabe")&&  <h1 className="text-[#194084] font-['Tajawal'] font-semibold text-2xl lg:text-4xl">إختر احدى الشخصيات</h1> }
                 <div className='flex justify-center p-10 lg:pt-16'>
                     <div className='bg-[#F47458] bg-opacity-20 h-28 lg:h-36 w-28 lg:w-36 transition-all duration-500 rounded-[50%]'>
                     {/* <img className='h-[80%] w-[100%] mt-[20%] '  src="" alt='avatrar'/> */}
@@ -58,10 +64,12 @@ function Avatar() {
                     <img className='h-[80%] w-[100%] mt-[20%] ' onClick={()=>{
                         setImage(path);
                         setanimate("animate-[avatar_2s_ease-in-out_1]");
-                        setTimeout(()=>{
-                            axios.patch(url, {"avatar":path});
-                            navigate(`/home`);
-                        },1500);
+                        setTimeout(()=>{  
+                            axios.patch(url, {"avatar":path}).then(resp =>{
+                                navigate(`/home/${resp.data.id}`);
+                            }
+                            )
+                        },1500);    
                         }
                         } key={path} src={path} alt='avatrar'/>
                 </div>

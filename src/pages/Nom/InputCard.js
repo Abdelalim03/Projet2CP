@@ -39,22 +39,17 @@ function InputCard() {
         axios.get("http://localhost:5000/users?nom="+username.trim())
         .then(resp=>{
           if (resp.data.length){
-          axios.patch('http://localhost:5000/parametres',{"currentUser":resp.data[0].id} ).then(res => {
-            navigate(`/home/${resp.data.id}`);
-          }).catch(errorr => {
-              console.log(errorr);
-          });
-        }else{
+          axios.patch('http://localhost:5000/parametres',{"currentUser":resp.data[0].id} )
+            navigate(`/home/${resp.data[0].id}`);  
+          }else{
           axios.post('http://localhost:5000/users',{
           "nom": username.trim(),
           "avatar": "",
           "exercices": [],
           "cours": ""})
           .then(res => {
-            axios.patch('http://localhost:5000/parametres',{"currentUser":res.data.id} ).then(res => {
+            axios.patch('http://localhost:5000/parametres',{"currentUser":res.data.id} )
               navigate(`/avatar/${res.data.id}`);
-          })
-            
           }).catch(error => {
               console.log(error);
           });

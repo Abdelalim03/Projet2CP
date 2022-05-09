@@ -1,16 +1,15 @@
+import axios from "axios";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import UserTitle from "../../Components/UserTitle";
 import CustomCard from "./CustomCard";
 
 export default function Menu() {
-  
+  let {id} = useParams();
   return (
     // <div className=" bg-symapp-blue-light-second">
-
     <div className=" symapp-container  ">
       <UserTitle userName = 'Amine' userImage='PersonPic'/>
-
       <div className="flex flex-col lg:gap-8 md:gap-3">
         <div className="flex flex-row lg:gap-10 md:gap-4  ">
           <div className="flex flex-col gap-3 ">

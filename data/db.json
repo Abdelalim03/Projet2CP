@@ -1,7 +1,7 @@
 {
   "parametres": {
     "langue": "français",
-    "currentUser": 2
+    "currentUser": 0
   },
   "users": [
     {
@@ -17,6 +17,55 @@
       "exercices": [],
       "cours": "",
       "id": 2
+    },
+    {
+      "nom": "kkkkkkkk",
+      "avatar": "",
+      "exercices": [],
+      "cours": "",
+      "id": 3
+    },
+    {
+      "nom": "eeeeeee",
+      "avatar": "/avatar/Group-5.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 5
+    },
+    {
+      "nom": "احمد",
+      "avatar": "/avatar/Group-5.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 6
+    },
+    {
+      "nom": "ahmed",
+      "avatar": "/avatar/Group-5.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 7
+    },
+    {
+      "nom": "him",
+      "avatar": "/avatar/Group-1.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 8
+    },
+    {
+      "nom": "waiil",
+      "avatar": "/avatar/Group-1.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 9
+    },
+    {
+      "nom": "waiiil",
+      "avatar": "/avatar/Group-3.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 10
     }
   ]
 }
