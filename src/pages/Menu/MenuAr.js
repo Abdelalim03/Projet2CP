@@ -3,13 +3,13 @@ import { Link, useParams } from "react-router-dom";
 import UserTitleAr from "../../Components/UserTitleAr";
 import CustomCardAr from "./CustomCardAr";
 
-export default function Menu() {
+export default function MenuAr({userName, userAvatar}) {
   return (
     // <div className=" bg-symapp-blue-light-second">
 
     <div className=" symapp-container-Ar items-end  ">
       <div dir="rtl" > 
-      <UserTitleAr message="  اهلا" userName="  امين !" userImage="PersonPic" />
+      <UserTitleAr message=" اهلا" userName={userName} userImage={userAvatar}  />
 
       </div>
 

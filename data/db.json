@@ -1,43 +1,15 @@
 {
   "parametres": {
-    "langue": "arabe",
-    "currentUser": 0
+    "langue": "français",
+    "currentUser": 1
   },
   "users": [
     {
-      "id": 1,
       "nom": "Amine",
-      "avatar": "",
-      "exercices": [],
-      "cours": ""
-    },
-    {
-      "nom": "newUser",
-      "avatar": "/avatar/Group-1.svg",
+      "avatar": "/avatar/Group.svg",
       "exercices": [],
       "cours": "",
-      "id": 2
-    },
-    {
-      "nom": "a",
-      "avatar": "/avatar/Group-1.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 3
-    },
-    {
-      "nom": "ggg",
-      "avatar": "/avatar/Group-1.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 4
-    },
-    {
-      "nom": "تثختسخش",
-      "avatar": "/avatar/Group-1.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 5
+      "id": 1
     }
   ],
   "courses": [

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import UserTitleAr from "../../Components/UserTitleAr";
 import Chapitre from "./Chapitre";
-function CoursAr() {
+function CoursAr({userName, userAvatar}) {
   const [Courses, SetCourses] = useState(null);
   useEffect(() => {
     fetch("http://localhost:5000/courses")
@@ -16,7 +16,7 @@ function CoursAr() {
   return (
     <div dir="rtl" className="symapp-container-Ar">
       <div className="w-[80%] h-32 mb-0 lg:mb-10">
-      <UserTitleAr message ='  اهلا' userName=" امين ! "  userImage="PersonPic" />
+      <UserTitleAr message=" اهلا" userName={userName} userImage={userAvatar}  />
         <p className="ml-2 lg:ml-3 lg:mt-5 md:mt-3 font-['Tajawal'] font-semibold md:text-sm lg:text-xl">
           لنتعلم شيئا اليوم !
         </p>
