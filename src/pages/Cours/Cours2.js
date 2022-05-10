@@ -5,7 +5,7 @@ function Cours2() {
   const [Courses, SetCourses] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:4000/courses")
+    fetch("http://localhost:5000/courses")
       .then((res) => {
         return res.json();
       })
@@ -22,7 +22,7 @@ function Cours2() {
           Apprenons quelque chose de nouveau aujourd'hui !
         </p>
       </div>
-      <div className="h-[325px] lg:h-[450px] w-[600px] lg:w-[930px] overflow-auto ">
+      <div className="shadow-lg p-3 pt-6 rounded-md h-[325px] lg:h-[450px] w-[600px] lg:w-[930px] overflow-auto ">
         {Courses &&
           Courses.map((course) => {
             return (

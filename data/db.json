@@ -1,7 +1,7 @@
 {
   "parametres": {
-    "langue": "",
-    "currentUser": 0
+    "langue": "français",
+    "currentUser": 1
   },
   "users": [
     {
@@ -10,6 +10,55 @@
       "avatar": "",
       "exercices": [],
       "cours": ""
+    },
+    {
+      "nom": "Hakim",
+      "avatar": "/avatar/Group-5.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 2
     }
-  ]
+  ],
+  "courses" : [
+    {
+        "id":1,
+        "titre" :"la symmetrie d’un point par rapport a un point",
+        "ImageCours":"/Cours/imgCours/CoursPic.svg",
+        "Quiz":"Quiz 01",
+        "QuizExp":20
+
+    },
+    {
+        "id":2,
+        "titre" :"Symmetrie centrale 02 ",
+        "ImageCours":"/Cours/imgCours/CoursPic.svg",
+        "Quiz":"Quiz 2",
+        "QuizExp":100
+
+    },
+    {
+        "id":3,
+        "titre" :"Symmetrie axiale centrale 03 ",
+        "ImageCours":"/Cours/imgCours/CoursPic.svg",
+        "Quiz":"Quiz 03",
+        "QuizExp":40
+
+    },
+    {
+        "id":4,
+        "titre" :"Symmetrie axiale centrale 04 ",
+        "ImageCours":"/Cours/imgCours/CoursPic.svg",
+        "Quiz":"Quiz 04",
+        "QuizExp":40
+
+    },
+    {
+        "id":5,
+        "titre" :"Symmetrie axiale centrale 05 ",
+        "ImageCours":"/Cours/imgCours/CoursPic.svg",
+        "Quiz":"Quiz 05",
+        "QuizExp":40
+
+    }
+]
 }

@@ -8,8 +8,8 @@ function Exercices2() {
   return (
     <div className='symapp-container'>
       <div className=' relative bg-white rounded-l-2xl lg:rounded-l-3xl w-[92%] '>
-          <div className='absolute top-[44px] lg:left-8 left-4 lg:h-[620px] h-[450px] lg:w-[1000px] w-[710px]'>
-          <     Link to="../exercices">
+          <div className='absolute top-[44px] lg:left-8 left-4  lg:w-[1000px] w-[710px]'>
+          <Link to="../exercices">
                 <button className='Fleche'>
                    <img className='absolute left-0 lg:top-[495px] top-[355px] lg:h-[85px] lg:w-[150px] h-[45px] w-[110px]' src='/Exercices/FlecheG.svg' alt='FlecheB'/>
                    <img className='FlechePleine absolute left-0 lg:top-[495px] top-[355px] lg:h-[85px] lg:w-[150px] h-[45px] w-[110px]' src='/Exercices/FlecheGpleine.svg' alt='FlecheB'/>

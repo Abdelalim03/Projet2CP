@@ -7,14 +7,15 @@ import BoxBloquee from './BoxBloquee'
 function Exercices() {
   return (
     <div className='symapp-container'>
-      <div className=' relative bg-white rounded-l-2xl lg:rounded-l-3xl w-[92%] '>
-          <div className=' absolute lg:left-[45px] left-[32px] top-0 flex flex-row'>
+      <div className=' relative bg-white rounded-l-2xl lg:rounded-l-3xl w-[92%] flex justify-center items-center flex-col '>
+          <div className=' relative left-4 lg:left-7  flex flex-row'>
             <img className='mt-5  lg:w-[120px] lg:h-[145px] w-[90px] h-[110px]' src='/Exercices/FlecheGif.gif' alt='FlecheB'/>
-            <p className='mt-6 lg:pl-24 pl-8 lg:pr-8 font-semibold text-[#194084] lg:text-[18px] text-[14px] '>Obtenez les clés en résolvant les exercices pour obtenir le cadeau !  </p>
+            <p className='mt-6 mr-6 lg:pl-24 pl-8 lg:pr-8 font-semibold text-[#194084] lg:text-[18px] text-[14px] '>Obtenez les clés en résolvant les exercices pour obtenir le cadeau !  </p>
+            <img className=' lg:h-[80px] h-[60px]' src='/Exercices/GiftGif.gif' alt='Gift'/>
           </div>
-          <img className='absolute lg:left-[940px] left-[640px] lg:h-[80px] h-[60px]' src='/Exercices/GiftGif.gif' alt='Gift'/>
+          
 
-          <div className='absolute top-[44px] left-0 lg:h-[620px] h-[450px] lg:w-[940px] w-[710px]'>
+          <div className='relative -top-20 left-5 lg:left-0   lg:w-[940px] w-[710px]'>
             <div className='relative'> 
                 <div className='absolute lg:top-[110px] top-[80px]'> <Box numExo="01" display1="hidden" display2="hidden" display3="hidden" display4="hidden"/> </div>
                 <div className='absolute lg:top-[218px] top-[158px]'> <BoxBloquee numExoPrecedent="01" numExoBloque="02" display1="hidden" display2="hidden" display3="hidden" display4="hidden"/> </div>

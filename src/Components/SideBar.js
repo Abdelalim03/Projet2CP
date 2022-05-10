@@ -37,7 +37,7 @@ export default function SideBar(props) {
                   <ul className={`flex flex-col  gap-6  `}>
                     <li>
                       <Link
-                        to="../home"
+                        to="./"
                         className="flex items-center hover:bg-symapp-pink  "
                       >
                         <img
@@ -61,7 +61,7 @@ export default function SideBar(props) {
 
                     <li>
                       <Link
-                        to="../home/cours"
+                        to="./cours"
                         className="flex items-center hover:bg-symapp-pink  "
                       >
                         <img
@@ -85,7 +85,7 @@ export default function SideBar(props) {
 
                     <li>
                       <Link
-                        to="../home/exercices"
+                        to="./exercices"
                         className="flex items-center hover:bg-symapp-pink    "
                       >
                         <img
@@ -108,7 +108,7 @@ export default function SideBar(props) {
                     </li>
                     <li>
                       <Link
-                        to="../home/dessiner"
+                        to="./dessiner"
                         className="flex items-center hover:bg-symapp-pink   "
                       >
                         <img
@@ -131,7 +131,7 @@ export default function SideBar(props) {
                     </li>
                     <li className="lg:mt-20">
                       <Link
-                        to="../home/parametres"
+                        to="./parametres"
                         className="flex items-center hover:bg-symapp-pink   "
                       >
                         <img
