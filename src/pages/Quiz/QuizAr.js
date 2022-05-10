@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function QuizAr() {
   return (
-    <div className="flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen">
+    <div className="flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen  font-['Tajawal'] w-screen">
       <div className=" flex flex-col justify-start gap-5">
         <div dir='rtl' className="bg-symapp-blue lg:h-40 md:h-20 lg:rounded-tl-[50px] md:rounded-tl-[30px] flex justify-between pl-4 pr-4">
           <div dir='rtl' className="flex items-center gap-10">

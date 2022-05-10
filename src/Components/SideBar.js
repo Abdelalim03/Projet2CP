@@ -14,7 +14,7 @@ export default function SideBar(props) {
                 isOpen ? "lg:w-64 md:w-[150px]" : "lg:w-24 md:w-[66px]"
               }  h-screen bg-symapp-blue-light-second ease-out duration-700 `}
             >
-              <button onClick={showSidebar}>
+                <button onClick={showSidebar}>
                 <div className="absolute lg:ml-4 lg:mt-10 md:ml-2 md:mt-4">
                   <>
                     {isOpen ? (
@@ -31,6 +31,7 @@ export default function SideBar(props) {
                   </>
                 </div>
               </button>
+
 
               <div className=" flex flex-col  md:gap-4 md:mt-16 lg:mt-28 font-bold  ">
                 <nav>
@@ -190,7 +191,7 @@ export default function SideBar(props) {
                   <ul className={`flex flex-col  gap-6  `}>
                     <li>
                       <Link
-                        to="../home"
+                        to="./"
                         className="flex items-center hover:bg-symapp-pink flex-row-reverse "
                       >
                         <img
@@ -214,7 +215,7 @@ export default function SideBar(props) {
 
                     <li>
                       <Link
-                        to="../home/cours"
+                        to="./cours"
                         className="flex items-center hover:bg-symapp-pink  flex-row-reverse"
                       >
                         <img
@@ -238,7 +239,7 @@ export default function SideBar(props) {
 
                     <li>
                       <Link
-                        to="../home/exercices"
+                        to="./exercices"
                         className="flex items-center hover:bg-symapp-pink flex-row-reverse    "
                       >
                         <img
@@ -261,7 +262,7 @@ export default function SideBar(props) {
                     </li>
                     <li>
                       <Link
-                        to="../home/dessiner"
+                        to="./dessiner"
                         className="flex items-center hover:bg-symapp-pink flex-row-reverse  "
                       >
                         <img
@@ -284,7 +285,7 @@ export default function SideBar(props) {
                     </li>
                     <li className="lg:mt-20">
                       <Link
-                        to="../home/parametres"
+                        to="./parametres"
                         className="flex items-center hover:bg-symapp-pink  flex-row-reverse "
                       >
                         <img

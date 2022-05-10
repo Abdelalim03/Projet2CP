@@ -1,7 +1,7 @@
 {
   "parametres": {
-    "langue": "français",
-    "currentUser": 1
+    "langue": "arabe",
+    "currentUser": 3
   },
   "users": [
     {
@@ -12,53 +12,79 @@
       "cours": ""
     },
     {
-      "nom": "Hakim",
-      "avatar": "/avatar/Group-5.svg",
+      "nom": "newUser",
+      "avatar": "/avatar/Group-1.svg",
       "exercices": [],
       "cours": "",
       "id": 2
+    },
+    {
+      "nom": "a",
+      "avatar": "/avatar/Group-1.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 3
+    },
+    {
+      "nom": "ggg",
+      "avatar": "/avatar/Group-1.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 4
+    },
+    {
+      "nom": "تثختسخش",
+      "avatar": "/avatar/Group-1.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 5
     }
   ],
-  "courses" : [
+  "courses": [
     {
-        "id":1,
-        "titre" :"la symmetrie d’un point par rapport a un point",
-        "ImageCours":"/Cours/imgCours/CoursPic.svg",
-        "Quiz":"Quiz 01",
-        "QuizExp":20
-
+      "id": 1,
+      "titre": "la symmetrie d’un point par rapport a un point",
+      "titreAr": "التناظر بالنسبة لنقطة",
+      "ImageCours": "/Cours/imgCours/CoursPic.svg",
+      "Quiz": "Quiz 01",
+      "QuizAr": "استجواب 01",
+      "QuizExp": 20
     },
     {
-        "id":2,
-        "titre" :"Symmetrie centrale 02 ",
-        "ImageCours":"/Cours/imgCours/CoursPic.svg",
-        "Quiz":"Quiz 2",
-        "QuizExp":100
-
+      "id": 2,
+      "titre": "Symmetrie centrale 02 ",
+      "titreAr": "   02 التناظر بالنسبة لنقطة ",
+      "ImageCours": "/Cours/imgCours/CoursPic.svg",
+      "Quiz": "Quiz 2",
+      "QuizAr": "استجواب 02",
+      "QuizExp": 100
     },
     {
-        "id":3,
-        "titre" :"Symmetrie axiale centrale 03 ",
-        "ImageCours":"/Cours/imgCours/CoursPic.svg",
-        "Quiz":"Quiz 03",
-        "QuizExp":40
-
+      "id": 3,
+      "titre": "Symmetrie axiale centrale 03 ",
+      "titreAr": "   03 التناظر بالنسبة لنقطة ",
+      "ImageCours": "/Cours/imgCours/CoursPic.svg",
+      "Quiz": "Quiz 03",
+      "QuizAr": "استجواب 01",
+      "QuizExp": 40
     },
     {
-        "id":4,
-        "titre" :"Symmetrie axiale centrale 04 ",
-        "ImageCours":"/Cours/imgCours/CoursPic.svg",
-        "Quiz":"Quiz 04",
-        "QuizExp":40
-
+      "id": 4,
+      "titre": "Symmetrie axiale centrale 04 ",
+      "titreAr": "   04 التناظر بالنسبة لنقطة ",
+      "ImageCours": "/Cours/imgCours/CoursPic.svg",
+      "Quiz": "Quiz 04",
+      "QuizAr": "استجواب 01",
+      "QuizExp": 40
     },
     {
-        "id":5,
-        "titre" :"Symmetrie axiale centrale 05 ",
-        "ImageCours":"/Cours/imgCours/CoursPic.svg",
-        "Quiz":"Quiz 05",
-        "QuizExp":40
-
+      "id": 5,
+      "titre": "Symmetrie axiale centrale 05 ",
+      "titreAr": "   05 التناظر بالنسبة لنقطة ",
+      "ImageCours": "/Cours/imgCours/CoursPic.svg",
+      "Quiz": "Quiz 05",
+      "QuizAr": "استجواب 01",
+      "QuizExp": 40
     }
-]
+  ]
 }

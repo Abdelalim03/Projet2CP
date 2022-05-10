@@ -8,20 +8,23 @@ export default function Menu() {
     // <div className=" bg-symapp-blue-light-second">
 
     <div className=" symapp-container-Ar items-end  ">
-      <UserTitleAr message =' اهلا' userName=" امين "  userImage="PersonPic" />
+      <div dir="rtl" > 
+      <UserTitleAr message="  اهلا" userName="  امين !" userImage="PersonPic" />
+
+      </div>
 
       <div className="flex flex-col lg:gap-8 md:gap-3  ">
         <div className="flex flex-row-reverse lg:gap-10 md:gap-4  ">
           <div className="flex flex-col gap-3 items-end  ">
             <p className="font-semibold text-black lg:text-2xl ml-4 text-lg ">
-              !تعلم 
+              !تعلم
             </p>
             <div className="container flex bg-symapp-purple lg:rounded-[40px] md:rounded-[30px] lg:h-[210px] md:h-40 lg:w-[595px] md:w-[400px] items-center justify-between flex-row-reverse ">
               <div className="flex flex-col justify-evenly items-center lg:ml-10 lg:gap-2 md:gap-2 md:ml-2 ">
                 <h1 className="text-white font-bold lg:text-[43px] md:text-2xl ">
                   دروس
                 </h1>
-                <p  className="text-white lg:text-base md:text-xs text-right pr-8  font-bold  md:ml-5   ">
+                <p className="text-white lg:text-base md:text-xs text-right pr-8  font-bold  md:ml-5   ">
                   تناظر محوري و مركزي
                 </p>
                 <Link to="./cours">

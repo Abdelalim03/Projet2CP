@@ -1,19 +1,20 @@
-import React,{useState} from 'react'
+import React from 'react'
+import GetLanguage from '../../Components/GetLanguage';
 
 import QuizFr from './QuizFr';
 import QuizAr from './QuizAr';
 
 function Quiz() {
-  const [langue, setLangue] = useState("");
-
-  return (    
-     <>
-{ (langue==="français")? <QuizFr /> : <QuizAr /> }
-     </>
-   
-  )
+  const language = GetLanguage();
+    return (    
+      <>
+ { (language==="français")&& <QuizFr />  }
+ { (language==="arabe")&&  <QuizAr /> }
+      </>
     
+   )
+    }
   
-}
+
 
 export default Quiz
