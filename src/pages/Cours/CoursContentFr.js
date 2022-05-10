@@ -6,27 +6,27 @@ import WebViewer from "@pdftron/pdfjs-express-viewer";
 
 export default function CoursContent() {
   const [Course, SetCourse] = useState(null);
+  const [isLoading, setisLoading] = useState(true);
   const { coursId } = useParams();
   const ChaptreId = "0" + coursId;
 
   useEffect(() => {
-    setTimeout(() => {
-      fetch(`http://localhost:5000/courses/${coursId}`)
-        .then((res) => {
-          if (!res.ok) {
-            throw Error("Could not fetch from this res !!");
-          }
-          console.log(res);
-          return res.json();
-        })
-        .then((Course) => {
-          SetCourse(Course);
-          console.log(Course);
-        })
-        .catch((err) => {
-          console.log(err.message);
-        });
-    }, 1000);
+    fetch(`http://localhost:5000/courses/${coursId}`)
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("Could not fetch from this res !!");
+        }
+        console.log(res);
+        return res.json();
+      })
+      .then((Course) => {
+        SetCourse(Course);
+        setisLoading(false);
+        console.log(Course);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
   }, []);
 
   const viewer = useRef(null);
@@ -60,6 +60,11 @@ export default function CoursContent() {
                 {`${Course.titre}`}
               </p>
             )}
+            {isLoading && (
+              <p className=" ml-3 lg:text-lg md:text-sm text-white ">
+                Veuillez patientez Svp !
+              </p>
+            )}
           </div>
         </div>
         <label type="file">
@@ -72,10 +77,18 @@ export default function CoursContent() {
         </label>
       </div>
 
-      <div
-        className="h-[100%] w-[100%] bg-slate-500 flex items-center justify-center"
-        ref={viewer}
-      ></div>
+      {isLoading && (
+        <div className="h-[100%] w-[100%] bg-slate-500 flex items-center justify-center">
+          Veuillez patientez Svp !
+        </div>
+      )}
+
+      {Course && (
+        <div
+          className="h-[100%] w-[100%] bg-slate-500 flex items-center justify-center"
+          ref={viewer}
+        ></div>
+      )}
     </div>
   );
 }
