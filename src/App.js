@@ -16,13 +16,28 @@ import NoPage2 from "./pages/NoPage/NoPage2";
 import Exercices2 from "./pages/Exercices/Exercices2";
 import Landing from "./pages/Landing/Landing";
 
+
+import Cours2Prof from "./pages/CoursProf/Cours2Prof";
+function App() {
+  return (
+        <Router>
+      <Routes>
+        <Route path="/" >
+          <Route index element={<Cours2Prof/>} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
+}
+export default App;
+{/*
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/">
           <Route index element={<Langue />} />
-
           <Route path="welcome" element={<Landing />} />
           <Route path="choix" element={<EtesVous />} />
           <Route path="nom" element={<Nom />} />
@@ -45,4 +60,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/}
