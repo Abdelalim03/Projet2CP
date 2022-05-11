@@ -59,8 +59,8 @@ const Dropdown = ({ color }) => {
                 onClick={(e) => e.preventDefault()}
               >
                 <div className="flex items-center gap-7">
-              <img className="w-5" src="/Prof/Trash.svg" alt="icon" />
-                <span>Supprimer</span>
+              <img className="w-5" src="/Prof/3dots.svg" alt="icon" />
+                <span>Action</span>
                 </div>
               </a>
               <div className="h-0 my-2 border border-solid border-t-0 border-slate-800 opacity-25" />
