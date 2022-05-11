@@ -1,6 +1,4 @@
 import React from 'react'
-import SideBar from '../../Components/SideBar'
-import UserTitle from '../../Components/UserTitle'
 import InsPolygoneContent from './InsPolygoneContent'
 import RotateContent from './RotateContent'
 function EditeurFr() {
