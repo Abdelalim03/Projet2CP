@@ -1,20 +1,45 @@
 import { useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import WebViewer from "@pdftron/pdfjs-express-viewer";
 
 // import SamplePdf from "./SymétrieCours.pdf";
 
 export default function CoursContentProf() {
-  const viewer = useRef(null);
+  const [Course, SetCourse] = useState(null);
+  const [isLoading, setisLoading] = useState(true);
+  const { coursId } = useParams();
+  const ChaptreId = "0" + coursId;
+
   useEffect(() => {
-    WebViewer(
-      {
-        path: "/public/pdfjsviewer",
-        initialDoc: "/public/SymétrieCours.pdf",
-      },
-      viewer.current
-    ).then((instance) => {});
+    fetch(`http://localhost:5000/courses/${coursId}`)
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("Could not fetch from this res !!");
+        }
+        console.log(res);
+        return res.json();
+      })
+      .then((Course) => {
+        SetCourse(Course);
+        setisLoading(false);
+        console.log(Course);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
   }, []);
+
+  const viewer = useRef(null);
+  // useEffect(() => {
+  //   WebViewer(
+  //     {
+  //       path: "/public/pdfjsviewer",
+  //       initialDoc: "/public/SymétrieCours.pdf",
+  //     },
+  //     viewer.current
+  //   ).then((instance) => {});
+  // }
+  //    }) , []);
   // const [PdfFile, setpdfFile] = useState(SamplePdf);
 
   return (
@@ -28,11 +53,18 @@ export default function CoursContentProf() {
           </Link>
           <div className="flex flex-col gap-1 items-start">
             <h1 className=" ml-3 lg:text-3xl md:text-lg text-white font-bold ">
-              Chapitre 01{" "}
+              Chapitre {`${ChaptreId}`}
             </h1>
-            <p className=" ml-3 lg:text-lg md:text-sm text-white ">
-              Chapitre Description{" "}
-            </p>
+            {Course && (
+              <p className=" ml-3 lg:text-lg md:text-sm text-white ">
+                {`${Course.titre}`}
+              </p>
+            )}
+            {isLoading && (
+              <p className=" ml-3 lg:text-lg md:text-sm text-white ">
+                Veuillez patientez Svp !
+              </p>
+            )}
           </div>
         </div>
         <label type="file">
@@ -45,11 +77,18 @@ export default function CoursContentProf() {
         </label>
       </div>
 
-      <div
-        className="h-[100%] w-[100%] bg-slate-500 flex items-center justify-center"
-        ref={viewer}
-      ></div>
+      {isLoading && (
+        <div className="h-[100%] w-[100%] bg-slate-500 flex items-center justify-center">
+          Veuillez patientez Svp !
+        </div>
+      )}
+
+      {Course && (
+        <div
+          className="h-[100%] w-[100%] bg-slate-500 flex items-center justify-center"
+          ref={viewer}
+        ></div>
+      )}
     </div>
   );
 }
-
