@@ -16,14 +16,17 @@ import NoPage2 from "./pages/NoPage/NoPage2";
 import Exercices2 from "./pages/Exercices/Exercices2";
 import Landing from "./pages/Landing/Landing";
 
-
 import Cours2Prof from "./pages/CoursProf/Cours2Prof";
+import ContinueAs from "./pages/CoursProf/ContinueAs";
+
 function App() {
   return (
         <Router>
       <Routes>
         <Route path="/" >
           <Route index element={<Cours2Prof/>} />
+{/*          <Route index element={<ContinueAs/>} />
+*/}
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
