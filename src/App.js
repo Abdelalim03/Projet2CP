@@ -25,10 +25,10 @@ function App() {
         <Router>
       <Routes>
         <Route path="/" >
-          <Route index element={<ContinueAs/>} />
 {/*          
+          <Route index element={<ContinueAs/>} />
+        */}
           <Route index element={<Cours2Prof/>} />
-*/}
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

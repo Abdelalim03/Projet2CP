@@ -16,10 +16,10 @@ function CoursProf({userName, userAvatar}) {
   return (
     <div className="symapp-container">
       <div className="w-[80%] h-32 mb-0 lg:mb-10">
-        <UserTitle message="Salut" userName={userName} userImage={userAvatar} />
+        <UserTitle message='Salut' userName='Monsieur / Madame' userImage='/Prof/EnseignantIcon.svg'/>
 
         <p className="ml-2 lg:ml-3 lg:mt-5 md:mt-3 font-semibold md:text-sm lg:text-xl">
-          Apprenons quelque chose de nouveau aujourd'hui !
+          Créeons un cours idéal pour nos étudiants !
         </p>
       </div>
       <div className="shadow-lg p-3 pt-6 rounded-md h-[325px] lg:h-[450px] w-[600px] lg:w-[930px] overflow-auto font-['Kodchasan'] ">
