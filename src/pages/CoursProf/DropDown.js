@@ -23,50 +23,61 @@ const Dropdown = ({ color }) => {
   return (
     <>
       <div className="flex flex-wrap">
-          <div className="relative inline-flex align-middle w-full">
-
-            <button
-              type="button"
-              ref={btnDropdownRef}
-              onClick={() => {
-                dropdownPopoverShow
-                  ? closeDropdownPopover()
-                  : openDropdownPopover();
-              }}
-            >
-              <img
-                className="w-4 lg:w-7 h-4 lg:h-7"
-                src="/Prof/3dots.svg"
-                alt="icon"
-              />
-
-            </button>
-            <div
-              ref={popoverDropdownRef}
+        <div className="relative inline-flex align-middle w-full">
+          <button
+            type="button"
+            ref={btnDropdownRef}
+            onClick={() => {
+              dropdownPopoverShow
+                ? closeDropdownPopover()
+                : openDropdownPopover();
+            }}
+          >
+            <img
+              className="w-4 lg:w-7 h-4 lg:h-7"
+              src="/Prof/3dots.svg"
+              alt="icon"
+            />
+          </button>
+          <div
+            ref={popoverDropdownRef}
+            className={
+              (dropdownPopoverShow ? "block " : "hidden ") +
+              (color === "white" ? "bg-white " : bgColor + " ") +
+              "text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1"
+            }
+            style={{ minWidth: "12rem" }}
+          >
+            <a
+              href="#link"
               className={
-                (dropdownPopoverShow ? "block " : "hidden ") +
-                (color === "white" ? "bg-white " : bgColor + " ") +
-                "text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1"
+                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent " +
+                (color === "white" ? " text-slate-700" : "text-white")
               }
-              style={{ minWidth: "12rem" }}
+              onClick={(e) => e.preventDefault()}
             >
-              <a
-                href="#link"
-                className={
-                  "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent " +
-                  (color === "white" ? " text-slate-700" : "text-white")
-                }
-                onClick={(e) => e.preventDefault()}
-              >
-                <div className="flex items-center gap-7">
-              <img className="w-5" src="/Prof/3dots.svg" alt="icon" />
+              <div className="flex items-center gap-7">
+                <img className="w-5" src="/Prof/3dots.svg" alt="icon" />
                 <span>Action</span>
-                </div>
-              </a>
-              <div className="h-0 my-2 border border-solid border-t-0 border-slate-800 opacity-25" />
-            </div>
+              </div>
+            </a>
+            <div className="h-0 my-2 border border-solid border-t-0 border-slate-800 opacity-25" />
+            <a
+              href="#link"
+              className={
+                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent " +
+                (color === "white" ? " text-slate-700" : "text-white")
+              }
+              onClick={(e) => e.preventDefault()}
+            >
+              <div className="flex items-center gap-7">
+                <img className="w-5" src="/Prof/3dots.svg" alt="icon" />
+                <span>Another Action</span>
+              </div>
+            </a>
           </div>
         </div>
+      </div>
     </>
   );
 };

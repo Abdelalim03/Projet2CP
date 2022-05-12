@@ -1,13 +1,10 @@
 import React from "react";
-export default function ConfirModal() {
+export default function DeleteConfirModal() {
   const [showModal, setShowModal] = React.useState(false);
   return (
     <>
-      <button
-       type="button"
-        onClick={() => setShowModal(true)}
-      >
-      <img className="w-5" src="/Prof/Trash.svg" alt="icon" />
+      <button type="button" onClick={() => setShowModal(true)}>
+        <img className="w-5" src="/Prof/Trash.svg" alt="icon" />
       </button>
       {showModal ? (
         <>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import UserTitle from "../../Components/UserTitle";
 import ChapitreProf from "./ChapitreProf";
-function CoursProf({userName, userAvatar}) {
+function CoursProf({ userName, userAvatar }) {
   const [Courses, SetCourses] = useState(null);
   useEffect(() => {
     fetch("http://localhost:5000/courses")
@@ -16,7 +16,11 @@ function CoursProf({userName, userAvatar}) {
   return (
     <div className="symapp-container">
       <div className="w-[80%] h-32 mb-0 lg:mb-10">
-        <UserTitle message='Salut' userName='Monsieur / Madame' userImage='/Prof/EnseignantIcon.svg'/>
+        <UserTitle
+          message="Salut"
+          userName="Monsieur / Madame"
+          userImage="/Prof/EnseignantIcon.svg"
+        />
 
         <p className="ml-2 lg:ml-3 lg:mt-5 md:mt-3 font-semibold md:text-sm lg:text-xl">
           Créeons un cours idéal pour nos étudiants !
