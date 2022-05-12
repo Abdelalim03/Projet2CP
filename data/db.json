@@ -1,6 +1,6 @@
 {
   "parametres": {
-    "langue": "",
+    "langue": "arabe",
     "currentUser": 0
   },
   "users": [
@@ -24,6 +24,13 @@
       "exercices": [],
       "cours": "",
       "id": 3
+    },
+    {
+      "nom": "a",
+      "avatar": "/avatar/Group-6.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 4
     }
   ],
   "courses": [

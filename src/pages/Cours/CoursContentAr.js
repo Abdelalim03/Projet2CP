@@ -1,10 +1,19 @@
-import { useEffect, useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import WebViewer from "@pdftron/pdfjs-express-viewer";
+import { Viewer, LocalizationMap, TextDirection } from "@react-pdf-viewer/core";
+import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 
-// import SamplePdf from "./SymétrieCours.pdf";
+import SamplePdf from "./SymétrieCours.pdf";
+import { Worker } from "@react-pdf-viewer/core";
+
+import ar_AE from "@react-pdf-viewer/locales/lib/ar_AE.json";
 
 export default function CoursContent() {
+  const defaultLayoutPluginInstance = defaultLayoutPlugin();
+  const [PdfFile, setpdfFile] = useState(SamplePdf);
   const [Course, SetCourse] = useState(null);
   const [isLoading, setisLoading] = useState(true);
 
@@ -33,29 +42,16 @@ export default function CoursContent() {
       });
   }, []);
 
-  const viewer = useRef(null);
-  // useEffect(() => {
-  //   WebViewer(
-  //     {
-  //       path: "/public/pdfjsviewer",
-  //       initialDoc: "/public/SymétrieCours.pdf",
-  //     },
-  //     viewer.current
-  //   ).then((instance) => {});
-  // }
-  //    }) , []);
-  // const [PdfFile, setpdfFile] = useState(SamplePdf);
-
   return (
-    <div className=" flex flex-col lg:gap-10 md:gap-2 lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen font-['Tajawal'] w-screen  ">
-      <div className="bg-symapp-blue lg:h-40 md:h-20 lg:rounded-tr-[50px] md:rounded-tr-[30px] flex items-center justify-between flex-row-reverse  ">
+    <div className=" flex flex-col lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen font-['Tajawal'] w-screen  ">
+      <div className="bg-symapp-blue lg:h-32 md:h-20 lg:rounded-tr-[50px] md:rounded-tr-[30px] flex items-center justify-between flex-row-reverse    ">
         <div className="flex items-center flex-row-reverse lg:gap-10 md:gap-2 pr-6 ">
           <Link to="../cours">
             <div className="flex justify-center items-center lg:w-14 lg:h-14 md:h-9 md:w-9 bg-[#FAE0B2] rounded-lg hover:cursor-pointer hover:scale-110 rotate-180 hover:shadow-sm">
               <img className="w-fit" src="/quiz/return.svg" alt="" />
             </div>
           </Link>
-          <div className="flex flex-col gap-1 items-start">
+          <div className="flex flex-col gap-1 items-end">
             <h1 className=" mr-3 lg:text-3xl md:text-lg text-white font-bold ">
               {`${ChaptreId}`} الدرس
             </h1>
@@ -71,27 +67,37 @@ export default function CoursContent() {
             )}
           </div>
         </div>
-        <label type="file">
-          <img
-            className="lg:w-12 md:w-8 hover:cursor-pointer hover:scale-110 hover:shadow-sm ml-8 "
-            src="/Cours/Icons/Upload.png"
-            alt=""
-          />
-          <input type="file" className="hidden" />
-        </label>
       </div>
 
       {isLoading && (
-        <div className="h-[100%] w-[100%] bg-slate-500 flex items-center justify-center">
+        <div className="h-[100%] w-[100%] bg-symapp-pink-light flex items-center justify-center">
           الرجاء الانتظار من فضلكم !
         </div>
       )}
 
       {Course && (
-        <div
-          className="h-[100%] w-[100%] bg-slate-500 flex items-center justify-center"
-          ref={viewer}
-        ></div>
+        <div className="h-[78%]  w-[100%]">
+          {PdfFile && (
+            <>
+              <Worker workerUrl={`${pdfjsWorker}`}>
+                <Viewer
+                  fileUrl={PdfFile}
+                  localization={ar_AE}
+                  plugins={[defaultLayoutPluginInstance]}
+                  theme={{
+                    direction: TextDirection.RightToLeft,
+                  }}
+                />
+              </Worker>
+            </>
+          )}
+
+          {!PdfFile && (
+            <div className="h-[100%] w-[100%] bg-symapp-blue-light flex items-center justify-center text-2xl">
+              الدرس غير متوفر حاليا, نعتذر منكم
+            </div>
+          )}
+        </div>
       )}
     </div>
   );
