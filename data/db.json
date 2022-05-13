@@ -1,7 +1,7 @@
 {
   "parametres": {
-    "langue": "arabe",
-    "currentUser": 3
+    "langue": "français",
+    "currentUser": 8
   },
   "users": [
     {
@@ -12,32 +12,53 @@
       "cours": ""
     },
     {
-      "nom": "newUser",
+      "nom": "vbvvv",
       "avatar": "/avatar/Group-1.svg",
       "exercices": [],
       "cours": "",
       "id": 2
     },
     {
-      "nom": "a",
-      "avatar": "/avatar/Group-1.svg",
+      "nom": "hhhh",
+      "avatar": "/avatar/Group-4.svg",
       "exercices": [],
       "cours": "",
       "id": 3
     },
     {
-      "nom": "ggg",
-      "avatar": "/avatar/Group-1.svg",
+      "nom": "ahmed",
+      "avatar": "/avatar/Group-5.svg",
       "exercices": [],
       "cours": "",
       "id": 4
     },
     {
-      "nom": "تثختسخش",
-      "avatar": "/avatar/Group-1.svg",
+      "nom": "eeeeeeee",
+      "avatar": "/avatar/Group-3.svg",
       "exercices": [],
       "cours": "",
       "id": 5
+    },
+    {
+      "nom": "dddd",
+      "avatar": "/avatar/Group-5.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 6
+    },
+    {
+      "nom": "Wail",
+      "avatar": "/avatar/Group-2.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 7
+    },
+    {
+      "nom": "jjjj",
+      "avatar": "/avatar/Group-5.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 8
     }
   ],
   "courses": [
@@ -48,7 +69,13 @@
       "ImageCours": "/Cours/imgCours/CoursPic.svg",
       "Quiz": "Quiz 01",
       "QuizAr": "استجواب 01",
-      "QuizExp": 20
+      "QuizExp": 20,
+      "Prop1": "",
+      "Prop2": "",
+      "Prop3": "",
+      "propCorrecte": "",
+      "ImageQuiz": "",
+      "CheminCours": ""
     },
     {
       "id": 2,
@@ -57,7 +84,13 @@
       "ImageCours": "/Cours/imgCours/CoursPic.svg",
       "Quiz": "Quiz 2",
       "QuizAr": "استجواب 02",
-      "QuizExp": 100
+      "QuizExp": 100,
+      "Prop1": "",
+      "Prop2": "",
+      "Prop3": "",
+      "propCorrecte": "",
+      "ImageQuiz": "",
+      "CheminCours": ""
     },
     {
       "id": 3,
@@ -66,7 +99,13 @@
       "ImageCours": "/Cours/imgCours/CoursPic.svg",
       "Quiz": "Quiz 03",
       "QuizAr": "استجواب 01",
-      "QuizExp": 40
+      "QuizExp": 40,
+      "Prop1": "",
+      "Prop2": "",
+      "Prop3": "",
+      "propCorrecte": "",
+      "ImageQuiz": "",
+      "CheminCours": ""
     },
     {
       "id": 4,
@@ -75,7 +114,13 @@
       "ImageCours": "/Cours/imgCours/CoursPic.svg",
       "Quiz": "Quiz 04",
       "QuizAr": "استجواب 01",
-      "QuizExp": 40
+      "QuizExp": 40,
+      "Prop1": "",
+      "Prop2": "",
+      "Prop3": "",
+      "propCorrecte": "",
+      "ImageQuiz": "",
+      "CheminCours": ""
     },
     {
       "id": 5,
@@ -84,7 +129,28 @@
       "ImageCours": "/Cours/imgCours/CoursPic.svg",
       "Quiz": "Quiz 05",
       "QuizAr": "استجواب 01",
-      "QuizExp": 40
+      "QuizExp": 40,
+      "Prop1": "",
+      "Prop2": "",
+      "Prop3": "",
+      "propCorrecte": "",
+      "ImageQuiz": "",
+      "CheminCours": ""
+    },
+    {
+      "titre": "ksksks",
+      "titreAr": "التناظر بالنسبة لنقطة",
+      "ImageCours": "/Cours/imgCours/CoursPic.svg",
+      "Quiz": "Quiz 01",
+      "QuizAr": "استجواب 01",
+      "QuizExp": 20,
+      "Prop1": "kdkd",
+      "Prop2": "k,xk",
+      "Prop3": "kdkkd",
+      "propCorrecte": "",
+      "ImageQuiz": "",
+      "CheminCours": "",
+      "id": 6
     }
   ]
 }

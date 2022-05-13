@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import GetCurrentUser from "../../Components/GetCurrentUser";
-import GetLanguage from "../../Components/GetLanguage";
 import Absolute from "./Absolute";
 const axios = require("axios");
 

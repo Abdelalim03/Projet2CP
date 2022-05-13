@@ -33,6 +33,7 @@ function CoursAr() {
                   numExp={`${course.QuizExp}`}
                   image={`${course.ImageCours}`}
                   courseId={course.id}
+                  image2="/Cours/Archanges/flicha.svg"
                 />
               </div>
             );

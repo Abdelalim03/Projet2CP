@@ -9,8 +9,8 @@ function Cours() {
   const language = GetLanguage();
     return (    
       <>
- { (language==="français")&& <CoursFr />  }
- { (language==="arabe")&&  <CoursAr /> }
+  { (language==="français")&& <CoursFr />  }
+  { (language==="arabe")&&  <CoursAr /> }
       </>
     
    )
