@@ -15,11 +15,8 @@ import Cours from "./pages/Cours/Cours";
 import NoPage2 from "./pages/NoPage/NoPage2";
 import Exercices2 from "./pages/Exercices/Exercices2";
 import Landing from "./pages/Landing/Landing";
-import CoursProfFr from "./pages/Cours/CoursProfFr";
 import Parameters from "./pages/Parameters/Parameters";
 
-import CoursProf from "./pages/CoursProf/CoursProf";
-import ContinueAs from "./pages/EtesVous/ContinueAs";
 
 
 function App() {
