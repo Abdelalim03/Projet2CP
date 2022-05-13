@@ -34,6 +34,7 @@ function CoursFr({userName, userAvatar}) {
                   numExp={`${course.QuizExp}`}
                   image={`${course.ImageCours}`}
                   courseId={course.id}
+                  image2="/Cours/Icons/flicha.svg"
                 />
               </div>
             );

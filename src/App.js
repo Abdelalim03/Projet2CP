@@ -15,13 +15,15 @@ import Cours from "./pages/Cours/Cours";
 import NoPage2 from "./pages/NoPage/NoPage2";
 import Exercices2 from "./pages/Exercices/Exercices2";
 import Landing from "./pages/Landing/Landing";
+import CoursProfFr from "./pages/Cours/CoursProfFr";
+import Parameters from "./pages/Parameters/Parameters";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/">
-          <Route index element={<Langue />} />
+          <Route index element={<CoursProfFr />} />
 
           <Route path="welcome" element={<Landing />} />
           <Route path="choix" element={<EtesVous />} />
@@ -37,6 +39,7 @@ function App() {
             <Route path="exercices" element={<Exercices />} />
             <Route path="exercices2" element={<Exercices2 />} />
             <Route path="dessiner" element={<Editeur />} />
+            <Route path="parametres" element={<Parameters />} />
             <Route path="*" element={<NoPage2 />} />
           </Route>
         </Route>
