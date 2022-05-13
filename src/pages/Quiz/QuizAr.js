@@ -24,9 +24,11 @@ function QuizAr() {
           />
         </div>
 
-        <div className="flex flex-row gap-10 justify-center">
+        <div className="flex flex-row gap-20 lg:gap-28 justify-center">
 
-        <div className="flex flex-col gap-5 justify-around items-center">
+        <div className="flex flex-col mt-10 gap-5 justify-around items-end">
+                      {/*Progress bar*/}
+{/*
             <div className="flex justify-between bg-[#C7DBFE] rounded-md md:w-80 lg:w-96 md:h-9 lg:h-11 p-1 px-4">
               <img
                 className="w-fit cursor-pointer hover:scale-110"
@@ -47,8 +49,9 @@ function QuizAr() {
                 alt=""
               />
             </div>
+  */}
 
-            <div className="flex flex-col justify-center items-center gap-5">
+            <div className="flex flex-col justify-center items-center gap-10">
 
                 <div className="form-check flex flex-row-reverse items-center gap-5">
                   <input
@@ -97,7 +100,7 @@ function QuizAr() {
 
 
 
-            <div className="mt-3 flex flex-col justify-center items-end">
+            <div className="mt-5 lg:mt-10 flex gap-1 flex-col justify-center items-end">
               <p className="md:text-2xl lg:text-3xl font-bold">🎉✨ ! ممتـاز</p>
               <p className="text-base font-bold text-gray-400">
                 ! جيد، واصل على هذا المنوال

@@ -27,7 +27,7 @@ function QuizFr() {
           />
         </div>
 
-        <div className="flex flex-row gap-10 justify-center">
+        <div className="flex flex-row md:gap-20 lg:gap-28 justify-center">
           <div className=" p-5 flex flex-col gap-5 bg-[#FAE0B2] rounded-3xl">
             <div className="flex justify-center">
               <img
@@ -40,7 +40,9 @@ function QuizFr() {
             <p className="md:text-lg lg:text-xl font-bold">This is a question</p>
           </div>
 
-          <div className="flex flex-col gap-5 justify-around items-center">
+          <div className="flex flex-col gap-5 justify-around items-start">
+            {/*Progress bar*/}
+            {/*
             <div className="flex justify-between bg-[#C7DBFE] rounded-md md:w-80 lg:w-96 md:h-9 lg:h-11 p-1 px-4">
               <img
                 className="w-fit cursor-pointer hover:scale-110"
@@ -61,8 +63,9 @@ function QuizFr() {
                 alt=""
               />
             </div>
+  */}
 
-            <div className="flex flex-col justify-center items-start gap-5">
+            <div className="flex flex-col justify-center items-start mt-10 gap-10">
               <div className="form-check flex items-center gap-5">
                 <input
                   className="form-check-input appearance-none rounded-full h-7 w-7 border-4 border-[#5F6368] bg-[#C4C4C4] hover:shadow-lg hover:shadow-[#5F6368] hover:border-[#3B52B5] checked:bg-[#7EABFF] checked:border-[#3B52B5] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer"
@@ -107,7 +110,7 @@ function QuizFr() {
               </div>
             </div>
 
-            <div className="flex flex-col mt-2 justify-center items-start">
+            <div className="flex flex-col mt-5 lg:mt-10 gap-1 justify-center items-start">
               <p className="md:text-2xl lg:text-3xl font-bold">Bravo! 🎉✨</p>
               <p className="text-base font-bold text-gray-400">
                 Tres bien, continuez comme ca !
