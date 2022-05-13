@@ -21,7 +21,7 @@ function ParametersFr() {
        </button>  
 
         <div className='rounded-l-2xl lg:rounded-l-3xl w-[92%] '>
-           <div className='flex flex-col gap-10 justify-center ml-48'>
+           <div className='flex flex-col gap-10 justify-center items-start ml-10 '>
                 <CompParametersFr
                     icon = "/Parameters/account.svg"    
                     titre = "Changez votre nom"
@@ -34,12 +34,12 @@ function ParametersFr() {
                     fleche = "/Parameters/flecheD.svg"      
                 />
                 <div className='flex flex-row gap-10'>
-                    <div className='h-20 w-[500px] rounded-[15px] bg-[#FFC5C1] flex flex-row items-center'>
+                    <div className='h-20 w-[400px] lg:w-[500px] rounded-[15px] bg-[#FFC5C1] flex flex-row items-center'>
                         <img className='w-[70px] h-[70px] pl-8 ' src="/Parameters/langue.svg"/>
                         <div className='w-[65%] font-bold text-xl ml-10'> Changez la langue</div>
                         <button onClick={showDiv} className='rounded-[7px] bg-[#FAE0B2] flex justify-center items-center h-6 lg:w-9 lg:h-9 hover:lg:w-10 hover:lg:h-10 hover:bg-[#faddac] '>
-                            {(estOuvert)&&<img className='w-4 lg:w-7 h-4 lg:h-4' src="/Parameters/flecheG.svg"/> }
-                            {(!estOuvert)&&<img className='w-4 lg:w-7 h-4 lg:h-4' src="/Parameters/flecheD.svg"/> }
+                            {(estOuvert)&&<img className='w-6 lg:w-7 h-4 lg:h-4' src="/Parameters/flecheG.svg"/> }
+                            {(!estOuvert)&&<img className='w-6 lg:w-7 h-4 lg:h-4' src="/Parameters/flecheD.svg"/> }
 
                         </button>
                      </div>
