@@ -18,13 +18,16 @@ import Landing from "./pages/Landing/Landing";
 import CoursProfFr from "./pages/Cours/CoursProfFr";
 import Parameters from "./pages/Parameters/Parameters";
 
+import CoursProf from "./pages/CoursProf/CoursProf";
+import ContinueAs from "./pages/EtesVous/ContinueAs";
+
+
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/">
-          <Route index element={<CoursProfFr />} />
-
+          <Route index element={<Langue />} />
           <Route path="welcome" element={<Landing />} />
           <Route path="choix" element={<EtesVous />} />
           <Route path="nom" element={<Nom />} />
