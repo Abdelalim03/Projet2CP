@@ -15,31 +15,13 @@ import Cours from "./pages/Cours/Cours";
 import NoPage2 from "./pages/NoPage/NoPage2";
 import Exercices2 from "./pages/Exercices/Exercices2";
 import Landing from "./pages/Landing/Landing";
+import CoursProfFr from "./pages/Cours/CoursProfFr";
+import Parameters from "./pages/Parameters/Parameters";
 
 import CoursProf from "./pages/CoursProf/CoursProf";
 import ContinueAs from "./pages/EtesVous/ContinueAs";
 
-{
-  /*To Test */
-}
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/">
-          <Route index element={<CoursProf />} />
-{/*          
-          <Route index element={<ContinueAs/>} />
-*/}
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </Router>
-  );
-}
-export default App;
-{
-  /*
+
 function App() {
   return (
     <Router>
@@ -60,6 +42,7 @@ function App() {
             <Route path="exercices" element={<Exercices />} />
             <Route path="exercices2" element={<Exercices2 />} />
             <Route path="dessiner" element={<Editeur />} />
+            <Route path="parametres" element={<Parameters />} />
             <Route path="*" element={<NoPage2 />} />
           </Route>
         </Route>
@@ -68,5 +51,4 @@ function App() {
   );
 }
 
-export default App;*/
-}
+export default App;
