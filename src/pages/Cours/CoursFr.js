@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Chapitre from "./Chapitre";
 import UserTitle from "../../Components/UserTitle";
-function Cours2() {
+function CoursFr({userName, userAvatar}) {
   const [Courses, SetCourses] = useState(null);
   useEffect(() => {
     fetch("http://localhost:5000/courses")
@@ -16,7 +16,8 @@ function Cours2() {
   return (
     <div className="symapp-container">
       <div className="w-[80%] h-32 mb-0 lg:mb-10">
-        <UserTitle message="Salut" userName="Amine" userImage="PersonPic" />
+        <UserTitle message="Salut" userName={userName} userImage={userAvatar} />
+
         <p className="ml-2 lg:ml-3 lg:mt-5 md:mt-3 font-semibold md:text-sm lg:text-xl">
           Apprenons quelque chose de nouveau aujourd'hui !
         </p>
@@ -43,4 +44,4 @@ function Cours2() {
   );
 }
 
-export default Cours2;
+export default CoursFr;

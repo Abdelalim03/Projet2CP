@@ -1,64 +1,16 @@
 {
   "parametres": {
-    "langue": "français",
-    "currentUser": 8
+    "langue": "arabe",
+    "currentUser": 0
+
   },
   "users": [
     {
-      "id": 1,
       "nom": "Amine",
-      "avatar": "",
-      "exercices": [],
-      "cours": ""
-    },
-    {
-      "nom": "vbvvv",
-      "avatar": "/avatar/Group-1.svg",
+      "avatar": "/avatar/Group.svg",
       "exercices": [],
       "cours": "",
-      "id": 2
-    },
-    {
-      "nom": "hhhh",
-      "avatar": "/avatar/Group-4.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 3
-    },
-    {
-      "nom": "ahmed",
-      "avatar": "/avatar/Group-5.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 4
-    },
-    {
-      "nom": "eeeeeeee",
-      "avatar": "/avatar/Group-3.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 5
-    },
-    {
-      "nom": "dddd",
-      "avatar": "/avatar/Group-5.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 6
-    },
-    {
-      "nom": "Wail",
-      "avatar": "/avatar/Group-2.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 7
-    },
-    {
-      "nom": "jjjj",
-      "avatar": "/avatar/Group-5.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 8
+      "id": 1
     }
   ],
   "courses": [

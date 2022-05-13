@@ -4,12 +4,12 @@ import { Link, useParams } from "react-router-dom";
 import UserTitle from "../../Components/UserTitle";
 import CustomCard from "./CustomCard";
 
-export default function Menu() {
-  let {id} = useParams();
+export default function MenuFr({userName, userAvatar}) {
+  
   return (
     // <div className=" bg-symapp-blue-light-second">
     <div className=" symapp-container  ">
-      <UserTitle message="Salut" userName="Amine" userImage="PersonPic" />
+      <UserTitle message="Salut" userName={userName} userImage={userAvatar} />
 
       <div className="flex flex-col lg:gap-8 md:gap-3">
         <div className="flex flex-row lg:gap-10 md:gap-4  ">

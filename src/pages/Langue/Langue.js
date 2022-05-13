@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import GetCurrentUser from "../../Components/GetCurrentUser";
 import Absolute from "./Absolute";
@@ -6,7 +6,9 @@ const axios = require("axios");
 
 function Langue() {
   const navigate = useNavigate();
+
   if (GetCurrentUser() !== 0) navigate("/welcome");
+  
   const handleClick = (lang) => {
     axios
       .patch("http://localhost:5000/parametres", { langue: lang })

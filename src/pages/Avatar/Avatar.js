@@ -8,16 +8,16 @@ import Absolute from './Absolute'
 function Avatar() {
     let {id} = useParams();
 
-    const paths = ["/avatar/Group-1.svg",
-    "/avatar/Group-2.svg",
-    "/avatar/Group-3.svg",
-    "/avatar/Group-4.svg",
-    "/avatar/Group-5.svg",
-    "/avatar/Group-6.svg",
-    "/avatar/Group-7.svg",
-    "/avatar/Group-8.svg",
-    "/avatar/Group-9.svg",
-    "/avatar/Group.svg"];
+    const paths = [{name:"/avatar/Group-1.svg",id:1},
+    {name:"/avatar/Group-2.svg",id:2},
+    {name:"/avatar/Group-3.svg",id:3},
+    {name:"/avatar/Group-4.svg",id:4},
+    {name:"/avatar/Group-5.svg",id:5},
+    {name:"/avatar/Group-6.svg",id:6},
+    {name:"/avatar/Group-7.svg",id:7},
+    {name:"/avatar/Group-8.svg",id:8},
+    {name:"/avatar/Group-9.svg",id:9},
+    {name:"/avatar/Group.svg",id:10}];
 
     const language = GetLanguage();
     const navigate = useNavigate();
@@ -49,17 +49,17 @@ function Avatar() {
     <div className='select-none h-[48%] w-[100%] flex justify-center bg-[#F47458] bg-opacity-20 rounded-t-[100px]'>
           <div className='grid grid-cols-5 gap-2 lg:gap-5 mt-2'>
             {paths.map(path=>
-                <button className='h-28 lg:h-36 w-28 lg:w-36  p-3 hover:p-0 transition-all duration-500 rounded-[50%] flex justify-center items-center bg-white'>
+                <button key={path.id} className='h-28 lg:h-36 w-28 lg:w-36  p-3 hover:p-0 transition-all duration-500 rounded-[50%] flex justify-center items-center bg-white'>
                 <div className='h-[100%] w-[100%] rounded-[50%] overflow-hidden hover:bg-sky-600 bg-[#C7DBFE]'>
                     <img className='h-[80%] w-[100%] mt-[20%] ' onClick={()=>{
-                        setImage(path);
+                        setImage(path.name);
                         setanimate("animate-[avatar_2s_ease-in-out_1]");
                         setTimeout(()=>{
-                            axios.patch(url, {"avatar":path});
+                            axios.patch(url, {"avatar":path.name});
                             navigate(`/home/${id}`);
                         },1500);
                         }
-                        } key={path} src={path} alt='avatrar'/>
+                        }  src={path.name} alt='avatrar'/>
                 </div>
             </button>
             )}
