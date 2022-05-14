@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NoPage from "./pages/NoPage/NoPage";
 import Menu from "./pages/Menu/Menu";
-import MenuAr from "./pages/Menu/MenuAr";
 import Avatar from "./pages/Avatar/Avatar";
 import EtesVous from "./pages/EtesVous/EtesVous";
 import Nom from "./pages/Nom/Nom";
