@@ -6,6 +6,10 @@ import { useParams } from "react-router-dom";
 
 import CoursAr from './CoursAr';
 import CoursFr from './CoursFr';
+import GetMode from "../../Components/GetMode";
+import CoursFrProf from "./CoursProfFr";
+import NoPage from "../NoPage/NoPage2"
+
 
 function Cours() {
   const [User, setUser] = useState(null);
@@ -25,10 +29,13 @@ function Cours() {
       });
   }, []);
   const language = GetLanguage();
+  const mode = GetMode();
     return (    
       <>
- { (language==="français")&& <CoursFr userAvatar={User.avatar} userName={User.nom} />  }
- { (language==="arabe")&&  <CoursAr userAvatar={User.avatar} userName={User.nom} /> }
+ { (language==="français")&&(mode ==="eleve") && <CoursFr userAvatar={User.avatar} userName={User.nom} />  }
+ { (language==="français")&&(mode ==="prof") && <CoursFrProf userAvatar={User.avatar} userName={User.nom} />  }
+ { (language==="arabe")&& (mode ==="eleve") &&<CoursAr userAvatar={User.avatar} userName={User.nom} /> }
+ { (language==="arabe")&& (mode ==="prof") &&<NoPage/> }
       </>
     
    )

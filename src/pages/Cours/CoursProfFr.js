@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Chapitre from "./Chapitre";
 import UserTitle from "../../Components/UserTitle";
 import Form from './Form';
+import ChapitreProf from '../CoursProf/ChapitreProf';
 
-function CoursProfFr() {
+function CoursProfFr({userName, userAvatar}) {
   const [Courses, SetCourses] = useState(null);
   const [estOuvert, SetEstOuvert] = useState(false);
   const showDiv = () => {SetEstOuvert(!estOuvert)};
@@ -27,9 +28,10 @@ function CoursProfFr() {
         <Form />
       </div>
       <div className="w-[80%] h-32">
-        <UserTitle message="Salut" userName="Amine" userImage="PersonPic" />
+      
+        <UserTitle message="Salut" userName={userName} userImage={userAvatar} />
         <p className="ml-2 lg:ml-3 lg:mt-5 md:mt-3 font-semibold md:text-sm lg:text-xl">
-          Apprenons quelque chose de nouveau aujourd'hui !
+        Créeons un cours idéal pour nos étudiants !
         </p>
         <div className='w-[80%] h-14 flex flex-row justify-end'>
             <button onClick={showDiv} className='h-10 w-10 rounded-md text-2xl font-semibold text-center bg-[#FAE0B2] hover:bg-[#fde8c4]' >+</button>
@@ -41,12 +43,13 @@ function CoursProfFr() {
           Courses.map((course) => {
             return (
               <div key={course.id}>
-                <Chapitre
+                <ChapitreProf
                   nomChapitre={`Chapitre ${course.id}`}
                   titreChapitre={`${course.titre}`}
                   nomQuiz={` Quiz ${course.id}`}
                   numExp={`${course.QuizExp}`}
                   image={`${course.ImageCours}`}
+                  courseId={course.id}
                   image2="/Cours/Icons/flicha.svg"
                 />
               </div>

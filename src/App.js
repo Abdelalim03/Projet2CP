@@ -18,7 +18,6 @@ import Landing from "./pages/Landing/Landing";
 import Parameters from "./pages/Parameters/Parameters";
 
 
-
 function App() {
   return (
     <Router>
