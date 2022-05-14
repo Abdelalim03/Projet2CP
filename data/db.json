@@ -1,8 +1,8 @@
 {
   "parametres": {
     "langue": "arabe",
-    "currentUser": 0
-
+    "currentUser": 0,
+    "mode": "prof"
   },
   "users": [
     {
@@ -11,6 +11,20 @@
       "exercices": [],
       "cours": "",
       "id": 1
+    },
+    {
+      "nom": "Prof",
+      "avatar": "/Prof/EnseignantIcon.svg",
+      "exercices": [],
+      "cours": "",
+      "id": -1
+    },
+    {
+      "nom": "a",
+      "avatar": "/avatar/Group-1.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 2
     }
   ],
   "courses": [
@@ -103,6 +117,31 @@
       "ImageQuiz": "",
       "CheminCours": "",
       "id": 6
+    },
+    {
+      "titre": "Amine'sCours",
+      "titreAr": "التناظر بالنسبة لنقطة",
+      "ImageCours": "/Cours/imgCours/CoursPic.svg",
+      "Quiz": "Quiz 01",
+      "QuizAr": "استجواب 01",
+      "QuizExp": 20,
+      "propCorrecte": "",
+      "ImageQuiz": "",
+      "DesCours": "",
+      "CheminCours": "",
+      "id": 7
+    },
+    {
+      "titreAr": "التناظر بالنسبة لنقطة",
+      "ImageCours": "/Cours/imgCours/CoursPic.svg",
+      "Quiz": "Quiz 01",
+      "QuizAr": "استجواب 01",
+      "QuizExp": 20,
+      "propCorrecte": "",
+      "ImageQuiz": "",
+      "DesCours": "",
+      "CheminCours": "",
+      "id": 8
     }
   ]
 }

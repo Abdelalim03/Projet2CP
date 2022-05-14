@@ -18,8 +18,8 @@ function CoursProf({ userName, userAvatar }) {
       <div className="w-[80%] h-32 mb-0 lg:mb-10">
         <UserTitle
           message="Salut"
-          userName="Monsieur / Madame"
-          userImage="/Prof/EnseignantIcon.svg"
+          userName={userName}
+          userImage={userAvatar}
         />
 
         <p className="ml-2 lg:ml-3 lg:mt-5 md:mt-3 font-semibold md:text-sm lg:text-xl">

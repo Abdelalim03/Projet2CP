@@ -21,7 +21,6 @@ import Parameters from "./pages/Parameters/Parameters";
 import CoursProf from "./pages/CoursProf/CoursProf";
 import ContinueAs from "./pages/EtesVous/ContinueAs";
 
-
 function App() {
   return (
     <Router>
