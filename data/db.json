@@ -1,7 +1,7 @@
 {
   "parametres": {
     "langue": "arabe",
-    "currentUser": 0,
+    "currentUser": 3,
     "mode": "prof"
   },
   "users": [
@@ -25,6 +25,13 @@
       "exercices": [],
       "cours": "",
       "id": 2
+    },
+    {
+      "nom": "hh",
+      "avatar": "/avatar/Group-3.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 3
     }
   ],
   "courses": [

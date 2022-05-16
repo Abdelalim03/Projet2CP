@@ -1,0 +1,12 @@
+<svg width="417" height="512" viewBox="0 0 417 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M185.625 0H386.225C402.793 0 416.225 13.4315 416.225 30V482C416.225 498.569 402.793 512 386.225 512H75.2246C58.6561 512 45.2246 498.569 45.2246 482V140.401L185.625 0Z" fill="#F8928C"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M44.4619 140.499L151.253 140.409C170.572 140.393 186.224 124.728 186.224 105.409L186.225 0H184.863L44.4619 140.401V140.499Z" fill="#EDBFBD"/>
+<line y1="-0.25" x2="198" y2="-0.25" transform="matrix(-0.707107 0.707107 0.707107 0.707107 185.727 0.498291)" stroke="#F8A8A5" stroke-width="0.5"/>
+<path d="M45.1428 139.873L45.3068 232.108L159.224 140.079L45.1428 139.873Z" fill="#E26E67"/>
+<rect width="164" height="22" transform="matrix(-1 0 0 1 300.225 257)" fill="white"/>
+<rect width="164" height="22" transform="matrix(-1 0 0 1 300.225 317)" fill="white"/>
+<rect width="164" height="22" transform="matrix(-1 0 0 1 300.225 378)" fill="white"/>
+<circle r="12.5" transform="matrix(-1 0 0 1 336.725 268.5)" fill="white"/>
+<circle r="12.5" transform="matrix(-1 0 0 1 336.725 388.5)" fill="white"/>
+<circle r="12.5" transform="matrix(-1 0 0 1 336.725 327.5)" fill="white"/>
+</svg>
