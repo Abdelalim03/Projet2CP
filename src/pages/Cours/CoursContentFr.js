@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Viewer, LocalizationMap, TextDirection } from "@react-pdf-viewer/core";
+import { Viewer } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
@@ -20,8 +20,7 @@ export default function CoursContent() {
       `data:${pdfContentType};base64,`.length
     );
     const bytes = window.atob(base64WithoutPrefix);
-    // const bytes = Buffer.from(base64WithoutPrefix, "str");
-    // const bytes = new Buffer(str, 'base64').toString('binary')
+
     let length = bytes.length;
     let out = new Uint8Array(length);
 
@@ -32,12 +31,6 @@ export default function CoursContent() {
     return new Blob([out], { type: pdfContentType });
   };
 
-  // const url = URL.createObjectURL(base64toBlob(base64));
-  // console.log(url);
-
-  //  const b64 = getBase64(SamplePdf);
-
-  //  console.log(b64);
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
   const [PdfFile, setpdfFile] = useState(null);
   const [Course, SetCourse] = useState(null);
