@@ -3,7 +3,7 @@ import React, {useRef, useState} from 'react'
 export default function FileInAr(props) {
     const [etatSel, setEtatSel] = useState(`لم يتم اختيار أي ${props.fileType} `);
     const [textColor, setTextColor] = useState("text-orange-400");
-
+    const OnUploadFile = (e) => props.onUploadFunction(e);
     const handleFileInput = (e) => {
         // handle validations
         if(e.target.files.length ===0){
@@ -15,6 +15,7 @@ export default function FileInAr(props) {
             const file = e.target.files[0];
             setEtatSel(`${file.name}`);
         }
+        OnUploadFile(e);
     };
 
     return (

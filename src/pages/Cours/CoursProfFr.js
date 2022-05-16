@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Chapitre from "./Chapitre";
 import UserTitle from "../../Components/UserTitle";
 import Form from './Form';
+import ChapitreProf from '../CoursProf/ChapitreProf';
 
 function CoursProfFr(props) {
   const [Courses, SetCourses] = useState(null);
@@ -41,12 +42,13 @@ function CoursProfFr(props) {
           Courses.map((course) => {
             return (
               <div key={course.id}>
-                <Chapitre
+                <ChapitreProf
                   nomChapitre={`Chapitre ${course.id}`}
                   titreChapitre={`${course.titre}`}
                   nomQuiz={` Quiz ${course.id}`}
                   numExp={`${course.QuizExp}`}
                   image={`${course.ImageCours}`}
+                  courseId={course.id}
                   image2="/Cours/Icons/flicha.svg"
                 />
               </div>

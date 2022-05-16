@@ -28,7 +28,36 @@ function FormAr(props) {
       "propCorrecte": "",
       "ImageQuiz": "",
       "DesCours": "",
-      "CheminCours": ""});
+      "CheminCours": "",
+      "CourseBase64":`${file}`
+    });
+  }
+
+  const [ file, setFile ] = useState(null)
+  const [ fileName, setFileName ] = useState(null)
+
+  const fileToBase64 = (file, cb) => {
+    const reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onload = function () {
+      cb(null, reader.result)
+    }
+    reader.onerror = function (error) {
+      cb(error, null)
+    }
+  }
+
+  const onUploadFileChange = ({ target }) => {
+    if (target.files < 1 || !target.validity.valid) {
+      return
+    }
+    fileToBase64(target.files[0], (err, result) => {
+      if (result) {
+        setFile(result)
+        // console.log(result);
+        setFileName(target.files[0])
+      }
+    })
   }
 
   return (
@@ -50,7 +79,9 @@ function FormAr(props) {
             <p className='block mr-5 text-sm lg:text-lg font-semibold'>صورة مرتبطة بالدرس :</p>
             <FileInAr accept=".png" fileName="imgCours" fileType="صورة"/>
             <p for="pdfCours" className='block mr-5 text-sm lg:text-lg font-semibold'>أدخل ملف الدرس :</p>
-            <FileInAr accept=".pdf" fileName="pdfCours" fileType="ملف"/>
+            <FileInAr accept=".pdf" fileName="pdfCours" fileType="ملف" onUploadFunction={onUploadFileChange}/>
+            
+
           </div>
           <p className='mr-20 mb-5 mt-3 text-base lg:text-xl font-semibold text-[#283D93]'>
             يرجى إدخال المعلومات اللازمة لإضافة الإستجواب

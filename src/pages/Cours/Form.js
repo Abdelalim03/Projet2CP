@@ -27,7 +27,36 @@ function Form(props) {
       "propCorrecte": "",
       "ImageQuiz": "",
       "DesCours": "",
-      "CheminCours": ""});
+      "CheminCours": "",
+      "CourseBase64":`${file}`
+    });
+  }
+
+  const [ file, setFile ] = useState(null)
+  const [ fileName, setFileName ] = useState(null)
+
+  const fileToBase64 = (file, cb) => {
+    const reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onload = function () {
+      cb(null, reader.result)
+    }
+    reader.onerror = function (error) {
+      cb(error, null)
+    }
+  }
+
+  const onUploadFileChange = ({ target }) => {
+    if (target.files < 1 || !target.validity.valid) {
+      return
+    }
+    fileToBase64(target.files[0], (err, result) => {
+      if (result) {
+        setFile(result)
+        // console.log(result);
+        setFileName(target.files[0])
+      }
+    })
   }
 
   return (
@@ -46,10 +75,23 @@ function Form(props) {
                    placeholder="Entrer le titre de cours:"
                    required
             />
+
             <p className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer une image descriptive du cours:</p>
             <FileInFr accept=".png" fileName="imgCours" genre="une" fileType="Image"/>
             <p for="pdfCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer le fichier du cours :</p>
-            <FileInFr accept=".pdf" fileName="pdfCours" genre="un" fileType="fichier"/>
+            <FileInFr accept=".pdf" fileName="pdfCours" genre="un" fileType="fichier" onUploadFunction={onUploadFileChange} />
+
+            {/* <div>
+            <label for="pdf" className='block ml-5 font-semibold'>Insérer une image descriptive du cours:</label>
+            <FileIn genre="une" fileType="image"/>
+            </div> */}
+            {/* <div>
+            
+            <FileIn genre="un" fileType="fichier" />
+            </div> */}
+            {/* <label for="pdf" className='block ml-5 font-semibold'>Insérer le fichier du cours :</label>
+              <input type="file" name="filetobase64" onChange={onUploadFileChange} accept="application/pdf" /> */}
+
           </div>
           <p className='ml-20 mb-5 mt-3 text-base lg:text-xl font-semibold text-[#283D93]'>
               Veuillez entrer les information nécessaires pour ajouter le quiz
