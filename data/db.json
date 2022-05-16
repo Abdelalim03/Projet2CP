@@ -1,7 +1,7 @@
 {
   "parametres": {
-    "langue": "arabe",
-    "currentUser": 0,
+    "langue": "français",
+    "currentUser": 2,
     "mode": "prof"
   },
   "users": [
@@ -20,128 +20,14 @@
       "id": -1
     },
     {
-      "nom": "a",
-      "avatar": "/avatar/Group-1.svg",
+      "nom": "Lyes",
+      "avatar": "",
       "exercices": [],
       "cours": "",
       "id": 2
     }
   ],
   "courses": [
-    {
-      "id": 1,
-      "titre": "la symmetrie d’un point par rapport a un point",
-      "titreAr": "التناظر بالنسبة لنقطة",
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
-      "Quiz": "Quiz 01",
-      "QuizAr": "استجواب 01",
-      "QuizExp": 20,
-      "Prop1": "",
-      "Prop2": "",
-      "Prop3": "",
-      "propCorrecte": "",
-      "ImageQuiz": "",
-      "CheminCours": ""
-    },
-    {
-      "id": 2,
-      "titre": "Symmetrie centrale 02 ",
-      "titreAr": "   02 التناظر بالنسبة لنقطة ",
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
-      "Quiz": "Quiz 2",
-      "QuizAr": "استجواب 02",
-      "QuizExp": 100,
-      "Prop1": "",
-      "Prop2": "",
-      "Prop3": "",
-      "propCorrecte": "",
-      "ImageQuiz": "",
-      "CheminCours": ""
-    },
-    {
-      "id": 3,
-      "titre": "Symmetrie axiale centrale 03 ",
-      "titreAr": "   03 التناظر بالنسبة لنقطة ",
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
-      "Quiz": "Quiz 03",
-      "QuizAr": "استجواب 01",
-      "QuizExp": 40,
-      "Prop1": "",
-      "Prop2": "",
-      "Prop3": "",
-      "propCorrecte": "",
-      "ImageQuiz": "",
-      "CheminCours": ""
-    },
-    {
-      "id": 4,
-      "titre": "Symmetrie axiale centrale 04 ",
-      "titreAr": "   04 التناظر بالنسبة لنقطة ",
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
-      "Quiz": "Quiz 04",
-      "QuizAr": "استجواب 01",
-      "QuizExp": 40,
-      "Prop1": "",
-      "Prop2": "",
-      "Prop3": "",
-      "propCorrecte": "",
-      "ImageQuiz": "",
-      "CheminCours": ""
-    },
-    {
-      "id": 5,
-      "titre": "Symmetrie axiale centrale 05 ",
-      "titreAr": "   05 التناظر بالنسبة لنقطة ",
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
-      "Quiz": "Quiz 05",
-      "QuizAr": "استجواب 01",
-      "QuizExp": 40,
-      "Prop1": "",
-      "Prop2": "",
-      "Prop3": "",
-      "propCorrecte": "",
-      "ImageQuiz": "",
-      "CheminCours": ""
-    },
-    {
-      "titre": "ksksks",
-      "titreAr": "التناظر بالنسبة لنقطة",
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
-      "Quiz": "Quiz 01",
-      "QuizAr": "استجواب 01",
-      "QuizExp": 20,
-      "Prop1": "kdkd",
-      "Prop2": "k,xk",
-      "Prop3": "kdkkd",
-      "propCorrecte": "",
-      "ImageQuiz": "",
-      "CheminCours": "",
-      "id": 6
-    },
-    {
-      "titre": "Amine'sCours",
-      "titreAr": "التناظر بالنسبة لنقطة",
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
-      "Quiz": "Quiz 01",
-      "QuizAr": "استجواب 01",
-      "QuizExp": 20,
-      "propCorrecte": "",
-      "ImageQuiz": "",
-      "DesCours": "",
-      "CheminCours": "",
-      "id": 7
-    },
-    {
-      "titreAr": "التناظر بالنسبة لنقطة",
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
-      "Quiz": "Quiz 01",
-      "QuizAr": "استجواب 01",
-      "QuizExp": 20,
-      "propCorrecte": "",
-      "ImageQuiz": "",
-      "DesCours": "",
-      "CheminCours": "",
-      "id": 8
-    }
+   
   ]
 }

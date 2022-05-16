@@ -16,11 +16,10 @@ export default function FileIn(props) {
             setEtatSel(`${file.name}`);
         }
     };
-
     return (
         <div className="file-uploader flex flex-row">
             <label for="inputFile" className='h-fit w-fit p-1 border-2 bg-white border-blue-400 font-semibold rounded-md'>Choisissez {`${props.genre}`} {`${props.fileType}`}</label>
-            <input type="file" onChange={handleFileInput} accept=".png" id="inputFile" name="inputFile" className='hidden'/>
+            <input type="file" onChange={handleFileInput} accept={ (props.fileType == "fichier") ? `application/pdf` : `./png`} id="inputFile" name="inputFile" className='hidden'/>
             <p className={`h-fit w-fit p-[6px] ml-3 font-medium ${textColor}`}>{etatSel}</p>
         </div>
     );
