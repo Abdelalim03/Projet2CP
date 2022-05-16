@@ -13,7 +13,9 @@ function QuizFr() {
               </div>
             </Link>
             <div className="flex flex-col gap-1 items-start">
-              <h1 className="text-white font-bold md:text-2xl lg:text-3xl">Quiz 01</h1>
+              <h1 className="text-white font-bold md:text-2xl lg:text-3xl">
+                Quiz 01
+              </h1>
               <p className="text-white text-base text-left w-40 font-bold md:text-lg lg:text-xl">
                 Quiz Description
               </p>
@@ -37,7 +39,9 @@ function QuizFr() {
               />
             </div>
 
-            <p className="md:text-lg lg:text-xl font-bold">This is a question</p>
+            <p className="md:text-lg lg:text-xl font-bold">
+              This is a question
+            </p>
           </div>
 
           <div className="flex flex-col gap-5 justify-around items-start">

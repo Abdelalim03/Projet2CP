@@ -1,19 +1,38 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Viewer, LocalizationMap, TextDirection } from "@react-pdf-viewer/core";
+import { Viewer } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
-
-import SamplePdf from "./SymétrieCours.pdf";
+// import SamplePdf from "./SymétrieCours.pdf";
 import { Worker } from "@react-pdf-viewer/core";
-
 import fr_FR from "@react-pdf-viewer/locales/lib/fr_FR.json";
 
+const pdfContentType = "application/pdf";
+
 export default function CoursContent() {
+  // const base64 =
+
+  const base64toBlob = (data) => {
+    // Cut the prefix `data:application/pdf;base64` from the raw base 64
+    const base64WithoutPrefix = data.substr(
+      `data:${pdfContentType};base64,`.length
+    );
+    const bytes = window.atob(base64WithoutPrefix);
+
+    let length = bytes.length;
+    let out = new Uint8Array(length);
+
+    while (length--) {
+      out[length] = bytes.charCodeAt(length);
+    }
+
+    return new Blob([out], { type: pdfContentType });
+  };
+
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
-  const [PdfFile, setpdfFile] = useState(SamplePdf);
+  const [PdfFile, setpdfFile] = useState(null);
   const [Course, SetCourse] = useState(null);
   const [isLoading, setisLoading] = useState(true);
   const { coursId } = useParams();
@@ -31,7 +50,10 @@ export default function CoursContent() {
       .then((Course) => {
         SetCourse(Course);
         setisLoading(false);
-        console.log(Course);
+        const base64 = Course.CourseBase64;
+        const url = URL.createObjectURL(base64toBlob(base64));
+        console.log(url);
+        setpdfFile(url);
       })
       .catch((err) => {
         console.log(err.message);
@@ -80,6 +102,7 @@ export default function CoursContent() {
                   fileUrl={PdfFile}
                   localization={fr_FR}
                   plugins={[defaultLayoutPluginInstance]}
+                  // initialPage={Course}
                 />
               </Worker>
             </>

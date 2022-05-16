@@ -1,6 +1,10 @@
 import React from 'react'
+import GetLanguage from '../../Components/GetLanguage'
+
 
 function Box(props) {
+
+    const language = GetLanguage();
   return (
     <div className='relative lg:w-[180px] lg:h-[180px] w-[130px] h-[130px] select-none'>
         <div className='container hover:z-20 absolute lg:w-[110px] lg:h-[110px] w-[80px] h-[80px] lg:top-[35px] lg:left-[35px] top-[25px] left-[25px] lg:hover:w-[180px] lg:hover:h-[180px] hover:w-[130px] hover:h-[130px] hover:bg-[#FFC5C1] hover:border-[3px] hover:top-0 hover:left-0 border-2 bg-[#FFDFD9] border-[#6A5CF7]'>
@@ -14,8 +18,9 @@ function Box(props) {
             <div className='littleKey w-[100%] h-6 lg:h-9 flex flex-row justify-center'>
                 <img  className='w-[75%] h-[90%] lg:h-[95%]' src='/Exercices/Clef.svg'/>
             </div>
-            <div className='toShow hidden w-[70%] text-center lg:text-2xl text-[16px] font-bold text-white m-auto'>
-                Obtenez la clé {props.numExo}
+            <div className=''>
+                { (language==="français")&& <div className='toShow hidden w-[70%] text-center lg:text-2xl text-[16px] font-bold text-white m-auto'>Obtenez la clé {props.numExo}</div> }
+                { (language==="arabe")&& <div className='toShow hidden w-[70%] text-center lg:text-2xl text-[16px] font-bold text-white m-auto'>أحصل على المفتاح {props.numExo}</div> }
             </div>
             <div className='bigKey hidden w-[100%] lg:h-16 h-11 lg:mt-[10px] mt-[6px]'>
                 <img  className='w-[75%] h-[95%]' src='/Exercices/Clef.svg'/>

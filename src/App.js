@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NoPage from "./pages/NoPage/NoPage";
 import Menu from "./pages/Menu/Menu";
-import MenuAr from "./pages/Menu/MenuAr";
 import Avatar from "./pages/Avatar/Avatar";
 import EtesVous from "./pages/EtesVous/EtesVous";
 import Nom from "./pages/Nom/Nom";
@@ -13,9 +12,10 @@ import Layout from "./Components/Layout";
 import CoursContent from "./pages/Cours/CoursContent";
 import Cours from "./pages/Cours/Cours";
 import NoPage2 from "./pages/NoPage/NoPage2";
-import Exercices2 from "./pages/Exercices/Exercices2";
 import Landing from "./pages/Landing/Landing";
 import Parameters from "./pages/Parameters/Parameters";
+import ExercicesAr2 from "./pages/Exercices/ExercicesAr2";
+import ExercicesFr2 from "./pages/Exercices/ExercicesFr2";
 
 
 function App() {
@@ -36,7 +36,8 @@ function App() {
             <Route path="courscontent/:coursId" element={<CoursContent />} />
             <Route path="quiz" element={<Quiz />} />
             <Route path="exercices" element={<Exercices />} />
-            <Route path="exercices2" element={<Exercices2 />} />
+            <Route path="ExercicesAr2" element={<ExercicesAr2 />} />
+            <Route path="ExercicesFr2" element={<ExercicesFr2 />} />
             <Route path="dessiner" element={<Editeur />} />
             <Route path="parametres" element={<Parameters />} />
             <Route path="*" element={<NoPage2 />} />

@@ -1,27 +1,43 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Viewer, LocalizationMap, TextDirection } from "@react-pdf-viewer/core";
+import { Viewer, TextDirection } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 
-import SamplePdf from "./SymétrieCours.pdf";
+// import SamplePdf from "./SymétrieCours.pdf";
 import { Worker } from "@react-pdf-viewer/core";
-
 import ar_AE from "@react-pdf-viewer/locales/lib/ar_AE.json";
 
+
+const pdfContentType = "application/pdf";
+
 export default function CoursContent() {
+  
+  const base64toBlob = (data) => {
+   
+    const base64WithoutPrefix = data.substr(
+      `data:${pdfContentType};base64,`.length
+    );
+    const bytes = window.atob(base64WithoutPrefix);
+
+    let length = bytes.length;
+    let out = new Uint8Array(length);
+
+    while (length--) {
+      out[length] = bytes.charCodeAt(length);
+    }
+
+    return new Blob([out], { type: pdfContentType });
+  };
+
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
-  const [PdfFile, setpdfFile] = useState(SamplePdf);
+  const [PdfFile, setpdfFile] = useState(null);
   const [Course, SetCourse] = useState(null);
   const [isLoading, setisLoading] = useState(true);
-
   const { coursId } = useParams();
-
   const ChaptreId = "0" + coursId;
-
-  console.log(coursId);
 
   useEffect(() => {
     fetch(`http://localhost:5000/courses/${coursId}`)
@@ -34,13 +50,17 @@ export default function CoursContent() {
       })
       .then((Course) => {
         SetCourse(Course);
-        console.log(Course);
         setisLoading(false);
+        const base64 = Course.CourseBase64;
+        const url = URL.createObjectURL(base64toBlob(base64));
+        console.log(url);
+        setpdfFile(url);
       })
       .catch((err) => {
         console.log(err.message);
       });
   }, []);
+
 
   return (
     <div className=" flex flex-col lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen font-['Tajawal'] w-screen  ">

@@ -4,7 +4,7 @@ import SideBar from '../../Components/SideBar'
 import Box from './Box'
 import BoxBloquee from './BoxBloquee'
 
-function Exercices2() {
+function ExercicesFr2() {
   return (
     <div className='symapp-container'>
       <div className=' relative bg-white rounded-l-2xl lg:rounded-l-3xl w-[92%] '>
@@ -52,4 +52,4 @@ function Exercices2() {
   )
 }
 
-export default Exercices2
+export default ExercicesFr2

@@ -37,9 +37,9 @@ function ParametersFr() {
                     <div className='h-20 w-[400px] lg:w-[500px] rounded-[15px] bg-[#FFC5C1] flex flex-row items-center'>
                         <img className='w-[70px] h-[70px] pl-8 ' src="/Parameters/langue.svg"/>
                         <div className='w-[65%] font-bold text-xl ml-10'> Changez la langue</div>
-                        <button onClick={showDiv} className='rounded-[7px] bg-[#FAE0B2] flex justify-center items-center h-6 lg:w-9 lg:h-9 hover:lg:w-10 hover:lg:h-10 hover:bg-[#faddac] '>
-                            {(estOuvert)&&<img className='w-6 lg:w-7 h-4 lg:h-4' src="/Parameters/flecheG.svg"/> }
-                            {(!estOuvert)&&<img className='w-6 lg:w-7 h-4 lg:h-4' src="/Parameters/flecheD.svg"/> }
+                        <button onClick={showDiv} className='mr-4 lg:mr-0 rounded-[7px] bg-[#FAE0B2] flex justify-center items-center h-6 lg:w-9 lg:h-9 hover:lg:w-10 hover:lg:h-10 hover:bg-[#faddac] '>
+                            {(estOuvert)&&<img className='w-7 h-5' src="/Parameters/flecheG.svg"/> }
+                            {(!estOuvert)&&<img className='w-7 h-5' src="/Parameters/flecheD.svg"/> }
 
                         </button>
                      </div>

@@ -2,7 +2,7 @@
   "parametres": {
     "langue": "arabe",
     "currentUser": 0,
-    "mode": "eleve"
+    "mode": "prof"
   },
   "users": [
     {
@@ -20,11 +20,32 @@
       "id": -1
     },
     {
-      "nom": "a",
-      "avatar": "/avatar/Group-1.svg",
+      "nom": "أحمد سهيلي",
+      "avatar": "/avatar/Group-9.svg",
       "exercices": [],
       "cours": "",
       "id": 2
+    },
+    {
+      "nom": "Afham",
+      "avatar": "/avatar/Group-9.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 3
+    },
+    {
+      "nom": "khra",
+      "avatar": "/avatar/Group-3.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 4
+    },
+    {
+      "nom": "khroro",
+      "avatar": "/avatar/Group-2.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 5
     }
   ],
   "courses": [
