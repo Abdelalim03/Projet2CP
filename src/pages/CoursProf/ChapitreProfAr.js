@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import DeleteConfirModalَAr from "../CoursProf/DeleteConfirmModalAr";
 
-function Chapitre(props) {
+function ChapitreProfAr(props) {
   return (
     <div className="w-[550px] lg:w-[840px] h-[80px] lg:h-[115px] flex flex-row justify-between mb-6 lg:mb-8">
       <div className="bg-[#FFC5C1] w-[420px] lg:w-[660px] py-4 lg:py-5 rounded-2xl lg:rounded-3xl flex flex-row">
@@ -24,7 +24,7 @@ function Chapitre(props) {
           </div>
         </div>
         <div className="ml-3 w-[15%] gap-5 flex flex-row justify-center items-center">
-      
+        <DeleteConfirModalَAr/>
           <Link to={`../courscontent/${props.courseId}`}>
             <button className="bg-[#FAE0B2] flex justify-center items-center w-6 lg:w-9 h-6 lg:h-9">
               <img
@@ -51,4 +51,4 @@ function Chapitre(props) {
   );
 }
 
-export default Chapitre;
+export default ChapitreProfAr;
