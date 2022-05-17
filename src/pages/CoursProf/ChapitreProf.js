@@ -42,7 +42,7 @@ function ChapitreProf(props) {
         <h1 className="font-semibold font-['Tajawal'] text-base lg:text-xl mb-3 lg:mb-6">
           {props.nomQuiz}
         </h1>
-        <Link to="../quiz">
+        <Link to={`../quiz/${props.courseId}`}>
           <button className="w-[59px] lg:w-fit font-normal text-xs lg:text-base text-center border-2 border-[#283D93] p-1 rounded-lg">
             {props.numExp} Exp
           </button>

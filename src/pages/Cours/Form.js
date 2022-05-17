@@ -102,9 +102,11 @@ function Form(props) {
 
           </div>
           <p className='ml-20 mb-5 mt-3 text-base lg:text-xl font-semibold text-[#283D93]'>
-              Veuillez entrer les information nécessaires pour ajouter le quiz
+              Veuillez entrer les informations nécessaires pour ajouter le quiz
           </p>
+          
           <div className=' h-3/4 lg:h-2/3 w-2/3 pl-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around ml-32 rounded-xl'>
+          <label className='block ml-5 text-sm lg:text-lg font-semibold'> Veuillez Insérer les propositions du quiz </label>
             <label for="Proposition1" className='block ml-5 text-sm lg:text-lg font-semibold'>Première proposition: </label>
             <input 
                     onChange={handleChange}
@@ -114,6 +116,7 @@ function Form(props) {
                     required
                     placeholder="entrer la proposition: "
                     onInvalid={handleInvalide}
+                    pattern="\S+"
             />
             <label for="Proposition2" className='block ml-5 text-sm lg:text-lg font-semibold'>Deuxième proposition: </label>
             <input 

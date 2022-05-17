@@ -32,7 +32,7 @@ function QuizFr(props) {
       setEvaluer("Faux :(");
     }
   }
-
+  
   return (
     <div className="flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen">
       <div className=" flex flex-col justify-start gap-5">

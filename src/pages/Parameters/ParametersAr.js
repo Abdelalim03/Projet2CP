@@ -13,39 +13,39 @@ function ParametersAr() {
            navigate("/")
          );}}
             className='h-fit w-[100%] flex flex-row-reverse justify-end'>
-           <div className='ml-4 w-[120px] h-[130px] flex flex-col gap-2 justify-start items-center'>
+           <div className='ml-4 w-[90px] lg:w-[120px] h-[100px] lg:h-[130px] flex flex-col gap-2 justify-start items-center'>
                 <img className='w-[50%] h-[50%] rotate-180' src="/Parameters/exit.svg"/>
                 <div className="font-bold text-lg font-['Tajawal']">خروج</div>
            </div>
        </button>  
 
         <div className='rounded-l-2xl lg:rounded-l-3xl w-[92%] '>
-           <div  className='flex flex-col gap-10 justify-center items-end -mr-10'>
+           <div className='flex flex-col gap-10 justify-center items-end mr-24 lg:mr-48'>
                 <CompParametersAr 
                     icon = "/Parameters/account.svg"    
-                    titre = "Changez votre nom"
+                    titre = "تغيير الاسم"
                     fleche = "/Parameters/flecheG.svg"      
                 />
 
                 <CompParametersAr
                     icon = "/Parameters/pen.svg"    
-                    titre = "Changez votre avatar"
+                    titre = "تغيير الشخصية"
                     fleche = "/Parameters/flecheG.svg"      
                 />
                 <div className='flex flex-row-reverse gap-10'>
-                    <div dir="rtl" className='h-20 w-[400px] lg:w-[500px] rounded-[15px] bg-[#FFC5C1] flex flex-row items-center'>
-                        <img className='w-[70px] h-[70px] pr-8 ' src="/Parameters/langue.svg"/>
-                        <div className='w-[65%] font-bold text-xl mr-10'> Changez la langue</div>
-                        <button onClick={showDiv} className='ml-4 lg:ml-0 rounded-[7px] bg-[#FAE0B2] flex justify-center items-center h-6 lg:w-9 lg:h-9 hover:lg:w-10 hover:lg:h-10 hover:bg-[#faddac] '>
-                            {(estOuvert)&&<img className='w-7 h-5' src="/Parameters/flecheD.svg"/> }
-                            {(!estOuvert)&&<img className='w-7 h-5' src="/Parameters/flecheG.svg"/> }
+                    <div dir="rtl" className='h-14 lg:h-20 w-[350px] lg:w-[500px] rounded-[15px] bg-[#FFC5C1] flex flex-row items-center'>
+                        <img className='w-[50px] lg:w-[70px] h-[50px] lg:h-[70px] pr-5 lg:pr-8 ' src="/Parameters/langue.svg"/>
+                        <div className="w-[65%] font-bold text-lg lg:text-xl mr-6 lg:mr-10 font-['Tajawal']"> تغيير اللغة </div>
+                        <button onClick={showDiv} className='rounded-[7px] bg-[#FAE0B2] flex justify-center items-center w-7 lg:w-9 h-7 hover:w-8 hover:h-8 lg:h-9 hover:lg:w-10 hover:lg:h-10 hover:bg-[#faddac] '>
+                            {(estOuvert)&&<img className='w-4 lg:w-7 h-4 lg:h-4' src="/Parameters/flecheD.svg"/> }
+                            {(!estOuvert)&&<img className='w-4 lg:w-7 h-4 lg:h-4' src="/Parameters/flecheG.svg"/> }
 
                         </button>
                      </div>
                     
                     <button onClick={()=>{axios.patch("http://localhost:5000/parametres", { langue: "français" });}}
                         
-                        className ={` w-[60px] h-[60px] hover:scale-125 ${!estOuvert && 'hidden'} `} > 
+                        className ={`w-[50px] lg:w-[60px] h-[50px] lg:h-[60px] hover:scale-125 ${!estOuvert && 'hidden'} `} > 
                       <img className='h-[100%] w-[100%] ' src ="/Parameters/frenchIcon.svg"/>
                     </button>
 
