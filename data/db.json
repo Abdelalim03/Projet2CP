@@ -1,8 +1,8 @@
 {
   "parametres": {
-    "langue": "arabe",
-    "currentUser": 0,
-    "mode": "prof"
+    "langue": "français",
+    "currentUser": 4,
+    "mode": "eleve"
   },
   "users": [
     {
@@ -39,6 +39,13 @@
       "exercices": [],
       "cours": "",
       "id": 4
+    },
+    {
+      "nom": "wail",
+      "avatar": "",
+      "exercices": [],
+      "cours": "",
+      "id": 5
     }
   ],
   "courses": [
