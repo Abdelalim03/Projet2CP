@@ -293,3 +293,22 @@ input[type=file]::-webkit-file-upload-button {
     @apply  md:pr-[40px] lg:pr-[70px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen w-screen font-["Tajawal"]
   }
 }
+
+#drawCanvas {
+  border: 1px solid black;
+  display: block;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+#drawCanvas.deplacer {
+  cursor: move;
+}
+#drawCanvas.fill {
+  cursor: url("./fill.png"),pointer;
+}
+#drawCanvas.remove {
+  cursor: url("./gomme.png"),pointer;
+}
+#drawCanvas.rotate {
+  cursor: url("./rotate.png"),pointer;
+}

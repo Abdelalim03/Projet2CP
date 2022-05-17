@@ -1,8 +1,8 @@
 {
   "parametres": {
     "langue": "français",
-    "currentUser": 0,
-    "mode": "prof"
+    "currentUser": 2,
+    "mode": "eleve"
   },
   "users": [
     {
@@ -20,32 +20,11 @@
       "id": -1
     },
     {
-      "nom": "أحمد سهيلي",
-      "avatar": "/avatar/Group-9.svg",
+      "nom": "ahmed",
+      "avatar": "/avatar/Group-8.svg",
       "exercices": [],
       "cours": "",
       "id": 2
-    },
-    {
-      "nom": "Afham",
-      "avatar": "/avatar/Group-9.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 3
-    },
-    {
-      "nom": "khra",
-      "avatar": "/avatar/Group-3.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 4
-    },
-    {
-      "nom": "khroro",
-      "avatar": "/avatar/Group-2.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 5
     }
   ],
   "courses": [
@@ -163,6 +142,21 @@
       "DesCours": "",
       "CheminCours": "",
       "id": 8
+    }
+  ],
+  "exercices": [
+    {
+      "typeOfCheck": "Shapes",
+      "allowed_delta": 0,
+      "preDashedString": "[]",
+      "preLinesString": "[]",
+      "preShapesString": "[]",
+      "prePointString": "[{\"x\":280,\"y\":280,\"stroked\":\"black\"},{\"x\":760,\"y\":360,\"stroked\":\"black\"}]",
+      "solutionPointString": "[]",
+      "solutionLinesString": "[{\"xd\":280,\"yd\":280,\"xf\":760,\"yf\":360,\"stroked\":\"black\"}]",
+      "solutionShapesString": "[]",
+      "allshapesString": "[]",
+      "id": 1
     }
   ]
 }
