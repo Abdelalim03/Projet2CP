@@ -1,8 +1,8 @@
 {
   "parametres": {
     "langue": "français",
-    "currentUser": 0,
-    "mode": "prof"
+    "currentUser": 1,
+    "mode": "eleve"
   },
   "users": [
     {
@@ -46,6 +46,13 @@
       "exercices": [],
       "cours": "",
       "id": 5
+    },
+    {
+      "nom": "x::",
+      "avatar": "",
+      "exercices": [],
+      "cours": "",
+      "id": 6
     }
   ],
   "courses": [
@@ -134,35 +141,10 @@
       "Prop1": "kdkd",
       "Prop2": "k,xk",
       "Prop3": "kdkkd",
-      "propCorrecte": "",
+      "propCorrecte": "2",
       "ImageQuiz": "",
       "CheminCours": "",
       "id": 6
-    },
-    {
-      "titre": "Amine'sCours",
-      "titreAr": "التناظر بالنسبة لنقطة",
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
-      "Quiz": "Quiz 01",
-      "QuizAr": "استجواب 01",
-      "QuizExp": 20,
-      "propCorrecte": "",
-      "ImageQuiz": "",
-      "DesCours": "",
-      "CheminCours": "",
-      "id": 7
-    },
-    {
-      "titreAr": "التناظر بالنسبة لنقطة",
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
-      "Quiz": "Quiz 01",
-      "QuizAr": "استجواب 01",
-      "QuizExp": 20,
-      "propCorrecte": "",
-      "ImageQuiz": "",
-      "DesCours": "",
-      "CheminCours": "",
-      "id": 8
     }
   ]
 }

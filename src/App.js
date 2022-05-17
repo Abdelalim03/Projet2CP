@@ -34,7 +34,7 @@ function App() {
             <Route index element={<Menu />} />
             <Route path="cours" element={<Cours />} />
             <Route path="courscontent/:coursId" element={<CoursContent />} />
-            <Route path="quiz" element={<Quiz />} />
+            <Route path="quiz/:id" element={<Quiz />} />
             <Route path="exercices" element={<Exercices />} />
             <Route path="ExercicesAr2" element={<ExercicesAr2 />} />
             <Route path="ExercicesFr2" element={<ExercicesFr2 />} />
