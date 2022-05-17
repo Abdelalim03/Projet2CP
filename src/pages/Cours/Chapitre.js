@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import DeleteConfirModalَAr from "../CoursProf/DeleteConfirmModalAr";
 
 function Chapitre(props) {
   return (
@@ -22,7 +23,8 @@ function Chapitre(props) {
             </h2>
           </div>
         </div>
-        <div className="w-[15%]  flex flex-row justify-center items-center">
+        <div className="ml-3 w-[15%] gap-5 flex flex-row justify-center items-center">
+        <DeleteConfirModalَAr/>
           <Link to={`../courscontent/${props.courseId}`}>
             <button className="bg-[#FAE0B2] flex justify-center items-center w-6 lg:w-9 h-6 lg:h-9">
               <img

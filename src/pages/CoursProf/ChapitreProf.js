@@ -25,7 +25,6 @@ function ChapitreProf(props) {
           </div>
         </div>
         <div className="w-[20%] pr-3 flex flex-row gap-5 justify-center items-center">
-          <DropdownRender />
           <DeleteConfirModal />
           <Link to={`../courscontent/${props.courseId}`}>
             <button className="bg-[#FAE0B2] flex justify-center items-center w-6 lg:w-9 h-6 lg:h-9">
