@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import DeleteConfirModal from "./DeleteConfirModal";
+import DeleteConfirModal from "./DeleteConfirModalFr";
 import DropdownRender from "./DropDown";
 
 function ChapitreProf(props) {
