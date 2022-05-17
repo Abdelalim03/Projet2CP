@@ -30,7 +30,7 @@ function ChapitreProf(props) {
             <button className="bg-[#FAE0B2] flex justify-center items-center w-6 lg:w-9 h-6 lg:h-9">
               <img
                 className="w-4 lg:w-7 h-4 lg:h-7 "
-                src="/Cours/Icons/flicha.svg"
+                src={`${props.image2}`}
                 alt="icon"
               />
             </button>

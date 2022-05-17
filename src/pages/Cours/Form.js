@@ -83,23 +83,19 @@ function Form(props) {
                    required
                    onInvalid={handleInvalide}
             />
-
             <p className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer une image descriptive du cours:</p>
             <FileInFr accept=".png" fileName="imgCours" genre="une" fileType="Image"/>
             <p for="pdfCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer le fichier du cours :</p>
             <FileInFr accept=".pdf" fileName="pdfCours" genre="un" fileType="fichier" onUploadFunction={onUploadFileChange} />
-
             {/* <div>
             <label for="pdf" className='block ml-5 font-semibold'>Insérer une image descriptive du cours:</label>
             <FileIn genre="une" fileType="image"/>
             </div> */}
             {/* <div>
-            
             <FileIn genre="un" fileType="fichier" />
             </div> */}
             {/* <label for="pdf" className='block ml-5 font-semibold'>Insérer le fichier du cours :</label>
               <input type="file" name="filetobase64" onChange={onUploadFileChange} accept="application/pdf" /> */}
-
           </div>
           <p className='ml-20 mb-5 mt-3 text-base lg:text-xl font-semibold text-[#283D93]'>
               Veuillez entrer les informations nécessaires pour ajouter le quiz

@@ -33,7 +33,9 @@ function CoursProfFr(props) {
           Apprenons quelque chose de nouveau aujourd'hui !
         </p>
         <div className='w-[87%] h-14 flex flex-row justify-end'>
-            <button onClick={showDiv} className='h-8 lg:h-10 w-8 lg:w-10 rounded-md text-lg lg:text-2xl font-semibold text-center bg-[#FAE0B2] hover:bg-[#fde8c4]' >+</button>
+            <button onClick={showDiv} className='h-8 lg:h-10 w-8 lg:w-10 rounded-md text-lg lg:text-2xl font-semibold flex justify-center items-center bg-[#FAE0B2] hover:bg-[#fde8c4]' >
+              <img className=' h-4 w-4' src="/Cours/Icons/plus.png"/>
+            </button>
         </div>
       </div>
       <div className="shadow-lg p-3 pt-6 rounded-md h-[325px] lg:h-[450px] w-[600px] lg:w-[930px] overflow-auto ">
