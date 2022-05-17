@@ -6,11 +6,18 @@ import FileInFr from './FileInFr';
 function Form(props) {
 
   const [inputs, setInputs] = useState({});
+  const [propCorrecte, setPropCorrecte] = useState("");
 
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setInputs(values => ({...values, [name]: value}))
+  }
+
+  const handleChange2 = (e) =>{setPropCorrecte(e.target.value)}
+
+  const handleInvalide = (e) =>{
+    e.target.setCustomValidity("Champs manquant");
   }
 
   const handleSubmit = (event) => {
@@ -24,7 +31,7 @@ function Form(props) {
       "Prop1": inputs.prop1,
       "Prop2": inputs.prop2,
       "Prop3": inputs.prop3,
-      "propCorrecte": "",
+      "propCorrecte": propCorrecte,
       "ImageQuiz": "",
       "DesCours": "",
       "CheminCours": "",
@@ -74,6 +81,7 @@ function Form(props) {
                    onChange={handleChange}
                    placeholder="Entrer le titre de cours:"
                    required
+                   onInvalid={handleInvalide}
             />
 
             <p className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer une image descriptive du cours:</p>
@@ -105,6 +113,7 @@ function Form(props) {
                     type="text" id="proposition1" name="prop1"
                     required
                     placeholder="entrer la proposition: "
+                    onInvalid={handleInvalide}
             />
             <label for="Proposition2" className='block ml-5 text-sm lg:text-lg font-semibold'>Deuxième proposition: </label>
             <input 
@@ -114,6 +123,7 @@ function Form(props) {
                     type="text" id="proposition2" name="prop2"
                     placeholder="entrer la proposition: "
                     required
+                    onInvalid={handleInvalide}
             />
             <label for="Proposition3" className='block ml-5 text-sm lg:text-lg font-semibold'>Troisième proposition: </label>
             <input 
@@ -123,9 +133,10 @@ function Form(props) {
                     type="text" id="proposition3" name="prop3"
                     placeholder="entrer la proposition: "
                     required
+                    onInvalid={handleInvalide}
             />
             <label className='block ml-5 text-sm lg:text-lg font-semibold'>Selectionner la proposition correcte: </label>
-            <select required className='block cursor-pointer h-fit w-fit p-1 border-2 bg-white border-blue-400 text-sm lg:text-lg font-semibold rounded-md text-center border-black/50'>
+            <select onChange={handleChange2} value={propCorrecte} required className='block cursor-pointer h-fit w-fit p-1 border-2 bg-white border-blue-400 text-sm lg:text-lg font-semibold rounded-md text-center border-black/50'>
               <option value="1">La première</option>
               <option value="2">La deuxième</option>
               <option value="3">La troisième</option>

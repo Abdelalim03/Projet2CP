@@ -1,7 +1,38 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function QuizFr() {
+function QuizFr(props) {
+
+  const [hide, setHide] = useState(true);
+  const [correcte, SetCorrect] = useState(false);
+  const [evaluer, setEvaluer] = useState("");
+  const [desact, SetDesact] = useState(false);
+
+  const [check1, SetCheck1] = useState(false);
+  const [check2, SetCheck2] = useState(false);
+  const [check3, SetCheck3] = useState(false);
+
+  const voirSolution = () =>{
+    if(props.propoCor === "1") SetCheck1(true);
+    if(props.propoCor === "2") SetCheck2(true);
+    if(props.propoCor === "3") SetCheck3(true);
+  }
+
+  const handleSubmit = (e) =>{
+    SetDesact(true);
+    if(e.target.value === props.propoCor) {
+        SetCorrect(true);
+        setHide(false);
+        setEvaluer("Bravo 🎉✨");
+    }
+    else{
+      SetCorrect(false);
+      setHide(false);
+      setEvaluer("Faux :(");
+    }
+  }
+
   return (
     <div className="flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen">
       <div className=" flex flex-col justify-start gap-5">
@@ -40,7 +71,7 @@ function QuizFr() {
             </div>
 
             <p className="md:text-lg lg:text-xl font-bold">
-              This is a question
+              cocher la proposition correcte :
             </p>
           </div>
 
@@ -76,12 +107,15 @@ function QuizFr() {
                   type="radio"
                   name="flexRadioDefault"
                   id="flexRadioDefault1"
+                  value="1"
+                  onChange={handleSubmit}
+                  disabled={desact}
                 />
                 <label
-                  className="form-check-label inline-block md:text-xl lg:text-2xl font-bold text-gray-800"
+                  className={`form-check-label ${check1 && "text-green-400"} inline-block md:text-xl lg:text-2xl font-bold ${!check1 && "text-gray-800"}`}
                   htmlFor="flexRadioDefault1"
                 >
-                  Prop01
+                  {props.propo1}
                 </label>
               </div>
               <div className="form-check flex items-center gap-5">
@@ -90,12 +124,15 @@ function QuizFr() {
                   type="radio"
                   name="flexRadioDefault"
                   id="flexRadioDefault2"
+                  value="2"
+                  onChange={handleSubmit}
+                  disabled={desact}
                 />
                 <label
-                  className="form-check-label inline-block md:text-xl lg:text-2xl font-bold text-gray-800"
+                  className={`form-check-label ${check2 && "text-green-400"} inline-block md:text-xl lg:text-2xl font-bold ${!check2 && "text-gray-800"}`}
                   htmlFor="flexRadioDefault2"
                 >
-                  Prop02
+                  {props.propo2}
                 </label>
               </div>
               <div className="form-check flex items-center gap-5">
@@ -104,25 +141,27 @@ function QuizFr() {
                   type="radio"
                   name="flexRadioDefault"
                   id="flexRadioDefault3"
+                  value="3"
+                  onChange={handleSubmit}
+                  disabled={desact}
                 />
                 <label
-                  className="form-check-label inline-block md:text-xl lg:text-2xl font-bold text-gray-800"
+                  className={`form-check-label ${check3 && "text-green-400"} inline-block md:text-xl lg:text-2xl font-bold ${!check3 && "text-gray-800"}`}
                   htmlFor="flexRadioDefault3"
                 >
-                  Prop03
+                  {props.propo3}
                 </label>
               </div>
             </div>
 
-            <div className="flex flex-col mt-5 lg:mt-10 gap-1 justify-center items-start">
-              <p className="md:text-2xl lg:text-3xl font-bold">Bravo! 🎉✨</p>
-              <p className="text-base font-bold text-gray-400">
-                Tres bien, continuez comme ca !
-              </p>
-              <button className="container bg-[#4ED964] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-lg lg:text-xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md">
-                Continuer
-              </button>
-              <button className="container bg-[#FAE0B2] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-lg lg:text-xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md">
+            <div className={`${hide && "hidden"} ${(!hide && "flex")} flex-col mt-5 lg:mt-10 gap-1 justify-center items-start`}>
+              <p className="md:text-2xl lg:text-3xl font-bold">{evaluer}</p>
+              <Link to="../cours">
+                  <button className="container bg-[#4ED964] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-lg lg:text-xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md">
+                    Continuer
+                  </button>
+              </Link>
+              <button onClick={voirSolution} className={`container ${correcte && "hidden"} bg-[#FAE0B2] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-lg lg:text-xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md`}>
                 Voir la sollution
               </button>
             </div>

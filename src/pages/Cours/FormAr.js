@@ -7,11 +7,18 @@ import FileIn from './FileInFr';
 function FormAr(props) {
 
   const [inputs, setInputs] = useState({});
+  const [propCorrecte, setPropCorrecte] = useState("");
 
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setInputs(values => ({...values, [name]: value}))
+  }
+
+  const handleChange2 = (e) =>{setPropCorrecte(e.target.value)}
+
+  const handleInvalide = (e) =>{
+    e.target.setCustomValidity("معلومة ناقصة");
   }
 
   const handleSubmit = (event) => {
@@ -25,7 +32,7 @@ function FormAr(props) {
       "Prop1": inputs.prop1,
       "Prop2": inputs.prop2,
       "Prop3": inputs.prop3,
-      "propCorrecte": "",
+      "propCorrecte": propCorrecte,
       "ImageQuiz": "",
       "DesCours": "",
       "CheminCours": "",
@@ -75,6 +82,7 @@ function FormAr(props) {
                    onChange={handleChange}
                    placeholder="أدخل عنوان الدرس"
                    required
+                   onInvalid={handleInvalide}
             />
             <p className='block mr-5 text-sm lg:text-lg font-semibold'>صورة مرتبطة بالدرس :</p>
             <FileInAr accept=".png" fileName="imgCours" fileType="صورة"/>
@@ -95,6 +103,7 @@ function FormAr(props) {
                     type="text" id="proposition1" name="prop1"
                     required
                     placeholder="أدخل الإقتراح : "
+                    onInvalid={handleInvalide}
             />
             <label for="Proposition2" className='block mr-5 text-sm lg:text-lg font-semibold'>الإقتراح الثاني : </label>
             <input 
@@ -104,6 +113,7 @@ function FormAr(props) {
                     type="text" id="proposition2" name="prop2"
                     placeholder="أدخل الإقتراح : "
                     required
+                    onInvalid={handleInvalide}
             />
             <label for="Proposition3" className='block mr-5 text-sm lg:text-lg font-semibold'>الإقتراح الثالث : </label>
             <input 
@@ -113,9 +123,10 @@ function FormAr(props) {
                     type="text" id="proposition3" name="prop3"
                     placeholder="أدخل الإقتراح : "
                     required
+                    onInvalid={handleInvalide}
             />
             <label className='block mr-5 text-sm lg:text-lg font-semibold'>عين الإجابة الصحيحة : </label>
-            <select required className='block cursor-pointer h-fit w-fit p-1 border-2 bg-white border-blue-400 text-sm lg:text-lg font-semibold rounded-md text-center border-black/50'>
+            <select onChange={handleChange2} value={propCorrecte} required className='block cursor-pointer h-fit w-fit p-1 border-2 bg-white border-blue-400 text-sm lg:text-lg font-semibold rounded-md text-center border-black/50'>
               <option value="1">الأولى</option>
               <option value="2">الثانية</option>
               <option value="3">الثالثة</option>
