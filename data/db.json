@@ -1,8 +1,8 @@
 {
   "parametres": {
-    "langue": "français",
-    "currentUser": 2,
-    "mode": "eleve"
+    "langue": "arabe",
+    "currentUser": 0,
+    "mode": "prof"
   },
   "users": [
     {

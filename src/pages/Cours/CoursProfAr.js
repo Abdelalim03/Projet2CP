@@ -1,8 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import UserTitleAr from "../../Components/UserTitleAr";
-import ChapitreProf from "../CoursProf/ChapitreProf";
-import Chapitre from "./Chapitre";
+import ChapitreProfAr from "../CoursProf/ChapitreProfAr"
 import FormAr from "./FormAr";
 
 function CoursProfAr(props) {
@@ -43,7 +42,7 @@ function CoursProfAr(props) {
           Courses.map((course) => {
             return (
               <div key={course.id}>
-                <Chapitre
+                <ChapitreProfAr
                   nomChapitre={ ` الدرس ${course.id}  `}
                   titreChapitre={`${course.titreAr}`}
                   nomQuiz={` استجواب ${course.id} `}
