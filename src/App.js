@@ -16,6 +16,7 @@ import Landing from "./pages/Landing/Landing";
 import Parameters from "./pages/Parameters/Parameters";
 import ExercicesAr2 from "./pages/Exercices/ExercicesAr2";
 import ExercicesFr2 from "./pages/Exercices/ExercicesFr2";
+import Logo from "./pages/Logo/Logo";
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/">
-          <Route index element={<Langue />} />
+          <Route index element={<Logo />} />
+          <Route path="langue" element={<Langue />} />
           <Route path="welcome" element={<Landing />} />
           <Route path="choix" element={<EtesVous />} />
           <Route path="nom" element={<Nom />} />

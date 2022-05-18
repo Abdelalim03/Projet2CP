@@ -1,7 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function QuizAr() {
+function QuizAr(props) {
+  const [hide, setHide] = useState(true);
+  const [correcte, SetCorrect] = useState(false);
+  const [evaluer, setEvaluer] = useState("");
+  const [desact, SetDesact] = useState(false);
+
+  const [check1, SetCheck1] = useState(false);
+  const [check2, SetCheck2] = useState(false);
+  const [check3, SetCheck3] = useState(false);
+
+  const voirSolution = () =>{
+    if(props.propoCor === "1") SetCheck1(true);
+    if(props.propoCor === "2") SetCheck2(true);
+    if(props.propoCor === "3") SetCheck3(true);
+  }
+
+  const handleSubmit = (e) =>{
+    SetDesact(true);
+    if(e.target.value === props.propoCor) {
+        SetCorrect(true);
+        setHide(false);
+        setEvaluer("Bravo 🎉✨");
+    }
+    else{
+      SetCorrect(false);
+      setHide(false);
+      setEvaluer("Faux :(");
+    }
+  }
   return (
     <div className="flex flex-col lg:gap-10 md:gap-2 lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen  font-['Tajawal'] w-screen">
       <div className=" flex flex-col justify-start gap-5">
@@ -59,12 +87,15 @@ function QuizAr() {
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
+                    value="1"
+                    onChange={handleSubmit}
+                    disabled={desact}
                   />
                   <label
-                    className="form-check-label md:text-xl lg:text-2xl text-right font-bold text-gray-800"
+                    className={`form-check-label ${check1 && "text-green-400"} md:text-xl lg:text-2xl text-right font-bold text-gray-800`}
                     htmlFor="flexRadioDefault1"
                   >
-                    الخيار 1
+                    {props.propo1}
                   </label>
                 </div>
                 <div className="form-check flex flex-row-reverse items-center gap-5">
@@ -73,12 +104,15 @@ function QuizAr() {
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault2"
+                    value="2"
+                    onChange={handleSubmit}
+                    disabled={desact}
                   />
                   <label
-                    className="form-check-label inline-block md:text-xl lg:text-2xl font-bold text-gray-800"
+                    className={`form-check-label ${check2 && "text-green-400"} inline-block md:text-xl lg:text-2xl font-bold text-gray-800`}
                     htmlFor="flexRadioDefault2"
                   >
-                    الخيار 2
+                    {props.propo2}
                   </label>
                 </div>
                 <div className="form-check flex flex-row-reverse items-center gap-5">
@@ -87,12 +121,15 @@ function QuizAr() {
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault3"
+                    value="3"
+                    onChange={handleSubmit}
+                    disabled={desact}
                   />
                   <label
-                    className="form-check-label inline-block md:text-xl lg:text-2xl font-bold text-gray-800"
+                    className={`form-check-label ${check3 && "text-green-400"} inline-block md:text-xl lg:text-2xl font-bold text-gray-800`}
                     htmlFor="flexRadioDefault3"
                   >
-                    الخيار 3
+                    {props.propo3}
                   </label>
                 </div>
             </div>
@@ -100,17 +137,15 @@ function QuizAr() {
 
 
 
-            <div className="mt-5 lg:mt-10 flex gap-1 flex-col justify-center items-end">
-              <p className="md:text-2xl lg:text-3xl font-bold">🎉✨ ! ممتـاز</p>
-              <p className="text-base font-bold text-gray-400">
-                ! جيد، واصل على هذا المنوال
-              </p>
+            <div className={`${hide && "hidden"} ${(!hide && "flex")} mt-5 lg:mt-10 flex gap-1 flex-col justify-center items-end`}>
+              <p className="md:text-2xl lg:text-3xl font-bold">{evaluer}</p>
               <div className="flex flex-col justify-center items-end">
-
-              <button className="container bg-[#4ED964] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-xl lg:text-2xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md">
-                المواصلة
-              </button>
-              <button className="container bg-[#FAE0B2] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-xl lg:text-2xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md">
+              <Link to="../cours">
+                  <button className="container bg-[#4ED964] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-xl lg:text-2xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md">
+                    المواصلة
+                  </button>
+              </Link>
+              <button onClick={voirSolution} className={`container ${correcte && "hidden"} bg-[#FAE0B2] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-xl lg:text-2xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md`}>
                 الحـل
               </button>
               </div>
@@ -122,7 +157,7 @@ function QuizAr() {
               <img className="h-72 lg:h-96 bg-white rounded-3xl" src="/quiz/grille.png" alt="" />
             </div>
 
-            <p dir='rtl' className="md:text-lg lg:text-xl font-bold">هذا سؤال</p>
+            <p dir='rtl' className="md:text-lg lg:text-xl font-bold">إختر الجواب الصحيح</p>
           </div>
         </div>
       </div>
