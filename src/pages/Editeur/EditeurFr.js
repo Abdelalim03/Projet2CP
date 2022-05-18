@@ -8,9 +8,21 @@ function EditeurFr() {
                 <div className='text-base lg:text-xl font-semibold text-[#283D93]' >
                     C'est à vous pour appliquer vos idées
                 </div>
-                <button className='h-11 lg:h-12 w-11 lg:w-12 mt-5 flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                    <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 10.svg' alt='icon' />
-                </button>
+                <div className='palButton flex flex-row mt-5 h-fit w-fit'>
+                    <button className='h-11 lg:h-12 w-11 lg:w-12 flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                        <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 10.svg' alt='icon' />
+                    </button>
+                    <div className='palCol h-11 lg:h-12 animate-[avatar_500ms_ease-in-out_1] w-[500px] lg:w-[900px] hidden flex-row gap-3'>
+                        <div className='ml-8 cursor-pointer h-[60%] w-[26.4px] lg:w-[28px] my-auto bg-slate-400'></div>
+                        <div className=' h-[60%] cursor-pointer w-[26px] lg:w-[28px] my-auto bg-slate-400'></div>
+                        <div className=' h-[60%] cursor-pointer w-[26px] lg:w-[28px] my-auto bg-slate-400'></div>
+                        <div className=' h-[60%] cursor-pointer w-[26px] lg:w-[28px] my-auto bg-slate-400'></div>
+                        <div className=' h-[60%] cursor-pointer w-[26px] lg:w-[28px] my-auto bg-slate-400'></div>
+                        <div className=' h-[60%] cursor-pointer w-[26px] lg:w-[28px] my-auto bg-slate-400'></div>
+                        <div className=' h-[60%] cursor-pointer w-[26px] lg:w-[28px] my-auto bg-slate-400'></div>
+                        <div className=' h-[60%] cursor-pointer w-[26px] lg:w-[28px] my-auto bg-slate-400'></div>
+                    </div>
+                </div>
             </div>
             <div className='h-full flex justify-start gap-10'>
             <div className='h-3/4 mt-1 w-20 px-2 ml-10 flex flex-col justify-around'>

@@ -278,6 +278,10 @@ input[type=file]::-webkit-file-upload-button {
   display: none;
 }
 
+.palButton:hover .palCol{
+  display: flex;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

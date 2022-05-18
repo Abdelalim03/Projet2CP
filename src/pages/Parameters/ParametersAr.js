@@ -1,16 +1,25 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
-import CompParametersAr from './CompParametersAr';
+import { Link, useNavigate } from 'react-router-dom';
+import GetCurrentUser from '../../Components/GetCurrentUser';
+import FormNom from './FormNom';
 
 function ParametersAr() {
     const [estOuvert, SetEstOuvert] = useState(false);
     const showDiv = () => {SetEstOuvert(!estOuvert)};
-    const navigate = useNavigate();
+
+    const [nomestOuvert, SetNomEstOuvert] = useState(false);
+    const showNom = () => {SetNomEstOuvert(!nomestOuvert)};
+
+    const navigate = useNavigate(); 
+
+    const id = GetCurrentUser();
+
+    const changerAv = ()=>{navigate(`/avatar/${id}`)}
   return (
     <div className='symapp-container-Ar'>
        <button onClick={()=>{axios.patch("http://localhost:5000/parametres", { currentUser: 0 }).then(
-           navigate("/")
+           navigate("langue")
          );}}
             className='h-fit w-[100%] flex flex-row-reverse justify-end'>
            <div className='ml-4 w-[120px] h-[130px] flex flex-col gap-2 justify-start items-center'>
@@ -18,6 +27,12 @@ function ParametersAr() {
                 <div className="font-bold text-lg font-['Tajawal']">خروج</div>
            </div>
        </button>  
+       <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!nomestOuvert && 'hidden'}`}>
+            <div className='h-8 lg:h-12 w-3/4 lg:w-2/3 flex flex-row justify-end bg-blue-200'>
+                <button onClick={showNom} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
+            </div>
+            <FormNom />
+        </div>
 
         <div className='rounded-l-2xl lg:rounded-l-3xl w-[92%] '>
            <div  className='flex flex-col gap-10 justify-center items-end -mr-10'>
