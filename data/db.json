@@ -1,7 +1,7 @@
 {
   "parametres": {
     "langue": "français",
-    "currentUser": 2,
+    "currentUser": 3,
     "mode": "eleve"
   },
   "users": [
@@ -25,6 +25,13 @@
       "exercices": [],
       "cours": "",
       "id": 2
+    },
+    {
+      "nom": "fahd",
+      "avatar": "/avatar/Group-8.svg",
+      "exercices": [],
+      "cours": "",
+      "id": 3
     }
   ],
   "courses": [
@@ -149,7 +156,7 @@
       "typeOfCheck": "Shapes",
       "allowed_delta": 0,
       "preDashedString": "[]",
-      "preLinesString": "[]",
+      "preLin esString": "[]",
       "preShapesString": "[]",
       "prePointString": "[{\"x\":280,\"y\":280,\"stroked\":\"black\"},{\"x\":760,\"y\":360,\"stroked\":\"black\"}]",
       "solutionPointString": "[]",

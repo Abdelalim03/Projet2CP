@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import GetLanguage from '../../Components/GetLanguage';
 import axios from 'axios';
-import InsPolygoneContentAr from './InsPolygoneContentAr';
-import RotateContentAr from './RotateContentAr';
+
 
 
 function Editeur() {
@@ -1208,7 +1207,6 @@ function drawLine(x1, y1, x2, y2) {
 }
 
 function proximate(x, y) {
-    console.log(x,y);
     let pfx = x % unity;
     x = ((pfx > unity/2) ? x - pfx + unity : x - pfx);
     let pfy = y % unity;
@@ -1457,7 +1455,6 @@ function load() {
     
     createCanvas();
     setUP();
-    console.log("khra");
     Exercice.fetch();
     Exercice.initiateExo();
     Exercice.getSolution();
@@ -1636,7 +1633,6 @@ class Exercice {
             // solutionShapesString='[{"x":600,"y":400,"u":40,"type":4,"filled":"white","stroked":"black"},{"x":600,"y":480,"u":40,"type":4,"filled":"white","stroked":"black"}]'
 
             // allshapesString='[]'
-            console.log(prePointString);
             // typeOfCheck="Shapes"
             // preDashedString='[{"xd":200,"yd":320,"xf":1120,"yf":320,"stroked":"white"}]'
 
@@ -1658,7 +1654,7 @@ class Exercice {
     return (    
       <>
  { (language==="français")&&
- <div className='symapp-container'>
+ <div className='symapp-container overflow-auto'>
     <div className=' ml-24 lg:ml-[105px] mt-2 h-16 w-3/4'>
                 <div className=' text-base lg:text-xl font-semibold text-[#283D93]' >
                     C'est à vous pour appliquer vos idées
@@ -1772,51 +1768,107 @@ class Exercice {
  
    }
  { (language==="arabe")&& 
- <div dir="rtl" className='symapp-container-Ar'>
-        <div className='mr-40 lg:mr-44 mt-4 h-24 w-3/4'>
+ <div dir="rtl"  className='symapp-container-Ar overflow-auto'>
+        <div className='mr-24 lg:mr-[105px] mt-2 h-16 w-3/4'>
                 <div className="text-base font-['Tajawal'] lg:text-xl font-semibold text-[#283D93]" >
                     هنا يمكنك تطبيق ما تعلمت
                 </div>
-                <button className='h-11 lg:h-12 w-11 lg:w-12 mt-5 flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                <button id='submit' className='h-11 lg:h-12 w-11 lg:w-12 mt-5 flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                     <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 10.svg' alt='icon' />
                 </button>
             </div>
-            <div className='h-full flex justify-start gap-10'>
-            <div className='h-3/4 mt-1 w-20 px-2 mr-10 flex flex-col justify-around'>
-                <div className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
+            <div className=' flex justify-start gap-5'>
+            <div className='h-3/4 mt-5 w-20 px-2 flex flex-col justify-around'>
+                <div id="deplacer" className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-6 lg:w-8 h-6 lg:h-8' src='/Editeur/EditorIcons/Vector.png' alt='icon' />
                     </button>
                 </div>
-                <div className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
+                <div id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 8.svg' alt='icon' />
                     </button>
                 </div>
-                <div className='insPolygone relative h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
+                <div id='point' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
+                    <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                        .
+                    </button>
+                </div>
+                <div id='polygone' className='insPolygone relative h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button className='h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/polygones.svg' alt='icon' />
                     </button>
-                    <InsPolygoneContentAr />
+                    <div className='insPolygoneContent h-40 lg:h-52 w-28 pr-4 hidden absolute right-[50px] lg:right-[60px] -bottom-[100%] lg:-bottom-[110%]'>
+                        <div className='z-10 w-20 lg:w-24 h-40 lg:h-52 px-1 border-2 flex flex-col justify-around border-[#6A5CF7] bg-[#FFDFD9]'>
+                                <div className='flex flex-row justify-around' >
+                                    <div className='insButton h-4 lg:h-5 w-7 lg:w-8 flex justify-center items-center'>
+                                        <img className='h-4 lg:h-5 w-5 lg:w-6' src='/Editeur/Polygones/mothaleth.png'/>
+                                    </div>
+                                    <div className='h-4 lg:h-5 w-8 lg:w-10 flex justify-center items-center text-sm lg:text-base font-semibold text-[#283D93] bg-white'>3</div>
+                                </div>
+                                <div className='flex flex-row justify-around'>
+                                    <div className='insButton h-4 lg:h-5 w-7 lg:w-8 flex justify-center items-center'>
+                                        <img className='h-4 lg:h-5 w-5 lg:w-6' src='/Editeur/Polygones/morabe3.svg'/>
+                                    </div>
+                                    <div className='h-4 lg:h-5 w-8 lg:w-10 flex justify-center items-center text-sm lg:text-base font-semibold text-[#283D93] bg-white'>4</div>
+                                </div>
+                                <div className='flex flex-row justify-around' >
+                                    <div className='insButton h-4 lg:h-5 w-7 lg:w-8 flex justify-center items-center'>
+                                        <img className='h-4 lg:h-5 w-5 lg:w-6' src='/Editeur/Polygones/Rectangle.svg'/>
+                                    </div>
+                                    <div className='h-4 lg:h-5 w-8 lg:w-10 flex justify-center items-center text-sm lg:text-base font-semibold text-[#283D93] bg-white'>4</div>
+                                </div>
+                                <div className='flex flex-row justify-around'>
+                                    <div className='insButton h-4 lg:h-5 w-7 lg:w-8 flex justify-center items-center'>
+                                        <img className='h-4 lg:h-5 w-5 lg:w-6' src='/Editeur/Polygones/khomassi.svg'/>
+                                    </div>
+                                    <div className='h-4 lg:h-5 w-8 lg:w-10 flex justify-center items-center text-sm lg:text-base font-semibold text-[#283D93] bg-white'>5</div>
+                                </div>
+                                <div className='flex flex-row justify-around'>
+                                    <div className='insButton h-4 lg:h-5 w-7 lg:w-8 flex justify-center items-center'>
+                                        <img className='h-4 lg:h-5 w-5 lg:w-6' src='/Editeur/Polygones/sodassi.svg'/>
+                                    </div>
+                                    <div className='h-4 lg:h-5 w-8 lg:w-10 text-sm lg:text-base flex justify-center items-center font-semibold text-[#283D93] bg-white'>6</div>
+                                </div>
+                                <div className='flex flex-row justify-around'>
+                                    <div className='insButton h-4 lg:h-5 w-7 lg:w-8 flex justify-center items-center'>
+                                        <img className='h-4 lg:h-5 w-5 lg:w-6' src='/Editeur/Polygones/Cercle.svg'/>
+                                    </div>
+                                    <div className='h-4 lg:h-5 w-8 lg:w-10 text-sm lg:text-base flex justify-center items-center bg-white'>
+                                        <img className='h-4 w-4' src='/Editeur/EditorIcons/infini.svg' />
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
                 </div>
-                <div className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
+                <div id='fill' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 14.svg' alt='icon' />
                     </button>
                 </div>
-                <div className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
+                <div id='remove' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 12.svg' alt='icon' /> 
                     </button>
                 </div>
-                <div className='rotate relative h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
+                <div id='rotate' className='rotate relative h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button className='h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Arrow-33.svg' alt='icon' />
                     </button>
-                    <RotateContentAr />
+                    <div className='rotateContent hidden absolute pr-4 right-[50px] lg:right-[60px] bottom-[6px] h-[112px] lg:h-[128px] w-[73px] lg:w-20'>
+                        <div className='h-[100%] w-14 lg:w-16 border-2 z-10 border-[#6A5CF7] bg-[#FFDFD9]'>
+                            <div className='rotateB1 h-14 lg:h-16 w-[52px] lg:w-[60px] hover:bg-[#FFC5C1] flex justify-center items-center border-b-2 border-[#6A5CF7]'>
+                                <img className='rotateImg1 h-[60%] lg:h-[70%] w-[60%] lg:w-[70%]' src='/Editeur/EditorIcons/Arrow-gauche.png'/>
+                            </div>
+
+                            <div className='rotateB2 h-[52px] lg:h-[60px] w-[52px] lg:w-[60px] hover:bg-[#FFC5C1] flex justify-center items-center'>
+                                <img className='rotateImg2 h-[60%] lg:h-[70%] w-[60%] lg:w-[70%]' src='/Editeur/EditorIcons/Arrow-droite.png'/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <canvas  className= 'w-[80%] h-[90%] bg-red-500'></canvas>
+            <canvas  id="drawCanvas" >Oops! On dirait que vous avez eu un probleme en installant l'application!</canvas>
             </div>
             
     </div>
