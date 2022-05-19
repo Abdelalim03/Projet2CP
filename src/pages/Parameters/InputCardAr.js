@@ -17,7 +17,6 @@ function InputCardAr() {
   axios
     .get(`http://localhost:5000/users/${id}`)
     .then((res) => {
-      console.log(res.data);
       return res.data;
     })
     .then((data) => {

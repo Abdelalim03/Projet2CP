@@ -19,7 +19,7 @@ function ParametersAr() {
   return (
     <div className='symapp-container-Ar'>
        <button onClick={()=>{axios.patch("http://localhost:5000/parametres", { currentUser: 0 }).then(
-           navigate("langue")
+           navigate("/langue")
          );}}
             className='h-fit w-[100%] flex flex-row-reverse justify-end'>
            <div className='ml-4 w-[90px] lg:w-[120px] h-[100px] lg:h-[130px] flex flex-col gap-2 justify-start items-center'>

@@ -37,10 +37,11 @@ function App() {
             <Route path="cours" element={<Cours />} />
             <Route path="courscontent/:coursId" element={<CoursContent />} />
             <Route path="quiz/:id" element={<Quiz />} />
-            <Route path="exercices" element={<Exercices />} />
-            <Route path="ExercicesAr2" element={<ExercicesAr2 />} />
-            <Route path="ExercicesFr2" element={<ExercicesFr2 />} />
-            <Route path="dessiner" element={<Editeur />} />
+            <Route path="exercices" element={<Exercices   />} />
+            <Route path="ExercicesAr2/:Max" element={<ExercicesAr2 />} />
+            <Route path="ExercicesFr2/:Max" element={<ExercicesFr2 />} />
+            <Route path="exercice/:exoId/:stars" element={<Editeur full={false} />} />
+            <Route path="dessiner" element={<Editeur full={true} />} />
             <Route path="parametres" element={<Parameters />} />
             <Route path="*" element={<NoPage2 />} />
           </Route>

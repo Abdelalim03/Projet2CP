@@ -1,55 +1,21 @@
 {
   "parametres": {
-    "langue": "arabe",
-    "currentUser": 6,
+    "langue": "français",
+    "currentUser": 1,
     "mode": "eleve"
   },
   "users": [
     {
       "nom": "Raouf",
       "avatar": "/avatar/Group-5.svg",
-      "exercices": [],
-      "cours": "",
+      "maxExo": 12,
       "id": 1
     },
     {
       "nom": "Prof",
       "avatar": "/Prof/EnseignantIcon.svg",
-      "exercices": [],
-      "cours": "",
+      "maxExo": 15,
       "id": -1
-    },
-    {
-      "nom": "Amino",
-      "avatar": "/avatar/Group-7.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 2
-    },
-    {
-      "nom": "raouf",
-      "avatar": "/avatar/Group-3.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 3
-    },
-    {
-      "nom": "uu",
-      "avatar": "",
-      "exercices": [],
-      "id": 4
-    },
-    {
-      "nom": "AA",
-      "avatar": "",
-      "exercices": [],
-      "id": 5
-    },
-    {
-      "nom": "fff",
-      "avatar": "/avatar/Group-4.svg",
-      "exercices": [],
-      "id": 6
     }
   ],
   "courses": [
@@ -144,9 +110,9 @@
       "preDashedString": "[]",
       "preLinesString": "[]",
       "preShapesString": "[]",
-      "prePointString": "[{\"x\":280,\"y\":160,\"stroked\":\"white\"},{\"x\":760,\"y\":240,\"stroked\":\"white\"},{\"x\":760,\"y\":160,\"stroked\":\"dodgerblue\"},{\"x\":280,\"y\":400,\"stroked\":\"dodgerblue\"},{\"x\":760,\"y\":320,\"stroked\":\"green\"},{\"x\":280,\"y\":240,\"stroked\":\"green\"},{\"x\":760,\"y\":400,\"stroked\":\"brown\"},{\"x\":280,\"y\":320,\"stroked\":\"brown\"}]",
+      "prePointString": "[{\"x\":280,\"y\":160,\"stroked\":\"white\"},{\"x\":760,\"y\":240,\"stroked\":\"white\"},{\"x\":760,\"y\":160,\"stroked\":\"dodgerblue\"},{\"x\":280,\"y\":400,\"stroked\":\"dodgerblue\"},{\"x\":760,\"y\":320,\"stroked\":\"HotPink\"},{\"x\":280,\"y\":240,\"stroked\":\"HotPink\"},{\"x\":760,\"y\":400,\"stroked\":\"orange\"},{\"x\":280,\"y\":320,\"stroked\":\"orange\"}]",
       "solutionPointString": "[]",
-      "solutionLinesString": "[{\"xd\":280,\"yd\":160,\"xf\":760,\"yf\":240,\"stroked\":\"white\"},{\"xd\":280,\"yd\":400,\"xf\":760,\"yf\":160,\"stroked\":\"dodgerblue\"},{\"xd\":280,\"yd\":320,\"xf\":760,\"yf\":400,\"stroked\":\"brown\"},{\"xd\":280,\"yd\":240,\"xf\":760,\"yf\":320,\"stroked\":\"green\"}]",
+      "solutionLinesString": "[{\"xd\":280,\"yd\":160,\"xf\":760,\"yf\":240,\"stroked\":\"white\"},{\"xd\":280,\"yd\":400,\"xf\":760,\"yf\":160,\"stroked\":\"dodgerblue\"},{\"xd\":280,\"yd\":320,\"xf\":760,\"yf\":400,\"stroked\":\"orange\"},{\"xd\":280,\"yd\":240,\"xf\":760,\"yf\":320,\"stroked\":\"hotpink\"}]",
       "solutionShapesString": "[]",
       "allshapesString": "[]",
       "questionFr": "Reliez entre les points avec des ligne de la meme couleur!",

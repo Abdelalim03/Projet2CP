@@ -3,24 +3,25 @@ import GetLanguage from '../../Components/GetLanguage'
 
 
 function Box(props) {
-
-    const language = GetLanguage();
+    let indents = [];
+    for (let i = 0; i < props.stars; i++) {
+    indents.push(<img key={i}  className={`coin lg:w-4 lg:h-4 w-[14px] h-[14px] px-[2px]`} src='/Exercices/coin.svg'/>);
+    }
   return (
     <div className='relative lg:w-[180px] lg:h-[180px] w-[130px] h-[130px] select-none'>
-        <div className='container hover:z-20 absolute lg:w-[110px] lg:h-[110px] w-[80px] h-[80px] lg:top-[35px] lg:left-[35px] top-[25px] left-[25px] lg:hover:w-[180px] lg:hover:h-[180px] hover:w-[130px] hover:h-[130px] hover:bg-[#FFC5C1] hover:border-[3px] hover:top-0 hover:left-0 border-2 bg-[#FFDFD9] border-[#6A5CF7]'>
+        <div className='container cursor-pointer hover:z-20 absolute lg:w-[110px] lg:h-[110px] w-[80px] h-[80px] lg:top-[35px] lg:left-[35px] top-[25px] left-[25px] lg:hover:w-[180px] lg:hover:h-[180px] hover:w-[130px] hover:h-[130px] hover:bg-[#FFC5C1] hover:border-[3px] hover:top-0 hover:left-0 border-2 bg-[#FFDFD9] border-[#6A5CF7]'>
             <div className='w-[100%] lg:mt-1 mt-[1px] flex flex-row justify-center'>
-                <img  className={`coin lg:w-4 lg:h-4 w-[14px] h-[14px] ${props.display1} px-[2px]`} src='/Exercices/coin.svg'/>
-                <img  className={`coin lg:w-4 lg:h-4 w-[14px] h-[14px] ${props.display2} px-[2px]`} src='/Exercices/coin.svg'/>
-                <img  className={`coin lg:w-4 lg:h-4 w-[14px] h-[14px] ${props.display3} px-[2px]`} src='/Exercices/coin.svg'/>
-                <img  className={`coin lg:w-4 lg:h-4 w-[14px] h-[14px] ${props.display4} px-[2px]`} src='/Exercices/coin.svg'/>
-                <img  className={`coin lg:w-4 lg:h-4 w-[14px] h-[14px] ${props.display5} px-[2px]`} src='/Exercices/coin.svg'/>
+            {
+                indents
+                }
+                
             </div>
             <div className='littleKey w-[100%] h-6 lg:h-9 flex flex-row justify-center'>
                 <img  className='w-[75%] h-[90%] lg:h-[95%]' src='/Exercices/Clef.svg'/>
             </div>
             <div className=''>
-                { (language==="français")&& <div className='toShow hidden w-[70%] text-center lg:text-2xl text-[16px] font-bold text-white m-auto'>Obtenez la clé {props.numExo}</div> }
-                { (language==="arabe")&& <div className='toShow hidden w-[70%] text-center lg:text-2xl text-[16px] font-bold text-white m-auto'>أحصل على المفتاح {props.numExo}</div> }
+                { (props.language==="français")&& <div className='toShow hidden w-[70%] text-center lg:text-2xl text-[16px] font-bold text-white m-auto'>Obtenez la clé {props.numExo}</div> }
+                { (props.language==="arabe")&& <div className='toShow hidden w-[70%] text-center lg:text-2xl text-[16px] font-bold text-white m-auto'>أحصل على المفتاح {props.numExo}</div> }
             </div>
             <div className='bigKey hidden w-[100%] lg:h-16 h-11 lg:mt-[10px] mt-[6px]'>
                 <img  className='w-[75%] h-[95%]' src='/Exercices/Clef.svg'/>

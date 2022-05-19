@@ -20,7 +20,7 @@ function ParametersFr() {
   return (
     <div className='symapp-container'>
        <button onClick={()=>{axios.patch("http://localhost:5000/parametres", { currentUser: 0 }).then(
-           navigate("langue")
+           navigate("/langue")
        );}}
        
        className='h-fit w-[100%] flex flex-row justify-end'>

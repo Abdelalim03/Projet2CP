@@ -88,9 +88,6 @@ code {
   border-radius: 20px;
 }
 
-.bouton:hover .boutonImg{
-  transform: rotate(-27deg);
-}
 
 .insPolygone:hover .insPolygoneContent{
   display: block;
@@ -296,4 +293,26 @@ input[type=file]::-webkit-file-upload-button {
   .symapp-container-Ar{
     @apply  md:pr-[20px] lg:pr-[50px] pt-4 flex flex-col lg:gap-10 md:gap-2 lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen w-screen font-["Tajawal"]
   }
+}
+
+#drawCanvas {
+  border: 1px solid black;
+  display: block;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+#drawCanvas.deplacer {
+  cursor: move;
+}
+#drawCanvas.fill {
+  cursor: url("./fill.png"),pointer;
+}
+#drawCanvas.remove {
+  cursor: url("./gomme.png"),pointer;
+}
+#drawCanvas.rotateD {
+  cursor: url("./rotate.png"),pointer;
+}
+#drawCanvas.rotateG {
+  cursor: url("../public/Editeur/EditorIcons/Arrow-gauche.png"),pointer;
 }
