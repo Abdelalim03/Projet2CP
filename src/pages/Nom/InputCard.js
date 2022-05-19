@@ -71,8 +71,8 @@ function InputCard() {
                 <img className='select-none absolute top-0 left-[60%]' src='/nom/Polygon 10.svg' alt='poly'/>
                 <img className='select-none absolute left-[30%] top-[10%] ' src='/nom/Group 70.svg' alt='Group 70'/>
                 <div className='h-12 lg:h-16 pl-7 rounded-2xl w-[75%]'>
-                <input dir={direction} name="userName" onKeyUp={(e)=>handlName(e)} onChange={(e)=>changeHandler(e)} value={username} type="text" className='rounded-l-2xl h-full m-0  pl-8 lg:pl-9 pr-2 text-base lg:text-xl w-[63%] focus:outline-none' placeholder="Nom d'utilisateur" />
-                    <button onClick={(e)=>handlName(e)} className="select-none w-fit px-3 h-full m-0 suivant rounded-r-2xl bg-[#0083CBB2] hover:bg-[#194084F2] text-base lg:text-2xl text-white font-bold lg:px-4 focus:outline-none transition ease-in-out delay-150 duration-300" type="button">
+                <input dir={direction} name="userName" onKeyUp={handlName} onChange={changeHandler} value={username} type="text" className='rounded-l-2xl h-full m-0  pl-8 lg:pl-9 pr-2 text-base lg:text-xl w-[63%] focus:outline-none' placeholder="Nom d'utilisateur" />
+                    <button onClick={handlName} className="select-none w-fit px-3 h-full m-0 suivant rounded-r-2xl bg-[#0083CBB2] hover:bg-[#194084F2] text-base lg:text-2xl text-white font-bold lg:px-4 focus:outline-none transition ease-in-out delay-150 duration-300" type="button">
                       suivant <FontAwesomeIcon icon={faArrowRightToBracket} className='text-white lg:w-5 -mb-[1px] lg:-mb-[2px]' />
                     </button>
                 </div>

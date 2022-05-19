@@ -15,15 +15,17 @@ function EtesVous() {
   // console.log(currentuserId);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/users/${currentuserId}`)
-      .then((res) => {
-        setUser(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (currentuserId !== 0) {
+      axios
+        .get(`http://localhost:5000/users/${currentuserId}`)
+        .then((res) => {
+          setUser(res.data);
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   }, [currentuserId]); //boucle infinie with User...ommit User...with currentuserId it's Nice.
   // console.log(User.id);
   // console.log(currentuserId);
@@ -35,7 +37,9 @@ function EtesVous() {
       {/* {language === "français" && (
         <EtesVousFr User={User} /> //u can ommit the currentId and tkhdem ghir blokher li rak tfetchi bih...mais les cas te3 curent =0 y93ed na9es
       )} */}
-      {language === "arabe" && <EtesVousAr />}
+      {language === "arabe" && (
+        <EtesVousAr User={User} currentuserId={currentuserId} />
+      )}
     </>
   );
 }

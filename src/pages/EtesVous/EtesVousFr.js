@@ -7,8 +7,7 @@ import ContinueAsFr from "./ContinueAsFr";
 const axios = require("axios");
 
 function EtesVousFr({ User, currentuserId }) {
-  // const currentuserId =currentuserId;
-  // console.log(currentuserId);
+  
   const [showModal, setShowModal] = useState(false);
   // const [CurrentUser, setCurrentUser] = useState(User);
   const handleMode = (mode) => {
@@ -25,43 +24,6 @@ function EtesVousFr({ User, currentuserId }) {
     if (currentuserId === 0) setShowModal(false);
   });
 
-  // const handleClick = (show, mode) => {
-  //   handleMode(mode);
-  //   handleShow(show);
-  // };
-  // const [User, setUser] = useState(props.User);
-  // //fetch from db the user of the id currentuser, display it;s name and pass
-  // useEffect(() => {
-  //    const isMounted = true
-  //   axios
-  //     .get(`http://localhost:5000/users/-1`)
-  //     .then((res) => {
-  //       if (isMounted) setUser(res.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  //     return () => { isMounted = false };
-  // }, []);
-  // useEffect(() => {
-  //   axios
-  //     .get(`http://localhost:5000/users/${currentuserId}`)
-  //     .then((res) => {
-  //       // console.log(res);
-  //       return res;
-  //     })
-  //     .then((data) => {
-  //       console.log(data);
-  //       setUser(data);
-
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, []);
-
-  // console.log(CurrentUser);
-  // console.log(showModal);
   console.log(User.id);
   console.log(currentuserId); //undefined ( 1: makontch mpassih prop 2: rendring Pb)
   return (

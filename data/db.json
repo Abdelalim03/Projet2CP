@@ -1,8 +1,8 @@
 {
   "parametres": {
-    "langue": "français",
-    "currentUser": 0,
-    "mode": "prof"
+    "langue": "arabe",
+    "currentUser": 1,
+    "mode": "eleve"
   },
   "users": [
     {
@@ -13,67 +13,11 @@
       "id": -1
     },
     {
-      "nom": "a",
-      "avatar": "/avatar/Group-3.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 1
-    },
-    {
-      "nom": "تثختسخش",
-      "avatar": "/avatar/Group-4.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 2
-    },
-    {
       "nom": "Amine",
-      "avatar": "",
-      "exercices": [],
-      "cours": "",
-      "id": 3
-    },
-    {
-      "nom": "aaaaa",
-      "avatar": "/avatar/Group-4.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 4
-    },
-    {
-      "nom": "hbb",
-      "avatar": "/avatar/Group-9.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 5
-    },
-    {
-      "nom": "A",
       "avatar": "/avatar/Group-1.svg",
       "exercices": [],
       "cours": "",
-      "id": 6
-    },
-    {
-      "nom": "Samir",
-      "avatar": "/avatar/Group-2.svg",
-      "exercices": [],
-      "cours": "",
-      "id": 7
-    },
-    {
-      "nom": "Amina",
-      "avatar": "",
-      "exercices": [],
-      "cours": "",
-      "id": 8
-    },
-    {
-      "nom": "yew",
-      "avatar": "",
-      "exercices": [],
-      "cours": "",
-      "id": 9
+      "id": 1
     }
   ],
   "courses": [
