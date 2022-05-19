@@ -1,6 +1,10 @@
 import React from "react";
 export default function DeleteConfirModalَAr() {
   const [showModal, setShowModal] = React.useState(false);
+
+
+
+  
   return (
     <>
       <button type="button" onClick={() => setShowModal(true)}>
