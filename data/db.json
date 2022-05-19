@@ -1,6 +1,6 @@
 {
   "parametres": {
-    "langue": "français",
+    "langue": "arabe",
     "currentUser": 1,
     "mode": "eleve"
   },
@@ -16,6 +16,18 @@
       "avatar": "/Prof/EnseignantIcon.svg",
       "maxExo": 15,
       "id": -1
+    },
+    {
+      "nom": "Amine",
+      "avatar": "",
+      "exercices": [],
+      "id": 2
+    },
+    {
+      "nom": "Benzima",
+      "avatar": "/avatar/Group-9.svg",
+      "exercices": [],
+      "id": 3
     }
   ],
   "courses": [

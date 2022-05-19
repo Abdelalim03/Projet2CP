@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faSquareCheck,faCircle,faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { useParams } from 'react-router-dom';
+import True from './True';
+import False from './False';
 
 function Editeur({full}) {
     // let qstFr,qstAr;
@@ -1309,9 +1311,9 @@ function setUP(){
     if (!full){ 
         document.getElementById("submit").addEventListener("click", function () {
         if(Exercice.CompareSolution(typeOfCheck)){
-            alert("Reponse Vrai")
+            SetTrueFrEstOuvert(!trueFrEstOuvert)
         }else{
-            alert("Reponse Fausse")
+            SetFalseFrEstOuvert(!FalseFrEstOuvert)
         }
 
     });
@@ -1696,13 +1698,42 @@ class Exercice {
             // allshapesString='[]'
 
 }
+
+    
     
 }
+
+    const [trueFrEstOuvert, SetTrueFrEstOuvert] = useState(false);
+    const showtrueFr = () => {SetTrueFrEstOuvert(!trueFrEstOuvert);}
+    const [FalseFrEstOuvert, SetFalseFrEstOuvert] = useState(false);
+    const showFalseFr = () => {SetFalseFrEstOuvert(!FalseFrEstOuvert);}
+   
   
     return (    
       <>
  { (language==="français")&&
  <div className='symapp-container pl-10 overflow-auto'>
+
+     <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!trueFrEstOuvert && 'hidden'}`}>
+            <div className='h-8 lg:h-12 w-2/5 flex flex-row justify-end bg-blue-200'>
+                <button onClick={showtrueFr} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
+            </div>
+            <True 
+            hide1='' hide2='' hide3='' hide4='' hide5=''
+            msg='Felicitation! votre reponse est juste'
+            cont='Continuer' ret='retour' flex='flex-row'
+              />
+     </div>
+     <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!FalseFrEstOuvert && 'hidden'}`}>
+            <div className='h-8 lg:h-12 w-2/5 flex flex-row justify-end bg-blue-200'>
+                <button onClick={showFalseFr} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
+            </div>
+            <False 
+            msg='Votre reponse est fausse, on sais que tu peut faire mieu ! essayer une autre fois '
+            ress='Ressayer' ret='retour'
+             />
+            
+     </div>
     <div className=' ml-24 lg:ml-[105px] mt-2 h-14 w-[85%]'>
                 <div className=' text-base lg:text-xl font-semibold text-[#283D93]' >
                     {full && "C'est à vous pour appliquer vos idées"}
@@ -1829,6 +1860,26 @@ class Exercice {
    }
  { (language==="arabe")&& 
  <div dir="rtl"  className='symapp-container-Ar pr-10 overflow-auto'>
+        <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!trueFrEstOuvert && 'hidden'}`}>
+                <div className='h-8 lg:h-12 w-2/5 flex flex-row justify-end bg-blue-200'>
+                    <button onClick={showtrueFr} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
+                </div>
+                <True 
+                hide1='' hide2='' hide3='' hide4='' hide5=''
+                msg='تهانينا ! إجابتك صحيحة'
+                cont='الرجوع' ret='المواصلة' flex='flex-row-reverse'
+                />
+        </div>
+        <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!FalseFrEstOuvert && 'hidden'}`}>
+                <div className='h-8 lg:h-12 w-2/5 flex flex-row justify-end bg-blue-200'>
+                    <button onClick={showFalseFr} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
+                </div>
+                <False 
+                msg='إجابتك خاطئة, يمكنك أن تكون أفضل ! حاول مرة أخرى '
+                ress='الرجوع' ret='الإعادة'
+                />
+                
+        </div>
         <div className='mr-24 lg:mr-[105px] mt-2 h-14 w-[85%]'>
                 <div className="text-base font-['Tajawal'] lg:text-xl font-semibold text-[#283D93]" >
                     
