@@ -7,7 +7,7 @@ import MenuFr from "./MenuFr";
 import { useParams } from "react-router-dom";
 
 function Menu() {
-  const [User, setUser] = useState(null);
+  const [User, setUser] = useState("");
   const { id } = useParams();
   useEffect(() => {
     axios

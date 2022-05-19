@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Chapitre from "./Chapitre";
 import UserTitle from "../../Components/UserTitle";
-function CoursFr({userName, userAvatar}) {
-  const [Courses, SetCourses] = useState(null);
+function CoursFr({ userName, userAvatar }) {
+  const [Courses, SetCourses] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/courses")
       .then((res) => {
