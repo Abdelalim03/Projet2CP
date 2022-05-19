@@ -31,7 +31,6 @@ function App() {
           <Route path="nom" element={<Nom />} />
           <Route path="avatar/:id" element={<Avatar />} />
           <Route path="*" element={<NoPage />} />
-
           <Route path="home/:id" element={<Layout />}>
             <Route index element={<Menu />} />
             <Route path="cours" element={<Cours />} />
