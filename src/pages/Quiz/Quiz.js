@@ -32,7 +32,7 @@ function Quiz() {
     return (    
       <>
  { (language==="français")&& <QuizFr propoCor={propCorrecte} propo1={prop1} propo2={prop2} propo3={prop3} />  }
- { (language==="arabe")&&  <QuizAr propo1={prop1} propo2={prop2} propo3={prop3}/> }
+ { (language==="arabe")&&  <QuizAr propoCor={propCorrecte} propo1={prop1} propo2={prop2} propo3={prop3}/> }
       </>
     
    )

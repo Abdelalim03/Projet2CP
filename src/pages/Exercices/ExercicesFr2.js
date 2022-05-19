@@ -1,10 +1,37 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import SideBar from '../../Components/SideBar'
+import { Link, useParams } from 'react-router-dom'
 import Box from './Box'
 import BoxBloquee from './BoxBloquee'
 
 function ExercicesFr2() {
+  const { Max } = useParams();
+  let tableOfex=[{class:"lg:left-[160px] lg:top-[434px] left-[100px] top-[314px]",stars:1,id:25},
+  {class:"lg:left-[268px] lg:top-[434px] left-[178px] top-[314px]",stars:1,id:26},
+  {class:"lg:left-[376px] lg:top-[434px] left-[256px] top-[314px]",stars:1,id:27},
+  {class:"lg:left-[482px] lg:top-[434px] left-[334px] top-[314px]",stars:1,id:28},
+  {class:"lg:left-[590px] lg:top-[434px] left-[412px] top-[314px]",stars:1,id:29},
+  {class:"lg:left-[698px] lg:top-[434px] left-[490px] top-[314px]",stars:1,id:30},
+  {class:"lg:left-[806px] lg:top-[434px] left-[568px] top-[314px]",stars:1,id:31},
+  {class:"lg:left-[806px] lg:top-[326px] left-[568px] top-[236px]",stars:1,id:32},
+  {class:"lg:left-[806px] lg:top-[218px] left-[568px] top-[158px]",stars:1,id:33},
+  {class:"lg:left-[698px] lg:top-[218px] left-[490px] top-[158px]",stars:1,id:34},
+  {class:"lg:left-[590px] lg:top-[218px] left-[412px] top-[158px]",stars:1,id:35},
+  {class:"lg:left-[482px] lg:top-[218px] left-[334px] top-[158px]",stars:1,id:36},
+  {class:"lg:left-[376px] lg:top-[218px] left-[256px] top-[158px]",stars:1,id:37},
+  {class:"lg:left-[268px] lg:top-[218px] left-[178px] top-[158px]",stars:1,id:38},
+  {class:"lg:left-[160px] lg:top-[218px] left-[100px] top-[158px]",stars:1,id:39},
+  {class:"lg:left-[52px] lg:top-[218px] left-[22px] top-[158px]",stars:1,id:40},
+  {class:"lg:left-[52px] lg:top-[110px] left-[22px] top-[80px]",stars:1,id:41},
+  {class:"lg:left-[52px] lg:top-[1px] left-[22px] top-[2px]",stars:3,id:42},
+  {class:"lg:left-[160px] lg:top-[1px] left-[100px] top-[2px]",stars:1,id:43},
+  {class:"lg:left-[268px] lg:top-[1px] left-[178px] top-[2px]",stars:1,id:44},
+  {class:"lg:left-[376px] lg:top-[1px] left-[256px] top-[2px]",stars:1,id:45},
+  {class:"lg:left-[482px] lg:top-[1px] left-[334px] top-[2px]",stars:1,id:46},
+  {class:"lg:left-[590px] lg:top-[1px] left-[412px] top-[2px]",stars:1,id:47},
+
+  
+  
+];
   return (
     <div className='symapp-container'>
       <div className=' relative bg-white rounded-l-2xl lg:rounded-l-3xl w-[92%] '>
@@ -21,29 +48,20 @@ function ExercicesFr2() {
                     <img  className='locked absolute lg:top-[110px] lg:left-10 top-[80px] left-[26px] lg:w-[40px] lg:h-[50px] w-[30px] h-[40px] ' src='/Exercices/YLock.svg'/>
 
                 </div>
-                <div className='absolute lg:left-[160px] lg:top-[434px] left-[100px] top-[314px]'> <BoxBloquee numExoPrecedent="23" numExoBloque="24" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[268px] lg:top-[434px] left-[178px] top-[314px]'> <BoxBloquee numExoPrecedent="24" numExoBloque="25" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[376px] lg:top-[434px] left-[256px] top-[314px]'> <BoxBloquee numExoPrecedent="25" numExoBloque="26" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[482px] lg:top-[434px] left-[334px] top-[314px]'> <BoxBloquee numExoPrecedent="26" numExoBloque="27" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[590px] lg:top-[434px] left-[412px] top-[314px]'> <BoxBloquee numExoPrecedent="27" numExoBloque="28" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[698px] lg:top-[434px] left-[490px] top-[314px]'> <BoxBloquee numExoPrecedent="28" numExoBloque="29" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[806px] lg:top-[434px] left-[568px] top-[314px]'> <BoxBloquee numExoPrecedent="29" numExoBloque="30" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[806px] lg:top-[326px] left-[568px] top-[236px]'> <BoxBloquee numExoPrecedent="30" numExoBloque="31" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[806px] lg:top-[218px] left-[568px] top-[158px]'> <BoxBloquee numExoPrecedent="31" numExoBloque="32" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[698px] lg:top-[218px] left-[490px] top-[158px]'> <BoxBloquee numExoPrecedent="32" numExoBloque="33" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[590px] lg:top-[218px] left-[412px] top-[158px]'> <BoxBloquee numExoPrecedent="33" numExoBloque="34" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[482px] lg:top-[218px] left-[334px] top-[158px]'> <BoxBloquee numExoPrecedent="34" numExoBloque="35" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[376px] lg:top-[218px] left-[256px] top-[158px]'> <BoxBloquee numExoPrecedent="35" numExoBloque="36" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[268px] lg:top-[218px] left-[178px] top-[158px]'> <BoxBloquee numExoPrecedent="36" numExoBloque="37" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[160px] lg:top-[218px] left-[100px] top-[158px]'> <BoxBloquee numExoPrecedent="37" numExoBloque="38" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[52px] lg:top-[218px] left-[22px] top-[158px]'> <BoxBloquee numExoPrecedent="38" numExoBloque="39" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[52px] lg:top-[110px] left-[22px] top-[80px]'> <BoxBloquee numExoPrecedent="39" numExoBloque="40" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[52px] lg:top-[1px] left-[22px] top-[2px]'> <BoxBloquee numExoPrecedent="40" numExoBloque="41" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[160px] lg:top-[1px] left-[100px] top-[2px]'> <BoxBloquee numExoPrecedent="41" numExoBloque="42" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[268px] lg:top-[1px] left-[178px] top-[2px]'> <BoxBloquee numExoPrecedent="42" numExoBloque="43" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[376px] lg:top-[1px] left-[256px] top-[2px]'> <BoxBloquee numExoPrecedent="43" numExoBloque="44" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[482px] lg:top-[1px] left-[334px] top-[2px]'> <BoxBloquee numExoPrecedent="44" numExoBloque="45" display1="hidden" display2="hidden"  /> </div>
-                <div className='absolute lg:left-[590px] lg:top-[1px] left-[412px] top-[2px]'> <BoxBloquee numExoPrecedent="45" numExoBloque="46" display1="hidden" display2="hidden"  /> </div>
+
+                {tableOfex.map((exo,index)=>(
+                  <div key={exo.id} className= {`absolute ${exo.class}`}  >
+                  {(exo.id<=Max) ?
+                  <Link to={`../exercice/${exo.id}/${exo.stars}`}>
+                  <Box language="français" numExo={`${exo.id}` } stars={exo.stars} />
+                  </Link>
+                    :
+                    <BoxBloquee language="français" numExoPrecedent={exo.id-1} stars={exo.stars} numExoBloque={exo.id} />
+                }
+                </div>
+              
+              ))}
+                
           </div>
 
       </div>

@@ -16,6 +16,7 @@ import Landing from "./pages/Landing/Landing";
 import Parameters from "./pages/Parameters/Parameters";
 import ExercicesAr2 from "./pages/Exercices/ExercicesAr2";
 import ExercicesFr2 from "./pages/Exercices/ExercicesFr2";
+import Logo from "./pages/Logo/Logo";
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/">
-          <Route index element={<Langue />} />
+          <Route index element={<Logo />} />
+          <Route path="langue" element={<Langue />} />
           <Route path="welcome" element={<Landing />} />
           <Route path="choix" element={<EtesVous />} />
           <Route path="nom" element={<Nom />} />
@@ -35,10 +37,11 @@ function App() {
             <Route path="cours" element={<Cours />} />
             <Route path="courscontent/:coursId" element={<CoursContent />} />
             <Route path="quiz/:id" element={<Quiz />} />
-            <Route path="exercices" element={<Exercices />} />
-            <Route path="ExercicesAr2" element={<ExercicesAr2 />} />
-            <Route path="ExercicesFr2" element={<ExercicesFr2 />} />
-            <Route path="dessiner" element={<Editeur />} />
+            <Route path="exercices" element={<Exercices   />} />
+            <Route path="ExercicesAr2/:Max" element={<ExercicesAr2 />} />
+            <Route path="ExercicesFr2/:Max" element={<ExercicesFr2 />} />
+            <Route path="exercice/:exoId/:stars" element={<Editeur full={false} />} />
+            <Route path="dessiner" element={<Editeur full={true} />} />
             <Route path="parametres" element={<Parameters />} />
             <Route path="*" element={<NoPage2 />} />
           </Route>
