@@ -1228,7 +1228,6 @@ function point(x, y, color, w) {
 }
 
 
-
 function drawLine(x1, y1, x2, y2) {
 
     gc.beginPath();
@@ -1717,16 +1716,16 @@ class Exercice {
                             <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 10.svg' alt='icon' />
                         </button>
                         <div className='palCol h-16  animate-[avatar_500ms_ease-in-out_1] w-[450px] lg:w-[500px] items-center  hidden flex-row gap-3'>
-                            <div style={{backgroundColor:"black"}} className=' color-field ml-4 cursor-pointer h-[28px] w-[28px]  '></div>
-                            <div style={{backgroundColor:"white"}} className='color-field border-solid border-2 border-black h-[28px] cursor-pointer w-[28px]  '></div>
-                            <div style={{backgroundColor:"DodgerBlue"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"red"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"green"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"yellow"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"purple"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"brown"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"orange"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"HotPink"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
+                            <div style={{backgroundColor:"black"}} className=' color-field ml-4 cursor-pointer h-[28px] w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"white"}} className='color-field border-solid border-2 border-black h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"DodgerBlue"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
+                            <div style={{backgroundColor:"red"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
+                            <div style={{backgroundColor:"green"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"yellow"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
+                            <div style={{backgroundColor:"purple"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
+                            <div style={{backgroundColor:"brown"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"orange"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"HotPink"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                     </div>
                 </div>
                 {
@@ -1842,16 +1841,16 @@ class Exercice {
                             <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 10.svg' alt='icon' />
                         </button>
                         <div className='palCol h-16 animate-[avatar_500ms_ease-in-out_1] lg:h-12 w-[450px] lg:w-[500px]  items-center hidden flex-row gap-3'>
-                            <div style={{backgroundColor:"black"}} className=' color-field mr-4 cursor-pointer h-[28px] w-[28px]  '></div>
-                            <div style={{backgroundColor:"white"}} className='color-field border-solid border-2 border-black h-[28px] cursor-pointer w-[28px]  '></div>
-                            <div style={{backgroundColor:"DodgerBlue"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"red"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"green"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"yellow"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"purple"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"brown"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"orange"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"HotPink"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
+                            <div style={{backgroundColor:"black"}} className=' color-field mr-4 cursor-pointer h-[28px] w-[28px] rounded-sm hover:scale-125 '></div>
+                            <div style={{backgroundColor:"white"}} className='color-field border-solid border-2 border-black h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125 '></div>
+                            <div style={{backgroundColor:"DodgerBlue"}} className='color-field h-[28px] cursor-pointer w-[28px]  rounded-sm hover:scale-125 '></div>
+                            <div style={{backgroundColor:"red"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125 '></div>
+                            <div style={{backgroundColor:"green"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"yellow"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"purple"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"brown"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"orange"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"HotPink"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                         </div>
                     </div>
                     {

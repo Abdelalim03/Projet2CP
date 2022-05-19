@@ -48,7 +48,7 @@ function InputCard() {
           axios.post('http://localhost:5000/users',{
           "nom": username.trim(),
           "avatar": "",
-          "exercices": [],
+          "maxExo": 1,
           })
           .then( async res => {
              axios.patch('http://localhost:5000/parametres',{"currentUser":res.data.id} ).then( async res2 => {

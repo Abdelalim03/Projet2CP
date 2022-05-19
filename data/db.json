@@ -1,7 +1,7 @@
 {
   "parametres": {
     "langue": "français",
-    "currentUser": 1,
+    "currentUser": 2,
     "mode": "eleve"
   },
   "users": [
@@ -16,6 +16,12 @@
       "avatar": "/Prof/EnseignantIcon.svg",
       "maxExo": 15,
       "id": -1
+    },
+    {
+      "nom": "ahmed",
+      "avatar": "/avatar/Group-1.svg",
+      "maxExo": 1,
+      "id": 2
     }
   ],
   "courses": [
