@@ -1,8 +1,4 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import AbsoluteAr from "./AbsoluteAr";
-// import CardAr from "./CardAr";
-// const axios = require("axios")
+
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -43,11 +39,11 @@ function EtesVousAr({ User, currentuserId }) {
           <ContinueAsAr
             nom={User.nom}
             avatar={User.avatar}
-            currentuserId={currentuserId} //tmchi fl cas user.id mais sans traiter le cas te3 current = 0
+            currentuserId={currentuserId} 
             Modal={showModal}
           />
         </>
-        {currentuserId === 0 ? ( //replace by currentuserid( cas user undifiend...)
+        {currentuserId === 0 ? ( 
           <Link to="/nom">
             <div onClick={() => handleMode("eleve")}>
               <CardAr

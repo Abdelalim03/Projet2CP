@@ -24,8 +24,6 @@ function EtesVousFr({ User, currentuserId }) {
     if (currentuserId === 0) setShowModal(false);
   });
 
-  console.log(User.id);
-  console.log(currentuserId); //undefined ( 1: makontch mpassih prop 2: rendring Pb)
   return (
     <div className="relative w-screen h-screen ">
       <Absolute />
@@ -36,11 +34,11 @@ function EtesVousFr({ User, currentuserId }) {
           <ContinueAsFr
             nom={User.nom}
             avatar={User.avatar}
-            currentuserId={currentuserId} //tmchi fl cas user.id mais sans traiter le cas te3 current = 0
+            currentuserId={currentuserId} 
             Modal={showModal}
           />
         </>
-        {currentuserId === 0 ? ( //replace by currentuserid( cas user undifiend...)
+        {currentuserId === 0 ? ( 
           <Link to="/nom">
             <div onClick={() => handleMode("eleve")}>
               <Card path="/etesvous/Eleve.png" scale="scale-100" name="Elève" />
