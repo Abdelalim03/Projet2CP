@@ -2,12 +2,12 @@
   "parametres": {
     "langue": "arabe",
     "currentUser": 4,
-    "mode": "eleve"
+    "mode": "prof"
   },
   "users": [
     {
       "nom": "Prof",
-      "avatar": "/avatar/Group-3.svg",
+      "avatar": "/Prof/EnseignantIcon.svg",
       "score": 100,
       "maxExo": 48,
       "id": -1
