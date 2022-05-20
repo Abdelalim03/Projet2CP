@@ -1,9 +1,8 @@
 import axios from "axios";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 
 function QuizFr(props) {
-
   const [hide, setHide] = useState(true);
   const [correcte, SetCorrect] = useState(false);
   const [evaluer, setEvaluer] = useState("");
@@ -13,26 +12,25 @@ function QuizFr(props) {
   const [check2, SetCheck2] = useState(false);
   const [check3, SetCheck3] = useState(false);
 
-  const voirSolution = () =>{
-    if(props.propoCor === "1") SetCheck1(true);
-    if(props.propoCor === "2") SetCheck2(true);
-    if(props.propoCor === "3") SetCheck3(true);
-  }
+  const voirSolution = () => {
+    if (props.propoCor === "1") SetCheck1(true);
+    if (props.propoCor === "2") SetCheck2(true);
+    if (props.propoCor === "3") SetCheck3(true);
+  };
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) => {
     SetDesact(true);
-    if(e.target.value === props.propoCor) {
-        SetCorrect(true);
-        setHide(false);
-        setEvaluer("Bravo 🎉✨");
-    }
-    else{
+    if (e.target.value === props.propoCor) {
+      SetCorrect(true);
+      setHide(false);
+      setEvaluer("Bravo 🎉✨");
+    } else {
       SetCorrect(false);
       setHide(false);
-      setEvaluer("Faux :(");
+      setEvaluer("Faux 🤯");
     }
-  }
-  
+  };
+
   return (
     <div className="flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen">
       <div className=" flex flex-col justify-start gap-5">
@@ -62,7 +60,7 @@ function QuizFr(props) {
             <div className="flex justify-center">
               <img
                 className="h-72 lg:h-96 bg-white rounded-3xl"
-                src="/quiz/grille.png"
+                src={props.QuizImage}
                 alt=""
               />
             </div>
@@ -109,7 +107,11 @@ function QuizFr(props) {
                   disabled={desact}
                 />
                 <label
-                  className={`form-check-label ${check1 && "text-green-400"} inline-block md:text-xl lg:text-2xl font-bold ${!check1 && "text-gray-800"}`}
+                  className={`form-check-label ${
+                    check1 && "text-green-400"
+                  } inline-block md:text-xl lg:text-2xl font-bold ${
+                    !check1 && "text-gray-800"
+                  }`}
                   htmlFor="flexRadioDefault1"
                 >
                   {props.propo1}
@@ -126,7 +128,11 @@ function QuizFr(props) {
                   disabled={desact}
                 />
                 <label
-                  className={`form-check-label ${check2 && "text-green-400"} inline-block md:text-xl lg:text-2xl font-bold ${!check2 && "text-gray-800"}`}
+                  className={`form-check-label ${
+                    check2 && "text-green-400"
+                  } inline-block md:text-xl lg:text-2xl font-bold ${
+                    !check2 && "text-gray-800"
+                  }`}
                   htmlFor="flexRadioDefault2"
                 >
                   {props.propo2}
@@ -143,7 +149,11 @@ function QuizFr(props) {
                   disabled={desact}
                 />
                 <label
-                  className={`form-check-label ${check3 && "text-green-400"} inline-block md:text-xl lg:text-2xl font-bold ${!check3 && "text-gray-800"}`}
+                  className={`form-check-label ${
+                    check3 && "text-green-400"
+                  } inline-block md:text-xl lg:text-2xl font-bold ${
+                    !check3 && "text-gray-800"
+                  }`}
                   htmlFor="flexRadioDefault3"
                 >
                   {props.propo3}
@@ -151,14 +161,23 @@ function QuizFr(props) {
               </div>
             </div>
 
-            <div className={`${hide && "hidden"} ${(!hide && "flex")} flex-col mt-5 lg:mt-10 gap-1 justify-center items-start`}>
+            <div
+              className={`${hide && "hidden"} ${
+                !hide && "flex"
+              } flex-col mt-5 lg:mt-10 gap-1 justify-center items-start`}
+            >
               <p className="md:text-2xl lg:text-3xl font-bold">{evaluer}</p>
               <Link to="../cours">
-                  <button className="container bg-[#4ED964] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-lg lg:text-xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md">
-                    Continuer
-                  </button>
+                <button className="container bg-[#4ED964] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-lg lg:text-xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md">
+                  Continuer
+                </button>
               </Link>
-              <button onClick={voirSolution} className={`container ${correcte && "hidden"} bg-[#FAE0B2] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-lg lg:text-xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md`}>
+              <button
+                onClick={voirSolution}
+                className={`container ${
+                  correcte && "hidden"
+                } bg-[#FAE0B2] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-lg lg:text-xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md`}
+              >
                 Voir la sollution
               </button>
             </div>

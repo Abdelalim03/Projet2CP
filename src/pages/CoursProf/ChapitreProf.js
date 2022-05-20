@@ -9,7 +9,7 @@ function ChapitreProf(props) {
       <div className="bg-[#FFC5C1] w-[420px] lg:w-[660px] py-4 lg:py-5 rounded-2xl lg:rounded-3xl flex flex-row">
         <div className="w-[15%] flex flex-row justify-center items-center">
           <img
-            className="w-11 lg:w-16 h-11 lg:h-16"
+            className="w-11 lg:w-16 h-11 lg:h-16 rounded-full"
             src={props.image}
             alt="img1"
           />

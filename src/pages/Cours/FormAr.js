@@ -30,7 +30,6 @@ function FormAr(props) {
       "position":inputs.positionCours,
       "titre": inputs.titreCours,
       "titreAr": inputs.titreCoursAr,
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
       "Quiz": "Quiz 01",
       "QuizAr": "استجواب 01",
       "QuizExp": 20,
@@ -45,13 +44,15 @@ function FormAr(props) {
       "DesCours": inputs.desCours,
       "DesCoursAr": inputs.desCoursAr,
       "CheminCours": "",
-      "CourseBase64":`${file}`
+      "ImageCours": `${CoursImageEncoded}`,
+      "CourseBase64":`${file}`,
+      "QuizImageBase64":`${QuizImageEncoded}`
     });
   }
 
   const [ file, setFile ] = useState(null)
-  const [ fileName, setFileName ] = useState(null)
-
+  const [QuizImageEncoded,setImageEncoded]=useState(null)
+  const [CoursImageEncoded,setCoursImageEncoded]=useState(null)
   const fileToBase64 = (file, cb) => {
     const reader = new FileReader()
     reader.readAsDataURL(file)
@@ -70,10 +71,33 @@ function FormAr(props) {
     fileToBase64(target.files[0], (err, result) => {
       if (result) {
         setFile(result)
-        setFileName(target.files[0])
+        // console.log(result);
       }
     })
   }
+  const onUploadQuizImageChange = ({ target }) => {
+    if (target.files < 1 || !target.validity.valid) {
+      return
+    }
+    fileToBase64(target.files[0], (err, result) => {
+      if (result) {
+        setImageEncoded(result)
+        console.log(result);
+      }
+    })
+  }
+  const onUploadCoursImageChange = ({ target }) => {
+    if (target.files < 1 || !target.validity.valid) {
+      return
+    }
+    fileToBase64(target.files[0], (err, result) => {
+      if (result) {
+        setCoursImageEncoded(result)
+        console.log(result);
+      }
+    })
+  }
+
 
   return (
         <form onSubmit={handleSubmit} className='h-3/4 w-4/5 bg-white overflow-auto'>
@@ -134,7 +158,7 @@ function FormAr(props) {
             />
 
             <p className='block mr-5 text-sm lg:text-lg font-semibold'>صورة مرتبطة بالدرس :</p>
-            <FileInAr accept=".png" fileName="imgCours" fileType="صورة"/>
+            <FileInAr accept=".png" fileName="imgCours" fileType="صورة" onUploadFunction={onUploadCoursImageChange}/>
             <p for="pdfCours" className='block mr-5 text-sm lg:text-lg font-semibold'>أدخل ملف الدرس :</p>
             <FileInAr accept=".pdf" fileName="pdfCours" fileType="ملف" onUploadFunction={onUploadFileChange}/>
             
@@ -221,7 +245,7 @@ function FormAr(props) {
               <option value="3">الثالثة</option>
             </select>
             <p className='block ml-5 text-sm lg:text-lg font-semibold'>أدخل صورة الاستجواب :</p>
-            <FileInAr accept=".png" fileName="imgQuiz" fileType="صورة"/>
+            <FileInAr accept=".png" fileName="imgQuiz" fileType="صورة" onUploadFunction={onUploadQuizImageChange} />
           </div>
           <div className='flex flex-row justify-end w-[100%] h-fit'>
             <label for="sub" className='w-fit h-10 lg:h-14 p-2 lg:p-3 ml-6 lg:ml-10 mt-2 lg:mt-4 mb-6 rounded-lg cursor-pointer bg-[#FFDFD9] hover:scale-110 hover:bg-[#FFC5C1] flex flex-row-reverse gap-3'>

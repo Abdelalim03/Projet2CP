@@ -1,10 +1,21 @@
 import React from "react";
-export default function DeleteConfirModalَAr() {
+import axios from "axios";
+
+export default function DeleteConfirModalَAr({ CourseId }) {
   const [showModal, setShowModal] = React.useState(false);
 
+  const handleDelete =  () => {
+    axios
+      .delete(`http://localhost:5000/courses/${CourseId}`)
+      .then((resp) => {
+        console.log(resp.data);
+        console.log("khra");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
-
-  
   return (
     <>
       <button type="button" onClick={() => setShowModal(true)}>
@@ -20,13 +31,17 @@ export default function DeleteConfirModalَAr() {
                 <div className="flex flex-col items-center gap-5 justify-center rounded-t">
                   <img className="w-24" src="/Prof/Trash.svg" alt="icon" />
 
-                  <h3 dir='rtl' className="mt-5 text-3xl text-center font-semibold">
-                    هل تريد حقا
-                    حـذف الـدرس؟
+                  <h3
+                    dir="rtl"
+                    className="mt-5 text-3xl text-center font-semibold"
+                  >
+                    هل تريد حقا حـذف الـدرس؟
                   </h3>
-                  <p dir='rtl' className="my-3 text-slate-500 text-center text-lg leading-relaxed">
-                    الإستجواب أيضا
-                    سيتم حذفه !
+                  <p
+                    dir="rtl"
+                    className="my-3 text-slate-500 text-center text-lg leading-relaxed"
+                  >
+                    الإستجواب أيضا سيتم حذفه !
                   </p>
                 </div>
                 {/*footer*/}
@@ -34,7 +49,7 @@ export default function DeleteConfirModalَAr() {
                   <button
                     className="bg-red-600 text-white text-xl active:bg-red-500 font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={handleDelete}
                   >
                     حـذف
                   </button>

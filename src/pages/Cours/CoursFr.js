@@ -12,7 +12,7 @@ function CoursFr({ userName, userAvatar }) {
         SetCourses(data);
         
       });
-  }, []);
+  }, [Courses]);
   return (
     <div className="symapp-container">
       <div className="w-[80%] h-32 mb-0 lg:mb-10">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import DeleteConfirModalَAr from "../CoursProf/DeleteConfirmModalAr";
+import DeleteConfirmModalَAr from "../CoursProf/DeleteConfirmModalAr";
 
 function ChapitreProfAr(props) {
   return (
@@ -8,7 +8,7 @@ function ChapitreProfAr(props) {
       <div className="bg-[#FFC5C1] w-[420px] lg:w-[660px] py-4 lg:py-5 rounded-2xl lg:rounded-3xl flex flex-row">
         <div className="w-[15%] flex flex-row justify-center items-center">
           <img
-            className="w-11 lg:w-16 h-11 lg:h-16"
+            className="w-11 lg:w-16 h-11 lg:h-16 rounded-full"
             src={props.image}
             alt="img1"
           />
@@ -24,11 +24,11 @@ function ChapitreProfAr(props) {
           </div>
         </div>
         <div className="ml-3 w-[15%] gap-5 flex flex-row justify-center items-center">
-        <DeleteConfirModalَAr/>
+        <DeleteConfirmModalَAr CourseId={props.courseId}/>
         <Link to={`../courscontent/${props.courseId}/${props.position}`}>
             <button className="bg-[#FAE0B2] flex justify-center items-center w-6 lg:w-9 h-6 lg:h-9">
               <img
-                className="w-4 lg:w-7 h-4 lg:h-7"
+                className="w-4 lg:w-7 h-4 lg:h-7 "
                 src={props.image2}
                 alt="icon"
               />
