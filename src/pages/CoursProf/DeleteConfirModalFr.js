@@ -1,6 +1,19 @@
+import axios from "axios";
 import React from "react";
-export default function DeleteConfirModal() {
+export default function DeleteConfirModal({ CourseId }) {
   const [showModal, setShowModal] = React.useState(false);
+
+  const handleDelete = () => {
+    axios
+      .delete(`http://localhost:5000/courses/${CourseId}`)
+      .then((resp) => {
+        console.log(resp.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <>
       <button type="button" onClick={() => setShowModal(true)}>
@@ -37,7 +50,7 @@ export default function DeleteConfirModal() {
                   <button
                     className="bg-red-600 text-white active:bg-red-500 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={handleDelete}
                   >
                     Supprimer
                   </button>

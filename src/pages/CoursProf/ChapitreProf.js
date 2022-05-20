@@ -25,8 +25,8 @@ function ChapitreProf(props) {
           </div>
         </div>
         <div className="w-[20%] pr-3 flex flex-row gap-5 justify-center items-center">
-          <DeleteConfirModal />
-          <Link to={`../courscontent/${props.courseId}`}>
+          <DeleteConfirModal CourseId={props.courseId}/>
+          <Link to={`../courscontent/${props.courseId}/${props.position}`}>
             <button className="bg-[#FAE0B2] flex justify-center items-center w-6 lg:w-9 h-6 lg:h-9">
               <img
                 className="w-4 lg:w-7 h-4 lg:h-7 "
@@ -41,7 +41,7 @@ function ChapitreProf(props) {
         <h1 className="font-semibold font-['Tajawal'] text-base lg:text-xl mb-3 lg:mb-6">
           {props.nomQuiz}
         </h1>
-        <Link to={`../quiz/${props.courseId}`}>
+        <Link to={`../quiz/${props.courseId}/${props.position}`}>
           <button className="w-[59px] lg:w-fit font-normal text-xs lg:text-base text-center border-2 border-[#283D93] p-1 rounded-lg">
             {props.numExp} Exp
           </button>

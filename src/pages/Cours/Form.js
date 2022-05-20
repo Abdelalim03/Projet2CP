@@ -22,6 +22,7 @@ function Form(props) {
 
   const handleSubmit = (event) => {
     axios.post('http://localhost:5000/courses',{
+      "position":inputs.positionCours,
       "titre": inputs.titreCours,
       "titreAr": "التناظر بالنسبة لنقطة",
       "ImageCours": "/Cours/imgCours/CoursPic.svg",
@@ -40,7 +41,6 @@ function Form(props) {
   }
 
   const [ file, setFile ] = useState(null)
-  const [ fileName, setFileName ] = useState(null)
 
   const fileToBase64 = (file, cb) => {
     const reader = new FileReader()
@@ -61,7 +61,6 @@ function Form(props) {
       if (result) {
         setFile(result)
         // console.log(result);
-        setFileName(target.files[0])
       }
     })
   }
@@ -80,6 +79,16 @@ function Form(props) {
                    value={inputs.titreCours || ""}
                    onChange={handleChange}
                    placeholder="Entrer le titre de cours:"
+                   required
+                   onInvalid={handleInvalide}
+            />
+            <label for="posCours" className='block ml-5 text-sm lg:text-lg font-semibold'>La Position du cours : </label>
+            <input  
+                   className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
+                   type="text" id="posCours" name="positionCours" maxLength="59"
+                   value={inputs.positionCours || ""}
+                   onChange={handleChange}
+                   placeholder="Entrer la position du cours:"
                    required
                    onInvalid={handleInvalide}
             />

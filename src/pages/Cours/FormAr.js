@@ -61,7 +61,6 @@ function FormAr(props) {
     fileToBase64(target.files[0], (err, result) => {
       if (result) {
         setFile(result)
-        // console.log(result);
         setFileName(target.files[0])
       }
     })

@@ -4,15 +4,15 @@ import UserTitle from "../../Components/UserTitle";
 function CoursFr({ userName, userAvatar }) {
   const [Courses, SetCourses] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
+    fetch("http://localhost:5000/courses?_sort=position")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         SetCourses(data);
+        
       });
   }, []);
-  console.log(Courses);
   return (
     <div className="symapp-container">
       <div className="w-[80%] h-32 mb-0 lg:mb-10">
@@ -28,9 +28,10 @@ function CoursFr({ userName, userAvatar }) {
             return (
               <div key={course.id}>
                 <Chapitre
-                  nomChapitre={`Chapitre ${course.id}`}
+                  position ={course.position}
+                  nomChapitre={`Chapitre ${course.position}`}
                   titreChapitre={`${course.titre}`}
-                  nomQuiz={` Quiz ${course.id}`}
+                  nomQuiz={` Quiz ${course.position}`}
                   numExp={`${course.QuizExp}`}
                   image={`${course.ImageCours}`}
                   courseId={course.id}

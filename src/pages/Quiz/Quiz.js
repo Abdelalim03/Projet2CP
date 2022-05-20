@@ -9,7 +9,7 @@ import { data } from 'autoprefixer';
 
 function Quiz() {
   const language = GetLanguage();
-  let { id } = useParams();
+  let { id,coursPos } = useParams();
   const [prop1, setProp1] = useState("");
   const [prop2, setProp2] = useState("");
   const [prop3, setProp3] = useState("");
@@ -31,8 +31,8 @@ function Quiz() {
     });
     return (    
       <>
- { (language==="français")&& <QuizFr propoCor={propCorrecte} propo1={prop1} propo2={prop2} propo3={prop3} />  }
- { (language==="arabe")&&  <QuizAr propoCor={propCorrecte} propo1={prop1} propo2={prop2} propo3={prop3}/> }
+ { (language==="français")&& <QuizFr propoCor={propCorrecte} propo1={prop1} propo2={prop2} propo3={prop3} position={coursPos} />  }
+ { (language==="arabe")&&  <QuizAr propoCor={propCorrecte} propo1={prop1} propo2={prop2} propo3={prop3} position={coursPos}/> }
       </>
     
    )

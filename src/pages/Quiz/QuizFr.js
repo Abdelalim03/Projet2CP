@@ -45,11 +45,8 @@ function QuizFr(props) {
             </Link>
             <div className="flex flex-col gap-1 items-start">
               <h1 className="text-white font-bold md:text-2xl lg:text-3xl">
-                Quiz 01
+                Quiz {props.position}
               </h1>
-              <p className="text-white text-base text-left w-40 font-bold md:text-lg lg:text-xl">
-                Quiz Description
-              </p>
             </div>
           </div>
 
