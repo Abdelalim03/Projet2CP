@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
-import GetLanguage from '../../Components/GetLanguage';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import True from './True';
 import False from './False';
 import { faSquareCheck,faCircle,faTrashCan } from '@fortawesome/free-solid-svg-icons'
-import { useParams } from 'react-router-dom';
+import { useOutletContext, useParams } from 'react-router-dom';
 
 function Editeur({full}) {
     // let qstFr,qstAr;
@@ -17,11 +16,11 @@ function Editeur({full}) {
     const [qstFr, setqstFr] = useState("");
     const [qstAr, setqstAr] = useState("");
   const { id , exoId , stars , Max } = useParams();
-  let language=GetLanguage();
-    useEffect( async () => {
+  const [language, setlanguage] = useOutletContext();
+    useEffect(  () => {
       
         if (!full){
-            await axios.get('http://localhost:5000/exercices/'+exoId).then(async resp => {
+             axios.get('http://localhost:5000/exercices/'+exoId).then(async resp => {
              allowed_delta=resp.data.allowed_delta
              preLinesString=resp.data.preLinesString
              typeOfCheck=resp.data.typeOfCheck

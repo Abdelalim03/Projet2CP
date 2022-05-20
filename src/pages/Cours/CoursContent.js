@@ -1,12 +1,12 @@
 import React from 'react'
-import GetLanguage from '../../Components/GetLanguage';
+import { useOutletContext } from 'react-router-dom';
 
 
 import CoursContentAr from './CoursContentAr';
 import CoursContentFr from './CoursContentFr';
 
 function CoursContent() {
-  const language = GetLanguage();
+  const [language, setlanguage] = useOutletContext();
     return (    
       <>
  { (language==="français")&& <CoursContentFr />  }

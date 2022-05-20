@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 function GetCurrentUser() {
   const [currentUser, setCurrentUser] = useState(0);
-  // const [currentUser, setCurrentUser] = useState("");
   useEffect(() => {
     let isSubscribed = true; 
     axios

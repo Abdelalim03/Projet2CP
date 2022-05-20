@@ -1,15 +1,14 @@
-import React from "react";
 import axios from "axios";
-
-export default function DeleteConfirModalَAr({ CourseId }) {
+import React from "react";
+export default function DeleteConfirModalَAr({CourseId, Courses, SetCourses}) {
   const [showModal, setShowModal] = React.useState(false);
 
-  const handleDelete =  () => {
+  const handleDelete = () => {
     axios
       .delete(`http://localhost:5000/courses/${CourseId}`)
       .then((resp) => {
-        console.log(resp.data);
-        console.log("khra");
+      SetCourses(Courses.filter(course=>course.id!==CourseId)); 
+        setShowModal(false)
       })
       .catch((err) => {
         console.log(err);

@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
-import GetLanguage from '../../Components/GetLanguage';
-
+import React, { useEffect, useState } from 'react'
 import QuizFr from './QuizFr';
 import QuizAr from './QuizAr';
-import { useParams } from 'react-router-dom';
+import { useOutletContext, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { data } from 'autoprefixer';
 
 function Quiz() {
-  const language = GetLanguage();
+  const [language, setlanguage] = useOutletContext();
   let { id,coursPos } = useParams();
   const [prop1, setProp1] = useState("");
   const [prop2, setProp2] = useState("");
@@ -18,9 +16,10 @@ function Quiz() {
   const [prop3Ar, setProp3Ar] = useState("");
   const [propCorrecte, setPropCorrecte] = useState("")
   const [QuizImage,setQuizImage] = useState("")
-  axios.get(`http://localhost:5000/courses/${id}`).then(
+  useEffect(() => {
+    
+    axios.get(`http://localhost:5000/courses/${id}`).then(
     (resp) =>{
-      console.log(resp.data);
       return resp.data;
     }).then(
       (data) =>{
@@ -37,6 +36,10 @@ function Quiz() {
     ).catch((err) => {
       console.log(err);
     });
+  
+  }, [])
+  
+  
     return (    
       <>
  { (language==="français")&& <QuizFr propoCor={propCorrecte} propo1={prop1} propo2={prop2} propo3={prop3} position={coursPos} QuizImage={QuizImage} />  }
