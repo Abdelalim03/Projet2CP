@@ -36,8 +36,8 @@ export default function CoursContent() {
   const [PdfFile, setpdfFile] = useState(null);
   const [Course, SetCourse] = useState(null);
   const [isLoading, setisLoading] = useState(true);
-  const { coursId } = useParams();
-  const ChaptreId = "0" + coursId;
+  const { coursId,coursPos } = useParams();
+  const ChaptreId = "0" + coursPos;
 
   useEffect(() => {
     fetch(`http://localhost:5000/courses/${coursId}`)
@@ -87,6 +87,14 @@ export default function CoursContent() {
             )}
           </div>
         </div>
+        <label type="file">
+          <img
+            className="lg:w-12 md:w-8 hover:cursor-pointer hover:scale-110 hover:shadow-sm mr-8 "
+            src="/Cours/Icons/Upload.png"
+            alt=""
+          />
+          <input type="file" className="hidden" />
+        </label>
       </div>
 
       {isLoading && (

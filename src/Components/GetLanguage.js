@@ -12,7 +12,7 @@ function GetLanguage() {
       .catch((error) => {
         console.log(error);
       });
-  }, [langue]);
+  }, []);
   return langue;
 }
 

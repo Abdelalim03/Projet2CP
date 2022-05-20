@@ -27,9 +27,10 @@ function CoursAr({userName, userAvatar}) {
             return (
               <div key={course.id}>
                 <Chapitre
-                  nomChapitre={ ` الدرس ${course.id}  `}
+                position={course.position}
+                  nomChapitre={ ` الدرس ${course.position}  `}
                   titreChapitre={`${course.titreAr}`}
-                  nomQuiz={` استجواب ${course.id} `}
+                  nomQuiz={` استجواب ${course.position} `}
                   numExp={`${course.QuizExp}`}
                   image={`${course.ImageCours}`}
                   courseId={course.id}

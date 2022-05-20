@@ -6,9 +6,8 @@ const axios = require("axios");
 
 function Langue() {
   const navigate = useNavigate();
+  if (GetCurrentUser() !== 0) navigate("/welcome"); //----pb
 
-  if (GetCurrentUser() !== 0) navigate("/welcome");
-  
   const handleClick = (lang) => {
     axios
       .patch("http://localhost:5000/parametres", { langue: lang })
