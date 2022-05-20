@@ -1,8 +1,8 @@
 {
   "parametres": {
     "langue": "arabe",
-    "currentUser": 0,
-    "mode": "prof"
+    "currentUser": 6,
+    "mode": "eleve"
   },
   "users": [
     {
@@ -46,6 +46,13 @@
       "maxExo": 1,
       "score": 0,
       "id": 5
+    },
+    {
+      "nom": "حكمت",
+      "avatar": "/avatar/Group-5.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 6
     }
   ],
   "courses": [],

@@ -36,14 +36,14 @@ function App() {
             <Route path="cours" element={<Cours />} />
             <Route path="courscontent/:coursId/:coursPos" element={<CoursContent />} />
             <Route path="quiz/:id/:coursPos" element={<Quiz />} />
-            <Route path="exercices" element={<Exercices   />} />
+            <Route path="exercices" element={<Exercices />} />
             <Route path="ExercicesAr2/:Max" element={<ExercicesAr2 />} />
             <Route path="ExercicesFr2/:Max" element={<ExercicesFr2 />} />
             <Route path="exercice/:exoId/:stars/:Max" element={<Editeur full={false} />} />
             <Route path="dessiner/:Max" element={<Editeur full={true} />} />
             <Route path="parametres" element={<Parameters />} />
             <Route path="*" element={<NoPage2 />} />
-          </Route>
+          </Route> 
         </Route>
       </Routes>
     </Router>

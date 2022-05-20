@@ -3,12 +3,12 @@ import GetLanguage from '../../Components/GetLanguage';
 
 import QuizFr from './QuizFr';
 import QuizAr from './QuizAr';
-import { useParams } from 'react-router-dom';
+import { useOutletContext, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { data } from 'autoprefixer';
 
 function Quiz() {
-  const language = GetLanguage();
+  const [language, setlanguage] = useOutletContext();
   let { id,coursPos } = useParams();
   const [prop1, setProp1] = useState("");
   const [prop2, setProp2] = useState("");
