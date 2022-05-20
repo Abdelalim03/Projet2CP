@@ -2,21 +2,25 @@ import React from "react";
 import { useEffect, useState } from "react";
 import UserTitleAr from "../../Components/UserTitleAr";
 import Chapitre from "./Chapitre";
-function CoursAr({userName, userAvatar}) {
+function CoursAr({ userName, userAvatar }) {
   const [Courses, SetCourses] = useState(null);
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
+    fetch("http://localhost:5000/courses?_sort=position")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         SetCourses(data);
       });
-  }, []);
+  }, [Courses]);
   return (
     <div dir="rtl" className="symapp-container-Ar">
       <div className="w-[80%] h-32 mb-0 lg:mb-10">
-      <UserTitleAr message=" اهلا" userName={userName} userImage={userAvatar}  />
+        <UserTitleAr
+          message=" اهلا"
+          userName={userName}
+          userImage={userAvatar}
+        />
         <p className="ml-2 lg:ml-3 lg:mt-5 md:mt-3 font-['Tajawal'] font-semibold md:text-sm lg:text-xl">
           لنتعلم شيئا اليوم !
         </p>
@@ -27,8 +31,8 @@ function CoursAr({userName, userAvatar}) {
             return (
               <div key={course.id}>
                 <Chapitre
-                position={course.position}
-                  nomChapitre={ ` الدرس ${course.position}  `}
+                  position={course.position}
+                  nomChapitre={` الدرس ${course.position}  `}
                   titreChapitre={`${course.titreAr}`}
                   nomQuiz={` استجواب ${course.position} `}
                   numExp={`${course.QuizExp}`}
