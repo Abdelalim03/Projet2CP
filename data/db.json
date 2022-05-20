@@ -1,8 +1,8 @@
 {
   "parametres": {
-    "langue": "arabe",
-    "currentUser": 0,
-    "mode": "prof"
+    "langue": "français",
+    "currentUser": 3,
+    "mode": "eleve"
   },
   "users": [
     {
@@ -24,6 +24,12 @@
       "exercices": [],
       "cours": "",
       "id": 2
+    },
+    {
+      "nom": "Chiheb",
+      "avatar": "/avatar/Group-2.svg",
+      "exercices": [],
+      "id": 3
     }
   ],
   "courses": [
