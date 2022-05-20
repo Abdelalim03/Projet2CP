@@ -1,40 +1,51 @@
 {
   "parametres": {
-    "langue": "français",
-    "currentUser": 0,
-    "mode": "prof"
+    "langue": "arabe",
+    "currentUser": 4,
+    "mode": "eleve"
   },
   "users": [
     {
       "nom": "Prof",
-      "avatar": "/Prof/EnseignantIcon.svg",
-      "maxExo": 15,
+      "avatar": "/avatar/Group-3.svg",
+      "score": 100,
+      "maxExo": 48,
       "id": -1
     },
     {
-      "nom": "Amine",
-      "avatar": "/avatar/Group-5.svg",
-      "exercices": [],
-      "cours": "",
+      "nom": "Karim",
+      "avatar": "/avatar/Group-8.svg",
+      "maxExo": 7,
+      "score": 9,
       "id": 1
     },
     {
-      "nom": "A",
-      "avatar": "/avatar/Group-2.svg",
-      "exercices": [],
+      "nom": "رفعت",
+      "avatar": "/avatar/Group-1.svg",
+      "maxExo": 1,
+      "score": 0,
       "id": 2
     },
     {
-      "nom": "Moh",
-      "avatar": "/avatar/Group-1.svg",
-      "exercices": [],
+      "nom": "fahim",
+      "avatar": "/avatar/Group-9.svg",
+      "maxExo": 1,
+      "score": 0,
       "id": 3
     },
     {
-      "nom": "a",
-      "avatar": "/avatar/Group-1.svg",
-      "exercices": [],
+      "nom": "hamdan",
+      "avatar": "/avatar/Group.svg",
+      "maxExo": 5,
+      "score": 4,
       "id": 4
+    },
+    {
+      "nom": "koko",
+      "avatar": "/avatar/Group-2.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 5
     }
   ],
   "courses": [

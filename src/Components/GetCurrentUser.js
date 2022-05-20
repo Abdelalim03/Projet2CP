@@ -5,7 +5,7 @@ function GetCurrentUser() {
   const [currentUser, setCurrentUser] = useState(0);
   // const [currentUser, setCurrentUser] = useState("");
   useEffect(() => {
-    let isSubscribed = true;
+    let isSubscribed = true; 
     axios
       .get("http://localhost:5000/parametres")
       .then((resp) => {

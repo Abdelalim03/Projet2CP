@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import UserTitle from "../../Components/UserTitle";
 import CustomCard from "./CustomCard";
 
-export default function MenuFr({userName, userAvatar}) {
+export default function MenuFr({userName, userAvatar, Max}) {
   
   return (
     // <div className=" bg-symapp-blue-light-second">
@@ -58,7 +58,7 @@ export default function MenuFr({userName, userAvatar}) {
             imageProps="lg:h-40 lg:w-72 lg:mr-9 lg:mt-14 md:h-36 md:w-48 md:mr-12 md:mt-10 "
           />
           <CustomCard
-            path="./dessiner"
+            path={"./dessiner/"+Max}
             bgcolor="bg-symapp-blue-light-second "
             messageMotivant="Amusez vous!"
             mainContent="Mode libre"
