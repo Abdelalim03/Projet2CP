@@ -26,7 +26,7 @@ function QuizAr(props) {
     } else {
       SetCorrect(false);
       setHide(false);
-      setEvaluer("Faux :(");
+      setEvaluer("Faux 🤯");
     }
   };
   return (
