@@ -15,7 +15,6 @@ export default function DeleteConfirModalَAr({CourseId, Courses, SetCourses}) {
       });
   };
 
-  
   return (
     <>
       <button type="button" onClick={() => setShowModal(true)}>
@@ -31,13 +30,17 @@ export default function DeleteConfirModalَAr({CourseId, Courses, SetCourses}) {
                 <div className="flex flex-col items-center gap-5 justify-center rounded-t">
                   <img className="w-24" src="/Prof/Trash.svg" alt="icon" />
 
-                  <h3 dir='rtl' className="mt-5 text-3xl text-center font-semibold">
-                    هل تريد حقا
-                    حـذف الـدرس؟
+                  <h3
+                    dir="rtl"
+                    className="mt-5 text-3xl text-center font-semibold"
+                  >
+                    هل تريد حقا حـذف الـدرس؟
                   </h3>
-                  <p dir='rtl' className="my-3 text-slate-500 text-center text-lg leading-relaxed">
-                    الإستجواب أيضا
-                    سيتم حذفه !
+                  <p
+                    dir="rtl"
+                    className="my-3 text-slate-500 text-center text-lg leading-relaxed"
+                  >
+                    الإستجواب أيضا سيتم حذفه !
                   </p>
                 </div>
                 {/*footer*/}

@@ -7,7 +7,11 @@ function CoursAr({userName, userAvatar, Courses}) {
   return (
     <div dir="rtl" className="symapp-container-Ar">
       <div className="w-[80%] h-32 mb-0 lg:mb-10">
-      <UserTitleAr message=" اهلا" userName={userName} userImage={userAvatar}  />
+        <UserTitleAr
+          message=" اهلا"
+          userName={userName}
+          userImage={userAvatar}
+        />
         <p className="ml-2 lg:ml-3 lg:mt-5 md:mt-3 font-['Tajawal'] font-semibold md:text-sm lg:text-xl">
           لنتعلم شيئا اليوم !
         </p>
@@ -18,8 +22,8 @@ function CoursAr({userName, userAvatar, Courses}) {
             return (
               <div key={course.id}>
                 <Chapitre
-                position={course.position}
-                  nomChapitre={ ` الدرس ${course.position}  `}
+                  position={course.position}
+                  nomChapitre={` الدرس ${course.position}  `}
                   titreChapitre={`${course.titreAr}`}
                   nomQuiz={` استجواب ${course.position} `}
                   numExp={`${course.QuizExp}`}

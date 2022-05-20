@@ -17,10 +17,10 @@ function Editeur({full}) {
     const [qstAr, setqstAr] = useState("");
   const { id , exoId , stars , Max } = useParams();
   const [language, setlanguage] = useOutletContext();
-    useEffect( async () => {
+    useEffect(  () => {
       
         if (!full){
-            await axios.get('http://localhost:5000/exercices/'+exoId).then(async resp => {
+             axios.get('http://localhost:5000/exercices/'+exoId).then(async resp => {
              allowed_delta=resp.data.allowed_delta
              preLinesString=resp.data.preLinesString
              typeOfCheck=resp.data.typeOfCheck

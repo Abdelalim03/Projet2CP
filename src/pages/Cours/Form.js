@@ -20,28 +20,38 @@ function Form(props) {
     e.target.setCustomValidity("Champs manquant");
   }
 
+  const handleInput = (e) =>{
+    e.target.setCustomValidity("");
+  }
+
   const handleSubmit = (event) => {
     axios.post('http://localhost:5000/courses',{
       "position":inputs.positionCours,
       "titre": inputs.titreCours,
-      "titreAr": "التناظر بالنسبة لنقطة",
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
+      "titreAr": inputs.titreCoursAr,
       "Quiz": "Quiz 01",
       "QuizAr": "استجواب 01",
       "QuizExp": 20,
       "Prop1": inputs.prop1,
+      "Prop1Ar": inputs.prop1Ar,
       "Prop2": inputs.prop2,
+      "Prop2Ar": inputs.prop2Ar,
       "Prop3": inputs.prop3,
+      "Prop3Ar": inputs.prop3Ar,
       "propCorrecte": propCorrecte,
       "ImageQuiz": "",
-      "DesCours": "",
+      "DesCours": inputs.desCours,
+      "DesCoursAr": inputs.desCoursAr,
       "CheminCours": "",
-      "CourseBase64":`${file}`
+      "ImageCours": `${CoursImageEncoded}`,
+      "CourseBase64":`${file}`,
+      "QuizImageBase64":`${QuizImageEncoded}`
     });
   }
 
   const [ file, setFile ] = useState(null)
-
+  const [QuizImageEncoded,setImageEncoded]=useState(null)
+  const [CoursImageEncoded,setCoursImageEncoded]=useState(null)
   const fileToBase64 = (file, cb) => {
     const reader = new FileReader()
     reader.readAsDataURL(file)
@@ -64,6 +74,29 @@ function Form(props) {
       }
     })
   }
+  const onUploadQuizImageChange = ({ target }) => {
+    if (target.files < 1 || !target.validity.valid) {
+      return
+    }
+    fileToBase64(target.files[0], (err, result) => {
+      if (result) {
+        setImageEncoded(result)
+        console.log(result);
+      }
+    })
+  }
+  const onUploadCoursImageChange = ({ target }) => {
+    if (target.files < 1 || !target.validity.valid) {
+      return
+    }
+    fileToBase64(target.files[0], (err, result) => {
+      if (result) {
+        setCoursImageEncoded(result)
+        console.log(result);
+      }
+    })
+  }
+
 
   return (
         <form onSubmit={handleSubmit} className='h-3/4 w-4/5 bg-white overflow-auto'>
@@ -71,7 +104,7 @@ function Form(props) {
           <p className='ml-20 mb-5 mt-3 text-base lg:text-xl font-semibold text-[#283D93]'>
               Veuillez entrer les information nécessaires pour ajouter le cours
           </p>
-          <div className='h-[50%] lg:h-[55%] w-2/3 pl-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around ml-32 rounded-xl'>
+          <div className='h-[100%] w-2/3 pl-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around ml-32 rounded-xl'>
             <label for="nomCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Le titre de cours : </label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
@@ -80,8 +113,49 @@ function Form(props) {
                    onChange={handleChange}
                    placeholder="Entrer le titre de cours:"
                    required
+                   onInput={handleInput}
                    onInvalid={handleInvalide}
+                   
             />
+            <label for="nomCoursAr" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer le titre de cours en arabe : </label>
+            <input  
+                   className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
+                   type="text" id="nomCoursAr" name="titreCoursAr" maxLength="59"
+                   value={inputs.titreCoursAr || ""}
+                   onChange={handleChange}
+                   placeholder="Rentrer le titre de cours:"
+                   required
+                   onInput={handleInput}
+                   onInvalid={handleInvalide}
+                   
+            />
+
+            <label for="desCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Entrer la description de cours : </label>
+            <input  
+                   className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
+                   type="text" id="desCours" name="desCours" maxLength="59"
+                   value={inputs.desCours || ""}
+                   onChange={handleChange}
+                   placeholder="Entrer la description de cours :"
+                   required
+                   onInput={handleInput}
+                   onInvalid={handleInvalide}
+                   
+            />
+
+            <label for="desCoursAr" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la description de cours en arabe : </label>
+            <input  
+                   className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
+                   type="text" id="desCoursAr" name="desCoursAr" maxLength="59"
+                   value={inputs.desCoursAr || ""}
+                   onChange={handleChange}
+                   placeholder="Rentrer la description de cours:"
+                   required
+                   onInput={handleInput}
+                   onInvalid={handleInvalide}
+                   
+            />
+            
             <label for="posCours" className='block ml-5 text-sm lg:text-lg font-semibold'>La Position du cours : </label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
@@ -90,10 +164,12 @@ function Form(props) {
                    onChange={handleChange}
                    placeholder="Entrer la position du cours:"
                    required
+                   onInput={handleInput}
                    onInvalid={handleInvalide}
+                   
             />
             <p className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer une image descriptive du cours:</p>
-            <FileInFr accept=".png" fileName="imgCours" genre="une" fileType="Image"/>
+            <FileInFr accept=".png" fileName="imgCours" genre="une" fileType="Image" onUploadFunction={onUploadCoursImageChange}/>
             <p for="pdfCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer le fichier du cours :</p>
             <FileInFr accept=".pdf" fileName="pdfCours" genre="un" fileType="fichier" onUploadFunction={onUploadFileChange} />
             {/* <div>
@@ -110,7 +186,7 @@ function Form(props) {
               Veuillez entrer les informations nécessaires pour ajouter le quiz
           </p>
           
-          <div className=' h-3/4 lg:h-2/3 w-2/3 pl-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around ml-32 rounded-xl'>
+          <div className=' h-[130%] w-2/3 pl-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around ml-32 rounded-xl'>
           <label className='block ml-5 text-sm lg:text-lg font-semibold'> Veuillez Insérer les propositions du quiz </label>
             <label for="Proposition1" className='block ml-5 text-sm lg:text-lg font-semibold'>Première proposition: </label>
             <input 
@@ -119,7 +195,20 @@ function Form(props) {
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="proposition1" name="prop1"
                     required
-                    placeholder="entrer la proposition: "
+                    placeholder="Entrer la proposition: "
+                    onInput={handleInput}
+                    onInvalid={handleInvalide}
+                    pattern="\S+"
+            />
+            <label for="Proposition1Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la proposition en arabe: </label>
+            <input 
+                    onChange={handleChange}
+                    value={inputs.prop1Ar || ""}
+                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
+                    type="text" id="proposition1Ar" name="prop1Ar"
+                    required
+                    placeholder="Rentrer la proposition: "
+                    onInput={handleInput}
                     onInvalid={handleInvalide}
                     pattern="\S+"
             />
@@ -129,9 +218,23 @@ function Form(props) {
                     value={inputs.prop2 || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="proposition2" name="prop2"
-                    placeholder="entrer la proposition: "
+                    placeholder="Entrer la proposition: "
                     required
+                    onInput={handleInput}
                     onInvalid={handleInvalide}
+                    
+            />
+            <label for="Proposition2Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la proposition en arabe: </label>
+            <input 
+                    onChange={handleChange}
+                    value={inputs.prop2Ar || ""}
+                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
+                    type="text" id="proposition2" name="prop2Ar"
+                    placeholder="Rentrer la proposition: "
+                    required
+                    onInput={handleInput}
+                    onInvalid={handleInvalide}
+                    
             />
             <label for="Proposition3" className='block ml-5 text-sm lg:text-lg font-semibold'>Troisième proposition: </label>
             <input 
@@ -139,8 +242,20 @@ function Form(props) {
                     value={inputs.prop3 || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="proposition3" name="prop3"
-                    placeholder="entrer la proposition: "
+                    placeholder="Entrer la proposition: "
                     required
+                    onInput={handleInput}
+                    onInvalid={handleInvalide}
+            />
+            <label for="Proposition3Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la proposition en arabe: </label>
+            <input 
+                    onChange={handleChange}
+                    value={inputs.prop3Ar || ""}
+                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
+                    type="text" id="proposition3Ar" name="prop3Ar"
+                    placeholder="Rentrer la proposition: "
+                    required
+                    onInput={handleInput}
                     onInvalid={handleInvalide}
             />
             <label className='block ml-5 text-sm lg:text-lg font-semibold'>Selectionner la proposition correcte: </label>
@@ -150,7 +265,7 @@ function Form(props) {
               <option value="3">La troisième</option>
             </select>
             <p className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer l'image de quiz:</p>
-            <FileInFr accept=".png" fileName="imgQuiz" genre="une" fileType="Image"/>
+            <FileInFr accept=".png" fileName="imgQuiz" genre="une" fileType="Image"  onUploadFunction={onUploadQuizImageChange}  />
           </div>
           <div className='flex flex-row justify-end w-[100%] h-fit'>
             <label for="sub" className='w-fit h-10 lg:h-14 p-2 lg:p-3 mr-6 lg:mr-10 mt-2 lg:mt-4 mb-6 rounded-lg cursor-pointer bg-[#FFDFD9] hover:scale-110 hover:bg-[#FFC5C1] flex flex-row gap-3'>

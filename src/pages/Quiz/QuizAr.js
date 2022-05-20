@@ -26,7 +26,7 @@ function QuizAr(props) {
     } else {
       SetCorrect(false);
       setHide(false);
-      setEvaluer("Faux :(");
+      setEvaluer("Faux 🤯");
     }
   };
   return (
@@ -171,7 +171,7 @@ function QuizAr(props) {
             <div className="flex justify-center">
               <img
                 className="h-72 lg:h-96 bg-white rounded-3xl"
-                src="/quiz/grille.png"
+                src={props.QuizImage}
                 alt=""
               />
             </div>

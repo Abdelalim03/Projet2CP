@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import GetCurrentUser from "../../Components/GetCurrentUser";
 import Absolute from "./Absolute";
 import Card from "./Card";
 import ContinueAsFr from "./ContinueAsFr";
