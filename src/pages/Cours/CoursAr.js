@@ -2,17 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import UserTitleAr from "../../Components/UserTitleAr";
 import Chapitre from "./Chapitre";
-function CoursAr({userName, userAvatar}) {
-  const [Courses, SetCourses] = useState(null);
-  useEffect(() => {
-    fetch("http://localhost:5000/courses")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        SetCourses(data);
-      });
-  }, []);
+function CoursAr({userName, userAvatar, Courses}) {
+ 
   return (
     <div dir="rtl" className="symapp-container-Ar">
       <div className="w-[80%] h-32 mb-0 lg:mb-10">

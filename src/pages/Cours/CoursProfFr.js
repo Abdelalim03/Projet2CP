@@ -5,19 +5,8 @@ import Form from './Form';
 import ChapitreProf from '../CoursProf/ChapitreProf';
 
 function CoursProfFr(props) {
-  const [Courses, SetCourses] = useState(null);
   const [estOuvert, SetEstOuvert] = useState(false);
   const showDiv = () => {SetEstOuvert(!estOuvert)};
-
-  useEffect(() => {
-    fetch("http://localhost:5000/courses?_sort=position")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        SetCourses(data);
-      });
-  }, []);
 
   return (
     <div className="symapp-container">
@@ -40,11 +29,13 @@ function CoursProfFr(props) {
       </div>
       <div className="shadow-lg p-3 pt-6 rounded-md h-[325px] lg:h-[450px] w-[600px] lg:w-[930px] overflow-auto ">
         
-        {Courses &&
-          Courses.map((course) => {
+        {props.Courses &&
+          props.Courses.map((course) => {
             return (
               <div key={course.id}>
                 <ChapitreProf
+                Courses={props.Courses}
+                SetCourses={props.SetCourses}
                 position={course.position}
                   nomChapitre={`Chapitre ${course.position}`}
                   titreChapitre={`${course.titre}`}

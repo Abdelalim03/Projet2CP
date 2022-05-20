@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import DeleteConfirModalَAr from "../CoursProf/DeleteConfirmModalAr";
 
@@ -24,7 +24,7 @@ function ChapitreProfAr(props) {
           </div>
         </div>
         <div className="ml-3 w-[15%] gap-5 flex flex-row justify-center items-center">
-        <DeleteConfirModalَAr/>
+        <DeleteConfirModalَAr CourseId={props.courseId} Courses={props.Courses} SetCourses={props.SetCourses} />
         <Link to={`../courscontent/${props.courseId}/${props.position}`}>
             <button className="bg-[#FAE0B2] flex justify-center items-center w-6 lg:w-9 h-6 lg:h-9">
               <img

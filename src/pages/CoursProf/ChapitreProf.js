@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import DeleteConfirModal from "./DeleteConfirModalFr";
 import DropdownRender from "./DropDown";
@@ -25,7 +25,7 @@ function ChapitreProf(props) {
           </div>
         </div>
         <div className="w-[20%] pr-3 flex flex-row gap-5 justify-center items-center">
-          <DeleteConfirModal CourseId={props.courseId}/>
+          <DeleteConfirModal CourseId={props.courseId} Courses={props.Courses} SetCourses={props.SetCourses} />
           <Link to={`../courscontent/${props.courseId}/${props.position}`}>
             <button className="bg-[#FAE0B2] flex justify-center items-center w-6 lg:w-9 h-6 lg:h-9">
               <img

@@ -5,20 +5,9 @@ import ChapitreProfAr from "../CoursProf/ChapitreProfAr"
 import FormAr from "./FormAr";
 
 function CoursProfAr(props) {
-  const [Courses, SetCourses] = useState(null);
   const [estOuvert, SetEstOuvert] = useState(false);
   const showDiv = () => {SetEstOuvert(!estOuvert)};
-
-  useEffect(() => {
-    fetch("http://localhost:5000/courses?_sort=position")
-
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        SetCourses(data);
-      });
-  }, []);
+  
   return (
     <div dir="rtl" className="symapp-container-Ar">
       <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!estOuvert && 'hidden'}`}>
@@ -39,11 +28,13 @@ function CoursProfAr(props) {
         </div>
       </div>
       <div className="shadow-lg p-3 pt-6 rounded-md font-['Tajawal'] h-[325px] lg:h-[450px] w-[600px] lg:w-[930px] overflow-auto  ">
-        {Courses &&
-          Courses.map((course) => {
+        {props.Courses &&
+          props.Courses.map((course) => {
             return (
               <div key={course.id}>
                 <ChapitreProfAr
+                Courses={props.Courses}
+                SetCourses={props.SetCourses}
                 position = {course.position}
                   nomChapitre={ ` الدرس ${course.position}  `}
                   titreChapitre={`${course.titreAr}`}

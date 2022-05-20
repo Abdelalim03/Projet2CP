@@ -1,18 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Chapitre from "./Chapitre";
 import UserTitle from "../../Components/UserTitle";
-function CoursFr({ userName, userAvatar }) {
-  const [Courses, SetCourses] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:5000/courses?_sort=position")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        SetCourses(data);
-        
-      });
-  }, []);
+function CoursFr({ userName, userAvatar ,Courses }) {
+  
   return (
     <div className="symapp-container">
       <div className="w-[80%] h-32 mb-0 lg:mb-10">
