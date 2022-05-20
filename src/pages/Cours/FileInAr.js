@@ -20,7 +20,7 @@ export default function FileInAr(props) {
 
     return (
         <div className="file-uploader flex flex-row">
-            <label for={`${props.fileName}`} className='h-fit w-fit p-1 border-2 bg-white border-blue-400 text-sm lg:text-lg font-semibold rounded-md'>اختر {props.fileType}</label>
+            <label for={`${props.fileName}`} className='h-fit w-fit p-1 border-2 bg-white border-blue-400 text-sm lg:text-lg font-semibold rounded-md cursor-pointer'>اختر {props.fileType}</label>
             <input required type="file" onChange={handleFileInput} accept={`${props.accept}`} id={`${props.fileName}`} name={`${props.fileName}`} className='hidden'/>
             <p className={`h-fit w-fit p-[6px] ml-3 text-sm lg:text-lg font-medium ${textColor}`}>{etatSel}</p>
         </div>
