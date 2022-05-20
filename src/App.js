@@ -35,8 +35,8 @@ function App() {
           <Route path="home/:id" element={<Layout  />}>
             <Route index element={<Menu />} />
             <Route path="cours" element={<Cours />} />
-            <Route path="courscontent/:coursId" element={<CoursContent />} />
-            <Route path="quiz/:id" element={<Quiz />} />
+            <Route path="courscontent/:coursId/:coursPos" element={<CoursContent />} />
+            <Route path="quiz/:id/:coursPos" element={<Quiz />} />
             <Route path="exercices" element={<Exercices   />} />
             <Route path="ExercicesAr2/:Max" element={<ExercicesAr2 />} />
             <Route path="ExercicesFr2/:Max" element={<ExercicesFr2 />} />

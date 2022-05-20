@@ -35,8 +35,8 @@ export default function CoursContent() {
   const [PdfFile, setpdfFile] = useState(null);
   const [Course, SetCourse] = useState(null);
   const [isLoading, setisLoading] = useState(true);
-  const { coursId } = useParams();
-  const ChaptreId = "0" + coursId;
+  const { coursId,coursPos } = useParams();
+  const ChaptreId = "0" + coursPos;
 
   useEffect(() => {
     fetch(`http://localhost:5000/courses/${coursId}`)
@@ -85,10 +85,11 @@ export default function CoursContent() {
             )}
           </div>
         </div>
+        
       </div>
 
       {isLoading && (
-        <div className="h-[100%] w-[100%] bg-slate-500 flex items-center justify-center">
+        <div className="h-[100%] w-[100%] bg-symapp-pink-light flex items-center justify-center">
           Veuillez patientez Svp !
         </div>
       )}

@@ -10,7 +10,7 @@ function CoursProfFr(props) {
   const showDiv = () => {SetEstOuvert(!estOuvert)};
 
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
+    fetch("http://localhost:5000/courses?_sort=position")
       .then((res) => {
         return res.json();
       })
@@ -45,9 +45,10 @@ function CoursProfFr(props) {
             return (
               <div key={course.id}>
                 <ChapitreProf
-                  nomChapitre={`Chapitre ${course.id}`}
+                position={course.position}
+                  nomChapitre={`Chapitre ${course.position}`}
                   titreChapitre={`${course.titre}`}
-                  nomQuiz={` Quiz ${course.id}`}
+                  nomQuiz={` Quiz ${course.position}`}
                   numExp={`${course.QuizExp}`}
                   image={`${course.ImageCours}`}
                   courseId={course.id}
