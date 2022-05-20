@@ -1,9 +1,18 @@
-import React, { useState } from "react";
-import { Link, Route } from "react-router-dom";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 export default function SideBar(props) {
   const [isOpen, setSideBar] = useState(false);
   const showSidebar = () => setSideBar(!isOpen);
+  const { id } = useParams();
+  const [Max, setMax] = useState();
+  useEffect(async () => {
+    await axios.get(`http://localhost:5000/users/${id}`)
+    .then(res=> setMax(res.data.maxExo))
+    .catch(err=>console.log(err));
+  }, [props.Language])
+  
   return (
     <>
       {props.Language ? ( //fr
@@ -108,7 +117,7 @@ export default function SideBar(props) {
                     </li>
                     <li>
                       <Link
-                        to="./dessiner"
+                        to={"./dessiner/"+Max}
                         className="flex items-center hover:bg-symapp-pink   "
                       >
                         <img
@@ -261,7 +270,7 @@ export default function SideBar(props) {
                     </li>
                     <li>
                       <Link
-                        to="./dessiner"
+                        to={"./dessiner/"+Max}
                         className="flex items-center hover:bg-symapp-pink flex-row-reverse  "
                       >
                         <img
@@ -276,7 +285,7 @@ export default function SideBar(props) {
                               className=" md:text-[13px] lg:text-[18px] relative mt-6 text-white tracking-wide lg:mr-5 md:mr-4 whitespace-nowrap"
                               onClick={showSidebar}
                             >
-                              مود ليبر
+                              الرسم الحر
                             </span>
                           )}
                         </>

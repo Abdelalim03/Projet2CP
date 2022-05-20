@@ -17,7 +17,6 @@ function EtesVous() {
         .get(`http://localhost:5000/users/${currentuserId}`)
         .then((res) => {
           setUser(res.data);
-          console.log(res.data);
         })
         .catch((err) => {
           console.log(err);

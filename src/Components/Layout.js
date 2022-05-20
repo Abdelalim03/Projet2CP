@@ -4,10 +4,9 @@ import SideBar from "./SideBar";
 import GetLanguage from "../Components/GetLanguage";
 
 function Layout() {
+  
   const language = GetLanguage();
-  const Languefr = language == "français";
-
-  const [Fr, setArabe] = useState(Languefr);
+  const Languefr = language === "français";
   return (
     <div
       className={`flex bg-symapp-blue-light-second ${

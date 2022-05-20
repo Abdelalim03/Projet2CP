@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
@@ -12,15 +12,13 @@ function InputCardAr() {
   const [curUserName, setCurUserName] = useState("");
 
   const [msg, setMsg] = useState("");
-  const id = GetCurrentUser();
+  const {id} = useParams();
+  console.log(id);
 
   axios
     .get(`http://localhost:5000/users/${id}`)
-    .then((res) => {
-      return res.data;
-    })
-    .then((data) => {
-      setCurUserName(data.nom);
+    .then((res) => {    
+      setCurUserName(res.data.nom);
     })
     .catch((err) => {
       console.log(err);

@@ -13,7 +13,6 @@ function Menu() {
     axios
       .get(`http://localhost:5000/users/${id}`)
       .then((res) => {
-        console.log(res.data);
         return res.data;
       })
       .then((data) => {
@@ -28,10 +27,10 @@ function Menu() {
   return (
     <>
       {language === "français" && (
-        <MenuFr userAvatar={User.avatar} userName={User.nom} />
+        <MenuFr userAvatar={User.avatar} userName={User.nom} Max={User.maxExo} />
       )}
       {language === "arabe" && (
-        <MenuAr userAvatar={User.avatar} userName={User.nom} />
+        <MenuAr userAvatar={User.avatar} userName={User.nom} Max={User.maxExo} />
       )}
     </>
   );

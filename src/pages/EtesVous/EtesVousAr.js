@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import GetCurrentUser from "../../Components/GetCurrentUser";
 import AbsoluteAr from "./AbsoluteAr";
 import CardAr from "./CardAr";
 import ContinueAsAr from "./ContinueAsAr";
@@ -25,16 +24,13 @@ function EtesVousAr({ User, currentuserId }) {
     if (currentuserId === 0) setShowModal(false);
   });
 
-  console.log(User.id);
-  console.log(currentuserId);
-
   return (
     <div className="font-['Tajawal'] relative w-screen h-screen ">
       <AbsoluteAr />
       <h1 dir="rtl" className="main-title">
         هـل أنـت؟
       </h1>
-      <div className="flex mt-3 gap-32 justify-center">
+      <div className="flex flex-row-reverse mt-3 gap-32 justify-center">
         <>
           <ContinueAsAr
             nom={User.nom}
