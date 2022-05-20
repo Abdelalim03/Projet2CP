@@ -25,7 +25,7 @@ function Form(props) {
       "position":inputs.positionCours,
       "titre": inputs.titreCours,
       "titreAr": "التناظر بالنسبة لنقطة",
-      "ImageCours": "/Cours/imgCours/CoursPic.svg",
+      "ImageCours": `${CoursImageEncoded}`,
       "Quiz": "Quiz 01",
       "QuizAr": "استجواب 01",
       "QuizExp": 20,
@@ -36,12 +36,14 @@ function Form(props) {
       "ImageQuiz": "",
       "DesCours": "",
       "CheminCours": "",
-      "CourseBase64":`${file}`
+      "CourseBase64":`${file}`,
+      "QuizImageBase64":`${QuizImageEncoded}`
     });
   }
 
   const [ file, setFile ] = useState(null)
-
+  const [QuizImageEncoded,setImageEncoded]=useState(null)
+  const [CoursImageEncoded,setCoursImageEncoded]=useState(null)
   const fileToBase64 = (file, cb) => {
     const reader = new FileReader()
     reader.readAsDataURL(file)
@@ -64,6 +66,29 @@ function Form(props) {
       }
     })
   }
+  const onUploadQuizImageChange = ({ target }) => {
+    if (target.files < 1 || !target.validity.valid) {
+      return
+    }
+    fileToBase64(target.files[0], (err, result) => {
+      if (result) {
+        setImageEncoded(result)
+        console.log(result);
+      }
+    })
+  }
+  const onUploadCoursImageChange = ({ target }) => {
+    if (target.files < 1 || !target.validity.valid) {
+      return
+    }
+    fileToBase64(target.files[0], (err, result) => {
+      if (result) {
+        setCoursImageEncoded(result)
+        console.log(result);
+      }
+    })
+  }
+
 
   return (
         <form onSubmit={handleSubmit} className='h-3/4 w-4/5 bg-white overflow-auto'>
@@ -93,7 +118,7 @@ function Form(props) {
                    onInvalid={handleInvalide}
             />
             <p className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer une image descriptive du cours:</p>
-            <FileInFr accept=".png" fileName="imgCours" genre="une" fileType="Image"/>
+            <FileInFr accept=".png" fileName="imgCours" genre="une" fileType="Image" onUploadFunction={onUploadCoursImageChange}/>
             <p for="pdfCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer le fichier du cours :</p>
             <FileInFr accept=".pdf" fileName="pdfCours" genre="un" fileType="fichier" onUploadFunction={onUploadFileChange} />
             {/* <div>
@@ -150,7 +175,7 @@ function Form(props) {
               <option value="3">La troisième</option>
             </select>
             <p className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer l'image de quiz:</p>
-            <FileInFr accept=".png" fileName="imgQuiz" genre="une" fileType="Image"/>
+            <FileInFr accept=".png" fileName="imgQuiz" genre="une" fileType="Image"  onUploadFunction={onUploadQuizImageChange}  />
           </div>
           <div className='flex flex-row justify-end w-[100%] h-fit'>
             <label for="sub" className='w-fit h-10 lg:h-14 p-2 lg:p-3 mr-6 lg:mr-10 mt-2 lg:mt-4 mb-6 rounded-lg cursor-pointer bg-[#FFDFD9] hover:scale-110 hover:bg-[#FFC5C1] flex flex-row gap-3'>
