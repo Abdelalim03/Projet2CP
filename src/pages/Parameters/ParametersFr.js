@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { Link, useLocation, useNavigate, useOutletContext, useParams } from 'react-router-dom';
-import GetCurrentUser from '../../Components/GetCurrentUser';
+import { useNavigate, useOutletContext, useParams } from 'react-router-dom';
 import FormNom from './FormNom';
 
 function ParametersFr() {

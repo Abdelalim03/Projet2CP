@@ -20,6 +20,55 @@
       "maxExo": 7,
       "score": 9,
       "id": 1
+    },
+    {
+      "nom": "رفعت",
+      "avatar": "/avatar/Group-1.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 2
+    },
+    {
+      "nom": "fahim",
+      "avatar": "/avatar/Group-9.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 3
+    },
+    {
+      "nom": "hamdan",
+      "avatar": "/avatar/Group.svg",
+      "maxExo": 5,
+      "score": 4,
+      "id": 4
+    },
+    {
+      "nom": "koko",
+      "avatar": "/avatar/Group-2.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 5
+    },
+    {
+      "nom": "Allouma",
+      "avatar": "/avatar/Group-4.svg",
+      "maxExo": 3,
+      "score": 5,
+      "id": 6
+    },
+    {
+      "nom": "eleve",
+      "avatar": "/avatar/Group-3.svg",
+      "maxExo": 48,
+      "score": 16,
+      "id": 7
+    },
+    {
+      "nom": "Halouuf",
+      "avatar": "/avatar/Group-7.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 8
     }
   ],
   "courses": [
@@ -46,9 +95,9 @@
       "preDashedString": "[]",
       "preLinesString": "[]",
       "preShapesString": "[]",
-      "prePointString": "[{\"x\":280,\"y\":160,\"stroked\":\"white\"},{\"x\":760,\"y\":240,\"stroked\":\"white\"},{\"x\":760,\"y\":160,\"stroked\":\"dodgerblue\"},{\"x\":280,\"y\":400,\"stroked\":\"dodgerblue\"},{\"x\":760,\"y\":320,\"stroked\":\"HotPink\"},{\"x\":280,\"y\":240,\"stroked\":\"HotPink\"},{\"x\":760,\"y\":400,\"stroked\":\"orange\"},{\"x\":280,\"y\":320,\"stroked\":\"orange\"}]",
+      "prePointString": "[{\"x\":280,\"y\":160,\"stroked\":\"white\"},{\"x\":760,\"y\":240,\"stroked\":\"white\"},{\"x\":760,\"y\":160,\"stroked\":\"lightskyblue\"},{\"x\":280,\"y\":400,\"stroked\":\"lightskyblue\"},{\"x\":760,\"y\":320,\"stroked\":\"lawngreen\"},{\"x\":280,\"y\":240,\"stroked\":\"lawngreen\"},{\"x\":760,\"y\":400,\"stroked\":\"saddlebrown\"},{\"x\":280,\"y\":320,\"stroked\":\"saddlebrown\"}]",
       "solutionPointString": "[]",
-      "solutionLinesString": "[{\"xd\":280,\"yd\":160,\"xf\":760,\"yf\":240,\"stroked\":\"white\"},{\"xd\":280,\"yd\":400,\"xf\":760,\"yf\":160,\"stroked\":\"dodgerblue\"},{\"xd\":280,\"yd\":320,\"xf\":760,\"yf\":400,\"stroked\":\"orange\"},{\"xd\":280,\"yd\":240,\"xf\":760,\"yf\":320,\"stroked\":\"hotpink\"}]",
+      "solutionLinesString": "[{\"xd\":280,\"yd\":160,\"xf\":760,\"yf\":240,\"stroked\":\"white\"},{\"xd\":280,\"yd\":400,\"xf\":760,\"yf\":160,\"stroked\":\"lightskyblue\"},{\"xd\":280,\"yd\":320,\"xf\":760,\"yf\":400,\"stroked\":\"saddlebrown\"},{\"xd\":280,\"yd\":240,\"xf\":760,\"yf\":320,\"stroked\":\"lawngreen\"}]",
       "solutionShapesString": "[]",
       "allshapesString": "[]",
       "questionFr": "Reliez entre les points avec des ligne de la meme couleur!",
@@ -89,31 +138,16 @@
       "allowed_delta": 0,
       "typeOfCheck": "Shapes",
       "preDashedString": "[]",
-      "preLinesString": "[{\"xd\":480,\"yd\":160,\"xf\":640,\"yf\":160,\"stroked\":\"white\"},{\"xd\":640,\"yd\":160,\"xf\":640,\"yf\":320,\"stroked\":\"white\"},{\"xd\":640,\"yd\":320,\"xf\":640,\"yf\":320,\"stroked\":\"white\"},{\"xd\":640,\"yd\":320,\"xf\":480,\"yf\":320,\"stroked\":\"white\"},{\"xd\":480,\"yd\":320,\"xf\":480,\"yf\":160,\"stroked\":\"white\"},{\"xd\":520,\"yd\":240,\"xf\":520,\"yf\":280,\"stroked\":\"white\"},{\"xd\":520,\"yd\":280,\"xf\":600,\"yf\":280,\"stroked\":\"white\"},{\"xd\":600,\"yd\":280,\"xf\":600,\"yf\":240,\"stroked\":\"white\"},{\"xd\":640,\"yd\":160,\"xf\":680,\"yf\":120,\"stroked\":\"black\"},{\"xd\":600,\"yd\":160,\"xf\":600,\"yf\":120,\"stroked\":\"black\"},{\"xd\":520,\"yd\":160,\"xf\":520,\"yf\":120,\"stroked\":\"black\"},{\"xd\":480,\"yd\":160,\"xf\":440,\"yf\":120,\"stroked\":\"black\"}]",
-      "preShapesString": "[]",
-      "prePointString": "[{\"x\":600,\"y\":200,\"stroked\":\"dodgerblue\"}]",
-      "solutionPointString": "[{\"x\":520,\"y\":200,\"stroked\":\"dodgerblue\"}]",
-      "solutionLinesString": "[]",
-      "solutionShapesString": "[]",
-      "allshapesString": "[]",
-      "questionFr": "Completez la figure suivante!",
-      "questionAr": "أكمل الشكل الموالي",
-      "id": 5
-    },
-    {
-      "allowed_delta": 0,
-      "typeOfCheck": "Shapes",
-      "preDashedString": "[]",
       "preLinesString": "[]",
-      "preShapesString": "[{\"x\":600,\"y\":200,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"white\"},{\"x\":440,\"y\":320,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"dodgerblue\"},{\"x\":760,\"y\":320,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"red\"},{\"x\":600,\"y\":320,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"purple\"}]",
+      "preShapesString": "[{\"x\":600,\"y\":200,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"white\"},{\"x\":440,\"y\":320,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"lightskyblue\"},{\"x\":760,\"y\":320,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"red\"},{\"x\":600,\"y\":320,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"plum\"}]",
       "prePointString": "[{\"x\":600,\"y\":200,\"stroked\":\"white\"}]",
-      "solutionPointString": "[{\"x\":760,\"y\":320,\"stroked\":\"red\"},{\"x\":600,\"y\":320,\"stroked\":\"purple\"},{\"x\":440,\"y\":320,\"stroked\":\"dodgerblue\"}]",
+      "solutionPointString": "[{\"x\":760,\"y\":320,\"stroked\":\"red\"},{\"x\":600,\"y\":320,\"stroked\":\"plum\"},{\"x\":440,\"y\":320,\"stroked\":\"lightskyblue\"}]",
       "solutionLinesString": "[]",
       "solutionShapesString": "[]",
       "allshapesString": "[]",
       "questionFr": "Dessinez le centre des cercles suivants",
       "questionAr": "أرسم مركز الاقراص الاتية",
-      "id": 6
+      "id": 5
     },
     {
       "allowed_delta": 0,
@@ -128,22 +162,22 @@
       "allshapesString": "[{\"x\":200,\"y\":200,\"u\":40,\"type\":1,\"filled\":\"white\",\"stroked\":\"white\"},{\"x\":320,\"y\":320,\"u\":40,\"type\":4,\"filled\":\"white\",\"stroked\":\"white\"}]",
       "questionFr": "Deplacez les polyones blancs pour avoir une symetrie!",
       "questionAr": "",
-      "id": 7
+      "id": 6
     },
     {
       "allowed_delta": 0,
       "typeOfCheck": "Shapes",
       "preDashedString": "[{\"xd\":560,\"yd\":40,\"xf\":560,\"yf\":560,\"strokeCol\":\"red\"}]",
       "preLinesString": "[]",
-      "preShapesString": "[{\"x\":920,\"y\":360,\"u\":40,\"type\":4,\"filled\":\"green\",\"stroked\":\"white\"},{\"x\":760,\"y\":520,\"u\":40,\"type\":1,\"filled\":\"purple\",\"stroked\":\"white\"},{\"x\":840,\"y\":200,\"u\":40,\"type\":5,\"filled\":\"red\",\"stroked\":\"white\"}]",
+      "preShapesString": "[{\"x\":920,\"y\":360,\"u\":40,\"type\":4,\"filled\":\"lawngreen\",\"stroked\":\"white\"},{\"x\":760,\"y\":520,\"u\":40,\"type\":1,\"filled\":\"plum\",\"stroked\":\"white\"},{\"x\":840,\"y\":200,\"u\":40,\"type\":5,\"filled\":\"red\",\"stroked\":\"white\"}]",
       "prePointString": "[]",
       "solutionPointString": "[]",
       "solutionLinesString": "[]",
-      "solutionShapesString": "[{\"x\":360,\"y\":520,\"u\":40,\"type\":1,\"filled\":\"purple\"},{\"x\":280,\"y\":200,\"u\":40,\"type\":5,\"filled\":\"red\"},{\"x\":200,\"y\":360,\"u\":40,\"type\":4,\"filled\":\"green\"}]",
+      "solutionShapesString": "[{\"x\":360,\"y\":520,\"u\":40,\"type\":1,\"filled\":\"plum\"},{\"x\":280,\"y\":200,\"u\":40,\"type\":5,\"filled\":\"red\"},{\"x\":200,\"y\":360,\"u\":40,\"type\":4,\"filled\":\"lawngreen\"}]",
       "allshapesString": "[{\"x\":360,\"y\":520,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"white\"},{\"x\":280,\"y\":200,\"u\":40,\"type\":5,\"filled\":false,\"stroked\":\"white\"},{\"x\":200,\"y\":360,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"}]",
       "questionFr": "Colorez les polygones avec les couleur adequtes!",
       "questionAr": "لون متعددي الأضلاع بالالوان المناسبة",
-      "id": 8
+      "id": 7
     },
     {
       "allowed_delta": 0,
@@ -158,11 +192,11 @@
       "allshapesString": "[{\"x\":720,\"y\":240,\"u\":40,\"type\":2,\"filled\":false,\"stroked\":\"white\"},{\"x\":840,\"y\":240,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":240,\"u\":40,\"type\":3,\"filled\":false,\"stroked\":\"white\"},{\"x\":760,\"y\":240,\"u\":40,\"type\":3,\"filled\":false,\"stroked\":\"white\"},{\"x\":840,\"y\":240,\"u\":40,\"type\":3,\"filled\":false,\"stroked\":\"white\"},{\"x\":640,\"y\":240,\"u\":40,\"type\":3,\"filled\":false,\"stroked\":\"white\"}]",
       "questionFr": "Utilisez la gomme pour realiser la symetrie dans la figure suivane!",
       "questionAr": "استعمل الممحاة للحصول على التناظر",
-      "id": 9
+      "id": 8
     },
     {
-      "allowed_delta": 0,
-      "typeOfCheck": "Shapes",
+      "allowed_delta": 100,
+      "typeOfCheck": "imageData",
       "preDashedString": "[{\"xd\":560,\"yd\":40,\"xf\":560,\"yf\":560,\"strokeCol\":\"red\"}]",
       "preLinesString": "[{\"xd\":760,\"yd\":240,\"xf\":760,\"yf\":320,\"strokeCol\":\"white\"},{\"xd\":760,\"yd\":320,\"xf\":840,\"yf\":320,\"strokeCol\":\"white\"},{\"xd\":840,\"yd\":320,\"xf\":840,\"yf\":240,\"strokeCol\":\"white\"},{\"xd\":840,\"yd\":240,\"xf\":760,\"yf\":240,\"strokeCol\":\"white\"}]",
       "preShapesString": "[]",
@@ -173,10 +207,10 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 10
+      "id": 9
     },
     {
-      "allowed_delta": 0,
+      "allowed_delta": 100,
       "typeOfCheck": "imageData",
       "preDashedString": "[{\"xd\":40,\"yd\":320,\"xf\":1160,\"yf\":320,\"strokeCol\":\"red\"}]",
       "preLinesString": "[{\"xd\":520,\"yd\":200,\"xf\":520,\"yf\":280,\"strokeCol\":\"white\"},{\"xd\":520,\"yd\":280,\"xf\":600,\"yf\":280,\"strokeCol\":\"white\"},{\"xd\":600,\"yd\":280,\"xf\":600,\"yf\":200,\"strokeCol\":\"white\"},{\"xd\":600,\"yd\":200,\"xf\":520,\"yf\":200,\"strokeCol\":\"white\"},{\"xd\":600,\"yd\":200,\"xf\":720,\"yf\":200,\"strokeCol\":\"white\"},{\"xd\":720,\"yd\":200,\"xf\":720,\"yf\":80,\"strokeCol\":\"white\"},{\"xd\":720,\"yd\":80,\"xf\":520,\"yf\":80,\"strokeCol\":\"white\"},{\"xd\":520,\"yd\":80,\"xf\":520,\"yf\":200,\"strokeCol\":\"white\"}]",
@@ -188,7 +222,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 11
+      "id": 10
     },
     {
       "allowed_delta": 9250,
@@ -203,7 +237,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 12
+      "id": 11
     },
     {
       "allowed_delta": 12100,
@@ -218,7 +252,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 13
+      "id": 12
     },
     {
       "allowed_delta": 8200,
@@ -233,7 +267,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 14
+      "id": 13
     },
     {
       "allowed_delta": 3400,
@@ -248,7 +282,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 15
+      "id": 14
     },
     {
       "allowed_delta": 5100,
@@ -263,7 +297,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 16
+      "id": 15
     },
     {
       "allowed_delta": 5800,
@@ -278,7 +312,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 17
+      "id": 16
     },
     {
       "allowed_delta": 6650,
@@ -293,22 +327,22 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 18
+      "id": 17
     },
     {
       "allowed_delta": 680,
       "typeOfCheck": "imageData",
       "preDashedString": "[{\"xd\":120,\"yd\":280,\"xf\":120,\"yf\":280,\"stroked\":\"white\"},{\"xd\":40,\"yd\":320,\"xf\":1160,\"yf\":320,\"stroked\":\"white\"},{\"xd\":40,\"yd\":320,\"xf\":40,\"yf\":320,\"stroked\":\"white\"}]",
-      "preLinesString": "[{\"xd\":760,\"yd\":320,\"xf\":760,\"yf\":320,\"stroked\":\"white\"},{\"xd\":760,\"yd\":320,\"xf\":760,\"yf\":80,\"stroked\":\"brown\"},{\"xd\":760,\"yd\":80,\"xf\":640,\"yf\":80,\"stroked\":\"brown\"},{\"xd\":640,\"yd\":80,\"xf\":640,\"yf\":160,\"stroked\":\"brown\"},{\"xd\":640,\"yd\":160,\"xf\":440,\"yf\":160,\"stroked\":\"brown\"},{\"xd\":440,\"yd\":160,\"xf\":440,\"yf\":320,\"stroked\":\"brown\"},{\"xd\":760,\"yd\":80,\"xf\":800,\"yf\":40,\"stroked\":\"black\"},{\"xd\":640,\"yd\":80,\"xf\":600,\"yf\":40,\"stroked\":\"black\"},{\"xd\":680,\"yd\":160,\"xf\":720,\"yf\":160,\"stroked\":\"yellow\"}]",
-      "preShapesString": "[{\"x\":520,\"y\":240,\"u\":40,\"type\":4,\"filled\":\"purple\",\"stroked\":\"white\"}]",
+      "preLinesString": "[{\"xd\":760,\"yd\":320,\"xf\":760,\"yf\":320,\"stroked\":\"white\"},{\"xd\":760,\"yd\":320,\"xf\":760,\"yf\":80,\"stroked\":\"saddlebrown\"},{\"xd\":760,\"yd\":80,\"xf\":640,\"yf\":80,\"stroked\":\"saddlebrown\"},{\"xd\":640,\"yd\":80,\"xf\":640,\"yf\":160,\"stroked\":\"saddlebrown\"},{\"xd\":640,\"yd\":160,\"xf\":440,\"yf\":160,\"stroked\":\"saddlebrown\"},{\"xd\":440,\"yd\":160,\"xf\":440,\"yf\":320,\"stroked\":\"saddlebrown\"},{\"xd\":760,\"yd\":80,\"xf\":800,\"yf\":40,\"stroked\":\"black\"},{\"xd\":640,\"yd\":80,\"xf\":600,\"yf\":40,\"stroked\":\"black\"},{\"xd\":680,\"yd\":160,\"xf\":720,\"yf\":160,\"stroked\":\"yellow\"}]",
+      "preShapesString": "[{\"x\":520,\"y\":240,\"u\":40,\"type\":4,\"filled\":\"plum\",\"stroked\":\"white\"}]",
       "prePointString": "[{\"x\":720,\"y\":120,\"stroked\":\"white\"},{\"x\":680,\"y\":120,\"stroked\":\"white\"}]",
       "solutionPointString": "[{\"x\":720,\"y\":520,\"stroked\":\"white\"},{\"x\":680,\"y\":520,\"stroked\":\"white\"}]",
-      "solutionLinesString": "[{\"xd\":440,\"yd\":320,\"xf\":440,\"yf\":480,\"stroked\":\"brown\"},{\"xd\":440,\"yd\":480,\"xf\":640,\"yf\":480,\"stroked\":\"brown\"},{\"xd\":640,\"yd\":480,\"xf\":640,\"yf\":560,\"stroked\":\"brown\"},{\"xd\":640,\"yd\":560,\"xf\":760,\"yf\":560,\"stroked\":\"brown\"},{\"xd\":760,\"yd\":560,\"xf\":760,\"yf\":320,\"stroked\":\"brown\"},{\"xd\":800,\"yd\":600,\"xf\":760,\"yf\":560,\"stroked\":\"black\"},{\"xd\":640,\"yd\":560,\"xf\":600,\"yf\":600,\"stroked\":\"black\"},{\"xd\":720,\"yd\":480,\"xf\":680,\"yf\":480,\"stroked\":\"yellow\"}]",
-      "solutionShapesString": "[{\"x\":520,\"y\":400,\"u\":40,\"type\":4,\"filled\":\"purple\",\"stroked\":\"white\"}]",
+      "solutionLinesString": "[{\"xd\":440,\"yd\":320,\"xf\":440,\"yf\":480,\"stroked\":\"saddlebrown\"},{\"xd\":440,\"yd\":480,\"xf\":640,\"yf\":480,\"stroked\":\"saddlebrown\"},{\"xd\":640,\"yd\":480,\"xf\":640,\"yf\":560,\"stroked\":\"saddlebrown\"},{\"xd\":640,\"yd\":560,\"xf\":760,\"yf\":560,\"stroked\":\"saddlebrown\"},{\"xd\":760,\"yd\":560,\"xf\":760,\"yf\":320,\"stroked\":\"saddlebrown\"},{\"xd\":800,\"yd\":600,\"xf\":760,\"yf\":560,\"stroked\":\"black\"},{\"xd\":640,\"yd\":560,\"xf\":600,\"yf\":600,\"stroked\":\"black\"},{\"xd\":720,\"yd\":480,\"xf\":680,\"yf\":480,\"stroked\":\"yellow\"}]",
+      "solutionShapesString": "[{\"x\":520,\"y\":400,\"u\":40,\"type\":4,\"filled\":\"plum\",\"stroked\":\"white\"}]",
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 19
+      "id": 18
     },
     {
       "allowed_delta": 50,
@@ -323,7 +357,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 20
+      "id": 19
     },
     {
       "allowed_delta": 560,
@@ -338,7 +372,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 21
+      "id": 20
     },
     {
       "allowed_delta": 6190,
@@ -353,7 +387,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 22
+      "id": 21
     },
     {
       "allowed_delta": 5793,
@@ -368,7 +402,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 23
+      "id": 22
     },
     {
       "allowed_delta": 4190,
@@ -383,7 +417,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 24
+      "id": 23
     },
     {
       "allowed_delta": 3784,
@@ -398,7 +432,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 25
+      "id": 24
     },
     {
       "allowed_delta": 2896,
@@ -413,7 +447,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 26
+      "id": 25
     },
     {
       "allowed_delta": 3433,
@@ -428,22 +462,22 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 27
+      "id": 26
     },
     {
       "allowed_delta": 100,
       "typeOfCheck": "imageData",
       "preDashedString": "[]",
-      "preLinesString": "[{\"xd\":560,\"yd\":160,\"xf\":560,\"yf\":280,\"stroked\":\"green\"},{\"xd\":560,\"yd\":280,\"xf\":480,\"yf\":280,\"stroked\":\"green\"},{\"xd\":480,\"yd\":280,\"xf\":480,\"yf\":240,\"stroked\":\"green\"},{\"xd\":480,\"yd\":240,\"xf\":520,\"yf\":240,\"stroked\":\"green\"},{\"xd\":520,\"yd\":240,\"xf\":520,\"yf\":160,\"stroked\":\"green\"},{\"xd\":520,\"yd\":160,\"xf\":560,\"yf\":160,\"stroked\":\"green\"}]",
+      "preLinesString": "[{\"xd\":560,\"yd\":160,\"xf\":560,\"yf\":280,\"stroked\":\"lawngreen\"},{\"xd\":560,\"yd\":280,\"xf\":480,\"yf\":280,\"stroked\":\"lawngreen\"},{\"xd\":480,\"yd\":280,\"xf\":480,\"yf\":240,\"stroked\":\"lawngreen\"},{\"xd\":480,\"yd\":240,\"xf\":520,\"yf\":240,\"stroked\":\"lawngreen\"},{\"xd\":520,\"yd\":240,\"xf\":520,\"yf\":160,\"stroked\":\"lawngreen\"},{\"xd\":520,\"yd\":160,\"xf\":560,\"yf\":160,\"stroked\":\"lawngreen\"}]",
       "preShapesString": "[]",
       "prePointString": "[{\"x\":600,\"y\":320,\"stroked\":\"red\"}]",
       "solutionPointString": "[]",
-      "solutionLinesString": "[{\"xd\":640,\"yd\":360,\"xf\":640,\"yf\":480,\"stroked\":\"green\"},{\"xd\":640,\"yd\":480,\"xf\":680,\"yf\":480,\"stroked\":\"green\"},{\"xd\":640,\"yd\":360,\"xf\":720,\"yf\":360,\"stroked\":\"green\"},{\"xd\":720,\"yd\":360,\"xf\":720,\"yf\":400,\"stroked\":\"green\"},{\"xd\":720,\"yd\":400,\"xf\":680,\"yf\":400,\"stroked\":\"green\"},{\"xd\":680,\"yd\":400,\"xf\":680,\"yf\":480,\"stroked\":\"green\"}]",
+      "solutionLinesString": "[{\"xd\":640,\"yd\":360,\"xf\":640,\"yf\":480,\"stroked\":\"lawngreen\"},{\"xd\":640,\"yd\":480,\"xf\":680,\"yf\":480,\"stroked\":\"lawngreen\"},{\"xd\":640,\"yd\":360,\"xf\":720,\"yf\":360,\"stroked\":\"lawngreen\"},{\"xd\":720,\"yd\":360,\"xf\":720,\"yf\":400,\"stroked\":\"lawngreen\"},{\"xd\":720,\"yd\":400,\"xf\":680,\"yf\":400,\"stroked\":\"lawngreen\"},{\"xd\":680,\"yd\":400,\"xf\":680,\"yf\":480,\"stroked\":\"lawngreen\"}]",
       "solutionShapesString": "[]",
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport au centre de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المركز الأحمر",
-      "id": 28
+      "id": 27
     },
     {
       "allowed_delta": 0,
@@ -458,7 +492,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport au centre de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المركز الأحمر",
-      "id": 29
+      "id": 28
     },
     {
       "allowed_delta": 0,
@@ -466,14 +500,14 @@
       "preDashedString": "[]",
       "preLinesString": "[]",
       "preShapesString": "[]",
-      "prePointString": "[{\"x\":600,\"y\":320,\"stroked\":\"red\"},{\"x\":320,\"y\":240,\"stroked\":\"black\"},{\"x\":440,\"y\":400,\"stroked\":\"dodgerblue\"}]",
-      "solutionPointString": "[{\"x\":880,\"y\":400,\"stroked\":\"black\"},{\"x\":760,\"y\":240,\"stroked\":\"dodgerblue\"}]",
+      "prePointString": "[{\"x\":600,\"y\":320,\"stroked\":\"red\"},{\"x\":320,\"y\":240,\"stroked\":\"black\"},{\"x\":440,\"y\":400,\"stroked\":\"lightskyblue\"}]",
+      "solutionPointString": "[{\"x\":880,\"y\":400,\"stroked\":\"black\"},{\"x\":760,\"y\":240,\"stroked\":\"lightskyblue\"}]",
       "solutionLinesString": "[]",
       "solutionShapesString": "[]",
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport au centre de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المركز الأحمر",
-      "id": 30
+      "id": 29
     },
     {
       "allowed_delta": 100,
@@ -488,7 +522,7 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport au centre de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المركز الأحمر",
-      "id": 31
+      "id": 30
     },
     {
       "allowed_delta": 4000,
@@ -503,37 +537,157 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport au centre de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المركز الأحمر",
+      "id": 31
+    },
+    {
+      "allowed_delta": 3950,
+      "typeOfCheck": "imageData",
+      "preDashedString": "[]",
+      "preLinesString": "[{\"xd\":600,\"yd\":320,\"xf\":520,\"yf\":160,\"stroked\":\"white\"},{\"xd\":520,\"yd\":320,\"xf\":480,\"yf\":240,\"stroked\":\"white\"},{\"xd\":520,\"yd\":160,\"xf\":360,\"yf\":160,\"stroked\":\"white\"},{\"xd\":480,\"yd\":240,\"xf\":400,\"yf\":240,\"stroked\":\"white\"},{\"xd\":400,\"yd\":240,\"xf\":360,\"yf\":360,\"stroked\":\"white\"},{\"xd\":360,\"yd\":160,\"xf\":320,\"yf\":320,\"stroked\":\"white\"},{\"xd\":360,\"yd\":360,\"xf\":240,\"yf\":360,\"stroked\":\"white\"},{\"xd\":240,\"yd\":360,\"xf\":200,\"yf\":360,\"stroked\":\"white\"},{\"xd\":320,\"yd\":320,\"xf\":240,\"yf\":320,\"stroked\":\"white\"},{\"xd\":200,\"yd\":360,\"xf\":200,\"yf\":240,\"stroked\":\"white\"},{\"xd\":200,\"yd\":240,\"xf\":200,\"yf\":200,\"stroked\":\"white\"},{\"xd\":200,\"yd\":200,\"xf\":160,\"yf\":200,\"stroked\":\"white\"},{\"xd\":160,\"yd\":200,\"xf\":200,\"yf\":120,\"stroked\":\"white\"},{\"xd\":200,\"yd\":120,\"xf\":240,\"yf\":120,\"stroked\":\"white\"},{\"xd\":240,\"yd\":120,\"xf\":240,\"yf\":320,\"stroked\":\"white\"}]",
+      "preShapesString": "[]",
+      "prePointString": "[{\"x\":560,\"y\":320,\"stroked\":\"red\"},{\"x\":200,\"y\":160,\"stroked\":\"yellow\"}]",
+      "solutionPointString": "[{\"x\":920,\"y\":480,\"stroked\":\"yellow\"}]",
+      "solutionLinesString": "[{\"xd\":520,\"yd\":320,\"xf\":600,\"yf\":480,\"stroked\":\"white\"},{\"xd\":600,\"yd\":320,\"xf\":640,\"yf\":400,\"stroked\":\"white\"},{\"xd\":640,\"yd\":400,\"xf\":720,\"yf\":400,\"stroked\":\"white\"},{\"xd\":600,\"yd\":480,\"xf\":760,\"yf\":480,\"stroked\":\"white\"},{\"xd\":720,\"yd\":400,\"xf\":760,\"yf\":280,\"stroked\":\"white\"},{\"xd\":760,\"yd\":280,\"xf\":920,\"yf\":280,\"stroked\":\"white\"},{\"xd\":760,\"yd\":480,\"xf\":800,\"yf\":320,\"stroked\":\"white\"},{\"xd\":800,\"yd\":320,\"xf\":880,\"yf\":320,\"stroked\":\"white\"},{\"xd\":880,\"yd\":320,\"xf\":880,\"yf\":520,\"stroked\":\"white\"},{\"xd\":920,\"yd\":280,\"xf\":920,\"yf\":440,\"stroked\":\"white\"},{\"xd\":920,\"yd\":440,\"xf\":960,\"yf\":440,\"stroked\":\"white\"},{\"xd\":880,\"yd\":520,\"xf\":920,\"yf\":520,\"stroked\":\"white\"},{\"xd\":920,\"yd\":520,\"xf\":960,\"yf\":440,\"stroked\":\"white\"}]",
+      "solutionShapesString": "[]",
+      "allshapesString": "[]",
+      "questionFr": "Dessinez le symetrique de la figure suivante! par rapport au centre de symetrie rouge en respectant les couleurs",
+      "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المركز الأحمر",
       "id": 32
+    },
+    {
+      "allowed_delta": 600,
+      "typeOfCheck": "imageData",
+      "preDashedString": "[]",
+      "preLinesString": "[{\"xd\":520,\"yd\":200,\"xf\":520,\"yf\":240,\"stroked\":\"white\"},{\"xd\":520,\"yd\":240,\"xf\":480,\"yf\":240,\"stroked\":\"white\"},{\"xd\":480,\"yd\":240,\"xf\":480,\"yf\":320,\"stroked\":\"white\"},{\"xd\":480,\"yd\":320,\"xf\":400,\"yf\":320,\"stroked\":\"white\"},{\"xd\":400,\"yd\":320,\"xf\":400,\"yf\":200,\"stroked\":\"white\"},{\"xd\":400,\"yd\":200,\"xf\":480,\"yf\":120,\"stroked\":\"white\"},{\"xd\":480,\"yd\":120,\"xf\":600,\"yf\":120,\"stroked\":\"white\"},{\"xd\":520,\"yd\":200,\"xf\":600,\"yf\":200,\"stroked\":\"white\"},{\"xd\":600,\"yd\":200,\"xf\":600,\"yf\":120,\"stroked\":\"white\"}]",
+      "preShapesString": "[]",
+      "prePointString": "[{\"x\":600,\"y\":320,\"stroked\":\"red\"}]",
+      "solutionPointString": "[]",
+      "solutionLinesString": "[{\"xd\":680,\"yd\":400,\"xf\":720,\"yf\":400,\"stroked\":\"white\"},{\"xd\":680,\"yd\":400,\"xf\":680,\"yf\":440,\"stroked\":\"white\"},{\"xd\":720,\"yd\":320,\"xf\":720,\"yf\":400,\"stroked\":\"white\"},{\"xd\":760,\"yd\":320,\"xf\":720,\"yf\":320,\"stroked\":\"white\"},{\"xd\":760,\"yd\":320,\"xf\":800,\"yf\":320,\"stroked\":\"white\"},{\"xd\":800,\"yd\":320,\"xf\":800,\"yf\":440,\"stroked\":\"white\"},{\"xd\":800,\"yd\":440,\"xf\":720,\"yf\":520,\"stroked\":\"white\"},{\"xd\":720,\"yd\":520,\"xf\":600,\"yf\":520,\"stroked\":\"white\"},{\"xd\":600,\"yd\":520,\"xf\":600,\"yf\":440,\"stroked\":\"white\"},{\"xd\":600,\"yd\":440,\"xf\":680,\"yf\":440,\"stroked\":\"white\"}]",
+      "solutionShapesString": "[]",
+      "allshapesString": "[]",
+      "questionFr": "Dessinez le symetrique de la figure suivante! par rapport au centre de symetrie rouge en respectant les couleurs",
+      "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المركز الأحمر",
+      "id": 33
+    },
+    {
+      "allowed_delta": 3800,
+      "typeOfCheck": "imageData",
+      "preDashedString": "[]",
+      "preLinesString": "[{\"xd\":520,\"yd\":280,\"xf\":480,\"yf\":280,\"stroked\":\"lightskyblue\"},{\"xd\":480,\"yd\":280,\"xf\":520,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":280,\"xf\":560,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":240,\"xf\":520,\"yf\":200,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":200,\"xf\":480,\"yf\":200,\"stroked\":\"lightskyblue\"},{\"xd\":480,\"yd\":200,\"xf\":440,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":320,\"xf\":440,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":440,\"yd\":320,\"xf\":400,\"yf\":280,\"stroked\":\"lightskyblue\"},{\"xd\":440,\"yd\":240,\"xf\":400,\"yf\":280,\"stroked\":\"lightskyblue\"},{\"xd\":440,\"yd\":320,\"xf\":320,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":320,\"yd\":400,\"xf\":240,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":440,\"yd\":240,\"xf\":320,\"yf\":280,\"stroked\":\"lightskyblue\"},{\"xd\":400,\"yd\":280,\"xf\":360,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":360,\"yd\":320,\"xf\":280,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":320,\"yd\":280,\"xf\":280,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":280,\"yd\":320,\"xf\":240,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":280,\"yd\":240,\"xf\":160,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":240,\"yd\":320,\"xf\":160,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":240,\"yd\":400,\"xf\":160,\"yf\":400,\"stroked\":\"lightskyblue\"}]",
+      "preShapesString": "[]",
+      "prePointString": "[{\"x\":600,\"y\":320,\"stroked\":\"red\"},{\"x\":480,\"y\":240,\"stroked\":\"yellow\"}]",
+      "solutionPointString": "[{\"x\":720,\"y\":400,\"stroked\":\"yellow\"}]",
+      "solutionLinesString": "[{\"xd\":680,\"yd\":320,\"xf\":760,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":920,\"yd\":240,\"xf\":1040,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":920,\"yd\":320,\"xf\":1040,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":920,\"yd\":240,\"xf\":1040,\"yf\":240,\"stroked\":\"white\"},{\"xd\":680,\"yd\":320,\"xf\":720,\"yf\":360,\"stroked\":\"lightskyblue\"},{\"xd\":720,\"yd\":360,\"xf\":680,\"yf\":360,\"stroked\":\"lightskyblue\"},{\"xd\":680,\"yd\":360,\"xf\":640,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":640,\"yd\":400,\"xf\":680,\"yf\":440,\"stroked\":\"lightskyblue\"},{\"xd\":680,\"yd\":440,\"xf\":720,\"yf\":440,\"stroked\":\"lightskyblue\"},{\"xd\":720,\"yd\":440,\"xf\":800,\"yf\":360,\"stroked\":\"lightskyblue\"},{\"xd\":800,\"yd\":360,\"xf\":760,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":880,\"yd\":240,\"xf\":1040,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":800,\"yd\":360,\"xf\":840,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":840,\"yd\":320,\"xf\":880,\"yf\":360,\"stroked\":\"lightskyblue\"},{\"xd\":880,\"yd\":360,\"xf\":920,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":880,\"yd\":360,\"xf\":920,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":920,\"yd\":400,\"xf\":1040,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":760,\"yd\":320,\"xf\":880,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":760,\"yd\":400,\"xf\":880,\"yf\":360,\"stroked\":\"lightskyblue\"}]",
+      "solutionShapesString": "[]",
+      "allshapesString": "[]",
+      "questionFr": "Dessinez le symetrique de la figure suivante! par rapport au centre de symetrie rouge en respectant les couleurs",
+      "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المركز الأحمر",
+      "id": 34
+    },
+    {
+      "allowed_delta": 4000,
+      "typeOfCheck": "imageData",
+      "preDashedString": "[]",
+      "preLinesString": "[{\"xd\":440,\"yd\":200,\"xf\":480,\"yf\":200,\"stroked\":\"black\"},{\"xd\":480,\"yd\":200,\"xf\":560,\"yf\":80,\"stroked\":\"black\"},{\"xd\":280,\"yd\":200,\"xf\":360,\"yf\":200,\"stroked\":\"black\"},{\"xd\":200,\"yd\":200,\"xf\":160,\"yf\":200,\"stroked\":\"black\"},{\"xd\":160,\"yd\":200,\"xf\":240,\"yf\":80,\"stroked\":\"black\"}]",
+      "preShapesString": "[{\"x\":400,\"y\":200,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"lightskyblue\"},{\"x\":240,\"y\":200,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"lightskyblue\"}]",
+      "prePointString": "[{\"x\":600,\"y\":280,\"stroked\":\"red\"}]",
+      "solutionPointString": "[]",
+      "solutionLinesString": "[{\"xd\":1040,\"yd\":360,\"xf\":960,\"yf\":480,\"stroked\":\"black\"},{\"xd\":720,\"yd\":360,\"xf\":640,\"yf\":480,\"stroked\":\"black\"},{\"xd\":720,\"yd\":360,\"xf\":760,\"yf\":360,\"stroked\":\"black\"},{\"xd\":840,\"yd\":360,\"xf\":920,\"yf\":360,\"stroked\":\"black\"},{\"xd\":1040,\"yd\":360,\"xf\":1000,\"yf\":360,\"stroked\":\"black\"}]",
+      "solutionShapesString": "[{\"x\":800,\"y\":360,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"lightskyblue\"},{\"x\":960,\"y\":360,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"lightskyblue\"}]",
+      "allshapesString": "[]",
+      "questionFr": "Dessinez le symetrique de la figure suivante! par rapport au centre de symetrie rouge en respectant les couleurs",
+      "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المركز الأحمر",
+      "id": 35
+    },
+    {
+      "allowed_delta": 4667,
+      "typeOfCheck": "imageData",
+      "preDashedString": "[]",
+      "preLinesString": "[{\"xd\":120,\"yd\":520,\"xf\":400,\"yf\":520,\"stroked\":\"yellow\"},{\"xd\":40,\"yd\":440,\"xf\":40,\"yf\":440,\"stroked\":\"yellow\"},{\"xd\":400,\"yd\":520,\"xf\":480,\"yf\":440,\"stroked\":\"yellow\"},{\"xd\":120,\"yd\":520,\"xf\":40,\"yf\":440,\"stroked\":\"yellow\"},{\"xd\":40,\"yd\":440,\"xf\":240,\"yf\":440,\"stroked\":\"yellow\"},{\"xd\":480,\"yd\":440,\"xf\":280,\"yf\":440,\"stroked\":\"yellow\"},{\"xd\":280,\"yd\":440,\"xf\":280,\"yf\":400,\"stroked\":\"yellow\"},{\"xd\":240,\"yd\":440,\"xf\":240,\"yf\":400,\"stroked\":\"yellow\"},{\"xd\":280,\"yd\":400,\"xf\":280,\"yf\":160,\"stroked\":\"white\"},{\"xd\":280,\"yd\":160,\"xf\":520,\"yf\":400,\"stroked\":\"white\"},{\"xd\":520,\"yd\":400,\"xf\":280,\"yf\":400,\"stroked\":\"white\"},{\"xd\":240,\"yd\":400,\"xf\":240,\"yf\":160,\"stroked\":\"white\"},{\"xd\":240,\"yd\":160,\"xf\":120,\"yf\":200,\"stroked\":\"white\"},{\"xd\":120,\"yd\":200,\"xf\":40,\"yf\":400,\"stroked\":\"white\"},{\"xd\":40,\"yd\":400,\"xf\":240,\"yf\":400,\"stroked\":\"white\"}]",
+      "preShapesString": "[]",
+      "prePointString": "[{\"x\":600,\"y\":320,\"stroked\":\"red\"}]",
+      "solutionPointString": "[]",
+      "solutionLinesString": "[{\"xd\":960,\"yd\":400,\"xf\":960,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":320,\"xf\":560,\"yf\":320,\"stroked\":\"red\"},{\"xd\":680,\"yd\":280,\"xf\":680,\"yf\":280,\"stroked\":\"white\"},{\"xd\":680,\"yd\":280,\"xf\":680,\"yf\":280,\"stroked\":\"white\"},{\"xd\":920,\"yd\":280,\"xf\":920,\"yf\":280,\"stroked\":\"white\"},{\"xd\":680,\"yd\":240,\"xf\":680,\"yf\":240,\"stroked\":\"white\"},{\"xd\":720,\"yd\":240,\"xf\":720,\"yf\":240,\"stroked\":\"white\"},{\"xd\":680,\"yd\":240,\"xf\":920,\"yf\":480,\"stroked\":\"white\"},{\"xd\":920,\"yd\":480,\"xf\":920,\"yf\":240,\"stroked\":\"white\"},{\"xd\":920,\"yd\":240,\"xf\":680,\"yf\":240,\"stroked\":\"white\"},{\"xd\":920,\"yd\":240,\"xf\":920,\"yf\":200,\"stroked\":\"yellow\"},{\"xd\":960,\"yd\":200,\"xf\":960,\"yf\":240,\"stroked\":\"yellow\"},{\"xd\":960,\"yd\":240,\"xf\":1160,\"yf\":240,\"stroked\":\"white\"},{\"xd\":1160,\"yd\":240,\"xf\":1080,\"yf\":440,\"stroked\":\"white\"},{\"xd\":1080,\"yd\":440,\"xf\":960,\"yf\":480,\"stroked\":\"white\"},{\"xd\":960,\"yd\":480,\"xf\":960,\"yf\":240,\"stroked\":\"white\"},{\"xd\":920,\"yd\":200,\"xf\":720,\"yf\":200,\"stroked\":\"yellow\"},{\"xd\":720,\"yd\":200,\"xf\":800,\"yf\":120,\"stroked\":\"yellow\"},{\"xd\":800,\"yd\":120,\"xf\":1080,\"yf\":120,\"stroked\":\"yellow\"},{\"xd\":1080,\"yd\":120,\"xf\":1160,\"yf\":200,\"stroked\":\"yellow\"},{\"xd\":1160,\"yd\":200,\"xf\":960,\"yf\":200,\"stroked\":\"yellow\"}]",
+      "solutionShapesString": "[]",
+      "allshapesString": "[]",
+      "questionFr": "Dessinez le symetrique de la figure suivante! par rapport au centre de symetrie rouge en respectant les couleurs",
+      "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المركز الأحمر",
+      "id": 36
+    },
+    {
+      "allowed_delta": 4667,
+      "typeOfCheck": "Shapes",
+      "preDashedString": "[]",
+      "preLinesString": "[]",
+      "preShapesString": "[{\"x\":560,\"y\":120,\"u\":40,\"type\":12,\"filled\":\"white\",\"stroked\":\"white\"},{\"x\":600,\"y\":80,\"u\":40,\"type\":15,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":680,\"y\":360,\"u\":40,\"type\":12,\"filled\":\"white\",\"stroked\":\"white\"},{\"x\":480,\"y\":280,\"u\":40,\"type\":12,\"filled\":\"white\",\"stroked\":\"white\"},{\"x\":680,\"y\":200,\"u\":40,\"type\":12,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":560,\"y\":440,\"u\":40,\"type\":12,\"filled\":\"yellow\",\"stroked\":\"white\"}]",
+      "prePointString": "[{\"x\":600,\"y\":280,\"stroked\":\"red\"}]",
+      "solutionPointString": "[]",
+      "solutionLinesString": "[]",
+      "solutionShapesString": "[{\"x\":640,\"y\":440,\"u\":40,\"type\":12,\"filled\":\"white\",\"stroked\":\"white\"},{\"x\":600,\"y\":480,\"u\":40,\"type\":3,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":640,\"y\":120,\"u\":40,\"type\":12,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":520,\"y\":200,\"u\":40,\"type\":12,\"filled\":\"white\",\"stroked\":\"white\"},{\"x\":520,\"y\":360,\"u\":40,\"type\":12,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":720,\"y\":280,\"u\":40,\"type\":12,\"filled\":\"white\",\"stroked\":\"white\"}]",
+      "allshapesString": "[{\"x\":640,\"y\":440,\"u\":40,\"type\":12,\"filled\":false,\"stroked\":\"white\"},{\"x\":600,\"y\":480,\"u\":40,\"type\":3,\"filled\":false,\"stroked\":\"white\"},{\"x\":640,\"y\":120,\"u\":40,\"type\":12,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":200,\"u\":40,\"type\":12,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":360,\"u\":40,\"type\":12,\"filled\":false,\"stroked\":\"white\"},{\"x\":720,\"y\":280,\"u\":40,\"type\":12,\"filled\":false,\"stroked\":\"white\"}]",
+      "questionFr": "Colorez les polygones avec les couleur adequtes!",
+      "questionAr": "لون متعددي الأضلاع بالالوان المناسبة",
+      "id": 37
+    },
+    {
+      "allowed_delta": 0,
+      "typeOfCheck": "Shapes",
+      "preDashedString": "[]",
+      "preLinesString": "[]",
+      "preShapesString": "[{\"x\":480,\"y\":200,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":440,\"y\":120,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":360,\"y\":80,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":280,\"y\":120,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":240,\"y\":200,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":280,\"y\":280,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":360,\"y\":320,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":440,\"y\":280,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":360,\"y\":160,\"u\":40,\"type\":1,\"filled\":\"yellow\",\"stroked\":\"yellow\"},{\"x\":400,\"y\":200,\"u\":40,\"type\":1,\"filled\":\"yellow\",\"stroked\":\"yellow\"},{\"x\":360,\"y\":240,\"u\":40,\"type\":1,\"filled\":\"yellow\",\"stroked\":\"yellow\"},{\"x\":320,\"y\":200,\"u\":40,\"type\":1,\"filled\":\"yellow\",\"stroked\":\"yellow\"}]",
+      "prePointString": "[{\"x\":560,\"y\":320,\"stroked\":\"red\"}]",
+      "solutionPointString": "[]",
+      "solutionLinesString": "[]",
+      "solutionShapesString": "[{\"x\":680,\"y\":360,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":680,\"y\":520,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":760,\"y\":560,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":640,\"y\":440,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":840,\"y\":360,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":880,\"y\":440,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":840,\"y\":520,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":760,\"y\":320,\"u\":40,\"type\":1,\"filled\":\"hotpink\",\"stroked\":\"hotpink\"},{\"x\":760,\"y\":480,\"u\":40,\"type\":1,\"filled\":\"yellow\",\"stroked\":\"yellow\"},{\"x\":800,\"y\":440,\"u\":40,\"type\":1,\"filled\":\"yellow\",\"stroked\":\"yellow\"},{\"x\":760,\"y\":400,\"u\":40,\"type\":1,\"filled\":\"yellow\",\"stroked\":\"yellow\"},{\"x\":720,\"y\":440,\"u\":40,\"type\":1,\"filled\":\"yellow\",\"stroked\":\"yellow\"}]",
+      "allshapesString": "",
+      "questionFr": "Dessinez le symetrique de la figure suivante! par rapport au centre de symetrie rouge en respectant les couleurs",
+      "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المركز الأحمر",
+      "id": 38
+    },
+    {
+      "allowed_delta": 25810,
+      "typeOfCheck": "imageData",
+      "preDashedString": "[]",
+      "preLinesString": "[{\"xd\":560,\"yd\":240,\"xf\":440,\"yf\":80,\"stroked\":\"hotpink\"},{\"xd\":440,\"yd\":80,\"xf\":280,\"yf\":80,\"stroked\":\"hotpink\"},{\"xd\":280,\"yd\":80,\"xf\":280,\"yf\":280,\"stroked\":\"hotpink\"},{\"xd\":280,\"yd\":280,\"xf\":360,\"yf\":320,\"stroked\":\"hotpink\"},{\"xd\":360,\"yd\":320,\"xf\":280,\"yf\":360,\"stroked\":\"hotpink\"},{\"xd\":280,\"yd\":360,\"xf\":280,\"yf\":560,\"stroked\":\"hotpink\"},{\"xd\":280,\"yd\":560,\"xf\":440,\"yf\":560,\"stroked\":\"hotpink\"},{\"xd\":440,\"yd\":560,\"xf\":560,\"yf\":400,\"stroked\":\"hotpink\"},{\"xd\":560,\"yd\":240,\"xf\":560,\"yf\":80,\"stroked\":\"orange\"},{\"xd\":560,\"yd\":80,\"xf\":600,\"yf\":80,\"stroked\":\"orange\"},{\"xd\":560,\"yd\":400,\"xf\":560,\"yf\":560,\"stroked\":\"orange\"},{\"xd\":560,\"yd\":560,\"xf\":600,\"yf\":560,\"stroked\":\"orange\"}]",
+      "preShapesString": "[]",
+      "prePointString": "[{\"x\":600,\"y\":320,\"stroked\":\"red\"}]",
+      "solutionPointString": "[]",
+      "solutionLinesString": "[]",
+      "solutionShapesString": "[]",
+      "allshapesString": "[]",
+      "questionFr": "Dessinez le symetrique de la figure suivante! par rapport au centre de symetrie rouge en respectant les couleurs",
+      "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المركز الأحمر",
+      "id": 39
     },
     {
       "allowed_delta": 0,
       "typeOfCheck": "Shapes",
       "preDashedString": "[{\"xd\":80,\"yd\":320,\"xf\":80,\"yf\":320,\"stroked\":\"white\"},{\"xd\":80,\"yd\":280,\"xf\":1120,\"yf\":280,\"stroked\":\"white\"}]",
       "preLinesString": "[]",
-      "preShapesString": "[{\"x\":840,\"y\":480,\"u\":40,\"type\":15,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":440,\"y\":360,\"u\":40,\"type\":7,\"filled\":\"green\",\"stroked\":\"white\"},{\"x\":840,\"y\":360,\"u\":40,\"type\":7,\"filled\":\"green\",\"stroked\":\"white\"},{\"x\":640,\"y\":360,\"u\":40,\"type\":11,\"filled\":\"purple\",\"stroked\":\"white\"},{\"x\":760,\"y\":360,\"u\":40,\"type\":4,\"filled\":\"dodgerblue\",\"stroked\":\"white\"},{\"x\":440,\"y\":480,\"u\":40,\"type\":15,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":640,\"y\":360,\"u\":40,\"type\":1,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":520,\"y\":360,\"u\":40,\"type\":4,\"filled\":\"dodgerblue\",\"stroked\":\"white\"}]",
+      "preShapesString": "[{\"x\":840,\"y\":480,\"u\":40,\"type\":15,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":440,\"y\":360,\"u\":40,\"type\":7,\"filled\":\"lawngreen\",\"stroked\":\"white\"},{\"x\":840,\"y\":360,\"u\":40,\"type\":7,\"filled\":\"lawngreen\",\"stroked\":\"white\"},{\"x\":640,\"y\":360,\"u\":40,\"type\":11,\"filled\":\"plum\",\"stroked\":\"white\"},{\"x\":760,\"y\":360,\"u\":40,\"type\":4,\"filled\":\"lightskyblue\",\"stroked\":\"white\"},{\"x\":440,\"y\":480,\"u\":40,\"type\":15,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":640,\"y\":360,\"u\":40,\"type\":1,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":520,\"y\":360,\"u\":40,\"type\":4,\"filled\":\"lightskyblue\",\"stroked\":\"white\"}]",
       "prePointString": "[]",
       "solutionPointString": "[]",
       "solutionLinesString": "[]",
-      "solutionShapesString": "[{\"x\":520,\"y\":200,\"u\":40,\"type\":4,\"filled\":\"dodgerblue\",\"stroked\":\"white\"},{\"x\":640,\"y\":200,\"u\":40,\"type\":11,\"filled\":\"purple\",\"stroked\":\"white\"},{\"x\":760,\"y\":200,\"u\":40,\"type\":4,\"filled\":\"dodgerblue\",\"stroked\":\"white\"},{\"x\":640,\"y\":200,\"u\":40,\"type\":1,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":840,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"green\",\"stroked\":\"white\"},{\"x\":840,\"y\":80,\"u\":40,\"type\":3,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":440,\"y\":80,\"u\":40,\"type\":3,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":440,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"green\",\"stroked\":\"white\"}]",
+      "solutionShapesString": "[{\"x\":520,\"y\":200,\"u\":40,\"type\":4,\"filled\":\"lightskyblue\",\"stroked\":\"white\"},{\"x\":640,\"y\":200,\"u\":40,\"type\":11,\"filled\":\"plum\",\"stroked\":\"white\"},{\"x\":760,\"y\":200,\"u\":40,\"type\":4,\"filled\":\"lightskyblue\",\"stroked\":\"white\"},{\"x\":640,\"y\":200,\"u\":40,\"type\":1,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":840,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"lawngreen\",\"stroked\":\"white\"},{\"x\":840,\"y\":80,\"u\":40,\"type\":3,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":440,\"y\":80,\"u\":40,\"type\":3,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":440,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"lawngreen\",\"stroked\":\"white\"}]",
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 33
+      "id": 40
     },
     {
       "allowed_delta": 0,
       "typeOfCheck": "Shapes",
       "preDashedString": "[{\"xd\":840,\"yd\":40,\"xf\":320,\"yf\":560,\"stroked\":\"white\"}]",
       "preLinesString": "[]",
-      "preShapesString": "[{\"x\":480,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"dodgerblue\",\"stroked\":\"white\"},{\"x\":360,\"y\":80,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"white\"},{\"x\":360,\"y\":200,\"u\":40,\"type\":5,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":480,\"y\":80,\"u\":40,\"type\":3,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":520,\"u\":40,\"type\":9,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":400,\"u\":40,\"type\":2,\"filled\":false,\"stroked\":\"white\"}]",
+      "preShapesString": "[{\"x\":480,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"lightskyblue\",\"stroked\":\"white\"},{\"x\":360,\"y\":80,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"white\"},{\"x\":360,\"y\":200,\"u\":40,\"type\":5,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":480,\"y\":80,\"u\":40,\"type\":3,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":520,\"u\":40,\"type\":9,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":400,\"u\":40,\"type\":2,\"filled\":false,\"stroked\":\"white\"}]",
       "prePointString": "[{\"x\":480,\"y\":40,\"stroked\":\"yellow\"},{\"x\":360,\"y\":80,\"stroked\":\"yellow\"}]",
       "solutionPointString": "[{\"x\":840,\"y\":520,\"stroked\":\"yellow\"},{\"x\":800,\"y\":400,\"stroked\":\"yellow\"}]",
       "solutionLinesString": "[]",
-      "solutionShapesString": "[{\"x\":680,\"y\":520,\"u\":40,\"type\":9,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":680,\"y\":400,\"u\":40,\"type\":2,\"filled\":\"dodgerblue\",\"stroked\":\"white\"},{\"x\":800,\"y\":400,\"u\":40,\"type\":13,\"filled\":false,\"stroked\":\"white\"},{\"x\":800,\"y\":520,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"white\"}]",
+      "solutionShapesString": "[{\"x\":680,\"y\":520,\"u\":40,\"type\":9,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":680,\"y\":400,\"u\":40,\"type\":2,\"filled\":\"lightskyblue\",\"stroked\":\"white\"},{\"x\":800,\"y\":400,\"u\":40,\"type\":13,\"filled\":false,\"stroked\":\"white\"},{\"x\":800,\"y\":520,\"u\":40,\"type\":1,\"filled\":false,\"stroked\":\"white\"}]",
       "allshapesString": "[{\"x\":680,\"y\":520,\"u\":40,\"type\":9,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":400,\"u\":40,\"type\":2,\"filled\":false,\"stroked\":\"white\"}]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 34
+      "id": 41
     },
     {
       "allowed_delta": 0,
@@ -548,22 +702,22 @@
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 35
+      "id": 42
     },
     {
       "allowed_delta": 5860,
       "typeOfCheck": "imageData",
       "preDashedString": "[{\"xd\":560,\"yd\":40,\"xf\":560,\"yf\":560,\"stroked\":\"red\"}]",
       "preLinesString": "[{\"xd\":520,\"yd\":280,\"xf\":120,\"yf\":280,\"stroked\":\"white\"},{\"xd\":120,\"yd\":280,\"xf\":120,\"yf\":480,\"stroked\":\"white\"},{\"xd\":120,\"yd\":480,\"xf\":520,\"yf\":480,\"stroked\":\"white\"},{\"xd\":520,\"yd\":280,\"xf\":520,\"yf\":480,\"stroked\":\"white\"},{\"xd\":160,\"yd\":160,\"xf\":200,\"yf\":200,\"stroked\":\"yellow\"},{\"xd\":160,\"yd\":120,\"xf\":200,\"yf\":120,\"stroked\":\"yellow\"},{\"xd\":120,\"yd\":200,\"xf\":120,\"yf\":160,\"stroked\":\"yellow\"},{\"xd\":320,\"yd\":400,\"xf\":320,\"yf\":480,\"stroked\":\"white\"},{\"xd\":1040,\"yd\":120,\"xf\":1040,\"yf\":120,\"stroked\":\"yellow\"},{\"xd\":800,\"yd\":400,\"xf\":800,\"yf\":400,\"stroked\":\"black\"}]",
-      "preShapesString": "[{\"x\":360,\"y\":80,\"u\":40,\"type\":3,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":480,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"brown\",\"stroked\":\"white\"},{\"x\":120,\"y\":120,\"u\":40,\"type\":1,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":360,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"brown\",\"stroked\":\"white\"},{\"x\":320,\"y\":440,\"u\":40,\"type\":4,\"filled\":\"purple\",\"stroked\":\"white\"},{\"x\":480,\"y\":80,\"u\":40,\"type\":3,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":320,\"y\":520,\"u\":40,\"type\":4,\"filled\":\"green\",\"stroked\":\"black\"}]",
+      "preShapesString": "[{\"x\":360,\"y\":80,\"u\":40,\"type\":3,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":480,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"saddlebrown\",\"stroked\":\"white\"},{\"x\":120,\"y\":120,\"u\":40,\"type\":1,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":360,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"saddlebrown\",\"stroked\":\"white\"},{\"x\":320,\"y\":440,\"u\":40,\"type\":4,\"filled\":\"plum\",\"stroked\":\"white\"},{\"x\":480,\"y\":80,\"u\":40,\"type\":3,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":320,\"y\":520,\"u\":40,\"type\":4,\"filled\":\"lawngreen\",\"stroked\":\"black\"}]",
       "prePointString": "[]",
       "solutionPointString": "[]",
       "solutionLinesString": "[{\"xd\":600,\"yd\":280,\"xf\":600,\"yf\":480,\"stroked\":\"white\"},{\"xd\":600,\"yd\":280,\"xf\":1000,\"yf\":280,\"stroked\":\"white\"},{\"xd\":600,\"yd\":480,\"xf\":1000,\"yf\":480,\"stroked\":\"white\"},{\"xd\":1000,\"yd\":480,\"xf\":1000,\"yf\":280,\"stroked\":\"white\"},{\"xd\":1000,\"yd\":160,\"xf\":1000,\"yf\":200,\"stroked\":\"yellow\"},{\"xd\":960,\"yd\":120,\"xf\":920,\"yf\":120,\"stroked\":\"yellow\"},{\"xd\":960,\"yd\":160,\"xf\":920,\"yf\":200,\"stroked\":\"yellow\"},{\"xd\":800,\"yd\":400,\"xf\":800,\"yf\":480,\"stroked\":\"white\"}]",
-      "solutionShapesString": "[{\"x\":640,\"y\":80,\"u\":40,\"type\":3,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":760,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"brown\",\"stroked\":\"white\"},{\"x\":1000,\"y\":120,\"u\":40,\"type\":1,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":640,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"brown\",\"stroked\":\"white\"},{\"x\":800,\"y\":440,\"u\":40,\"type\":4,\"filled\":\"purple\",\"stroked\":\"white\"},{\"x\":760,\"y\":80,\"u\":40,\"type\":3,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":800,\"y\":520,\"u\":40,\"type\":4,\"filled\":\"green\",\"stroked\":\"black\"}]",
+      "solutionShapesString": "[{\"x\":640,\"y\":80,\"u\":40,\"type\":3,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":760,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"saddlebrown\",\"stroked\":\"white\"},{\"x\":1000,\"y\":120,\"u\":40,\"type\":1,\"filled\":\"yellow\",\"stroked\":\"white\"},{\"x\":640,\"y\":200,\"u\":40,\"type\":7,\"filled\":\"saddlebrown\",\"stroked\":\"white\"},{\"x\":800,\"y\":440,\"u\":40,\"type\":4,\"filled\":\"plum\",\"stroked\":\"white\"},{\"x\":760,\"y\":80,\"u\":40,\"type\":3,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":800,\"y\":520,\"u\":40,\"type\":4,\"filled\":\"lawngreen\",\"stroked\":\"black\"}]",
       "allshapesString": "[]",
       "questionFr": "Dessinez le symetrique de la figure suivante! par rapport a l'axe de symetrie rouge en respectant les couleurs",
       "questionAr": "أرسم نظير الشكل الموالي، بالنسبة الى المستقيم الأحمر",
-      "id": 36
+      "id": 43
     },
     {
       "allowed_delta": 7412,
@@ -578,7 +732,7 @@
       "allshapesString": "[]",
       "questionFr": "Completez le decor suivant, en utilisant la symetrie axial et central en meme temps, par rapport aux deux axe, ainsi que le centre de leur croisement",
       "questionAr": "اكمل الزخرفة الموالية، بتحقيق التناظر المركزي و المحوري معا، بالنسبة الى المستقيمين و نقطة تقاطعهما.",
-      "id": 37
+      "id": 44
     },
     {
       "allowed_delta": 3035,
@@ -593,22 +747,37 @@
       "allshapesString": "[]",
       "questionFr": "Completez le decor suivant, en utilisant la symetrie axial et central en meme temps, par rapport aux deux axe, ainsi que le centre de leur croisement",
       "questionAr": "اكمل الزخرفة الموالية، بتحقيق التناظر المركزي و المحوري معا، بالنسبة الى المستقيمين و نقطة تقاطعهما.",
-      "id": 38
+      "id": 45
     },
     {
       "allowed_delta": 1954,
       "typeOfCheck": "imageData",
       "preDashedString": "[{\"xd\":560,\"yd\":80,\"xf\":560,\"yf\":320,\"stroked\":\"white\"},{\"xd\":560,\"yd\":320,\"xf\":560,\"yf\":440,\"stroked\":\"white\"},{\"xd\":560,\"yd\":440,\"xf\":560,\"yf\":560,\"stroked\":\"white\"},{\"xd\":560,\"yd\":320,\"xf\":800,\"yf\":320,\"stroked\":\"white\"},{\"xd\":560,\"yd\":320,\"xf\":320,\"yf\":320,\"stroked\":\"white\"}]",
-      "preLinesString": "[{\"xd\":560,\"yd\":240,\"xf\":520,\"yf\":240,\"stroked\":\"dodgerblue\"},{\"xd\":520,\"yd\":240,\"xf\":480,\"yf\":280,\"stroked\":\"dodgerblue\"},{\"xd\":480,\"yd\":280,\"xf\":480,\"yf\":280,\"stroked\":\"dodgerblue\"},{\"xd\":480,\"yd\":280,\"xf\":480,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":480,\"yd\":320,\"xf\":560,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":560,\"yd\":320,\"xf\":560,\"yf\":240,\"stroked\":\"dodgerblue\"},{\"xd\":520,\"yd\":240,\"xf\":520,\"yf\":200,\"stroked\":\"dodgerblue\"},{\"xd\":520,\"yd\":200,\"xf\":480,\"yf\":200,\"stroked\":\"dodgerblue\"},{\"xd\":480,\"yd\":280,\"xf\":440,\"yf\":280,\"stroked\":\"dodgerblue\"},{\"xd\":440,\"yd\":280,\"xf\":440,\"yf\":240,\"stroked\":\"dodgerblue\"},{\"xd\":680,\"yd\":560,\"xf\":680,\"yf\":560,\"stroked\":\"purple\"},{\"xd\":520,\"yd\":280,\"xf\":520,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":520,\"yd\":280,\"xf\":560,\"yf\":280,\"stroked\":\"dodgerblue\"},{\"xd\":480,\"yd\":240,\"xf\":400,\"yf\":160,\"stroked\":\"white\"},{\"xd\":400,\"yd\":160,\"xf\":360,\"yf\":120,\"stroked\":\"white\"},{\"xd\":400,\"yd\":160,\"xf\":440,\"yf\":120,\"stroked\":\"white\"},{\"xd\":440,\"yd\":120,\"xf\":480,\"yf\":120,\"stroked\":\"white\"},{\"xd\":400,\"yd\":160,\"xf\":360,\"yf\":200,\"stroked\":\"white\"},{\"xd\":360,\"yd\":200,\"xf\":360,\"yf\":240,\"stroked\":\"white\"}]",
+      "preLinesString": "[{\"xd\":560,\"yd\":240,\"xf\":520,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":240,\"xf\":480,\"yf\":280,\"stroked\":\"lightskyblue\"},{\"xd\":480,\"yd\":280,\"xf\":480,\"yf\":280,\"stroked\":\"lightskyblue\"},{\"xd\":480,\"yd\":280,\"xf\":480,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":480,\"yd\":320,\"xf\":560,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":320,\"xf\":560,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":240,\"xf\":520,\"yf\":200,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":200,\"xf\":480,\"yf\":200,\"stroked\":\"lightskyblue\"},{\"xd\":480,\"yd\":280,\"xf\":440,\"yf\":280,\"stroked\":\"lightskyblue\"},{\"xd\":440,\"yd\":280,\"xf\":440,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":680,\"yd\":560,\"xf\":680,\"yf\":560,\"stroked\":\"plum\"},{\"xd\":520,\"yd\":280,\"xf\":520,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":280,\"xf\":560,\"yf\":280,\"stroked\":\"lightskyblue\"},{\"xd\":480,\"yd\":240,\"xf\":400,\"yf\":160,\"stroked\":\"white\"},{\"xd\":400,\"yd\":160,\"xf\":360,\"yf\":120,\"stroked\":\"white\"},{\"xd\":400,\"yd\":160,\"xf\":440,\"yf\":120,\"stroked\":\"white\"},{\"xd\":440,\"yd\":120,\"xf\":480,\"yf\":120,\"stroked\":\"white\"},{\"xd\":400,\"yd\":160,\"xf\":360,\"yf\":200,\"stroked\":\"white\"},{\"xd\":360,\"yd\":200,\"xf\":360,\"yf\":240,\"stroked\":\"white\"}]",
       "preShapesString": "[]",
       "prePointString": "[]",
       "solutionPointString": "[]",
-      "solutionLinesString": "[{\"xd\":560,\"yd\":320,\"xf\":560,\"yf\":280,\"stroked\":\"dodgerblue\"},{\"xd\":560,\"yd\":280,\"xf\":600,\"yf\":280,\"stroked\":\"dodgerblue\"},{\"xd\":600,\"yd\":280,\"xf\":600,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":600,\"yd\":320,\"xf\":560,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":560,\"yd\":280,\"xf\":560,\"yf\":240,\"stroked\":\"dodgerblue\"},{\"xd\":560,\"yd\":240,\"xf\":600,\"yf\":240,\"stroked\":\"dodgerblue\"},{\"xd\":600,\"yd\":240,\"xf\":640,\"yf\":280,\"stroked\":\"dodgerblue\"},{\"xd\":640,\"yd\":280,\"xf\":640,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":640,\"yd\":320,\"xf\":600,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":600,\"yd\":240,\"xf\":600,\"yf\":200,\"stroked\":\"dodgerblue\"},{\"xd\":600,\"yd\":200,\"xf\":640,\"yf\":200,\"stroked\":\"dodgerblue\"},{\"xd\":640,\"yd\":280,\"xf\":680,\"yf\":280,\"stroked\":\"dodgerblue\"},{\"xd\":680,\"yd\":280,\"xf\":680,\"yf\":240,\"stroked\":\"dodgerblue\"},{\"xd\":640,\"yd\":240,\"xf\":760,\"yf\":120,\"stroked\":\"white\"},{\"xd\":720,\"yd\":160,\"xf\":680,\"yf\":120,\"stroked\":\"white\"},{\"xd\":680,\"yd\":120,\"xf\":640,\"yf\":120,\"stroked\":\"white\"},{\"xd\":720,\"yd\":160,\"xf\":760,\"yf\":200,\"stroked\":\"white\"},{\"xd\":760,\"yd\":200,\"xf\":760,\"yf\":240,\"stroked\":\"white\"},{\"xd\":560,\"yd\":320,\"xf\":640,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":640,\"yd\":320,\"xf\":640,\"yf\":360,\"stroked\":\"dodgerblue\"},{\"xd\":640,\"yd\":360,\"xf\":600,\"yf\":400,\"stroked\":\"dodgerblue\"},{\"xd\":600,\"yd\":400,\"xf\":560,\"yf\":400,\"stroked\":\"dodgerblue\"},{\"xd\":560,\"yd\":400,\"xf\":560,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":560,\"yd\":320,\"xf\":560,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":560,\"yd\":320,\"xf\":560,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":560,\"yd\":360,\"xf\":600,\"yf\":360,\"stroked\":\"dodgerblue\"},{\"xd\":600,\"yd\":360,\"xf\":600,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":640,\"yd\":400,\"xf\":760,\"yf\":520,\"stroked\":\"white\"},{\"xd\":720,\"yd\":480,\"xf\":760,\"yf\":440,\"stroked\":\"white\"},{\"xd\":760,\"yd\":440,\"xf\":760,\"yf\":400,\"stroked\":\"white\"},{\"xd\":720,\"yd\":480,\"xf\":680,\"yf\":520,\"stroked\":\"white\"},{\"xd\":680,\"yd\":520,\"xf\":640,\"yf\":520,\"stroked\":\"white\"},{\"xd\":640,\"yd\":360,\"xf\":680,\"yf\":360,\"stroked\":\"dodgerblue\"},{\"xd\":680,\"yd\":360,\"xf\":680,\"yf\":400,\"stroked\":\"dodgerblue\"},{\"xd\":600,\"yd\":400,\"xf\":600,\"yf\":440,\"stroked\":\"dodgerblue\"},{\"xd\":600,\"yd\":440,\"xf\":640,\"yf\":440,\"stroked\":\"dodgerblue\"},{\"xd\":560,\"yd\":320,\"xf\":480,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":560,\"yd\":320,\"xf\":560,\"yf\":400,\"stroked\":\"dodgerblue\"},{\"xd\":520,\"yd\":400,\"xf\":520,\"yf\":400,\"stroked\":\"dodgerblue\"},{\"xd\":560,\"yd\":400,\"xf\":520,\"yf\":400,\"stroked\":\"dodgerblue\"},{\"xd\":520,\"yd\":400,\"xf\":480,\"yf\":360,\"stroked\":\"dodgerblue\"},{\"xd\":480,\"yd\":360,\"xf\":480,\"yf\":320,\"stroked\":\"dodgerblue\"},{\"xd\":520,\"yd\":320,\"xf\":520,\"yf\":360,\"stroked\":\"dodgerblue\"},{\"xd\":520,\"yd\":360,\"xf\":560,\"yf\":360,\"stroked\":\"dodgerblue\"},{\"xd\":480,\"yd\":360,\"xf\":440,\"yf\":360,\"stroked\":\"dodgerblue\"},{\"xd\":440,\"yd\":360,\"xf\":440,\"yf\":400,\"stroked\":\"dodgerblue\"},{\"xd\":520,\"yd\":400,\"xf\":520,\"yf\":440,\"stroked\":\"dodgerblue\"},{\"xd\":520,\"yd\":440,\"xf\":480,\"yf\":440,\"stroked\":\"dodgerblue\"},{\"xd\":480,\"yd\":400,\"xf\":360,\"yf\":520,\"stroked\":\"white\"},{\"xd\":400,\"yd\":480,\"xf\":360,\"yf\":440,\"stroked\":\"white\"},{\"xd\":360,\"yd\":440,\"xf\":360,\"yf\":400,\"stroked\":\"white\"},{\"xd\":400,\"yd\":480,\"xf\":440,\"yf\":520,\"stroked\":\"white\"},{\"xd\":440,\"yd\":520,\"xf\":480,\"yf\":520,\"stroked\":\"white\"}]",
+      "solutionLinesString": "[{\"xd\":560,\"yd\":320,\"xf\":560,\"yf\":280,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":280,\"xf\":600,\"yf\":280,\"stroked\":\"lightskyblue\"},{\"xd\":600,\"yd\":280,\"xf\":600,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":600,\"yd\":320,\"xf\":560,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":280,\"xf\":560,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":240,\"xf\":600,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":600,\"yd\":240,\"xf\":640,\"yf\":280,\"stroked\":\"lightskyblue\"},{\"xd\":640,\"yd\":280,\"xf\":640,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":640,\"yd\":320,\"xf\":600,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":600,\"yd\":240,\"xf\":600,\"yf\":200,\"stroked\":\"lightskyblue\"},{\"xd\":600,\"yd\":200,\"xf\":640,\"yf\":200,\"stroked\":\"lightskyblue\"},{\"xd\":640,\"yd\":280,\"xf\":680,\"yf\":280,\"stroked\":\"lightskyblue\"},{\"xd\":680,\"yd\":280,\"xf\":680,\"yf\":240,\"stroked\":\"lightskyblue\"},{\"xd\":640,\"yd\":240,\"xf\":760,\"yf\":120,\"stroked\":\"white\"},{\"xd\":720,\"yd\":160,\"xf\":680,\"yf\":120,\"stroked\":\"white\"},{\"xd\":680,\"yd\":120,\"xf\":640,\"yf\":120,\"stroked\":\"white\"},{\"xd\":720,\"yd\":160,\"xf\":760,\"yf\":200,\"stroked\":\"white\"},{\"xd\":760,\"yd\":200,\"xf\":760,\"yf\":240,\"stroked\":\"white\"},{\"xd\":560,\"yd\":320,\"xf\":640,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":640,\"yd\":320,\"xf\":640,\"yf\":360,\"stroked\":\"lightskyblue\"},{\"xd\":640,\"yd\":360,\"xf\":600,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":600,\"yd\":400,\"xf\":560,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":400,\"xf\":560,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":320,\"xf\":560,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":320,\"xf\":560,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":360,\"xf\":600,\"yf\":360,\"stroked\":\"lightskyblue\"},{\"xd\":600,\"yd\":360,\"xf\":600,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":640,\"yd\":400,\"xf\":760,\"yf\":520,\"stroked\":\"white\"},{\"xd\":720,\"yd\":480,\"xf\":760,\"yf\":440,\"stroked\":\"white\"},{\"xd\":760,\"yd\":440,\"xf\":760,\"yf\":400,\"stroked\":\"white\"},{\"xd\":720,\"yd\":480,\"xf\":680,\"yf\":520,\"stroked\":\"white\"},{\"xd\":680,\"yd\":520,\"xf\":640,\"yf\":520,\"stroked\":\"white\"},{\"xd\":640,\"yd\":360,\"xf\":680,\"yf\":360,\"stroked\":\"lightskyblue\"},{\"xd\":680,\"yd\":360,\"xf\":680,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":600,\"yd\":400,\"xf\":600,\"yf\":440,\"stroked\":\"lightskyblue\"},{\"xd\":600,\"yd\":440,\"xf\":640,\"yf\":440,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":320,\"xf\":480,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":320,\"xf\":560,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":400,\"xf\":520,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":560,\"yd\":400,\"xf\":520,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":400,\"xf\":480,\"yf\":360,\"stroked\":\"lightskyblue\"},{\"xd\":480,\"yd\":360,\"xf\":480,\"yf\":320,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":320,\"xf\":520,\"yf\":360,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":360,\"xf\":560,\"yf\":360,\"stroked\":\"lightskyblue\"},{\"xd\":480,\"yd\":360,\"xf\":440,\"yf\":360,\"stroked\":\"lightskyblue\"},{\"xd\":440,\"yd\":360,\"xf\":440,\"yf\":400,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":400,\"xf\":520,\"yf\":440,\"stroked\":\"lightskyblue\"},{\"xd\":520,\"yd\":440,\"xf\":480,\"yf\":440,\"stroked\":\"lightskyblue\"},{\"xd\":480,\"yd\":400,\"xf\":360,\"yf\":520,\"stroked\":\"white\"},{\"xd\":400,\"yd\":480,\"xf\":360,\"yf\":440,\"stroked\":\"white\"},{\"xd\":360,\"yd\":440,\"xf\":360,\"yf\":400,\"stroked\":\"white\"},{\"xd\":400,\"yd\":480,\"xf\":440,\"yf\":520,\"stroked\":\"white\"},{\"xd\":440,\"yd\":520,\"xf\":480,\"yf\":520,\"stroked\":\"white\"}]",
       "solutionShapesString": "[]",
       "allshapesString": "[]",
       "questionFr": "Completez le decor suivant, en utilisant la symetrie axial et central en meme temps, par rapport aux deux axe, ainsi que le centre de leur croisement",
       "questionAr": "اكمل الزخرفة الموالية، بتحقيق التناظر المركزي و المحوري معا، بالنسبة الى المستقيمين و نقطة تقاطعهما.",
-      "id": 39
+      "id": 46
+    },
+    {
+      "allowed_delta": 1954,
+      "typeOfCheck": "Shapes",
+      "preDashedString": "[]",
+      "preLinesString": "[]",
+      "preShapesString": "[{\"x\":760,\"y\":120,\"u\":40,\"type\":4,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":760,\"y\":440,\"u\":40,\"type\":4,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":600,\"y\":280,\"u\":40,\"type\":4,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":440,\"y\":440,\"u\":40,\"type\":4,\"filled\":\"red\",\"stroked\":\"white\"}]",
+      "prePointString": "[]",
+      "solutionPointString": "[]",
+      "solutionLinesString": "[]",
+      "solutionShapesString": "[{\"x\":360,\"y\":120,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":440,\"y\":120,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":120,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":600,\"y\":120,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":120,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":360,\"y\":200,\"u\":40,\"type\":4,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":440,\"y\":200,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":200,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":600,\"y\":200,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":200,\"u\":40,\"type\":4,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":760,\"y\":200,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":360,\"y\":280,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":360,\"y\":360,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":360,\"y\":440,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":360,\"y\":520,\"u\":40,\"type\":4,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":440,\"y\":520,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":440,\"y\":360,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":440,\"y\":280,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":280,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":280,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":760,\"y\":280,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":360,\"u\":40,\"type\":4,\"filled\":\"red\",\"stroked\":\"white\"},{\"x\":600,\"y\":360,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":360,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":760,\"y\":360,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":440,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":600,\"y\":440,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":440,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":520,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":600,\"y\":520,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":520,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":760,\"y\":520,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"}]",
+      "allshapesString": "[{\"x\":360,\"y\":120,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":440,\"y\":120,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":120,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":600,\"y\":120,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":120,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":360,\"y\":200,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":440,\"y\":200,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":200,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":600,\"y\":200,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":200,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":760,\"y\":200,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":360,\"y\":280,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":360,\"y\":360,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":360,\"y\":440,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":360,\"y\":520,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":440,\"y\":520,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":440,\"y\":360,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":440,\"y\":280,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":280,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":280,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":760,\"y\":280,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":360,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":600,\"y\":360,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":360,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":760,\"y\":360,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":440,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":600,\"y\":440,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":440,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":520,\"y\":520,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":600,\"y\":520,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":680,\"y\":520,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"},{\"x\":760,\"y\":520,\"u\":40,\"type\":4,\"filled\":false,\"stroked\":\"white\"}]",
+      "questionFr": "Colorez le minimum de cases pour que la figure admette un centre de symetrie",
+      "questionAr": "لون اقل عدد من المربعات، لكي يقبل الشكل مركز تناظر",
+      "id": 47
     }
   ]
 }
