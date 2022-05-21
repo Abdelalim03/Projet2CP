@@ -10,15 +10,18 @@ function Layout() {
   useEffect(() => {
     setlanguage(langue);
   }, [langue])
-  
   return (
     <div
       className={`flex bg-symapp-blue-light-second ${
         (language!=="français") ? "flex-row-reverse" : ""
       } `}
     >
-      <SideBar Language={language==="français"} />
+      {language &&
+      <>
+        <SideBar Language={language==="français"} />
       <Outlet context={[language, setlanguage]}  />
+      </>}
+
     </div>
   );
 }

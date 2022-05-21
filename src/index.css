@@ -232,6 +232,18 @@ input[type=number]::-webkit-inner-spin-button {
 .insPolygone:hover .insPolygoneContent{
   display: block;
 }
+.CircularProgressbar-path {
+  stroke: red;
+}
+.CircularProgressbar-trail {
+  stroke: gray;
+}
+.CircularProgressbar-text {
+  fill: yellow;
+}
+.CircularProgressbar-background {
+  fill: green;
+}
 
 .insButton:hover{
   background-color: #fff2f0;
