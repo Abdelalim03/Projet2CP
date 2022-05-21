@@ -29,8 +29,6 @@ function Form(props) {
       "position":inputs.positionCours,
       "titre": inputs.titreCours,
       "titreAr": inputs.titreCoursAr,
-      "Quiz": "Quiz 01",
-      "QuizAr": "استجواب 01",
       "QuizExp": 20,
       "Prop1": inputs.prop1,
       "Prop1Ar": inputs.prop1Ar,
@@ -39,17 +37,17 @@ function Form(props) {
       "Prop3": inputs.prop3,
       "Prop3Ar": inputs.prop3Ar,
       "propCorrecte": propCorrecte,
-      "ImageQuiz": "",
       "DesCours": inputs.desCours,
       "DesCoursAr": inputs.desCoursAr,
-      "CheminCours": "",
       "ImageCours": `${CoursImageEncoded}`,
       "CourseBase64":`${file}`,
+      "CourseArBase64":`${fileAr}`,
       "QuizImageBase64":`${QuizImageEncoded}`
     });
   }
 
   const [ file, setFile ] = useState(null)
+  const [ fileAr, setFileAr ] = useState(null)
   const [QuizImageEncoded,setImageEncoded]=useState(null)
   const [CoursImageEncoded,setCoursImageEncoded]=useState(null)
   const fileToBase64 = (file, cb) => {
@@ -70,6 +68,17 @@ function Form(props) {
     fileToBase64(target.files[0], (err, result) => {
       if (result) {
         setFile(result)
+        // console.log(result);
+      }
+    })
+  }
+  const onUploadFileArChange = ({ target }) => {
+    if (target.files < 1 || !target.validity.valid) {
+      return
+    }
+    fileToBase64(target.files[0], (err, result) => {
+      if (result) {
+        setFileAr(result)
         // console.log(result);
       }
     })
@@ -102,85 +111,52 @@ function Form(props) {
         <form onSubmit={handleSubmit} className='h-3/4 w-4/5 bg-white overflow-auto'>
           <img className='fixed h-10 w-6 lg:h-14 lg:w-10 right-[132px] lg:right-[230px] top-36 lg:top-52' src='/Cours/Icons/Form.svg' alt='form' />
           <p className='ml-20 mb-5 mt-3 text-base lg:text-xl font-semibold text-[#283D93]'>
-              Veuillez entrer les information nécessaires pour ajouter le cours
+              Veuillez entrer les informations nécessaires pour ajouter le cours
           </p>
           <div className='h-[100%] w-2/3 pl-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around ml-32 rounded-xl'>
-            <label for="nomCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Le titre de cours : </label>
+            <label for="nomCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Le titre du cours : </label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
                    type="text" id="nomCours" name="titreCours" maxLength="59"
                    value={inputs.titreCours || ""}
                    onChange={handleChange}
-                   placeholder="Entrer le titre de cours:"
+                   placeholder="Entrez le titre du cours"
                    required
                    onInput={handleInput}
                    onInvalid={handleInvalide}
                    
             />
-            <label for="nomCoursAr" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer le titre de cours en arabe : </label>
+            <label for="nomCoursAr" className='block ml-5 text-sm lg:text-lg font-semibold'>Le titre du cours en arabe : </label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
                    type="text" id="nomCoursAr" name="titreCoursAr" maxLength="59"
                    value={inputs.titreCoursAr || ""}
                    onChange={handleChange}
-                   placeholder="Rentrer le titre de cours:"
+                   placeholder="Re-entrez le titre du cours"
                    required
                    onInput={handleInput}
                    onInvalid={handleInvalide}
                    
             />
 
-            <label for="desCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Entrer la description de cours : </label>
-            <input  
-                   className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
-                   type="text" id="desCours" name="desCours" maxLength="59"
-                   value={inputs.desCours || ""}
-                   onChange={handleChange}
-                   placeholder="Entrer la description de cours :"
-                   required
-                   onInput={handleInput}
-                   onInvalid={handleInvalide}
-                   
-            />
-
-            <label for="desCoursAr" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la description de cours en arabe : </label>
-            <input  
-                   className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
-                   type="text" id="desCoursAr" name="desCoursAr" maxLength="59"
-                   value={inputs.desCoursAr || ""}
-                   onChange={handleChange}
-                   placeholder="Rentrer la description de cours:"
-                   required
-                   onInput={handleInput}
-                   onInvalid={handleInvalide}
-                   
-            />
-            
-            <label for="posCours" className='block ml-5 text-sm lg:text-lg font-semibold'>La Position du cours : </label>
+            <label for="posCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Le numero du cours : </label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
                    type="text" id="posCours" name="positionCours" maxLength="59"
                    value={inputs.positionCours || ""}
                    onChange={handleChange}
-                   placeholder="Entrer la position du cours:"
+                   placeholder="Entrez le numero du cours"
                    required
                    onInput={handleInput}
                    onInvalid={handleInvalide}
                    
             />
-            <p className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer une image descriptive du cours:</p>
+            <p className='block ml-5 text-sm lg:text-lg font-semibold'>Insérez une image descriptive du cours:</p>
             <FileInFr accept=".png" fileName="imgCours" genre="une" fileType="Image" onUploadFunction={onUploadCoursImageChange}/>
-            <p for="pdfCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Insérer le fichier du cours :</p>
+            <label for="pdfCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Insérez le fichier du cours :</label>
             <FileInFr accept=".pdf" fileName="pdfCours" genre="un" fileType="fichier" onUploadFunction={onUploadFileChange} />
-            {/* <div>
-            <label for="pdf" className='block ml-5 font-semibold'>Insérer une image descriptive du cours:</label>
-            <FileIn genre="une" fileType="image"/>
-            </div> */}
-            {/* <div>
-            <FileIn genre="un" fileType="fichier" />
-            </div> */}
-            {/* <label for="pdf" className='block ml-5 font-semibold'>Insérer le fichier du cours :</label>
-              <input type="file" name="filetobase64" onChange={onUploadFileChange} accept="application/pdf" /> */}
+            <label for="pdfCoursAr" className='block ml-5 text-sm lg:text-lg font-semibold'>Insérez la version arabe  du cours :</label>
+            <FileInFr accept=".pdf" fileName="pdfCours1" genre="un" fileType="fichier" onUploadFunction={onUploadFileArChange} />
           </div>
           <p className='ml-20 mb-5 mt-3 text-base lg:text-xl font-semibold text-[#283D93]'>
               Veuillez entrer les informations nécessaires pour ajouter le quiz
@@ -188,72 +164,72 @@ function Form(props) {
           
           <div className=' h-[130%] w-2/3 pl-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around ml-32 rounded-xl'>
           <label className='block ml-5 text-sm lg:text-lg font-semibold'> Veuillez Insérer les propositions du quiz </label>
-            <label for="Proposition1" className='block ml-5 text-sm lg:text-lg font-semibold'>Première proposition: </label>
+            <label for="Proposition1" className='block ml-5 text-sm lg:text-lg font-semibold'>Première proposition : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop1 || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="proposition1" name="prop1"
                     required
-                    placeholder="Entrer la proposition: "
+                    placeholder="Entrez la proposition 01  "
                     onInput={handleInput}
                     onInvalid={handleInvalide}
                     pattern="\S+"
             />
-            <label for="Proposition1Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la proposition en arabe: </label>
+            <label for="Proposition1Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrez la première proposition en arabe : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop1Ar || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="proposition1Ar" name="prop1Ar"
                     required
-                    placeholder="Rentrer la proposition: "
+                    placeholder="Rentrez la proposition 01 ( arabe ) "
                     onInput={handleInput}
                     onInvalid={handleInvalide}
                     pattern="\S+"
             />
-            <label for="Proposition2" className='block ml-5 text-sm lg:text-lg font-semibold'>Deuxième proposition: </label>
+            <label for="Proposition2" className='block ml-5 text-sm lg:text-lg font-semibold'>Deuxième proposition : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop2 || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="proposition2" name="prop2"
-                    placeholder="Entrer la proposition: "
+                    placeholder="Entrez la proposition 02 "
                     required
                     onInput={handleInput}
                     onInvalid={handleInvalide}
                     
             />
-            <label for="Proposition2Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la proposition en arabe: </label>
+            <label for="Proposition2Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la euxième proposition en arabe : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop2Ar || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="proposition2" name="prop2Ar"
-                    placeholder="Rentrer la proposition: "
+                    placeholder="Rentrez la proposition 02 ( arabe )"
                     required
                     onInput={handleInput}
                     onInvalid={handleInvalide}
                     
             />
-            <label for="Proposition3" className='block ml-5 text-sm lg:text-lg font-semibold'>Troisième proposition: </label>
+            <label for="Proposition3" className='block ml-5 text-sm lg:text-lg font-semibold'>Troisième proposition : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop3 || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="proposition3" name="prop3"
-                    placeholder="Entrer la proposition: "
+                    placeholder="Entrez la proposition 03"
                     required
                     onInput={handleInput}
                     onInvalid={handleInvalide}
             />
-            <label for="Proposition3Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la proposition en arabe: </label>
+            <label for="Proposition3Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la troisième proposition en arabe: </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop3Ar || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="proposition3Ar" name="prop3Ar"
-                    placeholder="Rentrer la proposition: "
+                    placeholder="Rentrez la proposition 03 ( arabe ) "
                     required
                     onInput={handleInput}
                     onInvalid={handleInvalide}

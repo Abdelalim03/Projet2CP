@@ -31,6 +31,16 @@ function QuizFr(props) {
     }
   };
 
+  const handleReset = () => {
+    SetCheck1(false);
+    SetCheck2(false);
+    SetCheck3(false);
+    setEvaluer("");
+    SetDesact(false);
+    setHide(true);
+    SetCorrect(false);
+    console.log("Reset triggered");
+  };
   return (
     <div className="flex flex-col lg:gap-10 md:gap-2 lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen">
       <div className=" flex flex-col justify-start gap-5">
@@ -47,12 +57,13 @@ function QuizFr(props) {
               </h1>
             </div>
           </div>
-
-          <img
-            className="md:w-10 lg:w-12 hover:cursor-pointer hover:scale-110 hover:shadow-sm"
-            src="/quiz/reload.svg"
-            alt=""
-          />
+          <button onClick={handleReset}>
+            <img
+              className="md:w-10 lg:w-12 hover:cursor-pointer hover:scale-110 hover:shadow-sm"
+              src="/quiz/reload.svg"
+              alt=""
+            />
+          </button>
         </div>
 
         <div className="flex flex-row md:gap-20 lg:gap-28 justify-center">
@@ -71,30 +82,6 @@ function QuizFr(props) {
           </div>
 
           <div className="flex flex-col gap-5 justify-around items-start">
-            {/*Progress bar*/}
-            {/*
-            <div className="flex justify-between bg-[#C7DBFE] rounded-md md:w-80 lg:w-96 md:h-9 lg:h-11 p-1 px-4">
-              <img
-                className="w-fit cursor-pointer hover:scale-110"
-                src="/quiz/left.svg"
-                alt=""
-              />
-              <div className="flex flex-row">
-                <div className="flex justify-center items-center w-10 lg:w-14 border-r-2 border-[#283D93]"></div>
-                <div className="flex justify-center items-center w-10 lg:w-14 border-r-2 border-[#283D93]"></div>
-                <div className="flex justify-center items-center w-10 lg:w-14 border-r-2 border-[#283D93]"></div>
-                <div className="flex justify-center items-center w-10 lg:w-14 border-r-2 border-[#283D93]"></div>
-                <div className="flex justify-center items-center w-10 lg:w-14"></div>
-
-              </div>
-              <img
-                className="w-fit cursor-pointer hover:scale-110"
-                src="/quiz/right.svg"
-                alt=""
-              />
-            </div>
-  */}
-
             <div className="flex flex-col justify-center items-start mt-10 gap-10">
               <div className="form-check flex items-center gap-5">
                 <input

@@ -51,7 +51,7 @@ export default function CoursContent() {
       .then((Course) => {
         SetCourse(Course);
         setisLoading(false);
-        const base64 = Course.CourseBase64;
+        const base64 = Course.CourseArBase64;
         const url = URL.createObjectURL(base64toBlob(base64));
         console.log(url);
         setpdfFile(url);
