@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import UserTitleAr from "../../Components/UserTitleAr";
+import axios from "axios";
+
 export default function ContinueAsAr({ Modal, nom, avatar, currentuserId }) {
+  useEffect(() => {
+    axios
+      .patch("http://localhost:5000/parametres", { mode: "eleve" })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <>
       {Modal ? (
