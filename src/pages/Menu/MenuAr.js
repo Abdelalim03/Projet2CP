@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import UserTitleAr from "../../Components/UserTitleAr";
 import CustomCardAr from "./CustomCardAr";
 
-export default function MenuAr({userName, userAvatar}) {
+export default function MenuAr({userName, userAvatar, Max}) {
   return (
     // <div className=" bg-symapp-blue-light-second">
 
@@ -60,7 +60,7 @@ export default function MenuAr({userName, userAvatar}) {
             imageProps="lg:h-40 lg:w-72  lg:mt-14 md:h-36 md:w-48 md:mt-10 "
           />
           <CustomCardAr
-            path="./dessiner"
+            path={"./dessiner/"+Max}
             bgcolor="bg-symapp-blue-light-second "
             messageMotivant="! استمتع"
             mainContent="مود ليبر"

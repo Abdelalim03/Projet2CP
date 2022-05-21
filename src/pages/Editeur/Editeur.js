@@ -2,16 +2,21 @@ import React, { useEffect, useRef, useState } from 'react'
 import GetLanguage from '../../Components/GetLanguage';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import True from './True';
+import False from './False';
 import { faSquareCheck,faCircle,faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { useParams } from 'react-router-dom';
 
 function Editeur({full}) {
     // let qstFr,qstAr;
-    console.log(full);
+    const [trueFrEstOuvert, SetTrueFrEstOuvert] = useState(false);
+    const showtrueFr = () => {SetTrueFrEstOuvert(!trueFrEstOuvert);}
+    const [FalseFrEstOuvert, SetFalseFrEstOuvert] = useState(false);
+    const showFalseFr = () => {SetFalseFrEstOuvert(!FalseFrEstOuvert);}
+
     const [qstFr, setqstFr] = useState("");
     const [qstAr, setqstAr] = useState("");
-  const { exoId , stars } = useParams();
+  const { id , exoId , stars , Max } = useParams();
   let language=GetLanguage();
     useEffect( async () => {
       
@@ -94,12 +99,12 @@ let solutionPoints= [];
 const Canvas = useRef();
 
   let tableOfpoly=[
-      {img:"/Editeur/Polygones/mothaleth.png",type:3,id:3},
-      {img:"/Editeur/Polygones/morabe3.svg",type:4,id:4},
-      {img:"/Editeur/Polygones/Rectangle.svg",type:2,id:4.5},
-      {img:"/Editeur/Polygones/khomassi.svg",type:5,id:5},
-      {img:"/Editeur/Polygones/sodassi.svg",type:6,id:6},
-      {img:"/Editeur/Polygones/Cercle.svg",type:1,id:"∞"}
+      {img:"/Editeur/Polygones/mothaleth.png",type:3,id:1,cotes:3},
+      {img:"/Editeur/Polygones/morabe3.svg",type:4,id:2,cotes:4},
+      {img:"/Editeur/Polygones/Rectangle.svg",type:2,id:3,cotes:4},
+      {img:"/Editeur/Polygones/khomassi.svg",type:5,id:5,cotes:5},
+      {img:"/Editeur/Polygones/sodassi.svg",type:6,id:6,cotes:6},
+      {img:"/Editeur/Polygones/Cercle.svg",type:1,id:7,cotes:"∞"}
   ]
 
 
@@ -107,7 +112,206 @@ const Canvas = useRef();
 let preLinesString,preShapesString,solutionShapesString,solutionLinesString,allshapesString,preDashedString, prePointString, solutionPointString
 let typeOfCheck,allowed_delta=0
 
+let effect = false;
+let X=0,Y=0;
+let tranAxe=null, before;
+let first=true;
+let central=false;
 
+class SymetrieAxial{
+
+    static start(){
+        if(effect){ 
+            if((first && !central)){
+                first = true
+                X=0;Y=0;
+                effect=false;
+                tranAxe=null;
+                return
+            }
+            SymetrieAxial.doEffects();
+            SymetrieAxial.end();
+            
+            
+            return;
+        }
+        first = true
+        X=0;Y=0;
+        gameCanvas.addEventListener("click",SymetrieAxial.click);
+        gameCanvas.addEventListener("mousemove", SymetrieAxial.move);
+    }
+
+    static doEffects(){
+        
+
+        if((X==0 && Y==0) || !effect){
+            console.log("Erreur");
+            return;
+        }
+        let a=allshapes.length
+        for(let i=0;i<a;i++){
+            let {x, y, u, type, filled} = allshapes[i]
+            if(central){
+                x= 2*X-x;y= 2*Y-y;
+                 type = rotator(type,180);
+            }else{
+
+            if(X!=0){
+                x= 2*X-x
+            }else{
+                y= 2*Y-y
+            }
+        }
+        
+            Polygone.polygone({x, y, u, type, filled})
+            
+            allshapes.push({x, y, u, type, filled});
+            
+        }
+
+        a=points.length
+        for(let i=0;i<a;i++){
+            let {x,y,stroked} = points[i]
+            //points.push({x,y,stroked:strokeCol});
+            if(central){
+                x= 2*X-x;y= 2*Y-y;
+            }else{
+
+            if(X!=0){
+                x= 2*X-x
+            }else{
+                y= 2*Y-y
+            }
+        }
+            //Polygone.polygone({x, y, u, type, filled})
+            point(x,y,stroked,5);
+            points.push({x,y,stroked});    
+        }
+        a=allLines.length
+        for(let i=0;i<a;i++){
+            let {xd,yd,xf,yf,stroked} = allLines[i]
+            //allLines.push({xd,yd,xf,yf,stroked});
+            if(central){
+                xd= 2*X-xd;yd= 2*Y-yd;
+                xf= 2*X-xf;yf= 2*Y-yf;
+            }else{
+
+            if(X!=0){
+                xd= 2*X-xd;
+                xf= 2*X-xf
+            }else{
+                yd= 2*Y-yd
+                yf= 2*Y-yf
+            }
+        }
+            //Polygone.polygone({x, y, u, type, filled})
+            //point(x,y,stroked,5);
+            Dessein.drawline({xd,yd,xf,yf,stroked});
+            allLines.push({xd,yd,xf,yf,stroked});
+        }
+
+        // a=polygons.length
+        // for(let i=0;i<a;i++){
+            
+        //     let {N, lOnly,tab} = polygons[i];
+        //     let tableau=[];
+        //     for (let j=0;j<tab.length;j++){
+        //         let {x, y} = tab[j];
+        //         if(central){
+        //             x= 2*X-x;y= 2*Y-y;
+        //         }else{
+    
+        //         if(X!=0){
+        //             x= 2*X-x
+        //         }else{
+        //             y= 2*Y-y
+        //         }
+        //     }
+        //     tableau.push({x,y});
+        //     }
+            
+        
+        // Polylibre.polygone({tab:tableau,N,lOnly})
+        // // polygonsS.push({tab:tableau,N,lOnly});
+        // polygons.push({tab:tableau,N,lOnly});
+            
+        // }
+        gc.putImageData(imageData, 0, 0);
+        redrawAll();
+        imageData = before = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+        effect=false
+        tranAxe = null
+        endEvents();
+        
+    }
+
+    static click(e){
+        
+       
+
+        effect=false;
+        let {x, y} = proximate(e.offsetX, e.offsetY);    
+        
+        if(central){
+            effect=true
+            X=x;Y=y;
+            gc.putImageData(before, 0,0);
+            point(x,y,"red",4)
+            tranAxe = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+            return
+        }
+
+        if(first){
+            first=false;
+            X=x;Y=y;
+            gc.putImageData(before, 0,0);
+            point(x,y,"red",2.5)
+            tranAxe = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+            return
+        }
+        
+        //first=true;
+        if(!(x==X || y==Y)){
+            alert("yawdi mafihach");
+            gc.putImageData(before, 0,0);
+            X=0;Y=0;
+            
+            return;
+        }
+        gc.putImageData(tranAxe, 0,0);
+        gc.strokeStyle = "red";
+        if (x==X){
+        Y=0
+        drawLine(x,0,x,gameCanvas.height);
+        }else{
+        X=0
+        drawLine(0,y,gameCanvas.width,y)    
+        }
+        gc.strokeStyle = ((theme == false) ? 'white' : 'black');
+        effect=true        
+        tranAxe = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+        
+    }
+
+    static move(e){
+        if(tranAxe!=null){
+        gc.putImageData(tranAxe, 0,0);
+    }else{
+        gc.putImageData(tranAxe, 0,0);
+    }
+        let {x, y} = proximate(e.offsetX, e.offsetY);
+        point(x,y,"red",4)
+        
+    }
+
+    static end(){
+        // gc.putImageData(imageData, 0,0);
+        // X=0;first=false;Y=0;tranAxe=null;
+        // redrawAll();
+        gameCanvas.removeEventListener("click",SymetrieAxial.click);
+        gameCanvas.removeEventListener("mousemove", SymetrieAxial.move);
+    }
+}
 
 class Point {
     static start() {
@@ -554,7 +758,6 @@ class Deplacer {
         for(let i=allshapes.length-1; i>=0;i--){
             if( Math.abs(allshapes[i].x-x)<=allshapes[i].u && Math.abs(allshapes[i].y-y)<= allshapes[i].u){
                 gameCanvas.classList.add("deplacer");
-                console.log(gameCanvas.classList);
                 
                 let {x,y,u,type,filled,stroked}=allshapes[i]
                 stroked="blue"
@@ -716,7 +919,6 @@ class Polygone {
         Polygone.polygone({x, y, u, type, filled,stroked})
 
         allshapes.push({x, y, u, type, filled,stroked}) // store the center and the type
-        console.log(allshapes);
         imageData = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
 
     }
@@ -969,7 +1171,6 @@ class Polylibre{
     }
 
     static polygone({tab,N,lOnly,stroked}){
-        // console.log(tab);
         gc.strokeStyle=stroked;
         switch (N) {
             case 0:
@@ -1031,7 +1232,6 @@ class Polylibre{
             }
             n = N;
             polygons.push({tab,N,lOnly,stroked:strokeCol});
-            // console.log(polygons);
             tab = []
             
             
@@ -1228,7 +1428,6 @@ function point(x, y, color, w) {
 }
 
 
-
 function drawLine(x1, y1, x2, y2) {
 
     gc.beginPath();
@@ -1264,7 +1463,11 @@ function setUP(){
     })
     
     gameCanvas.addEventListener("mouseleave", function leave() {
+        if(tranAxe==null){
         gc.putImageData(imageZero, 0,0);
+        }else{
+        gc.putImageData(tranAxe, 0,0);
+        }
         gameCanvas.className = "";
         redrawAll();
     })
@@ -1275,7 +1478,6 @@ function setUP(){
         
         ele.addEventListener("click" , function () {
             type = parseInt(this.dataset.type);
-            console.log(type);
             chooseEvent("polygone")
         }
             )
@@ -1290,10 +1492,12 @@ function setUP(){
     });
     // document.getElementById("polylibre").addEventListener("click" , function () {chooseEvent("polylibre")});
     document.getElementById("dessin").addEventListener("click" , function () {chooseEvent("dessin")});
-    // document.getElementById("rotate").addEventListener("click" , function () {chooseEvent("rotate")});
     document.getElementById("fill").addEventListener("click", function () {chooseEvent("fill")});
     document.getElementById("point").addEventListener("click" , function () {chooseEvent("point")});
+    document.getElementById("symax").addEventListener("click" , function () {chooseEvent("symax")});
+    document.getElementById("symcent").addEventListener("click" , function () {chooseEvent("symcent")});
     document.getElementById("reset").addEventListener("click", function () {reset();});
+    
     // document.getElementById("ds").addEventListener("click", function () { gc.putImageData(imageSolution,0,0) });
     // document.getElementById("da").addEventListener("click", function () { gc.putImageData(imageReponse,0,0) });
     // document.getElementById("logd").addEventListener("click", function () {
@@ -1309,17 +1513,29 @@ function setUP(){
     if (!full){ 
         document.getElementById("submit").addEventListener("click", function () {
         if(Exercice.CompareSolution(typeOfCheck)){
-            alert("Reponse Vrai")
+
+            
+                axios.get(`http://localhost:5000/users/${id}`)
+                .then(res=>{
+                    if(res.data.maxExo === parseInt(exoId)){
+                        axios.patch(`http://localhost:5000/users/${id}`,{"score":parseInt(res.data.score)+parseInt(stars),"maxExo":parseInt(Max)+1});
+                    }
+                    
+                })
+                .catch(err=>console.log(err));
+        
+            
+            
+            showtrueFr();
         }else{
-            alert("Reponse Fausse")
+            showFalseFr();
         }
 
     });
 }
+
+
 }
-
-
-// }
     
     
     
@@ -1341,6 +1557,7 @@ function endEvents(){
     Rotate.end();
     Remove.end();
     Fill.end();
+    SymetrieAxial.end();
 }
 
 function chooseEvent(button){
@@ -1374,10 +1591,20 @@ function chooseEvent(button){
         case "point":
             Point.start()
             break;
-            default:
+        
+        case "symax":
+            central=false;
+            tranAxe = before = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+            SymetrieAxial.start()
+            break;
+        case "symcent":
+            central=true;
+            tranAxe = before = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+            SymetrieAxial.start()
+        default:
             break;
         }
-        
+
         
 
 }
@@ -1499,6 +1726,7 @@ function reset(){
     points=[]
     // Exercice.initiateExo();
     Exercice.help();
+    
 }
 
 function load() {
@@ -1598,7 +1826,6 @@ class Exercice {
             return false;
         
         
-        console.log('same length', img1.data.length);
         let c=0
         for (var i = 0; i < img1.data.length; ++i) {
             
@@ -1606,7 +1833,6 @@ class Exercice {
                 c++       
             }
         }
-        console.log(c);
         if(c>allowed_delta){
             return false   
         }else{
@@ -1701,8 +1927,30 @@ class Exercice {
   
     return (    
       <>
- { (language==="français")&&
+ { ((!full || parseInt( Max)===48) && language==="français")&&
  <div className='symapp-container pl-10 overflow-auto'>
+ <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!trueFrEstOuvert && 'hidden'}`}>
+            <div className='h-8 lg:h-12 w-2/5 flex flex-row justify-end bg-blue-200'>
+                <button onClick={showtrueFr} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
+            </div>
+            <True 
+            stars={stars}
+            msg='Felicitation! votre reponse est juste'
+            cont='Continuer' ret='Retour' flex='flex-row-reverse'
+            showtrueFr={showtrueFr}
+              />
+     </div>
+     <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!FalseFrEstOuvert && 'hidden'}`}>
+            <div className='h-8 lg:h-12 w-2/5 flex flex-row justify-end bg-blue-200'>
+                <button onClick={showFalseFr} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
+            </div>
+            <False 
+            msg='Votre reponse est fausse, on sais que tu peut faire mieu ! essayer une autre fois '
+            ress='Reéssayer' ret='Retour'
+            showFalseFr={showFalseFr}
+             />
+            
+     </div>
     <div className=' ml-24 lg:ml-[105px] mt-2 h-14 w-[85%]'>
                 <div className=' text-base lg:text-xl font-semibold text-[#283D93]' >
                     {full && "C'est à vous pour appliquer vos idées"}
@@ -1717,27 +1965,28 @@ class Exercice {
                             <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 10.svg' alt='icon' />
                         </button>
                         <div className='palCol h-16  animate-[avatar_500ms_ease-in-out_1] w-[450px] lg:w-[500px] items-center  hidden flex-row gap-3'>
-                            <div style={{backgroundColor:"black"}} className=' color-field ml-4 cursor-pointer h-[28px] w-[28px]  '></div>
-                            <div style={{backgroundColor:"white"}} className='color-field border-solid border-2 border-black h-[28px] cursor-pointer w-[28px]  '></div>
-                            <div style={{backgroundColor:"DodgerBlue"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"red"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"green"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"yellow"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"purple"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"brown"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"orange"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"HotPink"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
+                            <div style={{backgroundColor:"black"}} className=' color-field ml-4 cursor-pointer h-[28px] w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"white"}} className='color-field border-solid border-2 border-black h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"lightskyblue"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
+                            <div style={{backgroundColor:"red"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
+                            <div style={{backgroundColor:"lawngreen"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"yellow"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
+                            <div style={{backgroundColor:"plum"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
+                            <div style={{backgroundColor:"saddlebrown"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"orange"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"HotPink"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"DimGrey"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                     </div>
                 </div>
                 {
                     ((full)?<div className='flex'>
                     <div className='h-16 lg:h-20 w-16 lg:w-20 flex justify-center items-center'>
-                    <button className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button id="symcent" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-full' src='/Editeur/EditorIcons/symCent.svg' alt='icon' />
                     </button>
                 </div>
                     <div className='h-16 lg:h-20 w-16 lg:w-20 flex justify-center items-center'>
-                    <button className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button id="symax" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-full' src='/Editeur/EditorIcons/symAxe.svg' alt='icon' />
                     </button>
                 </div>
@@ -1779,7 +2028,7 @@ class Exercice {
                             <div data-type={poly.type} className='insButton polygone cursor-pointer h-4 lg:h-5 w-7 lg:w-8 flex justify-center items-center'>
                                 <img className='h-4 lg:h-5 w-5 lg:w-6' src={poly.img} />
                             </div>
-                            <div className='h-4 lg:h-5 w-8 lg:w-10 flex justify-center items-center text-sm lg:text-base font-semibold text-[#283D93] bg-white'>{poly.id}</div>
+                            <div className='h-4 lg:h-5 w-8 lg:w-10 flex justify-center items-center text-sm lg:text-base font-semibold text-[#283D93] bg-white'>{poly.cotes}</div>
                         </div>
                     ))
                 }    
@@ -1827,8 +2076,30 @@ class Exercice {
     </div>
  
    }
- { (language==="arabe")&& 
+ {(!full || parseInt( Max)===48) && (language==="arabe")&& 
  <div dir="rtl"  className='symapp-container-Ar pr-10 overflow-auto'>
+ <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!trueFrEstOuvert && 'hidden'}`}>
+                <div className='h-8 lg:h-12 w-2/5 flex flex-row justify-end bg-blue-200'>
+                    <button onClick={showtrueFr} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
+                </div>
+                <True 
+                stars = {stars}
+                msg='تهانينا ! إجابتك صحيحة'
+                cont='المواصلة' ret='الرجوع' flex='flex-row-reverse'
+                showtrueFr={showtrueFr}
+                />
+        </div>
+        <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!FalseFrEstOuvert && 'hidden'}`}>
+                <div className='h-8 lg:h-12 w-2/5 flex flex-row justify-end bg-blue-200'>
+                    <button onClick={showFalseFr} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
+                </div>
+                <False 
+                msg='إجابتك خاطئة, يمكنك أن تكون أفضل ! حاول مرة أخرى '
+                ress='الإعادة' ret='الرجوع'
+                showFalseFr={showFalseFr}
+                />
+                
+        </div>
         <div className='mr-24 lg:mr-[105px] mt-2 h-14 w-[85%]'>
                 <div className="text-base font-['Tajawal'] lg:text-xl font-semibold text-[#283D93]" >
                     
@@ -1838,20 +2109,21 @@ class Exercice {
                
                 <div className='flex justify-between items-center '>
                     <div className='palButton h-16 flex items-center flex-row mt-0 lg:mt-3 w-fit'>
-                        <button id='submit' className='h-11 lg:h-12 w-11 lg:w-12 flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                        <button className='h-11 lg:h-12 w-11 lg:w-12 flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                             <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 10.svg' alt='icon' />
                         </button>
                         <div className='palCol h-16 animate-[avatar_500ms_ease-in-out_1] lg:h-12 w-[450px] lg:w-[500px]  items-center hidden flex-row gap-3'>
-                            <div style={{backgroundColor:"black"}} className=' color-field mr-4 cursor-pointer h-[28px] w-[28px]  '></div>
-                            <div style={{backgroundColor:"white"}} className='color-field border-solid border-2 border-black h-[28px] cursor-pointer w-[28px]  '></div>
-                            <div style={{backgroundColor:"DodgerBlue"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"red"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"green"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"yellow"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"purple"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"brown"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"orange"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
-                            <div style={{backgroundColor:"HotPink"}} className='color-field h-[28px] cursor-pointer w-[28px]   '></div>
+                            <div style={{backgroundColor:"black"}} className=' color-field mr-4 cursor-pointer h-[28px] w-[28px] rounded-sm hover:scale-125 '></div>
+                            <div style={{backgroundColor:"white"}} className='color-field border-solid border-2 border-black h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125 '></div>
+                            <div style={{backgroundColor:"lightskyblue"}} className='color-field h-[28px] cursor-pointer w-[28px]  rounded-sm hover:scale-125 '></div>
+                            <div style={{backgroundColor:"red"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125 '></div>
+                            <div style={{backgroundColor:"lawngreen"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"yellow"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"plum"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"saddlebrown"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"orange"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"HotPink"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"DimGrey"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                         </div>
                     </div>
                     {
@@ -1899,11 +2171,11 @@ class Exercice {
                                     {
                         tableOfpoly.map(poly=>(
                                 <div key={poly.id} className='flex flex-row justify-around'>
-                                    <div  className='insButton cursor-pointer h-4 lg:h-5 w-7 lg:w-8 flex justify-center items-center'>
+                                    <div data-type={poly.type} className='insButton polygone cursor-pointer h-4 lg:h-5 w-7 lg:w-8 flex justify-center items-center'>
                                         <img className='h-4 lg:h-5 w-5 lg:w-6' src={poly.img}/>
                                     </div>
                                     <div className='h-4 lg:h-5 w-8 lg:w-10 text-sm lg:text-base flex justify-center items-center bg-white'>
-                                        {poly.id}
+                                        {poly.cotes}
                                     </div>
                                 </div>
                         ))
@@ -1948,6 +2220,18 @@ class Exercice {
             </div>
             
     </div>
+     }
+     {
+         (full && parseInt( Max)<48 ) && (language==="français") &&
+         <div className='symapp-container'>
+            7atta tkemmel les exercices ...
+         </div>
+     }
+     {
+         (full && parseInt( Max)<48 ) && (language==="arabe") &&
+         <div className='symapp-container-Ar'>
+            أكمل التمارين و ولي...
+         </div>
      }
       </>
     

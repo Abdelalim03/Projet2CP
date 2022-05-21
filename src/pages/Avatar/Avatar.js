@@ -73,12 +73,12 @@ function Avatar() {
               <div className="h-[100%] w-[100%] rounded-[50%] overflow-hidden hover:bg-sky-600 bg-[#C7DBFE]">
                 <img
                   className="h-[80%] w-[100%] mt-[20%] "
-                  onClick={() => {
+                  onClick={async () => {
                     setImage(path.name);
                     setanimate("animate-[avatar_2s_ease-in-out_1]");
-                    setTimeout(() => {
-                      axios.patch(url, { avatar: path.name });
-                      navigate(`/home/${id}`);
+                    setTimeout(async () => {
+                     await axios.patch(url, { avatar: path.name }).then(res=>navigate(`/home/${id}`));
+                      
                     }, 1500);
                   }}
                   src={path.name}

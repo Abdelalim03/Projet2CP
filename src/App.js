@@ -17,6 +17,7 @@ import Parameters from "./pages/Parameters/Parameters";
 import ExercicesAr2 from "./pages/Exercices/ExercicesAr2";
 import ExercicesFr2 from "./pages/Exercices/ExercicesFr2";
 import Logo from "./pages/Logo/Logo";
+import GetLanguage from "./Components/GetLanguage";
 
 
 function App() {
@@ -31,8 +32,7 @@ function App() {
           <Route path="nom" element={<Nom />} />
           <Route path="avatar/:id" element={<Avatar />} />
           <Route path="*" element={<NoPage />} />
-
-          <Route path="home/:id" element={<Layout />}>
+          <Route path="home/:id" element={<Layout  />}>
             <Route index element={<Menu />} />
             <Route path="cours" element={<Cours />} />
             <Route path="courscontent/:coursId" element={<CoursContent />} />
@@ -40,8 +40,8 @@ function App() {
             <Route path="exercices" element={<Exercices   />} />
             <Route path="ExercicesAr2/:Max" element={<ExercicesAr2 />} />
             <Route path="ExercicesFr2/:Max" element={<ExercicesFr2 />} />
-            <Route path="exercice/:exoId/:stars" element={<Editeur full={false} />} />
-            <Route path="dessiner" element={<Editeur full={true} />} />
+            <Route path="exercice/:exoId/:stars/:Max" element={<Editeur full={false} />} />
+            <Route path="dessiner/:Max" element={<Editeur full={true} />} />
             <Route path="parametres" element={<Parameters />} />
             <Route path="*" element={<NoPage2 />} />
           </Route>

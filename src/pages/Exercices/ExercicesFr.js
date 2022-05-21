@@ -5,7 +5,7 @@ import Box from './Box'
 import BoxBloquee from './BoxBloquee'
 
 function ExercicesFr({Max}) {
-  let tableOfex=[{class:"lg:top-[110px] top-[80px]",stars:1,id:1},
+  let tableOfex=[{class:"lg:top-[110px] top-[80px]",stars:4,id:1},
   {class:"lg:top-[218px] top-[158px]",stars:1,id:2},
   {class:"lg:top-[326px] top-[236px]",stars:1,id:3},
   {class:"lg:top-[434px] top-[314px]",stars:1,id:4},
@@ -48,7 +48,7 @@ function ExercicesFr({Max}) {
                 {tableOfex.map((exo,index)=>(
                   <div key={exo.id} className= {`absolute ${exo.class}`}  >
                   {(exo.id <=Max) ?
-                  <Link to={`../exercice/${exo.id}/${exo.stars}`}>
+                  <Link to={`../exercice/${exo.id}/${exo.stars}/${Max}`}>
                   <Box language="français" numExo={(exo.id<=9)?`0${exo.id}`:`${exo.id}`  } stars={exo.stars} />
                   </Link>
                     :

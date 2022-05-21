@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import GetCurrentUser from '../../Components/GetCurrentUser';
 import FormNom from './FormNom';
 
@@ -13,12 +13,11 @@ function ParametersAr() {
 
     const navigate = useNavigate(); 
 
-    const id = GetCurrentUser();
-
+    const {id} = useParams();
     const changerAv = ()=>{navigate(`/avatar/${id}`)}
   return (
     <div className='symapp-container-Ar'>
-       <button onClick={()=>{axios.patch("http://localhost:5000/parametres", { currentUser: 0 }).then(
+       <button onClick={async ()=>{await axios.patch("http://localhost:5000/parametres", { currentUser: 0 }).then(
            navigate("/langue")
          );}}
             className='h-fit w-[100%] flex flex-row-reverse justify-end'>
@@ -62,7 +61,7 @@ function ParametersAr() {
                         </button>
                      </div>
                     
-                    <button onClick={()=>{axios.patch("http://localhost:5000/parametres", { langue: "français" });}}
+                    <button onClick={async ()=>{await axios.patch("http://localhost:5000/parametres", { langue: "français" }).then(async res=>navigate("/home/"+id))}}
                         
                         className ={`w-[60px] h-[60px] hover:scale-125 ${!estOuvert && 'hidden'} `} > 
                       <img className='h-[100%] w-[100%] ' src ="/Parameters/frenchIcon.svg"/>
