@@ -2,8 +2,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import UserTitle from "../../Components/UserTitle";
-
+import axios from "axios";
 function ContinueAsFr({ Modal, nom, avatar, currentuserId }) {
+  useEffect(() => {
+    axios
+      .patch("http://localhost:5000/parametres", { mode: "eleve" })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <>
       {Modal ? (
