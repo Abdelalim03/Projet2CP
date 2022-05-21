@@ -76,7 +76,7 @@ function QuizFr(props) {
             </div>
 
             <p className="md:text-lg lg:text-xl font-bold">
-              cocher la proposition correcte :
+             {props.QuizQuest}
             </p>
           </div>
 

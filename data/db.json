@@ -1,8 +1,8 @@
 {
   "parametres": {
-    "langue": "français",
-    "currentUser": 0,
-    "mode": "prof"
+    "langue": "arabe",
+    "currentUser": 2,
+    "mode": "eleve"
   },
   "users": [
     {
@@ -18,6 +18,13 @@
       "maxExo": 7,
       "score": 9,
       "id": 1
+    },
+    {
+      "nom": "a",
+      "avatar": "/avatar/Group-1.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 2
     }
   ],
   "courses": [

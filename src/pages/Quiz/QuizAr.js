@@ -62,13 +62,12 @@ function QuizAr(props) {
             </div>
           </div>
           <button onClick={handleReset}>
-          <img
-            className="md:w-10 lg:w-12 scale-x-flip hover:scale-x-flip hover:cursor-pointer hover:scale-110 hover:shadow-sm"
-            src="/quiz/reload.svg"
-            alt=""
-          />
+            <img
+              className="md:w-10 lg:w-12 scale-x-flip hover:scale-x-flip hover:cursor-pointer hover:scale-110 hover:shadow-sm"
+              src="/quiz/reload.svg"
+              alt=""
+            />
           </button>
-         
         </div>
 
         <div className="flex flex-row gap-20 lg:gap-28 justify-center">
@@ -189,7 +188,7 @@ function QuizAr(props) {
             </div>
 
             <p dir="rtl" className="md:text-lg lg:text-xl font-bold">
-              إختر الجواب الصحيح
+              {props.QuizQuest}
             </p>
           </div>
         </div>
