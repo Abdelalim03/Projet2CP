@@ -1,8 +1,8 @@
 {
   "parametres": {
     "langue": "arabe",
-    "currentUser": 0,
-    "mode": "prof"
+    "currentUser": 2,
+    "mode": "eleve"
   },
   "users": [
     {
@@ -20,7 +20,7 @@
       "id": 1
     },
     {
-      "nom": "رفعت",
+      "nom": "شهاب",
       "avatar": "/avatar/Group-1.svg",
       "maxExo": 1,
       "score": 0,
