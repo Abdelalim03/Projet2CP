@@ -17,8 +17,12 @@ function Layout() {
         (language!=="français") ? "flex-row-reverse" : ""
       } `}
     >
-      <SideBar Language={language==="français"} />
+      {language &&
+      <>
+        <SideBar Language={language==="français"} />
       <Outlet context={[language, setlanguage]}  />
+      </>}
+
     </div>
   );
 }

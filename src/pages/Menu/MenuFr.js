@@ -43,7 +43,9 @@ export default function MenuFr({userName, userAvatar, Max}) {
             </p>
             <div
               className={`container flex bg-symapp-pink-light lg:rounded-[40px] md:rounded-[30px] lg:h-[210px] lg:w-[380px] md:h-40 md:w-[270px] items-center justify-between  `}
-            ></div>
+            >
+              
+            </div>
           </div>
         </div>
 

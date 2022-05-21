@@ -1,10 +1,8 @@
 {
   "parametres": {
-
     "langue": "français",
     "currentUser": 0,
     "mode": "prof"
-
   },
   "users": [
     {
@@ -69,10 +67,30 @@
       "maxExo": 1,
       "score": 0,
       "id": 8
+    },
+    {
+      "nom": "ahmed",
+      "avatar": "/avatar/Group-5.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 9
+    },
+    {
+      "nom": "farid",
+      "avatar": "/avatar/Group.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 10
+    },
+    {
+      "nom": "samir",
+      "avatar": "/avatar/Group-2.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 11
     }
   ],
-  "courses": [
-  ],
+  "courses": [],
   "exercices": [
     {
       "allowed_delta": 0,

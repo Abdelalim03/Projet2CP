@@ -1,13 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import GetCurrentUser from "../../Components/GetCurrentUser";
 import Absolute from "./Absolute";
 const axios = require("axios");
 
 function Langue() {
-  const navigate = useNavigate();
-  if (GetCurrentUser() !== 0) navigate("/welcome"); //----pb
-
+  const navigate = useNavigate();  
   const handleClick = (lang) => {
     axios
       .patch("http://localhost:5000/parametres", { langue: lang })
@@ -19,6 +17,8 @@ function Langue() {
       });
   };
   return (
+      
+    
     <div className="relative flex justify-center items-center w-screen h-screen">
       <Absolute />
       <div className="flex flex-col justify-center items-center gap-7 h-[56%] w-1/3 px-5 py-10 rounded-3xl bg-gradient-to-b from-[#eaf1ff] to-[#fce3de]">
@@ -40,6 +40,7 @@ function Langue() {
         </div>
       </div>
     </div>
+    
   );
 }
 
