@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
-import GetCurrentUser from '../../Components/GetCurrentUser';
+import { useNavigate, useOutletContext, useParams } from 'react-router-dom';
 import FormNom from './FormNom';
 
 function ParametersFr() {
@@ -10,7 +9,7 @@ function ParametersFr() {
 
     const [nomestOuvert, SetNomEstOuvert] = useState(false);
     const showNom = () => {SetNomEstOuvert(!nomestOuvert)};
-
+    const [language, setlanguage] = useOutletContext();
     const navigate = useNavigate(); 
 
     const { id } = useParams();
@@ -69,7 +68,7 @@ function ParametersFr() {
                         </button>
                      </div>
                     
-                    <button onClick={async()=>{await axios.patch("http://localhost:5000/parametres", { langue: "arabe" }).then(async res=>navigate("/home/"+id))}}
+                    <button onClick={async()=>{await axios.patch("http://localhost:5000/parametres", { langue: "arabe" }).then(async res=>{setlanguage("arabe");navigate("/home/"+id)})}}
                         
                         className ={` w-[60px] h-[60px] hover:scale-125 ${!estOuvert && 'hidden'} `} > 
                       <img className='h-[100%] w-[100%]' src ="/Parameters/arabeIcon.svg"/>

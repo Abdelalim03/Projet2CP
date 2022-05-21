@@ -13,7 +13,6 @@ function InputCardAr() {
 
   const [msg, setMsg] = useState("");
   const {id} = useParams();
-  console.log(id);
 
   axios
     .get(`http://localhost:5000/users/${id}`)

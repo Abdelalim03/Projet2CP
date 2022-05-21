@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
-import GetLanguage from '../../Components/GetLanguage';
+import { useOutletContext, useParams } from 'react-router-dom';
 import ExercicesAr from './ExercicesAr';
 import ExercicesFr from './ExercicesFr';
 
@@ -9,7 +8,7 @@ import ExercicesFr from './ExercicesFr';
 
 
 function Exercices() {
-  const language = GetLanguage();
+  const [language, setlanguage] = useOutletContext();
   let {id} = useParams();
   const [Max, setMax] = useState(1);
   useEffect(async () => {

@@ -1,10 +1,24 @@
-import React from "react";
-export default function DeleteConfirModal() {
+import axios from "axios";
+import React, { useEffect } from "react";
+export default function DeleteConfirModal({ CourseId, Courses, SetCourses }) {
   const [showModal, setShowModal] = React.useState(false);
+
+  const handleDelete = () => {
+    axios
+      .delete(`http://localhost:5000/courses/${CourseId}`)
+      .then((resp) => {
+        SetCourses(Courses.filter((course) => course.id !== CourseId));
+        setShowModal(false);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <>
       <button type="button" onClick={() => setShowModal(true)}>
-        <img className="w-5" src="/Prof/Trash.svg" alt="icon" />
+        <img className="w-10" src="/Prof/delete.png" alt="icon" />
       </button>
       {showModal ? (
         <>
@@ -37,7 +51,7 @@ export default function DeleteConfirModal() {
                   <button
                     className="bg-red-600 text-white active:bg-red-500 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={handleDelete}
                   >
                     Supprimer
                   </button>

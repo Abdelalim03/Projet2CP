@@ -1,10 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import GetLanguage from "../../Components/GetLanguage";
-
 import MenuAr from "./MenuAr";
 import MenuFr from "./MenuFr";
-import { useParams } from "react-router-dom";
+import { useOutletContext, useParams } from "react-router-dom";
 
 function Menu() {
   const [User, setUser] = useState("");
@@ -23,7 +21,7 @@ function Menu() {
       });
   }, []);
 
-  const language = GetLanguage();
+  const [language, setlanguage] = useOutletContext();
   return (
     <>
       {language === "français" && (

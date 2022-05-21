@@ -1,12 +1,11 @@
 import React from 'react'
-import GetLanguage from '../../Components/GetLanguage';
+import { useOutletContext } from 'react-router-dom';
 import ParametersAr from './ParametersAr';
 import ParametersFr from './ParametersFr';
 
 function Parameters() {
 
-    const language = GetLanguage();
-
+  const [language, setlanguage] = useOutletContext();
     return (    
       <>
         { (language==="français")&& <ParametersFr />  }

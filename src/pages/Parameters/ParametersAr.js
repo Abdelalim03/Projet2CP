@@ -1,17 +1,18 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom';
-import GetCurrentUser from '../../Components/GetCurrentUser';
+import { useNavigate, useOutletContext, useParams } from 'react-router-dom';
 import FormNom from './FormNom';
 
 function ParametersAr() {
     const [estOuvert, SetEstOuvert] = useState(false);
     const showDiv = () => {SetEstOuvert(!estOuvert)};
-
+    
     const [nomestOuvert, SetNomEstOuvert] = useState(false);
     const showNom = () => {SetNomEstOuvert(!nomestOuvert)};
 
     const navigate = useNavigate(); 
+
+    const [language, setlanguage] = useOutletContext();
 
     const {id} = useParams();
     const changerAv = ()=>{navigate(`/avatar/${id}`)}
@@ -61,7 +62,7 @@ function ParametersAr() {
                         </button>
                      </div>
                     
-                    <button onClick={async ()=>{await axios.patch("http://localhost:5000/parametres", { langue: "français" }).then(async res=>navigate("/home/"+id))}}
+                    <button onClick={async ()=>{await axios.patch("http://localhost:5000/parametres", { langue: "français" }).then(async res=>{setlanguage("français");navigate("/home/"+id)})}}
                         
                         className ={`w-[60px] h-[60px] hover:scale-125 ${!estOuvert && 'hidden'} `} > 
                       <img className='h-[100%] w-[100%] ' src ="/Parameters/frenchIcon.svg"/>

@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 function GetLanguage() {
   const [langue, setLangue] = useState("");
 
-  useEffect( async () => {
-   
-    await axios
+  useEffect(  () => {
+     axios
       .get("http://localhost:5000/parametres")
       .then((resp) => {
         setLangue(resp.data.langue);

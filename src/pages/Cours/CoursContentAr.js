@@ -10,13 +10,10 @@ import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 import { Worker } from "@react-pdf-viewer/core";
 import ar_AE from "@react-pdf-viewer/locales/lib/ar_AE.json";
 
-
 const pdfContentType = "application/pdf";
 
 export default function CoursContent() {
-  
   const base64toBlob = (data) => {
-   
     const base64WithoutPrefix = data.substr(
       `data:${pdfContentType};base64,`.length
     );
@@ -36,8 +33,8 @@ export default function CoursContent() {
   const [PdfFile, setpdfFile] = useState(null);
   const [Course, SetCourse] = useState(null);
   const [isLoading, setisLoading] = useState(true);
-  const { coursId } = useParams();
-  const ChaptreId = "0" + coursId;
+  const { coursId, coursPos } = useParams();
+  const ChaptreId = "0" + coursPos;
 
   useEffect(() => {
     fetch(`http://localhost:5000/courses/${coursId}`)
@@ -51,7 +48,7 @@ export default function CoursContent() {
       .then((Course) => {
         SetCourse(Course);
         setisLoading(false);
-        const base64 = Course.CourseBase64;
+        const base64 = Course.CourseArBase64;
         const url = URL.createObjectURL(base64toBlob(base64));
         console.log(url);
         setpdfFile(url);
@@ -60,7 +57,6 @@ export default function CoursContent() {
         console.log(err.message);
       });
   }, []);
-
 
   return (
     <div className=" flex flex-col lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen font-['Tajawal'] w-screen  ">
@@ -87,6 +83,14 @@ export default function CoursContent() {
             )}
           </div>
         </div>
+        {/* <label type="file">
+          <img
+            className="lg:w-12 md:w-8 hover:cursor-pointer hover:scale-110 hover:shadow-sm mr-8 "
+            src="/Cours/Icons/Upload.png"
+            alt=""
+          />
+          <input type="file" className="hidden" />
+        </label> */}
       </div>
 
       {isLoading && (
