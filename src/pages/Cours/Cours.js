@@ -14,29 +14,31 @@ function Cours() {
   const { id } = useParams();
   const [language, setlanguage] = useOutletContext();
   const [Courses, SetCourses] = useState(null);
+ 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/users/${id}`)
+    const abortControl = new AbortController();
+      fetch(`http://localhost:5000/users/${id}`,{ signal: abortControl.signal })
       .then((res) => {
-        return res.data;
+        return res.json();
       })
       .then((data) => {
         setUser(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-  useEffect(() => {
-    fetch("http://localhost:5000/courses?_sort=position")
+        fetch("http://localhost:5000/courses?_sort=position",{ signal: abortControl.signal })
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         SetCourses(data);
-        
+      }).catch(err=>{
+        console.log(err);
       });
+      }).catch(err=>{
+        console.log(err);
+      });
+      
+      return () => abortControl.abort();
   }, []);
+ 
 
   const mode = GetMode();
     return (    

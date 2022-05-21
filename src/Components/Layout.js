@@ -10,7 +10,6 @@ function Layout() {
   useEffect(() => {
     setlanguage(langue);
   }, [langue])
-  
   return (
     <div
       className={`flex bg-symapp-blue-light-second ${
