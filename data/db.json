@@ -1,8 +1,10 @@
 {
   "parametres": {
+
     "langue": "français",
     "currentUser": 0,
     "mode": "prof"
+
   },
   "users": [
     {
@@ -18,20 +20,6 @@
       "maxExo": 7,
       "score": 9,
       "id": 1
-    },
-    {
-      "nom": "ش",
-      "avatar": "/avatar/Group-2.svg",
-      "maxExo": 1,
-      "score": 0,
-      "id": 2
-    },
-    {
-      "nom": "a",
-      "avatar": "/avatar/Group-2.svg",
-      "maxExo": 1,
-      "score": 0,
-      "id": 3
     }
   ],
   "courses": [

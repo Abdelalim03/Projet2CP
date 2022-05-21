@@ -15,16 +15,17 @@ function Editeur({full}) {
 
     const [qstFr, setqstFr] = useState("");
     const [qstAr, setqstAr] = useState("");
+    const [typeOfCheck, settypeOfCheck] = useState(null);
+    // let typeOfCheck;
   const { id , exoId , stars , Max } = useParams();
   const [language, setlanguage] = useOutletContext();
     useEffect(  () => {
-      
         if (!full){
-             axios.get('http://localhost:5000/exercices/'+exoId).then(async resp => {
+             axios.get('http://localhost:5000/exercices/'+exoId).then( resp => {
              allowed_delta=resp.data.allowed_delta
-             preLinesString=resp.data.preLinesString
-             typeOfCheck=resp.data.typeOfCheck
-             preDashedString=resp.data.preDashedString
+             preLinesString=resp.data.preLinesString;
+             settypeOfCheck(resp.data.typeOfCheck)
+             preDashedString=resp.data.preDashedString;
              preShapesString=resp.data.preShapesString
              prePointString=resp.data.prePointString
              solutionPointString=resp.data.solutionPointString
@@ -77,7 +78,7 @@ let objetLib = null;
 
 
 let fillCol = "white";
-let strokeCol = ((theme == true) ? 'black' : 'white');
+let strokeCol = ((theme === true) ? 'black' : 'white');
 let mode_2 = null;
 let tabInd;
 let rotateDeg = 90;
@@ -101,6 +102,7 @@ const Canvas = useRef();
       {img:"/Editeur/Polygones/mothaleth.png",type:3,id:1,cotes:3},
       {img:"/Editeur/Polygones/morabe3.svg",type:4,id:2,cotes:4},
       {img:"/Editeur/Polygones/Rectangle.svg",type:2,id:3,cotes:4},
+      {img:"/Editeur/Polygones/mo3ayan.svg",type:12,id:4,cotes:4},
       {img:"/Editeur/Polygones/khomassi.svg",type:5,id:5,cotes:5},
       {img:"/Editeur/Polygones/sodassi.svg",type:6,id:6,cotes:6},
       {img:"/Editeur/Polygones/Cercle.svg",type:1,id:7,cotes:"∞"}
@@ -109,7 +111,7 @@ const Canvas = useRef();
 
     // Stock the data of each exercice as strings ?
 let preLinesString,preShapesString,solutionShapesString,solutionLinesString,allshapesString,preDashedString, prePointString, solutionPointString
-let typeOfCheck,allowed_delta=0
+let allowed_delta=0
 
 
 
@@ -1705,7 +1707,7 @@ class Exercice {
 }
     
 }
-  
+  console.log(typeOfCheck);
     return (    
       <>
  { ((!full || parseInt( Max)===48) && language==="français")&&
@@ -1761,7 +1763,7 @@ class Exercice {
                 {
                     ((full)?<div className='flex'>
                     <div className='h-16 lg:h-20 w-16 lg:w-20 flex justify-center items-center'>
-                    <button className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button  className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-full' src='/Editeur/EditorIcons/symCent.svg' alt='icon' />
                     </button>
                 </div>
@@ -1786,11 +1788,11 @@ class Exercice {
                     </button>
                 </div>
   
-                <div id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                <button disabled={(typeOfCheck==="Shapes") && (parseInt(exoId)>2)} id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
+                    <div  className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 8.svg' alt='icon' />
-                    </button>
-                </div>
+                    </div>
+                </button>
                 <div id='point' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button className='bouton text-5xl font-bold h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                     <FontAwesomeIcon icon={faCircle} className='text-black w-2  -mb-[1px] lg:-mb-[2px]' />  
@@ -1931,11 +1933,11 @@ class Exercice {
                         <img className='boutonImg w-6 lg:w-8 h-6 lg:h-8' src='/Editeur/EditorIcons/Vector.png' alt='icon' />
                     </button>
                 </div>
-                <div id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                <button disabled={(typeOfCheck==="Shapes") && (parseInt(exoId)>2)} id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
+                    <div className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 8.svg' alt='icon' />
-                    </button>
-                </div>
+                    </div>
+                </button>
                 <div id='point' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button className='bouton text-9xl font-bold h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                     <FontAwesomeIcon icon={faCircle} className='text-black w-2   -mb-[1px] lg:-mb-[2px]' />  
