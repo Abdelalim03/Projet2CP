@@ -176,7 +176,7 @@ function Form(props) {
                     placeholder="Entrez la question du quiz  "
                     onInput={handleInput}
                     onInvalid={handleInvalide}
-                    pattern="\S+"
+                    // pattern=""
             />
             <label for="QuestQuizAr" className='block ml-5 text-sm lg:text-lg font-semibold'>La question du quiz en arabe : </label>
             <input 
@@ -188,7 +188,7 @@ function Form(props) {
                     placeholder="Rentrez la question du quiz ( arabe )  "
                     onInput={handleInput}
                     onInvalid={handleInvalide}
-                    pattern="\S+"
+                    // pattern="\S+"
             />
             <label for="Proposition1" className='block ml-5 text-sm lg:text-lg font-semibold'>Première proposition : </label>
             <input 
@@ -200,7 +200,7 @@ function Form(props) {
                     placeholder="Entrez la proposition 01  "
                     onInput={handleInput}
                     onInvalid={handleInvalide}
-                    pattern="\S+"
+                    // pattern="\S+"
             />
             <label for="Proposition1Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrez la première proposition en arabe : </label>
             <input 
@@ -212,7 +212,7 @@ function Form(props) {
                     placeholder="Rentrez la proposition 01 ( arabe ) "
                     onInput={handleInput}
                     onInvalid={handleInvalide}
-                    pattern="\S+"
+                    // pattern="\S+"
             />
             <label for="Proposition2" className='block ml-5 text-sm lg:text-lg font-semibold'>Deuxième proposition : </label>
             <input 
