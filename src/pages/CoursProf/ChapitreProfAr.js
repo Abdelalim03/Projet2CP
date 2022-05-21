@@ -23,10 +23,10 @@ function ChapitreProfAr(props) {
             </h2>
           </div>
         </div>
-        <div className="ml-3 w-[15%] gap-5 flex flex-row justify-center items-center">
+        <div className="ml-5 w-[15%] gap-5 flex flex-row justify-center items-center">
         <DeleteConfirModalَAr CourseId={props.courseId} Courses={props.Courses} SetCourses={props.SetCourses} />
         <Link to={`../courscontent/${props.courseId}/${props.position}`}>
-            <button className="bg-[#FAE0B2] flex justify-center items-center w-6 lg:w-9 h-6 lg:h-9">
+            <button className="bg-[#FAE0B2] flex justify-center lg:rounded-md md:rounded-sm items-center w-6 lg:w-9 h-6 lg:h-9">
               <img
                 className="w-4 lg:w-7 h-4 lg:h-7 "
                 src={props.image2}

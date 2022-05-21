@@ -1,14 +1,18 @@
 import axios from "axios";
 import React from "react";
-export default function DeleteConfirModalَAr({CourseId, Courses, SetCourses}) {
+export default function DeleteConfirModalَAr({
+  CourseId,
+  Courses,
+  SetCourses,
+}) {
   const [showModal, setShowModal] = React.useState(false);
 
   const handleDelete = () => {
     axios
       .delete(`http://localhost:5000/courses/${CourseId}`)
       .then((resp) => {
-      SetCourses(Courses.filter(course=>course.id!==CourseId)); 
-        setShowModal(false)
+        SetCourses(Courses.filter((course) => course.id !== CourseId));
+        setShowModal(false);
       })
       .catch((err) => {
         console.log(err);
@@ -18,7 +22,7 @@ export default function DeleteConfirModalَAr({CourseId, Courses, SetCourses}) {
   return (
     <>
       <button type="button" onClick={() => setShowModal(true)}>
-        <img className="w-5" src="/Prof/Trash.svg" alt="icon" />
+        <img className="w-32" src="/Prof/delete.png" alt="icon" />
       </button>
       {showModal ? (
         <>
