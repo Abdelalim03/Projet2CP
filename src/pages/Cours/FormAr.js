@@ -30,8 +30,6 @@ function FormAr(props) {
       "position":inputs.positionCours,
       "titre": inputs.titreCours,
       "titreAr": inputs.titreCoursAr,
-      "Quiz": "Quiz 01",
-      "QuizAr": "استجواب 01",
       "QuizExp": 20,
       "Prop1": inputs.prop1,
       "Prop1Ar": inputs.prop1Ar,
@@ -40,17 +38,17 @@ function FormAr(props) {
       "Prop3": inputs.prop3,
       "Prop3Ar": inputs.prop3Ar,
       "propCorrecte": propCorrecte,
-      "ImageQuiz": "",
       "DesCours": inputs.desCours,
       "DesCoursAr": inputs.desCoursAr,
-      "CheminCours": "",
       "ImageCours": `${CoursImageEncoded}`,
       "CourseBase64":`${file}`,
+      "CourseArBase64":`${fileAr}`,
       "QuizImageBase64":`${QuizImageEncoded}`
     });
   }
 
   const [ file, setFile ] = useState(null)
+  const [ fileAr, setFileAr ] = useState(null)
   const [QuizImageEncoded,setImageEncoded]=useState(null)
   const [CoursImageEncoded,setCoursImageEncoded]=useState(null)
   const fileToBase64 = (file, cb) => {
@@ -71,6 +69,17 @@ function FormAr(props) {
     fileToBase64(target.files[0], (err, result) => {
       if (result) {
         setFile(result)
+        // console.log(result);
+      }
+    })
+  }
+  const onUploadFileArChange = ({ target }) => {
+    if (target.files < 1 || !target.validity.valid) {
+      return
+    }
+    fileToBase64(target.files[0], (err, result) => {
+      if (result) {
+        setFileAr(result)
         // console.log(result);
       }
     })
@@ -106,7 +115,8 @@ function FormAr(props) {
               يرجى إدخال المعلومات اللازمة لإضافة الدرس
           </p>
           <div className='h-[100%] w-2/3 pr-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around mr-32 rounded-xl'>
-            <label for="nomCoursAr" className='block mr-5 text-sm lg:text-lg font-semibold'>عنوان الدرس :</label>
+
+          <label for="nomCoursAr" className='block mr-5 text-sm lg:text-lg font-semibold'>عنوان الدرس :</label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pr-3' 
                    type="text" id="nomCoursAr" name="titreCoursAr" maxLength="59"
@@ -124,43 +134,31 @@ function FormAr(props) {
                    type="text" id="nomCoursAr" name="titreCours" maxLength="59"
                    value={inputs.titreCours || ""}
                    onChange={handleChange}
-                   placeholder="أعد إدخال عنوان الدرس"
+                   placeholder="أعد إدخال عنوان الدرس ( فرنسية )"
                    required
                    onInput={handleInput}
                    onInvalid={handleInvalide}
                    
             />
 
-            <label for="desCoursAr" className='block mr-5 text-sm lg:text-lg font-semibold'>وصف الدرس :</label>
+<label for="posCours" className='block ml-5 text-sm lg:text-lg font-semibold'>الرجاء ادخال ترتيب الدرس : </label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pr-3' 
-                   type="text" id="desCoursAr" name="desCoursAr" maxLength="59"
-                   value={inputs.desCoursAr || ""}
+                   type="text" id="posCours" name="positionCours" maxLength="59"
+                   value={inputs.positionCours || ""}
                    onChange={handleChange}
-                   placeholder="أدخل وصف الدرس"
+                   placeholder="أدخل ترتيب الدرس"
                    required
                    onInput={handleInput}
                    onInvalid={handleInvalide}
                    
             />
-
-            <label for="desCours" className='block mr-5 text-sm lg:text-lg font-semibold'>أعد إدخال وصف الدرس بالفرنسية :</label>
-            <input  
-                   className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pr-3' 
-                   type="text" id="desCours" name="desCours" maxLength="59"
-                   value={inputs.desCours || ""}
-                   onChange={handleChange}
-                   placeholder="أعد إدخال وصف الدرس "
-                   required
-                   onInput={handleInput}
-                   onInvalid={handleInvalide}
-                   
-            />
-
             <p className='block mr-5 text-sm lg:text-lg font-semibold'>صورة مرتبطة بالدرس :</p>
             <FileInAr accept=".png" fileName="imgCours" fileType="صورة" onUploadFunction={onUploadCoursImageChange}/>
             <p for="pdfCours" className='block mr-5 text-sm lg:text-lg font-semibold'>أدخل ملف الدرس :</p>
-            <FileInAr accept=".pdf" fileName="pdfCours" fileType="ملف" onUploadFunction={onUploadFileChange}/>
+            <FileInAr accept=".pdf" fileName="pdfCours" fileType="ملف" onUploadFunction={onUploadFileArChange}/>
+            <p for="pdfCoursFr" className='block mr-5 text-sm lg:text-lg font-semibold'> أعد إدخال ملف الدرس بالفرنسية:</p>
+            <FileInAr accept=".pdf" fileName="pdfCoursFr" fileType="ملف" onUploadFunction={onUploadFileChange}/>
             
 
           </div>
@@ -175,7 +173,7 @@ function FormAr(props) {
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pr-3'
                     type="text" id="proposition1Ar" name="prop1Ar"
                     required
-                    placeholder="أدخل الإقتراح  "
+                    placeholder=" أدخل الإقتراح 01"
                     onInput={handleInput}
                    onInvalid={handleInvalide}
                     
@@ -187,7 +185,7 @@ function FormAr(props) {
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pr-3'
                     type="text" id="proposition1" name="prop1"
                     required
-                    placeholder="أعد إدخال الاقتراح  "
+                    placeholder=" أعد إدخال الإقتراح 01 ( فرنسية )"
                     onInput={handleInput}
                    onInvalid={handleInvalide}
                     
@@ -198,7 +196,7 @@ function FormAr(props) {
                     value={inputs.prop2Ar || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pr-3'
                     type="text" id="proposition2Ar" name="prop2Ar"
-                    placeholder="أدخل الإقتراح  "
+                    placeholder=" أدخل الإقتراح 02"
                     required
                     onInput={handleInput}
                     onInvalid={handleInvalide}
@@ -209,7 +207,7 @@ function FormAr(props) {
                     value={inputs.prop2 || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pr-3'
                     type="text" id="proposition2" name="prop2"
-                    placeholder="أعد إدخال الاقتراح  "
+                    placeholder=" أعد إدخال الإقتراح 02 ( فرنسية )"
                     required
                     onInput={handleInput}
                     onInvalid={handleInvalide}
@@ -220,7 +218,7 @@ function FormAr(props) {
                     value={inputs.prop3Ar || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pr-3'
                     type="text" id="proposition3Ar" name="prop3Ar"
-                    placeholder="أدخل الإقتراح  "
+                    placeholder=" أدخل الإقتراح 03"
                     required
                     onInput={handleInput}
                     onInvalid={handleInvalide}
@@ -232,7 +230,8 @@ function FormAr(props) {
                     value={inputs.prop3 || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pr-3'
                     type="text" id="proposition3" name="prop3"
-                    placeholder="أعد إدخال الاقتراح  "
+                    placeholder=" أعد إدخال الإقتراح 03 ( فرنسية )"
+
                     required
                     onInput={handleInput}
                     onInvalid={handleInvalide}

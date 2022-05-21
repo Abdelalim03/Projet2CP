@@ -53,6 +53,13 @@
       "maxExo": 1,
       "score": 0,
       "id": 6
+    },
+    {
+      "nom": "ok",
+      "avatar": "/avatar/Group-4.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 7
     }
   ],
   "courses": [],
