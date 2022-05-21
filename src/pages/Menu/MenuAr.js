@@ -41,7 +41,7 @@ export default function MenuAr({userName, userAvatar, Max}) {
           </div>
           <div className="flex flex-col gap-3 items-end ">
             <p className="font-semibold text-black lg:text-2xl md:text-lg lg:ml-4">
-              مسار
+            مسارك 
             </p>
             <div
               className={`container flex bg-symapp-pink-light lg:rounded-[40px] md:rounded-[30px] lg:h-[210px] lg:w-[380px] md:h-40 md:w-[270px] items-center justify-between  `}

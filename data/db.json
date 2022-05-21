@@ -1,7 +1,7 @@
 {
   "parametres": {
     "langue": "français",
-    "currentUser": 7,
+    "currentUser": 8,
     "mode": "prof"
   },
   "users": [
@@ -60,6 +60,13 @@
       "maxExo": 48,
       "score": 16,
       "id": 7
+    },
+    {
+      "nom": "Halouuf",
+      "avatar": "/avatar/Group-7.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 8
     }
   ],
   "courses": [
