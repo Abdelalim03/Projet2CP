@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import AbsoluteAr from "./AbsoluteAr";
 import CardAr from "./CardAr";
 import ContinueAsAr from "./ContinueAsAr";
+import MdpForm from "./MdpForm";
 const axios = require("axios");
 
 function EtesVousAr({ User, currentuserId }) {
@@ -24,8 +25,18 @@ function EtesVousAr({ User, currentuserId }) {
     if (currentuserId === 0) setShowModal(false);
   });
 
+  const [mdp, setMdp] = useState(false)
+
+  const showMdp = () =>{setMdp(!mdp);}
+
   return (
     <div className="font-['Tajawal'] relative w-screen h-screen ">
+      <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!mdp && 'hidden'}`}>
+            <div className='h-8 lg:h-12 w-3/4 lg:w-2/3 flex flex-row justify-end bg-blue-200'>
+                <button onClick={showMdp} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
+            </div>
+            <MdpForm />
+      </div>
       <AbsoluteAr />
       <h1 dir="rtl" className="main-title">
         هـل أنـت؟
@@ -62,11 +73,8 @@ function EtesVousAr({ User, currentuserId }) {
             />
           </div>
         )}
-        <Link to="/home/-1">
           <div
-            onClick={() => {
-              handleMode("prof");
-            }}
+            onClick={showMdp}
           >
             <CardAr
               path="/etesvous/Enseignant.png"
@@ -74,7 +82,6 @@ function EtesVousAr({ User, currentuserId }) {
               name="أستـاذ"
             />
           </div>
-        </Link>
       </div>
     </div>
   );

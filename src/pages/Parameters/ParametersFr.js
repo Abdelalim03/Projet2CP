@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { Link, useLocation, useNavigate, useOutletContext, useParams } from 'react-router-dom';
 import GetCurrentUser from '../../Components/GetCurrentUser';
+import GetMode from '../../Components/GetMode';
 import FormNom from './FormNom';
 
 function ParametersFr() {
@@ -14,6 +15,8 @@ function ParametersFr() {
     const navigate = useNavigate(); 
 
     const { id } = useParams();
+
+    const mode = GetMode();
     
   
     const changerAv = ()=>{navigate(`/avatar/${id}`)}
@@ -44,7 +47,8 @@ function ParametersFr() {
 
                 <div className='h-20 w-[400px] lg:w-[500px] rounded-[15px] bg-[#FFC5C1] flex flex-row items-center'>
                     <img className='w-[70px] h-[70px] pl-8 ' src= "/Parameters/account.svg" />
-                    <div className='w-[65%] font-bold text-xl ml-10'> Changez votre nom </div>
+                    {(mode === "eleve") && <div className='w-[65%] font-bold text-xl ml-10'> Changez votre nom </div>}
+                    {(mode === "prof") && <div className='w-[65%] font-bold text-xl ml-10'> Changez votre mot de passe </div>}
                     <button onClick={showNom} className='mr-4 lg:mr-0 rounded-[7px] bg-[#FAE0B2] flex justify-center items-center w-7 lg:w-9 h-7 hover:w-8 hover:h-8 lg:h-9 hover:lg:w-10 hover:lg:h-10 hover:bg-[#faddac]'>
                         <img className='w-7 h-5' src="/Parameters/flecheD.svg"/> 
                     </button>
