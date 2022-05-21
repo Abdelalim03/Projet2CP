@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate, useOutletContext, useParams } from 'react-router-dom';
+import GetMode from '../../Components/GetMode';
 import FormNom from './FormNom';
 
 function ParametersAr() {
@@ -16,6 +17,9 @@ function ParametersAr() {
 
     const {id} = useParams();
     const changerAv = ()=>{navigate(`/avatar/${id}`)}
+
+    const mode = GetMode();
+
   return (
     <div className='symapp-container-Ar'>
        <button onClick={async ()=>{await axios.patch("http://localhost:5000/parametres", { currentUser: 0 }).then(
@@ -38,7 +42,8 @@ function ParametersAr() {
            <div className='flex flex-col gap-10 justify-center items-end -mr-5'>
                 <div dir="rtl" className='h-20 w-[400px] lg:w-[500px] rounded-[15px] bg-[#FFC5C1] flex flex-row items-center'>
                     <img className='w-[70px] h-[70px] pr-8 ' src= "/Parameters/account.svg" />
-                    <div className="w-[65%] font-bold text-xl mr-10 font-['Tajawal']"> تغيير الاسم </div>
+                    {(mode === "eleve") && <div className="w-[65%] font-bold text-xl mr-10 font-['Tajawal']"> تغيير الاسم </div>}
+                    {(mode === "prof") && <div className="w-[65%] font-bold text-xl mr-10 font-['Tajawal']"> تغيير كلمة السر </div>}
                     <button onClick={showNom} className='ml-4 lg:ml-0 rounded-[7px] bg-[#FAE0B2] flex justify-center items-center w-7 lg:w-9 h-7 hover:w-8 hover:h-8 lg:h-9 hover:lg:w-10 hover:lg:h-10 hover:bg-[#faddac]  '>
                         <img className='w-7 h-5' src="/Parameters/flecheG.svg"/> 
                     </button>

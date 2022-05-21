@@ -10,6 +10,7 @@
       "avatar": "/Prof/EnseignantIcon.svg",
       "score": 100,
       "maxExo": 48,
+      "mdp": "1962",
       "id": -1
     },
     {
@@ -48,46 +49,11 @@
       "id": 5
     },
     {
-      "nom": "Allouma",
-      "avatar": "/avatar/Group-4.svg",
-      "maxExo": 3,
-      "score": 5,
-      "id": 6
-    },
-    {
-      "nom": "eleve",
-      "avatar": "/avatar/Group-3.svg",
-      "maxExo": 48,
-      "score": 16,
-      "id": 7
-    },
-    {
-      "nom": "Halouuf",
+      "nom": "Imad",
       "avatar": "/avatar/Group-7.svg",
-      "maxExo": 1,
-      "score": 0,
-      "id": 8
-    },
-    {
-      "nom": "ahmed",
-      "avatar": "/avatar/Group-5.svg",
-      "maxExo": 1,
-      "score": 0,
-      "id": 9
-    },
-    {
-      "nom": "farid",
-      "avatar": "/avatar/Group.svg",
-      "maxExo": 1,
-      "score": 0,
-      "id": 10
-    },
-    {
-      "nom": "samir",
-      "avatar": "/avatar/Group-2.svg",
-      "maxExo": 1,
-      "score": 0,
-      "id": 11
+      "maxExo": 2,
+      "score": 4,
+      "id": 6
     }
   ],
   "courses": [],
