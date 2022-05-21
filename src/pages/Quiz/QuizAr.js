@@ -22,12 +22,21 @@ function QuizAr(props) {
     if (e.target.value === props.propoCor) {
       SetCorrect(true);
       setHide(false);
-      setEvaluer("Bravo 🎉✨");
+      setEvaluer("ممتاز 🎉✨");
     } else {
       SetCorrect(false);
       setHide(false);
-      setEvaluer("Faux 🤯");
+      setEvaluer("خطأ 🤯");
     }
+  };
+  const handleReset = () => {
+    SetCheck1(false);
+    SetCheck2(false);
+    SetCheck3(false);
+    setEvaluer("");
+    SetDesact(false);
+    setHide(true);
+    SetCorrect(false);
   };
   return (
     <div className="flex flex-col lg:gap-10 md:gap-2 lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen  font-['Tajawal'] w-screen">
@@ -52,11 +61,14 @@ function QuizAr(props) {
               </h1>
             </div>
           </div>
+          <button onClick={handleReset}>
           <img
             className="md:w-10 lg:w-12 scale-x-flip hover:scale-x-flip hover:cursor-pointer hover:scale-110 hover:shadow-sm"
             src="/quiz/reload.svg"
             alt=""
           />
+          </button>
+         
         </div>
 
         <div className="flex flex-row gap-20 lg:gap-28 justify-center">

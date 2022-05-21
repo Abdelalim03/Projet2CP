@@ -24,10 +24,10 @@ function ChapitreProf(props) {
             </h2>
           </div>
         </div>
-        <div className="w-[20%] pr-3 flex flex-row gap-5 justify-center items-center">
+        <div className="w-[20%] mr-5 flex flex-row gap-5 justify-center items-center">
           <DeleteConfirModal CourseId={props.courseId} Courses={props.Courses} SetCourses={props.SetCourses} />
           <Link to={`../courscontent/${props.courseId}/${props.position}`}>
-            <button className="bg-[#FAE0B2] flex justify-center items-center w-6 lg:w-9 h-6 lg:h-9">
+            <button className="bg-[#FAE0B2] flex justify-center lg:rounded-md md:rounded-sm items-center w-6 lg:w-9 h-6 lg:h-9">
               <img
                 className="w-4 lg:w-7 h-4 lg:h-7 "
                 src={`${props.image2}`}
