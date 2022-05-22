@@ -19,7 +19,7 @@ function LandingFr() {
           
               </div>
               
-              <div className='text-left font-normal text-[#18263f] lg:font-medium text-2xl md:text-3xl lg:text-4xl'>
+              <div className='text-left font-normal text-[#18263f] lg:font-medium text-2xl lg:text-4xl'>
                 <div className='h-fit w-fit mb-10 lg:mb-16'>
                   <h2>Un monde plein de   </h2>
                   <h2 className='inline'>symetrie vous attend</h2>

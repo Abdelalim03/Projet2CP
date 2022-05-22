@@ -2214,7 +2214,7 @@ function handleChange(e) {
                     </div>
                 </div>
                 <div id='reset' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button title='حذف' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button title='حذف الكل' className='bouton  h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                     <FontAwesomeIcon icon={faTrashCan} className='text-black w-7 boutonImg  -mb-[1px] lg:-mb-[2px]' />
                     </button>
                 </div>
