@@ -107,8 +107,18 @@ const Canvas = useRef();
 
 
     // Stock the data of each exercice as strings
-let preLinesString,preShapesString,solutionShapesString,solutionLinesString,allshapesString,preDashedString, prePointString, solutionPointString
+//let preLinesString,preShapesString,solutionShapesString,solutionLinesString,allshapesString,preDashedString, prePointString, solutionPointString
+//let allowed_delta=0
 let allowed_delta=0
+let preDashedString='[]'
+let preLinesString='[]'
+let preShapesString='[]'
+let prePointString='[]'
+let solutionPointString='[]'
+let solutionLinesString='[]'
+let solutionShapesString='[]'
+let allshapesString='[]'
+
 
 let effect = false;
 let X=0,Y=0;
@@ -131,6 +141,7 @@ class SymetrieAxial{
             }
             SymetrieAxial.doEffects();
             SymetrieAxial.end();
+            chooseEvent("dessin");
             return;
         }
         first = true
@@ -148,7 +159,7 @@ class SymetrieAxial{
         }
         let a=allshapes.length
         for(let i=0;i<a;i++){
-            let {x, y, u, type, filled} = allshapes[i]
+            let {x, y, u, type, filled, stroked} = allshapes[i]
             if(central){
                 x= 2*X-x;y= 2*Y-y;
                  type = rotator(type,180);
@@ -161,9 +172,8 @@ class SymetrieAxial{
             }
         }
         
-            Polygone.polygone({x, y, u, type, filled})
-            
-            allshapes.push({x, y, u, type, filled});
+            Polygone.polygone({x, y, u, type, filled, stroked})
+            allshapes.push({x, y, u, type, filled, stroked});
             
         }
 
@@ -915,7 +925,7 @@ class Polygone {
     static drawPolygone(e){
         gc.putImageData(imageData, 0, 0);
         let {x, y} = proximate(e.offsetX, e.offsetY); // Centre
-        let u = 5*unity;
+        let u = unity;
         let filled = false;
         let stroked = strokeCol;
         Polygone.polygone({x, y, u, type, filled,stroked})
@@ -1496,10 +1506,10 @@ function setUP(){
     document.getElementById("dessin").addEventListener("click" , function () {chooseEvent("dessin")});
     document.getElementById("fill").addEventListener("click", function () {chooseEvent("fill")});
     document.getElementById("point").addEventListener("click" , function () {chooseEvent("point")});
-   if (full){
+    if (full){
     document.getElementById("symax").addEventListener("click" , function () {chooseEvent("symax")});
     document.getElementById("symcent").addEventListener("click" , function () {chooseEvent("symcent")});
-   }     
+     }     
     document.getElementById("reset").addEventListener("click", function () {reset();});
         
     // });
@@ -1520,6 +1530,7 @@ function setUP(){
         }
 
     });
+    
 }
 
 
@@ -1723,10 +1734,11 @@ function load() {
     
     createCanvas();
     setUP();
-    Exercice.fetch();
     Exercice.initiateExo();
     Exercice.getSolution();
     reset();
+    chooseEvent("dessin"); // L'eleve commence avec dessin par default
+    
 }
 
 class Exercice {

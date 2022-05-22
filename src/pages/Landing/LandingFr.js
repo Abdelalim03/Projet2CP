@@ -15,7 +15,7 @@ function LandingFr() {
             <div className='flex flex-col h-[40%] mb-20 lg:mb-28 ml-[10%]'>
               <div className='text-left font-normal text-6xl md:text-7xl lg:text-8xl mb-[10%]'>
                 
-                <h1 className='inline text-[#18263f]'>Bienvenue</h1>
+                <h1 className='inline text-[#18263f]'>Salut!</h1>
           
               </div>
               
