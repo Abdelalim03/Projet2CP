@@ -9,17 +9,17 @@ function LandingFr() {
     <div className='relative w-screen h-screen selection:bg-fuchsia-300'>
         <div className='flex justify-start'>
             <div className='absolute left-3 top-3 lg:top-5 font-light text-2xl lg:text-4xl'>
-              LOGO
+              <img className='h-10 lg:h-16 w-10 lg:w-16' src='/landing/Logo.png' alt='logo' />
             </div>
             <div className='w-[40%] h-screen py-20 lg:py-32 flex flex-col '>
             <div className='flex flex-col h-[40%] mb-20 lg:mb-28 ml-[10%]'>
               <div className='text-left font-normal text-6xl md:text-7xl lg:text-8xl mb-[10%]'>
                 
-                <h1 className='inline text-[#18263f]'>Bienvenue</h1>
+                <h1 className='inline text-6xl lg:text-8xl text-[#18263f]'>Bienvenue</h1>
           
               </div>
               
-              <div className='text-left font-normal text-[#18263f] lg:font-medium text-2xl md:text-3xl lg:text-4xl'>
+              <div className='text-left font-normal text-[#18263f] lg:font-medium text-2xl lg:text-4xl'>
                 <div className='h-fit w-fit mb-10 lg:mb-16'>
                   <h2>Un monde de symetrie </h2>
                   <h2 className='inline'>et de jeu vous attend</h2>

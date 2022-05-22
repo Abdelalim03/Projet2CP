@@ -9,7 +9,7 @@ function LandingAr() {
     <div className='relative w-screen h-screen selection:bg-fuchsia-300'>
        <div className='flex justify-end'>
             <div className='absolute right-3 top-3 lg:top-5 font-light text-2xl lg:text-4xl'>
-              LOGO
+                <img className='h-10 lg:h-16 w-10 lg:w-16' src='/landing/Logo.png' alt='logo' />
             </div>
             <div className='w-[40%] h-screen py-20 lg:py-32 flex flex-col '>
             <div className='flex flex-col h-[40%] mb-20 lg:mb-28 mr-[10%]'>
@@ -19,8 +19,8 @@ function LandingAr() {
                 <h1 className='inline text-[#F47458]'>!</h1>
               </div>
               
-              <div className="text-right font-normal font-['Tajawal'] lg:font-medium text-2xl md:text-3xl lg:text-4xl">
-                <div className='h-fit ml-24 lg:ml-56 w-fit mb-10 lg:mb-16'>
+              <div className="text-right font-normal font-['Tajawal'] lg:font-medium text-2xl lg:text-3xl">
+                <div className='h-fit ml-28 lg:ml-64 w-fit mb-10 lg:mb-16'>
                   <h2>عالم مليء بالتناظر</h2>
                   <h2 className='inline'>في انتظارك</h2>
                 </div>
