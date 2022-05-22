@@ -1,6 +1,6 @@
 {
   "parametres": {
-    "langue": "arabe",
+    "langue": "français",
     "currentUser": 0,
     "mode": "prof"
   },
@@ -63,8 +63,7 @@
       "id": 7
     }
   ],
-  "courses": [
-  ],
+  "courses": [],
   "exercices": [
     {
       "allowed_delta": 0,
