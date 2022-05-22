@@ -106,7 +106,7 @@ const Canvas = useRef();
   ]
 
 
-    // Stock the data of each exercice as strings ?
+    // Stock the data of each exercice as strings
 let preLinesString,preShapesString,solutionShapesString,solutionLinesString,allshapesString,preDashedString, prePointString, solutionPointString
 let allowed_delta=0
 
@@ -131,8 +131,6 @@ class SymetrieAxial{
             }
             SymetrieAxial.doEffects();
             SymetrieAxial.end();
-            
-            
             return;
         }
         first = true
@@ -145,7 +143,7 @@ class SymetrieAxial{
         
 
         if((X===0 && Y===0) || !effect){
-            console.log("Erreur");
+            console.log("Une erreur c'est produite!");
             return;
         }
         let a=allshapes.length
@@ -272,11 +270,12 @@ class SymetrieAxial{
             return
         }
         
-        //first=true;
+        
         if(!(x===X || y===Y)){
-            alert("yawdi mafihach");
+            alert("Une droite de symetrie est horizontale ou verticale!");
             gc.putImageData(before, 0,0);
             X=0;Y=0;
+            first = true;
             
             return;
         }
@@ -916,7 +915,7 @@ class Polygone {
     static drawPolygone(e){
         gc.putImageData(imageData, 0, 0);
         let {x, y} = proximate(e.offsetX, e.offsetY); // Centre
-        let u = unity;
+        let u = 5*unity;
         let filled = false;
         let stroked = strokeCol;
         Polygone.polygone({x, y, u, type, filled,stroked})
@@ -1765,14 +1764,13 @@ class Exercice {
     }
 
     static CompareSolution(typeOfCheck){
-        console.log(this.compareSolutionByShapes(),this.CompareSolutionBylines());
+        
         if(typeOfCheck==="imageData"){
             // Compare imageData
         imageReponse=gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
         return this.compareTwoImages(imageReponse, imageSolution);
         }else if (typeOfCheck==="Shapes"){
             // Compare shapes only
-            console.log(this.compareSolutionByShapes(),this.CompareSolutionBylines());
         return this.compareSolutionByShapes() && this.CompareSolutionBylines();    
         }else if(typeOfCheck==="lines"){
             return this.CompareSolutionBylines();
@@ -2234,13 +2232,17 @@ class Exercice {
      {
          (full && parseInt( Max)<48 ) && (language==="français") &&
          <div className='symapp-container'>
-            7atta tkemmel les exercices ...
+             <div className='flex justify-center'>
+                 <div className='text-[50px] font-bold'>Pas encore! il faut d'abbord finir les exercices 😉</div>
+             </div>
          </div>
      }
      {
          (full && parseInt( Max)<48 ) && (language==="arabe") &&
          <div className='symapp-container-Ar'>
-            أكمل التمارين و ولي...
+            <div className='flex justify-center'>
+                 <div className='text-[50px] font-bold'>😉 حاول انهاء التمارين للحصول على الهدية</div>
+             </div>
          </div>
      }
       </>

@@ -1,8 +1,8 @@
 {
   "parametres": {
-    "langue": "français",
-    "currentUser": 0,
-    "mode": "prof"
+    "langue": "arabe",
+    "currentUser": 9,
+    "mode": "eleve"
   },
   "users": [
     {
@@ -54,6 +54,27 @@
       "maxExo": 2,
       "score": 4,
       "id": 6
+    },
+    {
+      "nom": "Chiheb",
+      "avatar": "/avatar/Group-1.svg",
+      "maxExo": 48,
+      "score": 6,
+      "id": 7
+    },
+    {
+      "nom": "ahmed",
+      "avatar": "/avatar/Group-5.svg",
+      "maxExo": 2,
+      "score": 4,
+      "id": 8
+    },
+    {
+      "nom": "jdideberk",
+      "avatar": "/avatar/Group-2.svg",
+      "maxExo": 1,
+      "score": 0,
+      "id": 9
     }
   ],
   "courses": [],
