@@ -8,11 +8,11 @@ import ProgressProvider from "./ProgressProvider";
 
 export default function MenuAr({userName, userAvatar, Max, score}) {
   const [Score, setScore] = useState(parseInt((score/149)*100))
-  const [Maxx, setMaxx] = useState(parseInt(Max/48)*100)
+  const [Maxx, setMaxx] = useState(parseInt((Max/48)*100))
 
   setTimeout(() => {
     setScore(parseInt((score/149)*100));
-    setMaxx(parseInt(Max/48)*100);
+    setMaxx(parseInt((Max/48)*100));
   }, 100);
   return (
     // <div className=" bg-symapp-blue-light-second">
