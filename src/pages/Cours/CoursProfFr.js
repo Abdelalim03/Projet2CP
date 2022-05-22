@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import Chapitre from "./Chapitre";
+import React, {  useState } from "react";
 import UserTitle from "../../Components/UserTitle";
 import Form from "./Form";
 import ChapitreProf from "../CoursProf/ChapitreProf";
@@ -25,7 +24,8 @@ function CoursProfFr(props) {
             x
           </button>
         </div>
-        <Form />
+        <Form Courses={props.Courses}
+                SetCourses={props.SetCourses} />
       </div>
       <div className="w-[80%] h-32">
         <UserTitle

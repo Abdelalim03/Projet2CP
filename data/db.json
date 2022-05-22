@@ -1,6 +1,6 @@
 {
   "parametres": {
-    "langue": "français",
+    "langue": "arabe",
     "currentUser": 0,
     "mode": "prof"
   },
@@ -54,9 +54,17 @@
       "maxExo": 2,
       "score": 4,
       "id": 6
+    },
+    {
+      "nom": "Ahmed",
+      "avatar": "/avatar/Group-1.svg",
+      "maxExo": 2,
+      "score": 4,
+      "id": 7
     }
   ],
-  "courses": [],
+  "courses": [
+  ],
   "exercices": [
     {
       "allowed_delta": 0,
