@@ -1,14 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
-import GetCurrentUser from '../../Components/GetCurrentUser';
-import { data } from 'autoprefixer';
-
-
-
-
+import bcrypt from 'bcryptjs'
 
 function MdpInputCard() {
     const navigate = useNavigate();
@@ -19,7 +14,8 @@ function MdpInputCard() {
 
     const [msg, setMsg] = useState("");
 
-    axios
+    useEffect(() => {
+      axios
       .get(`http://localhost:5000/users/-1`)
       .then((res) => {
         return res.data;
@@ -30,6 +26,11 @@ function MdpInputCard() {
       .catch((err) => {
         console.log(err);
       });
+    
+    
+    }, [])
+    
+    
 
     function changeHandler(e) {
       if (e.target.value===""){
@@ -43,9 +44,9 @@ function MdpInputCard() {
      setEnteredMdp(e.target.value);
     }
     
-    async function handlName(e) {
+     function handlName(e) {
       let isAuthorized = false;
-      if (enteredMdp.trim()!==""){
+      if (enteredMdp.trim()!==""){ 
         if (e.type==="keyup"){
           if (e.keyCode===13) isAuthorized=true;
         }else{
@@ -53,23 +54,28 @@ function MdpInputCard() {
         }
       }
 
-      
         if (isAuthorized){
-          if(mdp !== enteredMdp) setMsg("Mot de passe erroné");
-          else{
-            axios
+          bcrypt.compare(enteredMdp, mdp, function(err, result) {
+            if (!err){
+             if (result){
+              axios
             .patch("http://localhost:5000/parametres", { mode: "prof" })
             .catch((error) => {
               console.log(error);
             });
             navigate("/home/-1");
+                 
+             }else{
+              setMsg("Mot de passe erroné");
    
            isAuthorized=false;
-
-          }
-          
+  
       }
     }
+  });
+  }    
+    }
+    
   return (
     <div className="relative flex flex-col mx-auto justify-center items-center lg:-mt-4 h-52 lg:h-72 w-[73%] bg-[url('./grid.png')] bg-[#80aaff12] border-4 border-[#0083CB] rounded-3xl ">
                 <img className='select-none absolute left-[55%] bottom-[10%] ' src='/nom/Rectangle 74.svg' alt='rect'/>

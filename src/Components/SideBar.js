@@ -7,8 +7,8 @@ export default function SideBar(props) {
   const showSidebar = () => setSideBar(!isOpen);
   const { id } = useParams();
   const [Max, setMax] = useState();
-  useEffect(async () => {
-    await axios.get(`http://localhost:5000/users/${id}`)
+  useEffect( () => {
+     axios.get(`http://localhost:5000/users/${id}`)
     .then(res=> setMax(res.data.maxExo))
     .catch(err=>console.log(err));
   }, [props.Language])

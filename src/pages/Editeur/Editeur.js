@@ -108,8 +108,18 @@ const Canvas = useRef();
 
 
     // Stock the data of each exercice as strings
-let preLinesString,preShapesString,solutionShapesString,solutionLinesString,allshapesString,preDashedString, prePointString, solutionPointString
+//let preLinesString,preShapesString,solutionShapesString,solutionLinesString,allshapesString,preDashedString, prePointString, solutionPointString
+//let allowed_delta=0
 let allowed_delta=0
+let preDashedString='[]'
+let preLinesString='[]'
+let preShapesString='[]'
+let prePointString='[]'
+let solutionPointString='[]'
+let solutionLinesString='[]'
+let solutionShapesString='[]'
+let allshapesString='[]'
+
 
 let effect = false;
 let X=0,Y=0;
@@ -132,6 +142,7 @@ class SymetrieAxial{
             }
             SymetrieAxial.doEffects();
             SymetrieAxial.end();
+            chooseEvent("dessin");
             return;
         }
         first = true
@@ -149,7 +160,7 @@ class SymetrieAxial{
         }
         let a=allshapes.length
         for(let i=0;i<a;i++){
-            let {x, y, u, type, filled} = allshapes[i]
+            let {x, y, u, type, filled, stroked} = allshapes[i]
             if(central){
                 x= 2*X-x;y= 2*Y-y;
                  type = rotator(type,180);
@@ -162,9 +173,8 @@ class SymetrieAxial{
             }
         }
         
-            Polygone.polygone({x, y, u, type, filled})
-            
-            allshapes.push({x, y, u, type, filled});
+            Polygone.polygone({x, y, u, type, filled, stroked})
+            allshapes.push({x, y, u, type, filled, stroked});
             
         }
 
@@ -1497,10 +1507,10 @@ function setUP(){
     document.getElementById("dessin").addEventListener("click" , function () {chooseEvent("dessin")});
     document.getElementById("fill").addEventListener("click", function () {chooseEvent("fill")});
     document.getElementById("point").addEventListener("click" , function () {chooseEvent("point")});
-   if (full){
+    if (full){
     document.getElementById("symax").addEventListener("click" , function () {chooseEvent("symax")});
     document.getElementById("symcent").addEventListener("click" , function () {chooseEvent("symcent")});
-   }     
+     }     
     document.getElementById("reset").addEventListener("click", function () {reset();});
         
     // });
@@ -1521,6 +1531,7 @@ function setUP(){
         }
 
     });
+    
 }
 
 
@@ -1724,10 +1735,14 @@ function load() {
     
     createCanvas();
     setUP();
-    Exercice.fetch();
-    Exercice.initiateExo();
-    Exercice.getSolution();
+    if (!full){
+        Exercice.initiateExo();
+        Exercice.getSolution();
+    }
+    
     reset();
+    chooseEvent("dessin"); // L'eleve commence avec dessin par default
+    
 }
 
 class Exercice {
@@ -1884,34 +1899,7 @@ class Exercice {
         imageData=gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
     }
 
-    static fetch(){
-            // recuperer les données de la base de donnée de chaque exos
-            // typeOfCheck="Shapes"
-            // preDashedString='[{"xd":200,"yd":320,"xf":1120,"yf":320,"stroked":"white"}]'
-
-
-            // preLinesString='[]'
-            // preShapesString='[{"x":600,"y":240,"u":40,"type":4,"filled":"white","stroked":"black"},{"x":600,"y":160,"u":40,"type":4,"filled":"white","stroked":"black"}]'
-            // prePointString='[{"x":600,"y":160,"stroked":"black"},{"x":600,"y":240,"stroked":"black"}]'
-            // solutionPointString='[{"x":600,"y":400,"stroked":"black"},{"x":600,"y":480,"stroked":"black"}]'
-            // solutionLinesString='[]'
-            // solutionShapesString='[{"x":600,"y":400,"u":40,"type":4,"filled":"white","stroked":"black"},{"x":600,"y":480,"u":40,"type":4,"filled":"white","stroked":"black"}]'
-
-            // allshapesString='[]'
-            // typeOfCheck="Shapes"
-            // preDashedString='[{"xd":200,"yd":320,"xf":1120,"yf":320,"stroked":"white"}]'
-
-
-            // preLinesString='[]'
-            // preShapesString='[{"x":600,"y":240,"u":40,"type":4,"filled":"white","stroked":"black"},{"x":600,"y":160,"u":40,"type":4,"filled":"white","stroked":"black"}]'
-            // prePointString='[{"x":600,"y":160,"stroked":"black"},{"x":600,"y":240,"stroked":"black"}]'
-            // solutionPointString='[{"x":600,"y":400,"stroked":"black"},{"x":600,"y":480,"stroked":"black"}]'
-            // solutionLinesString='[]'
-            // solutionShapesString='[{"x":600,"y":400,"u":40,"type":4,"filled":"white","stroked":"black"},{"x":600,"y":480,"u":40,"type":4,"filled":"white","stroked":"black"}]'
-
-            // allshapesString='[]'
-
-}
+    
     
 }
 
@@ -2238,18 +2226,20 @@ function handleChange(e) {
      }
      {
          (full && parseInt( Max)<48 ) && (language==="français") &&
-         <div className='symapp-container'>
-             <div className='flex justify-center'>
-                 <div className='text-[50px] font-bold'>Pas encore! il faut d'abbord finir les exercices 😉</div>
-             </div>
+         <div className='symapp-container flex justify-center  items-center '>
+         
+                <img src="/Gif/cadeau.gif" alt="cad" />
+                 <div className='text-[50px] text-center mb-28 font-bold'>Pas encore! il faut d'abord finir les exercices 😉</div>
+                    
          </div>
      }
      {
          (full && parseInt( Max)<48 ) && (language==="arabe") &&
-         <div className='symapp-container-Ar'>
-            <div className='flex justify-center'>
-                 <div className='text-[50px] font-bold'>😉 حاول انهاء التمارين للحصول على الهدية</div>
-             </div>
+         <div className='symapp-container-Ar flex justify-center items-center'>
+                 <div>
+                     <img src="/Gif/cadeau.gif" alt="cad" />
+                     <div className='text-[50px] mb-28 text-center font-bold'>😉 حاول انهاء التمارين للحصول على الهدية</div>
+                 </div>
          </div>
      }
       </>
