@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
-import GetCurrentUser from '../../Components/GetCurrentUser';
+import bcrypt from 'bcryptjs'
+
 
 function MdpInputCardAr() {
   const navigate = useNavigate();
@@ -14,6 +15,8 @@ function MdpInputCardAr() {
 
     const [msg, setMsg] = useState("");
 
+
+  useEffect(() => {
     axios
       .get(`http://localhost:5000/users/-1`)
       .then((res) => {
@@ -24,7 +27,10 @@ function MdpInputCardAr() {
       })
       .catch((err) => {
         console.log(err);
-      });
+      }); 
+  }, [])
+  
+    
 
     function changeHandler(e) {
       if (e.target.value===""){
@@ -38,9 +44,9 @@ function MdpInputCardAr() {
      setEnteredMdp(e.target.value);
     }
   
-    async function handlName(e) {
+    function handlName(e) {
       let isAuthorized = false;
-      if (enteredMdp.trim()!==""){
+      if (enteredMdp.trim()!==""){ 
         if (e.type==="keyup"){
           if (e.keyCode===13) isAuthorized=true;
         }else{
@@ -48,23 +54,28 @@ function MdpInputCardAr() {
         }
       }
 
-      
         if (isAuthorized){
-          if(mdp !== enteredMdp) setMsg("كلمة السر خاطئة");
-          else{
-            axios
+          bcrypt.compare(enteredMdp, mdp, function(err, result) {
+            if (!err){
+             if (result){
+              axios
             .patch("http://localhost:5000/parametres", { mode: "prof" })
             .catch((error) => {
               console.log(error);
             });
             navigate("/home/-1");
+                 
+             }else{
+              setMsg("كلمة السر خاطئة");
    
            isAuthorized=false;
-
-          }
-          
+  
       }
     }
+  });
+  }    
+    }
+ 
 
   return (
         <div className="relative flex flex-col mx-auto justify-center items-center lg:-mt-4 h-52 lg:h-72 w-[73%] bg-[url('./grid.png')] bg-[#80aaff12] border-4 border-[#0083CB] rounded-3xl ">
