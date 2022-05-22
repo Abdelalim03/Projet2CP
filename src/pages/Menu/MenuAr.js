@@ -54,7 +54,7 @@ export default function MenuAr({userName, userAvatar, Max, score}) {
             مسارك 
             </p>
             <div
-              className={`container flex bg-symapp-pink-light lg:rounded-[40px] md:rounded-[30px] lg:h-[210px] lg:w-[380px] md:h-40 md:w-[270px] items-center justify-between  `}
+              className={`container flex bg-symapp-pink-light lg:rounded-[40px] md:rounded-[30px] lg:h-[210px] lg:w-[380px] md:h-40 md:w-[270px] items-center justify-around  `}
             >
             <div className="relative w-[40%] h-[60%] flex justify-center">
               {Maxx && <ProgressProvider valueStart={0} valueEnd={Maxx}>

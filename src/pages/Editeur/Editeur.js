@@ -2020,7 +2020,7 @@ class Exercice {
                 <div id='point' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button className='bouton relative text-5xl font-bold h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                     <FontAwesomeIcon icon={faCircle} className='text-black w-2  -mb-[1px] lg:-mb-[2px]' />
-                    <div className='boutonTool absolute hidden -left-[60%] -bottom-[20%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                    <div className='boutonTool absolute hidden -left-[83%] bottom-[30%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
                             point
                     </div>  
                     </button>
