@@ -16,7 +16,7 @@ function LandingFr() {
               <div className='text-left font-normal text-6xl md:text-7xl lg:text-8xl mb-[10%]'>
                 
                 <h1 className='inline text-[#18263f]'>Bienvenue</h1>
-                <h1 className='inline text-[#7EABFF]'>!</h1>
+          
               </div>
               
               <div className='text-left font-normal text-[#18263f] lg:font-medium text-2xl md:text-3xl lg:text-4xl'>

@@ -46,7 +46,6 @@ function Form({SetCourses, Courses}) {
       "CourseArBase64":`${fileAr}`,
       "QuizImageBase64":`${QuizImageEncoded}`
     }).then(res=>{
-      console.log(res);
       SetCourses([...Courses,{
         "position":inputs.positionCours,
         "titre": inputs.titreCours,
