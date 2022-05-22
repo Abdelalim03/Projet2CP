@@ -7,7 +7,7 @@ import FileIn from './FileInFr';
 function FormAr(Courses, SetCourses) {
 
   const [inputs, setInputs] = useState({});
-  const [propCorrecte, setPropCorrecte] = useState("");
+  const [propCorrecte, setPropCorrecte] = useState("1");
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -28,7 +28,7 @@ function FormAr(Courses, SetCourses) {
   const handleSubmit = (event) => {
    
     axios.post('http://localhost:5000/courses',{
-      "position":inputs.positionCours,
+      "position":parseInt(inputs.positionCours),
       "titre": inputs.titreCours,
       "titreAr": inputs.titreCoursAr,
       "QuizExp": 20,
@@ -48,9 +48,8 @@ function FormAr(Courses, SetCourses) {
       "CourseArBase64":`${fileAr}`,
       "QuizImageBase64":`${QuizImageEncoded}`
     }).then(res=>{
-      console.log(res);
       SetCourses([...Courses,{
-        "position":inputs.positionCours,
+        "position":parseInt(inputs.positionCours),
         "titre": inputs.titreCours,
         "titreAr": inputs.titreCoursAr,
         "QuizExp": 20,

@@ -1,17 +1,14 @@
-import React, { useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
-import GetCurrentUser from '../../Components/GetCurrentUser';
 import { data } from 'autoprefixer';
-
+import bcrypt from 'bcryptjs'
 
 
 
 
 function ChngMdpInputCard() {
-    const navigate = useNavigate();
     const [enteredMdp, setEnteredMdp] = useState("");
     const [direction, setDirection] = useState("ltr");
     const [mdp, setMdp] = useState("");
@@ -19,7 +16,11 @@ function ChngMdpInputCard() {
 
     const [msg, setMsg] = useState("");
 
-    axios
+    
+
+      useEffect(() => {
+        
+        axios
       .get(`http://localhost:5000/users/-1`)
       .then((res) => {
         return res.data;
@@ -30,7 +31,9 @@ function ChngMdpInputCard() {
       .catch((err) => {
         console.log(err);
       });
-
+        
+      }, [])
+      
     function changeHandler(e) {
       if (e.target.value===""){
         setDirection("ltr")
@@ -43,7 +46,7 @@ function ChngMdpInputCard() {
      setEnteredMdp(e.target.value);
     }
     
-    async function handlName(e) {
+     function handlName(e) {
       let isAuthorized = false;
       if (enteredMdp.trim()!==""){
         if (e.type==="keyup"){
@@ -55,21 +58,32 @@ function ChngMdpInputCard() {
 
       
         if (isAuthorized){
-          if(mdp === enteredMdp) setMsg("Ceci est le mot de passe courant");
-          else{
-            axios
-            .patch("http://localhost:5000/users/-1", { mdp: enteredMdp })
-            .catch((error) => {
-              console.log(error);
+          bcrypt.compare(enteredMdp, mdp, function(err, result) {
+            if (!err){
+             if (result){
+              setMsg("Ceci est le mot de passe courant");
+                 
+             }else{
+              bcrypt.hash(enteredMdp, 10, function(err, hash) {
+                if (!err){
+                  axios
+                  .patch("http://localhost:5000/users/-1", { mdp: hash })
+                  .catch((error) => {
+                    console.log(error);
+                  });
+                  setMsg("Chnagement avec succés");
+                }
             });
-            setMsg("Chnagement avec succés");
-   
-           isAuthorized=false;
-
-          }
-          
-      }
+              
+     
+             isAuthorized=false;
+             }
+            }else{
+                console.log(err);
+            }
+      });
     }
+  }
   return (
     <div className="relative flex flex-col mx-auto justify-center items-center lg:-mt-4 h-52 lg:h-72 w-[73%] bg-[url('./grid.png')] bg-[#80aaff12] border-4 border-[#0083CB] rounded-3xl ">
                 <img className='select-none absolute left-[55%] bottom-[10%] ' src='/nom/Rectangle 74.svg' alt='rect'/>
@@ -94,6 +108,6 @@ function ChngMdpInputCard() {
                 </div>
       </div>
   )
-}
+  }
 
 export default ChngMdpInputCard

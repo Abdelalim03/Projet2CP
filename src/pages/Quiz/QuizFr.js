@@ -16,7 +16,7 @@ function QuizFr(props) {
     if (props.propoCor === "1") SetCheck1(true);
     if (props.propoCor === "2") SetCheck2(true);
     if (props.propoCor === "3") SetCheck3(true);
-  };
+  }
 
   const handleSubmit = (e) => {
     SetDesact(true);

@@ -109,7 +109,7 @@ function QuizAr(props) {
                 <label
                   className={`form-check-label ${
                     check1 && "text-green-400"
-                  } md:text-xl lg:text-2xl text-right font-bold text-gray-800`}
+                  } md:text-xl lg:text-2xl text-right font-bold ${(!check1) && "text-gray-800"}`}
                   htmlFor="flexRadioDefault1"
                 >
                   {props.propo1}
@@ -128,7 +128,7 @@ function QuizAr(props) {
                 <label
                   className={`form-check-label ${
                     check2 && "text-green-400"
-                  } inline-block md:text-xl lg:text-2xl font-bold text-gray-800`}
+                  } inline-block md:text-xl lg:text-2xl font-bold ${(!check2) && "text-gray-800"}`}
                   htmlFor="flexRadioDefault2"
                 >
                   {props.propo2}
@@ -147,7 +147,7 @@ function QuizAr(props) {
                 <label
                   className={`form-check-label ${
                     check3 && "text-green-400"
-                  } inline-block md:text-xl lg:text-2xl font-bold text-gray-800`}
+                  } inline-block md:text-xl lg:text-2xl font-bold ${(!check3) && "text-gray-800"}`}
                   htmlFor="flexRadioDefault3"
                 >
                   {props.propo3}
@@ -193,6 +193,7 @@ function QuizAr(props) {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }

@@ -29,7 +29,7 @@ function Cours() {
       })
       .then(data => {
         setUser(data);
-        fetch("http://localhost:5000/courses")
+        fetch("http://localhost:5000/courses?_sort=position")
       .then((res) => {
         return res.json();
       })

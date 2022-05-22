@@ -8,33 +8,32 @@ function ExercicesAr2() {
   const navigate = useNavigate();
   const { Max } = useParams();
   let tableOfex=[
-  {class:" lg:right-[160px] lg:top-[434px] right-[100px] top-[314px]",stars:1,id:25},  
-  {class:" lg:right-[268px] lg:top-[434px] right-[178px] top-[314px]",stars:1,id:26},   
-  {class:" lg:right-[376px] lg:top-[434px] right-[256px] top-[314px]",stars:1,id:27},    
-  {class:" lg:right-[482px] lg:top-[434px] right-[334px] top-[314px]",stars:1,id:28},     
-  {class:" lg:right-[590px] lg:top-[434px] right-[412px] top-[314px]",stars:1,id:29},   
-  {class:" lg:right-[698px] lg:top-[434px] right-[490px] top-[314px]",stars:1,id:30}, 
-  {class:" lg:right-[806px] lg:top-[434px] right-[568px] top-[314px]",stars:1,id:31},      
-  {class:" lg:right-[806px] lg:top-[326px] right-[568px] top-[236px]",stars:1,id:32},    
-  {class:" lg:right-[806px] lg:top-[218px] right-[568px] top-[158px]",stars:1,id:33},      
-  {class:" lg:right-[698px] lg:top-[218px] right-[490px] top-[158px]",stars:1,id:34},      
-  {class:" lg:right-[590px] lg:top-[218px] right-[412px] top-[158px]",stars:1,id:35},  
-  {class:" lg:right-[482px] lg:top-[218px] right-[334px] top-[158px]",stars:1,id:36},     
-  {class:" lg:right-[376px] lg:top-[218px] right-[256px] top-[158px]",stars:1,id:37},
-  {class:" lg:right-[268px] lg:top-[218px] right-[178px] top-[158px]",stars:1,id:38},
-  {class:" lg:right-[160px] lg:top-[218px] right-[100px] top-[158px]",stars:1,id:39},   
-  {class:" lg:right-[52px] lg:top-[218px] right-[22px] top-[158px]"  ,stars:1,id:40},
-  {class:" lg:right-[52px] lg:top-[110px] right-[22px] top-[80px]"   ,stars:1,id:41},
-  {class:" lg:right-[52px] lg:top-[1px] right-[22px] top-[2px]"      ,stars:1,id:42},
-  {class:" lg:right-[160px] lg:top-[1px] right-[100px] top-[2px]"    ,stars:1,id:43},
-  {class:" lg:right-[268px] lg:top-[1px] right-[178px] top-[2px]"    ,stars:1,id:44},
-  {class:" lg:right-[376px] lg:top-[1px] right-[256px] top-[2px]"    ,stars:1,id:45},
-  {class:" lg:right-[482px] lg:top-[1px] right-[334px] top-[2px]"    ,stars:1,id:46},
-  {class:" lg:right-[590px] lg:top-[1px] right-[412px] top-[2px]"    ,stars:1,id:47},
-
-  
+  {class:" lg:right-[160px] lg:top-[434px] right-[100px] top-[314px]",stars:4,id:25},  
+  {class:" lg:right-[268px] lg:top-[434px] right-[178px] top-[314px]",stars:5,id:26},   
+  {class:" lg:right-[376px] lg:top-[434px] right-[256px] top-[314px]",stars:2,id:27},    
+  {class:" lg:right-[482px] lg:top-[434px] right-[334px] top-[314px]",stars:2,id:28},     
+  {class:" lg:right-[590px] lg:top-[434px] right-[412px] top-[314px]",stars:2,id:29},   
+  {class:" lg:right-[698px] lg:top-[434px] right-[490px] top-[314px]",stars:3,id:30}, 
+  {class:" lg:right-[806px] lg:top-[434px] right-[568px] top-[314px]",stars:3,id:31},      
+  {class:" lg:right-[806px] lg:top-[326px] right-[568px] top-[236px]",stars:3,id:32},    
+  {class:" lg:right-[806px] lg:top-[218px] right-[568px] top-[158px]",stars:3,id:33},      
+  {class:" lg:right-[698px] lg:top-[218px] right-[490px] top-[158px]",stars:4,id:34},      
+  {class:" lg:right-[590px] lg:top-[218px] right-[412px] top-[158px]",stars:4,id:35},  
+  {class:" lg:right-[482px] lg:top-[218px] right-[334px] top-[158px]",stars:4,id:36},     
+  {class:" lg:right-[376px] lg:top-[218px] right-[256px] top-[158px]",stars:4,id:37},
+  {class:" lg:right-[268px] lg:top-[218px] right-[178px] top-[158px]",stars:4,id:38},
+  {class:" lg:right-[160px] lg:top-[218px] right-[100px] top-[158px]",stars:4,id:39},   
+  {class:" lg:right-[52px] lg:top-[218px] right-[22px] top-[158px]"  ,stars:5,id:40},
+  {class:" lg:right-[52px] lg:top-[110px] right-[22px] top-[80px]"   ,stars:5,id:41},
+  {class:" lg:right-[52px] lg:top-[1px] right-[22px] top-[2px]"      ,stars:3,id:42},
+  {class:" lg:right-[160px] lg:top-[1px] right-[100px] top-[2px]"    ,stars:5,id:43},
+  {class:" lg:right-[268px] lg:top-[1px] right-[178px] top-[2px]"    ,stars:5,id:44},
+  {class:" lg:right-[376px] lg:top-[1px] right-[256px] top-[2px]"    ,stars:5,id:45},
+  {class:" lg:right-[482px] lg:top-[1px] right-[334px] top-[2px]"    ,stars:5,id:46},
+  {class:" lg:right-[590px] lg:top-[1px] right-[412px] top-[2px]"    ,stars:5,id:47},
   
 ];
+
   return (
     <div className='symapp-container-Ar'>
       <div className=' relative bg-white rounded-l-2xl lg:rounded-l-3xl w-[92%] '>
@@ -45,7 +44,7 @@ function ExercicesAr2() {
                    <img className='FlechePleine absolute right-0 lg:top-[495px] top-[355px] lg:h-[85px] lg:w-[150px] h-[45px] w-[110px]' src='/Exercices/FlecheDpleine.svg' alt='FlecheB'/>
                 </button>
                 </Link>
-                <div onClick={()=>{(parseInt(Max)===48)&& navigate("../dessiner/"+Max)}}  className='LastGift absolute lg:right-[806px] right-[560px] top-[0px] lg:w-[130px] lg:h-[190px] w-[90px] h-[150px]'>
+                <div title='حاول انهاء التمارين للحصول على الهدية' onClick={()=>{(parseInt(Max)===48)&& navigate("../dessiner/"+Max)}}  className='LastGift absolute lg:right-[806px] right-[560px] top-[0px] lg:w-[130px] lg:h-[190px] w-[90px] h-[150px]'>
                     <img className={`absolute top-0 right-0 lg:w-[120px] lg:h-[180px] w-[80px] h-[130px] ${(parseInt(Max)===48) && "cursor-pointer"}`} src='/Exercices/BigGiftGif.gif' alt='FlecheB'/>
                     {(parseInt(Max)<48) && <>
                       <div className='back absolute top-0 right-0 lg:w-[120px] lg:h-[180px] w-[80px] h-[130px] select-none '></div>   
