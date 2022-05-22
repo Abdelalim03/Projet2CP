@@ -1,11 +1,20 @@
 import axios from "axios";
-import React from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import UserTitle from "../../Components/UserTitle";
 import CustomCard from "./CustomCard";
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import ProgressProvider from "./ProgressProvider";
 
-export default function MenuFr({userName, userAvatar, Max}) {
-  
+export default function MenuFr({userName, userAvatar, Max, score}) {
+  const [Score, setScore] = useState(parseInt((score/135)*100))
+  const [Maxx, setMaxx] = useState(parseInt(Max/48)*100)
+
+  setTimeout(() => {
+    setScore(parseInt((score/135)*100));
+    setMaxx(parseInt(Max/48)*100);
+  }, 100);
   return (
     // <div className=" bg-symapp-blue-light-second">
     <div className=" symapp-container  ">
@@ -42,8 +51,23 @@ export default function MenuFr({userName, userAvatar, Max}) {
               Progrès
             </p>
             <div
-              className={`container flex bg-symapp-pink-light lg:rounded-[40px] md:rounded-[30px] lg:h-[210px] lg:w-[380px] md:h-40 md:w-[270px] items-center justify-between  `}
-            ></div>
+              className={`container flex bg-symapp-pink-light lg:rounded-[40px] md:rounded-[30px] lg:h-[210px] lg:w-[380px] md:h-40 md:w-[270px] items-center justify-around  `}
+            >
+            <div className="relative w-[40%] h-[60%] flex justify-center">
+              <ProgressProvider valueStart={0} valueEnd={Maxx}>
+          {value => <CircularProgressbar value={value} text={`${value}%`} />}
+                </ProgressProvider>
+              <span className="absolute -bottom-7 font-semibold">Exercices</span>
+            </div>
+            <div className="relative w-[40%] h-[60%] flex justify-center">
+            
+              <ProgressProvider valueStart={0} valueEnd={Score}>
+          {value => <CircularProgressbar value={value} text={`${value}%`} />}
+                </ProgressProvider>
+              <span className="absolute -bottom-7 font-semibold ">Score</span>
+            </div>
+            
+            </div>
           </div>
         </div>
 

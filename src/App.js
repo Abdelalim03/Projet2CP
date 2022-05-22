@@ -17,6 +17,7 @@ import Parameters from "./pages/Parameters/Parameters";
 import ExercicesAr2 from "./pages/Exercices/ExercicesAr2";
 import ExercicesFr2 from "./pages/Exercices/ExercicesFr2";
 import Logo from "./pages/Logo/Logo";
+import GetLanguage from "./Components/GetLanguage";
 
 
 function App() {

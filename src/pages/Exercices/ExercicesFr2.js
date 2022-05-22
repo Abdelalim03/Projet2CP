@@ -31,6 +31,7 @@ function ExercicesFr2() {
   {class:"lg:left-[482px] lg:top-[1px] left-[334px] top-[2px]",stars:1,id:46},
   {class:"lg:left-[590px] lg:top-[1px] left-[412px] top-[2px]",stars:1,id:47}
 ];
+console.log(Max);
   return (
     <div className='symapp-container'>
       <div className=' relative bg-white rounded-l-2xl lg:rounded-l-3xl w-[92%] '>

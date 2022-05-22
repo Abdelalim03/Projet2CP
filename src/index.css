@@ -229,8 +229,25 @@ input[type=number]::-webkit-inner-spin-button {
   transform: rotate(-27deg);
 }
 
+.bouton:hover .boutonTool{
+  display: block;
+  animation: avatar 500ms ease-in 1;
+}
+
 .insPolygone:hover .insPolygoneContent{
   display: block;
+}
+.CircularProgressbar-path {
+  stroke: red;
+}
+.CircularProgressbar-trail {
+  stroke: gray;
+}
+.CircularProgressbar-text {
+  fill: yellow;
+}
+.CircularProgressbar-background {
+  fill: green;
 }
 
 .insButton:hover{

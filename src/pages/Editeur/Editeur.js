@@ -7,7 +7,6 @@ import { faSquareCheck,faCircle,faTrashCan } from '@fortawesome/free-solid-svg-i
 import { useOutletContext, useParams } from 'react-router-dom';
 
 function Editeur({full}) {
-    // let qstFr,qstAr;
     const [trueFrEstOuvert, SetTrueFrEstOuvert] = useState(false);
     const showtrueFr = () => {SetTrueFrEstOuvert(!trueFrEstOuvert);}
     const [FalseFrEstOuvert, SetFalseFrEstOuvert] = useState(false);
@@ -15,16 +14,18 @@ function Editeur({full}) {
 
     const [qstFr, setqstFr] = useState("");
     const [qstAr, setqstAr] = useState("");
-    const [typeOfCheck, settypeOfCheck] = useState(null);
-    // let typeOfCheck;
-  const { id , exoId , stars , Max } = useParams();
-  const [language, setlanguage] = useOutletContext();
-    useEffect(  () => {
+    let typeOfCheck;
+    const [Check, setCheck] = useState(null);
+    // const [typeOfCheck, settypeOfCheck] = useState(null);
+    const { id , exoId , stars , Max } = useParams();
+    const [language, setlanguage] = useOutletContext();
+    useEffect(async  () => {
         if (!full){
-             axios.get('http://localhost:5000/exercices/'+exoId).then( resp => {
+            await axios.get('http://localhost:5000/exercices/'+exoId).then( resp => {
              allowed_delta=resp.data.allowed_delta
              preLinesString=resp.data.preLinesString;
-             settypeOfCheck(resp.data.typeOfCheck)
+             setCheck(resp.data.typeOfCheck)
+             typeOfCheck=resp.data.typeOfCheck
              preDashedString=resp.data.preDashedString;
              preShapesString=resp.data.preShapesString
              prePointString=resp.data.prePointString
@@ -40,9 +41,6 @@ function Editeur({full}) {
         }
         setTimeout(() => load(), 500);
 
-
-        
-        
       }, [full]);
   
   
@@ -66,7 +64,6 @@ let pos;
 let points=[];
 let objetP=null;
 
-// const [type, setType] = useState(1)
 let type;
 // Used by Polylibre
 let tab; 
@@ -113,7 +110,211 @@ const Canvas = useRef();
 let preLinesString,preShapesString,solutionShapesString,solutionLinesString,allshapesString,preDashedString, prePointString, solutionPointString
 let allowed_delta=0
 
+let effect = false;
+let X=0,Y=0;
+let tranAxe=null, before;
+let first=true;
+let central=false;
+const [cent, setCent] = useState(false);
+const [eff, setEff] = useState(false);
+class SymetrieAxial{
 
+    static start(){
+        if(effect){ 
+            if((first && !central)){
+                first = true
+                X=0;Y=0;
+                setEff(false);
+                effect=false;
+                tranAxe=null;
+                return
+            }
+            SymetrieAxial.doEffects();
+            SymetrieAxial.end();
+            
+            
+            return;
+        }
+        first = true
+        X=0;Y=0;
+        gameCanvas.addEventListener("click",SymetrieAxial.click);
+        gameCanvas.addEventListener("mousemove", SymetrieAxial.move);
+    }
+
+    static doEffects(){
+        
+
+        if((X===0 && Y===0) || !effect){
+            console.log("Erreur");
+            return;
+        }
+        let a=allshapes.length
+        for(let i=0;i<a;i++){
+            let {x, y, u, type, filled} = allshapes[i]
+            if(central){
+                x= 2*X-x;y= 2*Y-y;
+                 type = rotator(type,180);
+            }else{
+
+            if(X!==0){
+                x= 2*X-x
+            }else{
+                y= 2*Y-y
+            }
+        }
+        
+            Polygone.polygone({x, y, u, type, filled})
+            
+            allshapes.push({x, y, u, type, filled});
+            
+        }
+
+        a=points.length
+        for(let i=0;i<a;i++){
+            let {x,y,stroked} = points[i]
+            //points.push({x,y,stroked:strokeCol});
+            if(central){
+                x= 2*X-x;y= 2*Y-y;
+            }else{
+
+            if(X!==0){
+                x= 2*X-x
+            }else{
+                y= 2*Y-y
+            }
+        }
+            //Polygone.polygone({x, y, u, type, filled})
+            point(x,y,stroked,5);
+            points.push({x,y,stroked});    
+        }
+        a=allLines.length
+        for(let i=0;i<a;i++){
+            let {xd,yd,xf,yf,stroked} = allLines[i]
+            //allLines.push({xd,yd,xf,yf,stroked});
+            if(central){
+                xd= 2*X-xd;yd= 2*Y-yd;
+                xf= 2*X-xf;yf= 2*Y-yf;
+            }else{
+
+            if(X!=0){
+                xd= 2*X-xd;
+                xf= 2*X-xf
+            }else{
+                yd= 2*Y-yd
+                yf= 2*Y-yf
+            }
+        }
+            //Polygone.polygone({x, y, u, type, filled})
+            //point(x,y,stroked,5);
+            Dessein.drawline({xd,yd,xf,yf,stroked});
+            allLines.push({xd,yd,xf,yf,stroked});
+        }
+
+        // a=polygons.length
+        // for(let i=0;i<a;i++){
+            
+        //     let {N, lOnly,tab} = polygons[i];
+        //     let tableau=[];
+        //     for (let j=0;j<tab.length;j++){
+        //         let {x, y} = tab[j];
+        //         if(central){
+        //             x= 2*X-x;y= 2*Y-y;
+        //         }else{
+    
+        //         if(X!=0){
+        //             x= 2*X-x
+        //         }else{
+        //             y= 2*Y-y
+        //         }
+        //     }
+        //     tableau.push({x,y});
+        //     }
+            
+        
+        // Polylibre.polygone({tab:tableau,N,lOnly})
+        // // polygonsS.push({tab:tableau,N,lOnly});
+        // polygons.push({tab:tableau,N,lOnly});
+            
+        // }
+        gc.putImageData(imageData, 0, 0);
+        redrawAll();
+        imageData = before = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+        effect=false
+        setEff(false);
+        tranAxe = null
+        endEvents();
+        
+    }
+
+    static click(e){
+        
+       
+        setEff(false);
+        effect=false;
+        let {x, y} = proximate(e.offsetX, e.offsetY);    
+        
+        if(central){
+            effect=true;
+            setEff(true);
+            X=x;Y=y;
+            gc.putImageData(before, 0,0);
+            point(x,y,"red",4)
+            tranAxe = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+            return
+        }
+
+        if(first){
+            first=false;
+            X=x;Y=y;
+            gc.putImageData(before, 0,0);
+            point(x,y,"red",2.5)
+            tranAxe = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+            return
+        }
+        
+        //first=true;
+        if(!(x===X || y===Y)){
+            alert("yawdi mafihach");
+            gc.putImageData(before, 0,0);
+            X=0;Y=0;
+            
+            return;
+        }
+        gc.putImageData(tranAxe, 0,0);
+        gc.strokeStyle = "red";
+        if (x===X){
+        Y=0
+        drawLine(x,0,x,gameCanvas.height);
+        }else{
+        X=0
+        drawLine(0,y,gameCanvas.width,y)    
+        }
+        gc.strokeStyle = ((theme == false) ? 'white' : 'black');
+        effect=true 
+        setEff(true);       
+        tranAxe = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+        
+    }
+
+    static move(e){
+        if(tranAxe!=null){
+        gc.putImageData(tranAxe, 0,0);
+    }else{
+        gc.putImageData(tranAxe, 0,0);
+    }
+        let {x, y} = proximate(e.offsetX, e.offsetY);
+        point(x,y,"red",4)
+        
+    }
+
+    static end(){
+        // gc.putImageData(imageData, 0,0);
+        // X=0;first=false;Y=0;tranAxe=null;
+        // redrawAll();
+        gameCanvas.removeEventListener("click",SymetrieAxial.click);
+        gameCanvas.removeEventListener("mousemove", SymetrieAxial.move);
+    }
+}
 
 class Point {
     static start() {
@@ -1265,7 +1466,11 @@ function setUP(){
     })
     
     gameCanvas.addEventListener("mouseleave", function leave() {
+        if(tranAxe==null){
         gc.putImageData(imageZero, 0,0);
+        }else{
+        gc.putImageData(tranAxe, 0,0);
+        }
         gameCanvas.className = "";
         redrawAll();
     })
@@ -1292,24 +1497,16 @@ function setUP(){
     document.getElementById("dessin").addEventListener("click" , function () {chooseEvent("dessin")});
     document.getElementById("fill").addEventListener("click", function () {chooseEvent("fill")});
     document.getElementById("point").addEventListener("click" , function () {chooseEvent("point")});
+   if (full){
+    document.getElementById("symax").addEventListener("click" , function () {chooseEvent("symax")});
+    document.getElementById("symcent").addEventListener("click" , function () {chooseEvent("symcent")});
+   }     
     document.getElementById("reset").addEventListener("click", function () {reset();});
-    // document.getElementById("ds").addEventListener("click", function () { gc.putImageData(imageSolution,0,0) });
-    // document.getElementById("da").addEventListener("click", function () { gc.putImageData(imageReponse,0,0) });
-    // document.getElementById("logd").addEventListener("click", function () {
-    //     console.log("Lines:");
-    //     console.log(JSON.stringify(allLines));
-    //     console.log("Shapes:");
-    //     console.log(JSON.stringify(allshapes));
-    //     console.log("Points:")
-    //     console.log(JSON.stringify(points))
-        
         
     // });
     if (!full){ 
         document.getElementById("submit").addEventListener("click", function () {
         if(Exercice.CompareSolution(typeOfCheck)){
-
-            
                 axios.get(`http://localhost:5000/users/${id}`)
                 .then(res=>{
                     if(res.data.maxExo === parseInt(exoId)){
@@ -1318,9 +1515,6 @@ function setUP(){
                     
                 })
                 .catch(err=>console.log(err));
-        
-            
-            
             showtrueFr();
         }else{
             showFalseFr();
@@ -1352,6 +1546,7 @@ function endEvents(){
     Rotate.end();
     Remove.end();
     Fill.end();
+    SymetrieAxial.end();
 }
 
 function chooseEvent(button){
@@ -1385,10 +1580,22 @@ function chooseEvent(button){
         case "point":
             Point.start()
             break;
-            default:
+        
+        case "symax":
+            central=false;
+            setCent(false);
+            tranAxe = before = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+            SymetrieAxial.start()
+            break;
+        case "symcent":
+            setCent(true);
+            central=true;
+            tranAxe = before = gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+            SymetrieAxial.start()
+        default:
             break;
         }
-        
+
         
 
 }
@@ -1510,6 +1717,7 @@ function reset(){
     points=[]
     // Exercice.initiateExo();
     Exercice.help();
+    
 }
 
 function load() {
@@ -1557,16 +1765,16 @@ class Exercice {
     }
 
     static CompareSolution(typeOfCheck){
-    
-        if(typeOfCheck=="imageData"){
+        console.log(this.compareSolutionByShapes(),this.CompareSolutionBylines());
+        if(typeOfCheck==="imageData"){
             // Compare imageData
         imageReponse=gc.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
         return this.compareTwoImages(imageReponse, imageSolution);
-        }else if (typeOfCheck=="Shapes"){
+        }else if (typeOfCheck==="Shapes"){
             // Compare shapes only
-        return this.compareSolutionByShapes() && this.CompareSolutionBylines();
-            
-        }else if(typeOfCheck=="lines"){
+            console.log(this.compareSolutionByShapes(),this.CompareSolutionBylines());
+        return this.compareSolutionByShapes() && this.CompareSolutionBylines();    
+        }else if(typeOfCheck==="lines"){
             return this.CompareSolutionBylines();
         }
     }
@@ -1707,7 +1915,6 @@ class Exercice {
 }
     
 }
-  console.log(typeOfCheck);
     return (    
       <>
  { ((!full || parseInt( Max)===48) && language==="français")&&
@@ -1750,28 +1957,39 @@ class Exercice {
                         <div className='palCol h-16  animate-[avatar_500ms_ease-in-out_1] w-[450px] lg:w-[500px] items-center  hidden flex-row gap-3'>
                             <div style={{backgroundColor:"black"}} className=' color-field ml-4 cursor-pointer h-[28px] w-[28px] rounded-sm hover:scale-125  '></div>
                             <div style={{backgroundColor:"white"}} className='color-field border-solid border-2 border-black h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
-                            <div style={{backgroundColor:"DodgerBlue"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
+                            <div style={{backgroundColor:"lightskyblue"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
                             <div style={{backgroundColor:"red"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
-                            <div style={{backgroundColor:"green"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"lawngreen"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                             <div style={{backgroundColor:"yellow"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
-                            <div style={{backgroundColor:"purple"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
-                            <div style={{backgroundColor:"brown"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"plum"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125   '></div>
+                            <div style={{backgroundColor:"saddlebrown"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                             <div style={{backgroundColor:"orange"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                             <div style={{backgroundColor:"HotPink"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"DimGrey"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                     </div>
                 </div>
                 {
                     ((full)?<div className='flex'>
                     <div className='h-16 lg:h-20 w-16 lg:w-20 flex justify-center items-center'>
-                    <button  className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    {(eff && cent) ? <button id="symcent" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-green-700 flex justify-center items-center border-2 border-[#6A5CF7] bg-green-500'>
+                        <img className='boutonImg w-full' src='/Editeur/EditorIcons/effects.png' alt='icon' />
+                    </button>
+                    :
+                    <button id="symcent" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-full' src='/Editeur/EditorIcons/symCent.svg' alt='icon' />
                     </button>
-                </div>
+                    }
+                    </div>
                     <div className='h-16 lg:h-20 w-16 lg:w-20 flex justify-center items-center'>
-                    <button className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    {(eff && !cent) ?<button id="symax" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-green-700 flex justify-center items-center border-2 border-[#6A5CF7] bg-green-500'>
+                        <img className='boutonImg w-full' src='/Editeur/EditorIcons/effects.png' alt='icon' />
+                    </button>
+                    :
+                    <button id="symax" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-full' src='/Editeur/EditorIcons/symAxe.svg' alt='icon' />
                     </button>
-                </div>
+                    }
+                    </div>
                     </div>:
                     <button id="submit" className='rounded-lg h-10 bg-green-400 hover:bg-green-600 pr-3 pl-4 py-2 text-white font-bold '> Confirmer  <FontAwesomeIcon icon={faSquareCheck} className='text-white lg:w-5 ml-2  -mb-[1px] lg:-mb-[2px]' /></button>
                     )
@@ -1783,24 +2001,36 @@ class Exercice {
             
             <div className='mt-4 w-20 px-2  flex flex-col gap-2'>
                 <div id='deplacer' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-6 lg:w-8 h-6 lg:h-8' src='/Editeur/EditorIcons/Vector.png' alt='icon' />
+                        <div className='boutonTool absolute hidden -left-[90%] lg:-left-[80%] -bottom-[20%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                            deplacer
+                        </div>
                     </button>
                 </div>
   
-                <button disabled={(typeOfCheck==="Shapes") && (parseInt(exoId)>2)} id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <div  className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                <button disabled={(Check==="Shapes") && (parseInt(exoId)>2)} id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
+                    <div  className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 8.svg' alt='icon' />
+                        <div className='boutonTool absolute hidden -left-[90%] lg:-left-[80%] -bottom-[20%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                            polylibres
+                        </div>
                     </div>
                 </button>
                 <div id='point' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='bouton text-5xl font-bold h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                    <FontAwesomeIcon icon={faCircle} className='text-black w-2  -mb-[1px] lg:-mb-[2px]' />  
+                    <button className='bouton relative text-5xl font-bold h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <FontAwesomeIcon icon={faCircle} className='text-black w-2  -mb-[1px] lg:-mb-[2px]' />
+                    <div className='boutonTool absolute hidden -left-[83%] bottom-[30%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                            point
+                    </div>  
                     </button>
                 </div>
                 <div  className='insPolygone relative h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button className='bouton relative h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/polygones.svg' alt='icon' />
+                        <div className='boutonTool absolute hidden -left-[135%] lg:-left-[110%] -bottom-[40%] h-fit w-fit p-1 bg-black text-white font-thin text-xs rounded-sm'>
+                            polygones
+                        </div>
                     </button>
                     <div className='insPolygoneContent h-40 lg:h-52 w-28 pl-4 hidden absolute left-[50px] lg:left-[60px] -bottom-[100%] lg:-bottom-[110%]'>
                 <div className='z-10 w-20 lg:w-24 h-40 lg:h-52 px-1 border-2 flex flex-col justify-around border-[#6A5CF7] bg-[#FFDFD9]'>
@@ -1819,18 +2049,27 @@ class Exercice {
                 </div>
                 </div>
                 <div id='fill' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 14.svg' alt='icon' />
+                        <div className='boutonTool absolute hidden -left-[90%] lg:-left-[80%] -bottom-[20%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                            Colorer
+                        </div>
                     </button>
                 </div>
                 <div id='remove' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 12.svg' alt='icon' /> 
+                        <div className='boutonTool absolute hidden -left-[90%] lg:-left-[80%] -bottom-[20%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                            gomme
+                        </div>
                     </button>
                 </div>
                 <div  className='rotate relative h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button className='bouton relative h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Arrow-33.svg' alt='icon' />
+                        <div className='boutonTool absolute hidden -left-[110%] -bottom-[40%] h-fit w-fit p-1 bg-black text-white font-thin text-xs rounded-sm'>
+                            rotation
+                        </div>
                     </button>
                     <div className='rotateContent hidden absolute pl-4 left-[50px] lg:left-[60px] bottom-[6px] h-[112px] lg:h-[128px] w-[73px] lg:w-20'>
                     <div className='h-[100%] w-14 lg:w-16 border-2 z-10 border-[#6A5CF7] bg-[#FFDFD9]'>
@@ -1845,8 +2084,11 @@ class Exercice {
                     </div>
                 </div>
                 <div id='reset' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                     <FontAwesomeIcon icon={faTrashCan} className='text-black  boutonImg w-7 -mb-[1px] lg:-mb-[2px]' />
+                    <div className='boutonTool absolute hidden -left-[90%] lg:-left-[80%] -bottom-[20%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                            effacer
+                    </div>
                     </button>
                 </div>
             </div>
@@ -1897,27 +2139,38 @@ class Exercice {
                         <div className='palCol h-16 animate-[avatar_500ms_ease-in-out_1] lg:h-12 w-[450px] lg:w-[500px]  items-center hidden flex-row gap-3'>
                             <div style={{backgroundColor:"black"}} className=' color-field mr-4 cursor-pointer h-[28px] w-[28px] rounded-sm hover:scale-125 '></div>
                             <div style={{backgroundColor:"white"}} className='color-field border-solid border-2 border-black h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125 '></div>
-                            <div style={{backgroundColor:"DodgerBlue"}} className='color-field h-[28px] cursor-pointer w-[28px]  rounded-sm hover:scale-125 '></div>
+                            <div style={{backgroundColor:"lightskyblue"}} className='color-field h-[28px] cursor-pointer w-[28px]  rounded-sm hover:scale-125 '></div>
                             <div style={{backgroundColor:"red"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125 '></div>
-                            <div style={{backgroundColor:"green"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"lawngreen"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                             <div style={{backgroundColor:"yellow"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
-                            <div style={{backgroundColor:"purple"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
-                            <div style={{backgroundColor:"brown"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"plum"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"saddlebrown"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                             <div style={{backgroundColor:"orange"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                             <div style={{backgroundColor:"HotPink"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
+                            <div style={{backgroundColor:"DimGrey"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                         </div>
                     </div>
                     {
                     ((full)?<div className='flex'>
                     <div className='h-16 lg:h-20 w-16 lg:w-20 flex justify-center items-center'>
-                    <button className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    {(eff && cent) ? <button id="symcent" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-green-700 flex justify-center items-center border-2 border-[#6A5CF7] bg-green-500'>
+                        <img className='boutonImg w-full' src='/Editeur/EditorIcons/effects.png' alt='icon' />
+                    </button>
+                    :
+                    <button id="symcent" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-full' src='/Editeur/EditorIcons/symCent.svg' alt='icon' />
                     </button>
+                    }
                 </div>
                     <div className='h-16 lg:h-20 w-16 lg:w-20 flex justify-center items-center'>
-                    <button className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    {(eff && !cent) ?<button id="symax" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-green-700 flex justify-center items-center border-2 border-[#6A5CF7] bg-green-500'>
+                        <img className='boutonImg w-full' src='/Editeur/EditorIcons/effects.png' alt='icon' />
+                    </button>
+                    :
+                    <button id="symax" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-full' src='/Editeur/EditorIcons/symAxe.svg' alt='icon' />
                     </button>
+                    }
                 </div>
                     </div>:
                     <button id="submit" dir='rtl' className='rounded-lg h-10 bg-green-400 hover:bg-green-600 pl-3 pr-4 py-2 text-white text-lg font-bold font-["Tajawal"]'> تأكيد  <FontAwesomeIcon icon={faSquareCheck} className='text-white lg:w-5 mr-2  ' /></button>
@@ -1929,23 +2182,35 @@ class Exercice {
             <div className=' flex justify-start gap-1'>
             <div  className='mt-4 w-20 px-2  flex flex-col gap-2'>
                 <div id="deplacer" className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-6 lg:w-8 h-6 lg:h-8' src='/Editeur/EditorIcons/Vector.png' alt='icon' />
+                        <div className='boutonTool absolute hidden -right-[70%] lg:-right-[60%] -bottom-[20%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                            تحريك
+                        </div>
                     </button>
                 </div>
-                <button disabled={(typeOfCheck==="Shapes") && (parseInt(exoId)>2)} id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <div className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                <button disabled={(Check==="Shapes") && (parseInt(exoId)>2)} id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
+                    <div className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 8.svg' alt='icon' />
+                        <div className='boutonTool absolute hidden -right-[70%] lg:-right-[60%] -bottom-[20%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                            خطوط
+                        </div>
                     </div>
                 </button>
                 <div id='point' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='bouton text-9xl font-bold h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                    <FontAwesomeIcon icon={faCircle} className='text-black w-2   -mb-[1px] lg:-mb-[2px]' />  
+                    <button className='bouton relative text-9xl font-bold h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <FontAwesomeIcon icon={faCircle} className='text-black w-2   -mb-[1px] lg:-mb-[2px]' /> 
+                    <div className='boutonTool absolute hidden -right-[50%] lg:-right-[55%] -bottom-[20%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                            نقط
+                    </div>
                     </button>
                 </div>
                 <div  className='insPolygone relative h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button className='bouton relative h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/polygones.svg' alt='icon' />
+                        <div className='boutonTool absolute hidden -right-[100%] lg:-right-[90%] -bottom-[40%] h-fit w-fit p-1 bg-black text-white font-thin text-xs rounded-sm'>
+                            الأشكال
+                        </div>
                     </button>
                     <div className='insPolygoneContent h-40 lg:h-52 w-28 pr-4 hidden absolute right-[50px] lg:right-[60px] -bottom-[100%] lg:-bottom-[110%]'>
                         <div className='z-10 w-20 lg:w-24 h-40 lg:h-52 px-1 border-2 flex flex-col justify-around border-[#6A5CF7] bg-[#FFDFD9]'>
@@ -1966,18 +2231,27 @@ class Exercice {
                     </div>
                 </div>
                 <div id='fill' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 14.svg' alt='icon' />
+                        <div className='boutonTool absolute hidden -right-[55%] lg:-right-[60%] -bottom-[20%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                            تلوين
+                        </div>
                     </button>
                 </div>
                 <div id='remove' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 12.svg' alt='icon' /> 
+                        <div className='boutonTool absolute hidden -right-[50%] lg:-right-[55%] -bottom-[20%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                            محو
+                        </div>
                     </button>
                 </div>
                 <div  className='rotate relative h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button className='bouton relative h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Arrow-33.svg' alt='icon' />
+                        <div className='boutonTool absolute hidden -right-[70%] -bottom-[40%] h-fit w-fit p-1 bg-black text-white font-thin text-xs rounded-sm'>
+                            دوران
+                        </div>
                     </button>
                     <div className='rotateContent hidden absolute pr-4 right-[50px] lg:right-[60px] bottom-[6px] h-[112px] lg:h-[128px] w-[73px] lg:w-20'>
                         <div className='h-[100%] w-14 lg:w-16 border-2 z-10 border-[#6A5CF7] bg-[#FFDFD9]'>
@@ -1992,8 +2266,11 @@ class Exercice {
                     </div>
                 </div>
                 <div id='reset' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button className='bouton h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                     <FontAwesomeIcon icon={faTrashCan} className='text-black w-7 boutonImg  -mb-[1px] lg:-mb-[2px]' />
+                    <div className='boutonTool absolute hidden -right-[50%] lg:-right-[60%] -bottom-[20%] h-fit w-fit p-1 lg:p-2 bg-black text-white font-thin text-xs rounded-sm lg:rounded-md'>
+                        حذف
+                    </div>
                     </button>
                 </div>
             </div>

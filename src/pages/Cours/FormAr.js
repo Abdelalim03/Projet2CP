@@ -4,7 +4,7 @@ import FileInAr from './FileInAr';
 import FileIn from './FileInFr';
 
 
-function FormAr(props) {
+function FormAr(Courses, SetCourses) {
 
   const [inputs, setInputs] = useState({});
   const [propCorrecte, setPropCorrecte] = useState("");
@@ -26,6 +26,7 @@ function FormAr(props) {
   }
 
   const handleSubmit = (event) => {
+   
     axios.post('http://localhost:5000/courses',{
       "position":inputs.positionCours,
       "titre": inputs.titreCours,
@@ -46,6 +47,27 @@ function FormAr(props) {
       "CourseBase64":`${file}`,
       "CourseArBase64":`${fileAr}`,
       "QuizImageBase64":`${QuizImageEncoded}`
+    }).then(res=>{
+      console.log(res);
+      SetCourses([...Courses,{
+        "position":inputs.positionCours,
+        "titre": inputs.titreCours,
+        "titreAr": inputs.titreCoursAr,
+        "QuizExp": 20,
+        "Prop1": inputs.prop1,
+        "Prop1Ar": inputs.prop1Ar,
+        "Prop2": inputs.prop2,
+        "Prop2Ar": inputs.prop2Ar,
+        "Prop3": inputs.prop3,
+        "Prop3Ar": inputs.prop3Ar,
+        "propCorrecte": propCorrecte,
+        "DesCours": inputs.desCours,
+        "DesCoursAr": inputs.desCoursAr,
+        "ImageCours": `${CoursImageEncoded}`,
+        "CourseBase64":`${file}`,
+        "CourseArBase64":`${fileAr}`,
+        "QuizImageBase64":`${QuizImageEncoded}`
+      }])
     });
   }
 

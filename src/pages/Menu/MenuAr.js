@@ -1,9 +1,19 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import UserTitleAr from "../../Components/UserTitleAr";
 import CustomCardAr from "./CustomCardAr";
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import ProgressProvider from "./ProgressProvider";
 
-export default function MenuAr({userName, userAvatar, Max}) {
+export default function MenuAr({userName, userAvatar, Max, score}) {
+  const [Score, setScore] = useState(parseInt((score/135)*100))
+  const [Maxx, setMaxx] = useState(parseInt(Max/48)*100)
+
+  setTimeout(() => {
+    setScore(parseInt((score/135)*100));
+    setMaxx(parseInt(Max/48)*100);
+  }, 100);
   return (
     // <div className=" bg-symapp-blue-light-second">
 
@@ -41,11 +51,25 @@ export default function MenuAr({userName, userAvatar, Max}) {
           </div>
           <div className="flex flex-col gap-3 items-end ">
             <p className="font-semibold text-black lg:text-2xl md:text-lg lg:ml-4">
-              مسار
+            مسارك 
             </p>
             <div
-              className={`container flex bg-symapp-pink-light lg:rounded-[40px] md:rounded-[30px] lg:h-[210px] lg:w-[380px] md:h-40 md:w-[270px] items-center justify-between  `}
-            ></div>
+              className={`container flex bg-symapp-pink-light lg:rounded-[40px] md:rounded-[30px] lg:h-[210px] lg:w-[380px] md:h-40 md:w-[270px] items-center justify-around  `}
+            >
+            <div className="relative w-[40%] h-[60%] flex justify-center">
+              {Maxx && <ProgressProvider valueStart={0} valueEnd={Maxx}>
+          {value => <CircularProgressbar value={value} text={`${value}%`} />}
+                </ProgressProvider>}
+              <span className="absolute -bottom-7 font-semibold">التمارين</span>
+            </div>
+            <div className="relative w-[40%] h-[60%] flex justify-center">
+            
+              {Score && <ProgressProvider valueStart={0} valueEnd={Score}>
+          {value => <CircularProgressbar value={value} text={`${value}%`} />}
+                </ProgressProvider>}
+              <span className="absolute -bottom-7 font-semibold ">مجموع النقاط</span>
+            </div>
+            </div>
           </div>
         </div>
 
