@@ -32,6 +32,8 @@ function FormAr(Courses, SetCourses) {
       "titre": inputs.titreCours,
       "titreAr": inputs.titreCoursAr,
       "QuizExp": 20,
+      "QuestQuizFr": inputs.QuestQuizFr,
+      "QuestQuizAr": inputs.QuestQuizAr,
       "Prop1": inputs.prop1,
       "Prop1Ar": inputs.prop1Ar,
       "Prop2": inputs.prop2,
@@ -188,6 +190,30 @@ function FormAr(Courses, SetCourses) {
             يرجى إدخال المعلومات اللازمة لإضافة الإستجواب
           </p>
           <div className='h-[130%] w-2/3 pr-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around mr-32 rounded-xl'>
+          <label for="QuestQuizFr" className='block ml-5 text-sm lg:text-lg font-semibold'> سؤال الاستجواب : </label>
+            <input 
+                    onChange={handleChange}
+                    value={inputs.QuestQuizAr || ""}
+                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
+                    type="text" id="QuestQuizFr" name="QuestQuizFr"
+                    required
+                    placeholder="أدخل سؤال الاستجواب "
+                    onInput={handleInput}
+                    onInvalid={handleInvalide}
+                    pattern="\S+"
+            />
+            <label for="QuestQuizAr" className='block ml-5 text-sm lg:text-lg font-semibold'> سؤال الاستجواب بالفرنسية :</label>
+            <input 
+                    onChange={handleChange}
+                    value={inputs.QuestQuizAr || ""}
+                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
+                    type="text" id="QuestQuizAr" name="QuestQuizAr"
+                    required
+                    placeholder="أدخل سؤال الاستجواب ( الفرنسية ) "
+                    onInput={handleInput}
+                    onInvalid={handleInvalide}
+                    pattern="\S+"
+            />
             <label for="Proposition1Ar" className='block mr-5 text-sm lg:text-lg font-semibold'>الإقتراح الأول : </label>
             <input 
                     onChange={handleChange}

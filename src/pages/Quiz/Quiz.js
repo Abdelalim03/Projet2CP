@@ -14,6 +14,8 @@ function Quiz() {
   const [prop1Ar, setProp1Ar] = useState("");
   const [prop2Ar, setProp2Ar] = useState("");
   const [prop3Ar, setProp3Ar] = useState("");
+  const [QuestionAr, setQuestionAr] = useState("");
+  const [QuestionFr, setQuestionFr] = useState("");
   const [propCorrecte, setPropCorrecte] = useState("")
   const [QuizImage,setQuizImage] = useState("")
   useEffect(() => {
@@ -29,8 +31,10 @@ function Quiz() {
         setProp1Ar(`${data.Prop1Ar}`);
         setProp2Ar(`${data.Prop2Ar}`);
         setProp3Ar(`${data.Prop3Ar}`);
-       
         setPropCorrecte(`${data.propCorrecte}`);
+        setQuestionAr(`${data.QuestQuizAr}`);
+        setQuestionFr(`${data.QuestQuizFr}`);
+        
         setQuizImage(`${data.QuizImageBase64}`);
       }
     ).catch((err) => {
@@ -42,8 +46,8 @@ function Quiz() {
   
     return (    
       <>
- { (language==="français")&& <QuizFr propoCor={propCorrecte} propo1={prop1} propo2={prop2} propo3={prop3} position={coursPos} QuizImage={QuizImage} />  }
- { (language==="arabe")&&  <QuizAr propoCor={propCorrecte} propo1={prop1Ar} propo2={prop2Ar} propo3={prop3Ar} position={coursPos} QuizImage={QuizImage} /> }
+ { (language==="français")&& <QuizFr propoCor={propCorrecte} propo1={prop1} propo2={prop2} propo3={prop3} position={coursPos} QuizImage={QuizImage} QuizQuest = {QuestionFr}/>  }
+ { (language==="arabe")&&  <QuizAr propoCor={propCorrecte} propo1={prop1Ar} propo2={prop2Ar} propo3={prop3Ar} position={coursPos} QuizImage={QuizImage} QuizQuest={QuestionAr}/> }
       </>
     
    )
