@@ -23,7 +23,8 @@ function CoursProfAr(props) {
             x
           </button>
         </div>
-        <FormAr />
+        <FormAr Courses={props.Courses}
+                SetCourses={props.SetCourses} />
       </div>
       <div className="w-[80%] h-32 mb-0 lg:mb-10">
         <UserTitleAr

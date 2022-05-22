@@ -4,7 +4,7 @@ import FileInAr from './FileInAr';
 import FileIn from './FileInFr';
 
 
-function FormAr(props) {
+function FormAr(Courses, SetCourses) {
 
   const [inputs, setInputs] = useState({});
   const [propCorrecte, setPropCorrecte] = useState("");
@@ -26,11 +26,14 @@ function FormAr(props) {
   }
 
   const handleSubmit = (event) => {
+   
     axios.post('http://localhost:5000/courses',{
       "position":inputs.positionCours,
       "titre": inputs.titreCours,
       "titreAr": inputs.titreCoursAr,
       "QuizExp": 20,
+      "QuestQuizFr": inputs.QuestQuizFr,
+      "QuestQuizAr": inputs.QuestQuizAr,
       "Prop1": inputs.prop1,
       "Prop1Ar": inputs.prop1Ar,
       "Prop2": inputs.prop2,
@@ -44,6 +47,26 @@ function FormAr(props) {
       "CourseBase64":`${file}`,
       "CourseArBase64":`${fileAr}`,
       "QuizImageBase64":`${QuizImageEncoded}`
+    }).then(res=>{
+      SetCourses([...Courses,{
+        "position":inputs.positionCours,
+        "titre": inputs.titreCours,
+        "titreAr": inputs.titreCoursAr,
+        "QuizExp": 20,
+        "Prop1": inputs.prop1,
+        "Prop1Ar": inputs.prop1Ar,
+        "Prop2": inputs.prop2,
+        "Prop2Ar": inputs.prop2Ar,
+        "Prop3": inputs.prop3,
+        "Prop3Ar": inputs.prop3Ar,
+        "propCorrecte": propCorrecte,
+        "DesCours": inputs.desCours,
+        "DesCoursAr": inputs.desCoursAr,
+        "ImageCours": `${CoursImageEncoded}`,
+        "CourseBase64":`${file}`,
+        "CourseArBase64":`${fileAr}`,
+        "QuizImageBase64":`${QuizImageEncoded}`
+      }])
     });
   }
 
@@ -166,6 +189,30 @@ function FormAr(props) {
             يرجى إدخال المعلومات اللازمة لإضافة الإستجواب
           </p>
           <div className='h-[130%] w-2/3 pr-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around mr-32 rounded-xl'>
+          <label for="QuestQuizFr" className='block ml-5 text-sm lg:text-lg font-semibold'> سؤال الاستجواب : </label>
+            <input 
+                    onChange={handleChange}
+                    value={inputs.QuestQuizAr || ""}
+                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
+                    type="text" id="QuestQuizFr" name="QuestQuizFr"
+                    required
+                    placeholder="أدخل سؤال الاستجواب "
+                    onInput={handleInput}
+                    onInvalid={handleInvalide}
+                    pattern="\S+"
+            />
+            <label for="QuestQuizAr" className='block ml-5 text-sm lg:text-lg font-semibold'> سؤال الاستجواب بالفرنسية :</label>
+            <input 
+                    onChange={handleChange}
+                    value={inputs.QuestQuizAr || ""}
+                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
+                    type="text" id="QuestQuizAr" name="QuestQuizAr"
+                    required
+                    placeholder="أدخل سؤال الاستجواب ( الفرنسية ) "
+                    onInput={handleInput}
+                    onInvalid={handleInvalide}
+                    pattern="\S+"
+            />
             <label for="Proposition1Ar" className='block mr-5 text-sm lg:text-lg font-semibold'>الإقتراح الأول : </label>
             <input 
                     onChange={handleChange}
