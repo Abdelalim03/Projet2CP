@@ -28,7 +28,7 @@ function FormAr(Courses, SetCourses) {
   const handleSubmit = (event) => {
    
     axios.post('http://localhost:5000/courses',{
-      "position":inputs.positionCours,
+      "position":parseInt(inputs.positionCours),
       "titre": inputs.titreCours,
       "titreAr": inputs.titreCoursAr,
       "QuizExp": 20,
@@ -49,7 +49,7 @@ function FormAr(Courses, SetCourses) {
       "QuizImageBase64":`${QuizImageEncoded}`
     }).then(res=>{
       SetCourses([...Courses,{
-        "position":inputs.positionCours,
+        "position":parseInt(inputs.positionCours),
         "titre": inputs.titreCours,
         "titreAr": inputs.titreCoursAr,
         "QuizExp": 20,
