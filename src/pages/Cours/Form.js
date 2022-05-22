@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import FileInFr from './FileInFr';
 
 
-function Form(props) {
+function Form({SetCourses, Courses}) {
 
   const [inputs, setInputs] = useState({});
   const [propCorrecte, setPropCorrecte] = useState("");
@@ -30,6 +30,8 @@ function Form(props) {
       "titre": inputs.titreCours,
       "titreAr": inputs.titreCoursAr,
       "QuizExp": 20,
+      "QuestQuizFr": inputs.QuestQuizFr,
+      "QuestQuizAr": inputs.QuestQuizAr,
       "Prop1": inputs.prop1,
       "Prop1Ar": inputs.prop1Ar,
       "Prop2": inputs.prop2,
@@ -43,6 +45,26 @@ function Form(props) {
       "CourseBase64":`${file}`,
       "CourseArBase64":`${fileAr}`,
       "QuizImageBase64":`${QuizImageEncoded}`
+    }).then(res=>{
+      SetCourses([...Courses,{
+        "position":inputs.positionCours,
+        "titre": inputs.titreCours,
+        "titreAr": inputs.titreCoursAr,
+        "QuizExp": 20,
+        "Prop1": inputs.prop1,
+        "Prop1Ar": inputs.prop1Ar,
+        "Prop2": inputs.prop2,
+        "Prop2Ar": inputs.prop2Ar,
+        "Prop3": inputs.prop3,
+        "Prop3Ar": inputs.prop3Ar,
+        "propCorrecte": propCorrecte,
+        "DesCours": inputs.desCours,
+        "DesCoursAr": inputs.desCoursAr,
+        "ImageCours": `${CoursImageEncoded}`,
+        "CourseBase64":`${file}`,
+        "CourseArBase64":`${fileAr}`,
+        "QuizImageBase64":`${QuizImageEncoded}`
+      }])
     });
   }
 
@@ -164,6 +186,30 @@ function Form(props) {
           
           <div className=' h-[130%] w-2/3 pl-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around ml-32 rounded-xl'>
           <label className='block ml-5 text-sm lg:text-lg font-semibold'> Veuillez Insérer les propositions du quiz </label>
+            <label for="QuestQuizFr" className='block ml-5 text-sm lg:text-lg font-semibold'>La question du quiz : </label>
+            <input 
+                    onChange={handleChange}
+                    value={inputs.QuestQuizFr || ""}
+                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
+                    type="text" id="QuestQuizFr" name="QuestQuizFr"
+                    required
+                    placeholder="Entrez la question du quiz  "
+                    onInput={handleInput}
+                    onInvalid={handleInvalide}
+                    // pattern=""
+            />
+            <label for="QuestQuizAr" className='block ml-5 text-sm lg:text-lg font-semibold'>La question du quiz en arabe : </label>
+            <input 
+                    onChange={handleChange}
+                    value={inputs.QuestQuizAr || ""}
+                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
+                    type="text" id="QuestQuizAr" name="QuestQuizAr"
+                    required
+                    placeholder="Rentrez la question du quiz ( arabe )  "
+                    onInput={handleInput}
+                    onInvalid={handleInvalide}
+                    // pattern="\S+"
+            />
             <label for="Proposition1" className='block ml-5 text-sm lg:text-lg font-semibold'>Première proposition : </label>
             <input 
                     onChange={handleChange}
@@ -174,7 +220,7 @@ function Form(props) {
                     placeholder="Entrez la proposition 01  "
                     onInput={handleInput}
                     onInvalid={handleInvalide}
-                    pattern="\S+"
+                    // pattern="\S+"
             />
             <label for="Proposition1Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrez la première proposition en arabe : </label>
             <input 
@@ -186,7 +232,7 @@ function Form(props) {
                     placeholder="Rentrez la proposition 01 ( arabe ) "
                     onInput={handleInput}
                     onInvalid={handleInvalide}
-                    pattern="\S+"
+                    // pattern="\S+"
             />
             <label for="Proposition2" className='block ml-5 text-sm lg:text-lg font-semibold'>Deuxième proposition : </label>
             <input 
