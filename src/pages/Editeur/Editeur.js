@@ -5,6 +5,7 @@ import True from './True';
 import False from './False';
 import { faSquareCheck,faCircle,faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { useOutletContext, useParams } from 'react-router-dom';
+import Help from './Help';
 
 function Editeur({full}) {
     const [trueFrEstOuvert, SetTrueFrEstOuvert] = useState(false);
@@ -1906,10 +1907,21 @@ class Exercice {
 function handleChange(e) {
     setRangeU(parseInt( e.target.value));
 }
+
+const [helpestOuvert, SethelpEstOuvert] = useState(false);
+const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
     return (    
       <>
  { ((!full || parseInt( Max)===48) && language==="français")&&
  <div className='symapp-container pl-10 overflow-auto'>
+ <img onClick={showhelp} className='absolute cursor-pointer left-20 lg:left-28 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="/Editeur/helpIcon.jpg" alt="help"/>
+
+ <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!helpestOuvert && 'hidden'}`}>
+            <div className='h-8 lg:h-12 w-[80%] flex flex-row justify-end bg-blue-200'>
+                <button onClick={showhelp} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
+            </div>
+            <Help />
+ </div>
  <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!trueFrEstOuvert && 'hidden'}`}>
             <div className='h-8 lg:h-12 w-2/5 flex flex-row justify-end bg-blue-200'>
                 <button onClick={showtrueFr} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
@@ -2070,6 +2082,15 @@ function handleChange(e) {
    }
  {(!full || parseInt( Max)===48) && (language==="arabe")&& 
  <div dir="rtl"  className='symapp-container-Ar pr-10 overflow-auto'>
+<img onClick={showhelp} className='absolute cursor-pointer right-20 lg:right-28 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="/Editeur/helpIcon.jpg" alt="help"/>
+
+<div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!helpestOuvert && 'hidden'}`}>
+           <div className='h-8 lg:h-12 w-[80%] flex flex-row justify-end bg-blue-200'>
+               <button onClick={showhelp} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
+           </div>
+           <Help />
+</div>
+     
  <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!trueFrEstOuvert && 'hidden'}`}>
                 <div className='h-8 lg:h-12 w-2/5 flex flex-row justify-end bg-blue-200'>
                     <button onClick={showtrueFr} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
