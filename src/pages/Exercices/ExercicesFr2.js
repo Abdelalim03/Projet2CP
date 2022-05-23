@@ -7,31 +7,30 @@ function ExercicesFr2() {
   const navigate = useNavigate();
   const { Max } = useParams();
   
-  let tableOfex=[{class:"lg:left-[160px] lg:top-[434px] left-[100px] top-[314px]",stars:1,id:25},
-  {class:"lg:left-[268px] lg:top-[434px] left-[178px] top-[314px]",stars:1,id:26},
-  {class:"lg:left-[376px] lg:top-[434px] left-[256px] top-[314px]",stars:1,id:27},
-  {class:"lg:left-[482px] lg:top-[434px] left-[334px] top-[314px]",stars:1,id:28},
-  {class:"lg:left-[590px] lg:top-[434px] left-[412px] top-[314px]",stars:1,id:29},
-  {class:"lg:left-[698px] lg:top-[434px] left-[490px] top-[314px]",stars:1,id:30},
-  {class:"lg:left-[806px] lg:top-[434px] left-[568px] top-[314px]",stars:1,id:31},
-  {class:"lg:left-[806px] lg:top-[326px] left-[568px] top-[236px]",stars:1,id:32},
-  {class:"lg:left-[806px] lg:top-[218px] left-[568px] top-[158px]",stars:1,id:33},
-  {class:"lg:left-[698px] lg:top-[218px] left-[490px] top-[158px]",stars:1,id:34},
-  {class:"lg:left-[590px] lg:top-[218px] left-[412px] top-[158px]",stars:1,id:35},
-  {class:"lg:left-[482px] lg:top-[218px] left-[334px] top-[158px]",stars:1,id:36},
-  {class:"lg:left-[376px] lg:top-[218px] left-[256px] top-[158px]",stars:1,id:37},
-  {class:"lg:left-[268px] lg:top-[218px] left-[178px] top-[158px]",stars:1,id:38},
-  {class:"lg:left-[160px] lg:top-[218px] left-[100px] top-[158px]",stars:1,id:39},
-  {class:"lg:left-[52px] lg:top-[218px] left-[22px] top-[158px]",stars:1,id:40},
-  {class:"lg:left-[52px] lg:top-[110px] left-[22px] top-[80px]",stars:1,id:41},
+  let tableOfex=[{class:"lg:left-[160px] lg:top-[434px] left-[100px] top-[314px]",stars:4,id:25},
+  {class:"lg:left-[268px] lg:top-[434px] left-[178px] top-[314px]",stars:5,id:26},
+  {class:"lg:left-[376px] lg:top-[434px] left-[256px] top-[314px]",stars:2,id:27},
+  {class:"lg:left-[482px] lg:top-[434px] left-[334px] top-[314px]",stars:2,id:28},
+  {class:"lg:left-[590px] lg:top-[434px] left-[412px] top-[314px]",stars:2,id:29},
+  {class:"lg:left-[698px] lg:top-[434px] left-[490px] top-[314px]",stars:3,id:30},
+  {class:"lg:left-[806px] lg:top-[434px] left-[568px] top-[314px]",stars:3,id:31},
+  {class:"lg:left-[806px] lg:top-[326px] left-[568px] top-[236px]",stars:3,id:32},
+  {class:"lg:left-[806px] lg:top-[218px] left-[568px] top-[158px]",stars:3,id:33},
+  {class:"lg:left-[698px] lg:top-[218px] left-[490px] top-[158px]",stars:4,id:34},
+  {class:"lg:left-[590px] lg:top-[218px] left-[412px] top-[158px]",stars:4,id:35},
+  {class:"lg:left-[482px] lg:top-[218px] left-[334px] top-[158px]",stars:4,id:36},
+  {class:"lg:left-[376px] lg:top-[218px] left-[256px] top-[158px]",stars:4,id:37},
+  {class:"lg:left-[268px] lg:top-[218px] left-[178px] top-[158px]",stars:4,id:38},
+  {class:"lg:left-[160px] lg:top-[218px] left-[100px] top-[158px]",stars:4,id:39},
+  {class:"lg:left-[52px] lg:top-[218px] left-[22px] top-[158px]",stars:5,id:40},
+  {class:"lg:left-[52px] lg:top-[110px] left-[22px] top-[80px]",stars:5,id:41},
   {class:"lg:left-[52px] lg:top-[1px] left-[22px] top-[2px]",stars:3,id:42},
-  {class:"lg:left-[160px] lg:top-[1px] left-[100px] top-[2px]",stars:1,id:43},
-  {class:"lg:left-[268px] lg:top-[1px] left-[178px] top-[2px]",stars:1,id:44},
-  {class:"lg:left-[376px] lg:top-[1px] left-[256px] top-[2px]",stars:1,id:45},
-  {class:"lg:left-[482px] lg:top-[1px] left-[334px] top-[2px]",stars:1,id:46},
-  {class:"lg:left-[590px] lg:top-[1px] left-[412px] top-[2px]",stars:1,id:47}
+  {class:"lg:left-[160px] lg:top-[1px] left-[100px] top-[2px]",stars:5,id:43},
+  {class:"lg:left-[268px] lg:top-[1px] left-[178px] top-[2px]",stars:5,id:44},
+  {class:"lg:left-[376px] lg:top-[1px] left-[256px] top-[2px]",stars:5,id:45},
+  {class:"lg:left-[482px] lg:top-[1px] left-[334px] top-[2px]",stars:5,id:46},
+  {class:"lg:left-[590px] lg:top-[1px] left-[412px] top-[2px]",stars:5,id:47}
 ];
-console.log(Max);
   return (
     <div className='symapp-container'>
       <div className=' relative bg-white rounded-l-2xl lg:rounded-l-3xl w-[92%] '>
@@ -42,7 +41,7 @@ console.log(Max);
                    <img className='FlechePleine absolute left-0 lg:top-[495px] top-[355px] lg:h-[85px] lg:w-[150px] h-[45px] w-[110px]' src='/Exercices/FlecheGpleine.svg' alt='FlecheB'/>
                 </button>
                 </Link>
-                <div onClick={()=>{(parseInt(Max)===48)&& navigate("../dessiner/"+Max)}} className='LastGift absolute lg:left-[806px] left-[560px] top-[0px] lg:w-[130px] lg:h-[190px] w-[90px] h-[150px]'>
+                <div title='Essayer de compléter les exercercices pour débloquer le cadeau' onClick={()=>{(parseInt(Max)===48)&& navigate("../dessiner/"+Max)}} className='LastGift absolute lg:left-[806px] left-[560px] top-[0px] lg:w-[130px] lg:h-[190px] w-[90px] h-[150px]'>
                     <img className={`absolute top-0 left-0 lg:w-[120px] lg:h-[180px] w-[80px] h-[130px] ${(parseInt(Max)===48) && "cursor-pointer"}`} src='/Exercices/BigGiftGif.gif' alt='FlecheB'/>
                     {(parseInt(Max)<48) && <div className='back absolute top-0 left-0 lg:w-[120px] lg:h-[180px] w-[80px] h-[130px] select-none '></div>} 
                     {(parseInt(Max)<48) && <img  className='locked absolute lg:top-[110px] lg:left-10 top-[80px] left-[26px] lg:w-[40px] lg:h-[50px] w-[30px] h-[40px] ' src='/Exercices/YLock.svg'/>}  

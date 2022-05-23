@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
-
+import bcrypt from 'bcryptjs'
 
 function ChngMdpInputCardAr() {
-  const navigate = useNavigate();
     const [enteredMdp, setEnteredMdp] = useState("");
     const [direction, setDirection] = useState("rtl");
     const [mdp, setMdp] = useState("");
@@ -14,7 +12,8 @@ function ChngMdpInputCardAr() {
 
     const [msg, setMsg] = useState("");
 
-    axios
+    useEffect(() => {
+      axios
       .get(`http://localhost:5000/users/-1`)
       .then((res) => {
         return res.data;
@@ -25,6 +24,10 @@ function ChngMdpInputCardAr() {
       .catch((err) => {
         console.log(err);
       });
+      
+    }, [])
+    
+    
 
     function changeHandler(e) {
       if (e.target.value===""){
@@ -38,7 +41,7 @@ function ChngMdpInputCardAr() {
      setEnteredMdp(e.target.value);
     }
   
-    async function handlName(e) {
+     function handlName(e) {
       let isAuthorized = false;
       if (enteredMdp.trim()!==""){
         if (e.type==="keyup"){
@@ -50,21 +53,30 @@ function ChngMdpInputCardAr() {
 
       
         if (isAuthorized){
-          if(mdp === enteredMdp) setMsg("هذه كلمة السر الحالية");
-          else{
-            axios
-            .patch("http://localhost:5000/users/-1", { mdp: enteredMdp })
-            .catch((error) => {
-              console.log(error);
-            });
-            setMsg("تم تغيير كلمة السر بنجاح");
+          bcrypt.compare(enteredMdp, mdp, function(err, result) {
+            if (!err){
+             if (result){
+              setMsg("هذه كلمة السر الحالية");
+                 
+             }else{
+              bcrypt.hash(enteredMdp, 10, function(err, hash) {
+                if (!err){
+                  axios
+                  .patch("http://localhost:5000/users/-1", { mdp: hash })
+                  .catch((error) => {
+                    console.log(error);
+                  });
+                  setMsg("تم تغيير كلمة السر بنجاح");
+                }
    
            isAuthorized=false;
 
-          }
-          
+          });   
       }
     }
+  });
+}
+     }
 
   return (
         <div className="relative flex flex-col mx-auto justify-center items-center lg:-mt-4 h-52 lg:h-72 w-[73%] bg-[url('./grid.png')] bg-[#80aaff12] border-4 border-[#0083CB] rounded-3xl ">

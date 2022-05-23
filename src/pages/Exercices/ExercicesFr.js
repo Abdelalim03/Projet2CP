@@ -4,32 +4,30 @@ import Box from './Box'
 import BoxBloquee from './BoxBloquee'
 
 function ExercicesFr({Max}) {
-  let tableOfex=[{class:"lg:top-[110px] top-[80px]",stars:4,id:1},
+  let tableOfex=[{class:"lg:top-[110px] top-[80px]",stars:1,id:1},
   {class:"lg:top-[218px] top-[158px]",stars:1,id:2},
   {class:"lg:top-[326px] top-[236px]",stars:1,id:3},
   {class:"lg:top-[434px] top-[314px]",stars:1,id:4},
   {class:"lg:left-[108px] lg:top-[434px] left-[78px] top-[314px]",stars:1,id:5},
-  {class:"lg:left-[216px] lg:top-[434px] left-[156px] top-[314px]",stars:1,id:6},
-  {class:"lg:left-[216px] lg:top-[326px] left-[156px] top-[236px]",stars:1,id:7},
-  {class:"lg:left-[216px] lg:top-[218px] left-[156px] top-[158px]",stars:1,id:8},
-  {class:"lg:left-[216px] lg:top-[110px] left-[156px] top-[80px]",stars:1,id:9},
-  {class:"lg:left-[216px] lg:top-1 left-[156px] top-[2px]",stars:1,id:10},
-  {class:"lg:left-[324px] lg:top-1 left-[234px] top-[2px]",stars:1,id:11},
-  {class:"lg:left-[432px] lg:top-1 left-[312px] top-[2px]",stars:1,id:12},
-  {class:"lg:left-[540px] lg:top-1 left-[390px] top-[2px]",stars:1,id:13},
-  {class:"lg:left-[648px] lg:top-1 left-[468px] top-[2px]",stars:1,id:14},
-  {class:"lg:left-[756px] lg:top-1 left-[546px] top-[2px]",stars:1,id:15},
-  {class:"lg:left-[756px] lg:top-[110px] left-[546px] top-[80px]",stars:1,id:16},
-  {class:"lg:left-[756px] lg:top-[218px] left-[546px] top-[158px]",stars:1,id:17},
-  {class:"lg:left-[648px] lg:top-[218px] left-[468px] top-[158px]",stars:1,id:18},
-  {class:"lg:left-[540px] lg:top-[218px] left-[390px] top-[158px]",stars:1,id:19},
-  {class:"lg:left-[432px] lg:top-[218px] left-[312px] top-[158px]",stars:1,id:20},
-  {class:"lg:left-[432px] lg:top-[326px] left-[312px] top-[236px]",stars:1,id:21},
-  {class:"lg:left-[432px] lg:top-[434px] left-[312px] top-[314px]",stars:1,id:22},
-  {class:"lg:left-[540px] lg:top-[434px] left-[390px] top-[314px]",stars:1,id:23},
-  {class:"lg:left-[648px] lg:top-[434px] left-[468px] top-[314px]",stars:1,id:24},
-  
-  
+  {class:"lg:left-[216px] lg:top-[434px] left-[156px] top-[314px]",stars:2,id:6},
+  {class:"lg:left-[216px] lg:top-[326px] left-[156px] top-[236px]",stars:2,id:7},
+  {class:"lg:left-[216px] lg:top-[218px] left-[156px] top-[158px]",stars:2,id:8},
+  {class:"lg:left-[216px] lg:top-[110px] left-[156px] top-[80px]",stars:2,id:9},
+  {class:"lg:left-[216px] lg:top-1 left-[156px] top-[2px]",stars:2,id:10},
+  {class:"lg:left-[324px] lg:top-1 left-[234px] top-[2px]",stars:2,id:11},
+  {class:"lg:left-[432px] lg:top-1 left-[312px] top-[2px]",stars:3,id:12},
+  {class:"lg:left-[540px] lg:top-1 left-[390px] top-[2px]",stars:3,id:13},
+  {class:"lg:left-[648px] lg:top-1 left-[468px] top-[2px]",stars:3,id:14},
+  {class:"lg:left-[756px] lg:top-1 left-[546px] top-[2px]",stars:3,id:15},
+  {class:"lg:left-[756px] lg:top-[110px] left-[546px] top-[80px]",stars:3,id:16},
+  {class:"lg:left-[756px] lg:top-[218px] left-[546px] top-[158px]",stars:3,id:17},
+  {class:"lg:left-[648px] lg:top-[218px] left-[468px] top-[158px]",stars:3,id:18},
+  {class:"lg:left-[540px] lg:top-[218px] left-[390px] top-[158px]",stars:3,id:19},
+  {class:"lg:left-[432px] lg:top-[218px] left-[312px] top-[158px]",stars:3,id:20},
+  {class:"lg:left-[432px] lg:top-[326px] left-[312px] top-[236px]",stars:4,id:21},
+  {class:"lg:left-[432px] lg:top-[434px] left-[312px] top-[314px]",stars:4,id:22},
+  {class:"lg:left-[540px] lg:top-[434px] left-[390px] top-[314px]",stars:4,id:23},
+  {class:"lg:left-[648px] lg:top-[434px] left-[468px] top-[314px]",stars:4,id:24}
 ];
   return (
     <div className='symapp-container'>

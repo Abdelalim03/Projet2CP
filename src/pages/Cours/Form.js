@@ -6,7 +6,7 @@ import FileInFr from './FileInFr';
 function Form({SetCourses, Courses}) {
 
   const [inputs, setInputs] = useState({});
-  const [propCorrecte, setPropCorrecte] = useState("");
+  const [propCorrecte, setPropCorrecte] = useState("1");
 
   const handleChange = (event) => {
     const name = event.target.name;

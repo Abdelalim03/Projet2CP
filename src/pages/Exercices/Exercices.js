@@ -11,8 +11,8 @@ function Exercices() {
   const [language, setlanguage] = useOutletContext();
   let {id} = useParams();
   const [Max, setMax] = useState(1);
-  useEffect(async () => {
-   await axios.get("http://localhost:5000/users/"+id)
+  useEffect( () => {
+    axios.get("http://localhost:5000/users/"+id)
     .then(res=>{
       setMax(res.data.maxExo);
     });
