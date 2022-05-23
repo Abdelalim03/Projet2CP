@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import SideBar from '../../Components/SideBar'
 import Box from './Box'
 import BoxBloquee from './BoxBloquee'
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import AbsoluteLandingAr from './AbsoluteLandingAr'
-import AbsoluteLending from './AbsoluteLending'
 
 
 function LandingAr() {

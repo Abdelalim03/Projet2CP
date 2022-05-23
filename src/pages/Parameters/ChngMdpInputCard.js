@@ -3,8 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
-import GetCurrentUser from '../../Components/GetCurrentUser';
-import { data } from 'autoprefixer';
+
 
 
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Chapitre from "./Chapitre";
 import UserTitle from "../../Components/UserTitle";
 function CoursFr({ userName, userAvatar ,Courses }) {
