@@ -28,7 +28,7 @@ function CoursProfAr(props) {
       </div>
       <div className="w-[80%] h-32 mb-0 lg:mb-10">
         <UserTitleAr
-          message=" اهلا"
+          message=" أهلا"
           userName={props.userName}
           userImage={props.userAvatar}
         />
