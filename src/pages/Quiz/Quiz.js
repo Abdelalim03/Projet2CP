@@ -40,7 +40,7 @@ function Quiz() {
       console.log(err);
     });
   
-  }, [])
+  }, [id])
   
   
     return (    

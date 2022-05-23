@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 
 function InputCardAr() {
-  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [direction, setDirection] = useState("rtl");
   const [curUserName, setCurUserName] = useState("");

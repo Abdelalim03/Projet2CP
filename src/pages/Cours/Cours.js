@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useOutletContext, useParams } from "react-router-dom";
 
@@ -43,7 +42,7 @@ function Cours() {
           console.log(err.message);
       })
     return () => abortControl.abort();
-  }, [])
+  }, [id])
  
   const mode = GetMode();
    return (    

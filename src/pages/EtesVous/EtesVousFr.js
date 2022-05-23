@@ -19,7 +19,7 @@ function EtesVousFr({ User, currentuserId }) {
   };
   useEffect(() => {
     if (currentuserId === 0) setShowModal(false);
-  });
+  },[currentuserId]);
 
   const [mdp, setMdp] = useState(false)
 
