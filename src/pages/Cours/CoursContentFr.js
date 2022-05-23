@@ -5,7 +5,6 @@ import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
-// import SamplePdf from "./SymétrieCours.pdf";
 import { Worker } from "@react-pdf-viewer/core";
 import fr_FR from "@react-pdf-viewer/locales/lib/fr_FR.json";
 
@@ -35,7 +34,7 @@ export default function CoursContent() {
   const [PdfFile, setpdfFile] = useState(null);
   const [Course, SetCourse] = useState(null);
   const [isLoading, setisLoading] = useState(true);
-  const { coursId,coursPos } = useParams();
+  const { coursId, coursPos } = useParams();
   const ChaptreId = "0" + coursPos;
 
   useEffect(() => {
@@ -58,7 +57,7 @@ export default function CoursContent() {
       .catch((err) => {
         console.log(err.message);
       });
-  }, []);
+  }, [coursId]);
 
   return (
     <div className=" flex flex-col  lg:rounded-l-[50px] md:rounded-l-[30px] bg-white h-screen w-screen pb-10  ">
@@ -85,7 +84,6 @@ export default function CoursContent() {
             )}
           </div>
         </div>
-        
       </div>
 
       {isLoading && (

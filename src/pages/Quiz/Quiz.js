@@ -3,7 +3,6 @@ import QuizFr from './QuizFr';
 import QuizAr from './QuizAr';
 import { useOutletContext, useParams } from 'react-router-dom';
 import axios from 'axios';
-import { data } from 'autoprefixer';
 
 function Quiz() {
   const [language, setlanguage] = useOutletContext();
