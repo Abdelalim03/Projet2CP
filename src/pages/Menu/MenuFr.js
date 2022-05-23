@@ -13,7 +13,7 @@ export default function MenuFr({userName, userAvatar, Max, score}) {
 
   setTimeout(() => {
     setScore(parseInt((score/149)*100));
-    setMaxx(parseInt((Max/48)*100));
+    setMaxx(parseInt(((Max-1)/47)*100));
   }, 100);
   return (
     // <div className=" bg-symapp-blue-light-second">
