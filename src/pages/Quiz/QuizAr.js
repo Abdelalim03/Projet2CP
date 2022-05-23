@@ -40,10 +40,10 @@ function QuizAr(props) {
   };
   return (
     <div className="flex flex-col lg:gap-10 md:gap-2 lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen  font-['Tajawal'] w-screen">
-      <div className=" flex flex-col justify-start gap-5">
+      <div className=" flex flex-col justify-center gap-5">
         <div
           dir="rtl"
-          className="bg-symapp-blue lg:h-40 md:h-20 lg:rounded-tr-[50px] md:rounded-tr-[30px] flex justify-between pl-4 pr-4"
+          className="bg-symapp-blue lg:h-28 md:h-20 lg:rounded-tr-[50px] md:rounded-tr-[30px] flex justify-between pl-4 pr-4"
         >
           <div dir="rtl" className="flex items-center gap-10">
             <Link to="../cours">
@@ -70,32 +70,9 @@ function QuizAr(props) {
           </button>
         </div>
 
-        <div className="flex flex-row gap-20 lg:gap-28 justify-center">
-          <div className="flex flex-col mt-10 gap-5 justify-around items-end">
-            {/*Progress bar*/}
-            {/*
-            <div className="flex justify-between bg-[#C7DBFE] rounded-md md:w-80 lg:w-96 md:h-9 lg:h-11 p-1 px-4">
-              <img
-                className="w-fit cursor-pointer hover:scale-110"
-                src="/quiz/left.svg"
-                alt=""
-              />
-              <div className="flex flex-row ">
-              <div className="flex justify-center items-center w-10 lg:w-14 border-r-2 border-[#283D93]"></div>
-                <div className="flex justify-center items-center w-10 lg:w-14 border-r-2 border-[#283D93]"></div>
-                <div className="flex justify-center items-center w-10 lg:w-14 border-r-2 border-[#283D93]"></div>
-                <div className="flex justify-center items-center w-10 lg:w-14 border-r-2 border-[#283D93]"></div>
-                <div className="flex justify-center items-center w-10 lg:w-14">
-                </div>
-              </div>
-              <img
-                className="w-fit cursor-pointer hover:scale-110"
-                src="/quiz/right.svg"
-                alt=""
-              />
-            </div>
-  */}
-            <div className="flex flex-col justify-center items-center gap-10">
+        <div className="mx-10 flex flex-row gap-20 justify-center items-center">
+          <div className="flex flex-col mt-5 gap-5 justify-around items-end">
+            <div className="flex flex-col justify-center items-end gap-10">
               <div className="form-check flex flex-row-reverse items-center gap-5">
                 <input
                   className="form-check-input appearance-none rounded-full h-7 w-7 border-4 border-[#5F6368] bg-[#C4C4C4] hover:shadow-lg hover:shadow-[#5F6368] hover:border-[#3B52B5] checked:bg-[#7EABFF] checked:border-[#3B52B5] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer"
@@ -109,7 +86,9 @@ function QuizAr(props) {
                 <label
                   className={`form-check-label ${
                     check1 && "text-green-400"
-                  } md:text-xl lg:text-2xl text-right font-bold ${(!check1) && "text-gray-800"}`}
+                  } md:text-xl lg:text-2xl text-right ${
+                    !check1 && "text-gray-800"
+                  }`}
                   htmlFor="flexRadioDefault1"
                 >
                   {props.propo1}
@@ -128,7 +107,9 @@ function QuizAr(props) {
                 <label
                   className={`form-check-label ${
                     check2 && "text-green-400"
-                  } inline-block md:text-xl lg:text-2xl font-bold ${(!check2) && "text-gray-800"}`}
+                  } inline-block md:text-xl lg:text-2xl ${
+                    !check2 && "text-gray-800"
+                  }`}
                   htmlFor="flexRadioDefault2"
                 >
                   {props.propo2}
@@ -147,7 +128,9 @@ function QuizAr(props) {
                 <label
                   className={`form-check-label ${
                     check3 && "text-green-400"
-                  } inline-block md:text-xl lg:text-2xl font-bold ${(!check3) && "text-gray-800"}`}
+                  } inline-block md:text-xl lg:text-2xl ${
+                    !check3 && "text-gray-800"
+                  }`}
                   htmlFor="flexRadioDefault3"
                 >
                   {props.propo3}
@@ -160,7 +143,7 @@ function QuizAr(props) {
                 !hide && "flex"
               } mt-5 lg:mt-10 flex gap-1 flex-col justify-center items-end`}
             >
-              <p className="md:text-2xl lg:text-3xl font-bold">{evaluer}</p>
+              <p className="md:text-2xl lg:text-3xl">{evaluer}</p>
               <div className="flex flex-col justify-center items-end">
                 <Link to="../cours">
                   <button className="container bg-[#4ED964] rounded-2xl px-7 py-3 h-fit w-fit mt-4 md:text-xl lg:text-2xl font-bold text-black text-center shadow-sm hover:scale-105 hover:shadow-md">
@@ -178,10 +161,10 @@ function QuizAr(props) {
               </div>
             </div>
           </div>
-          <div className=" p-5 flex flex-col gap-5 bg-[#FAE0B2] rounded-3xl">
+          <div className="md:w-[40%] lg:w-[30%] p-5 flex flex-col gap-5 bg-[#FAE0B2] rounded-3xl">
             <div className="flex justify-center">
               <img
-                className="h-72 lg:h-96 bg-white rounded-3xl"
+                className="w-full md:max-h-72 lg:max-h-96 bg-white rounded-3xl"
                 src={props.QuizImage}
                 alt=""
               />
@@ -193,7 +176,6 @@ function QuizAr(props) {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

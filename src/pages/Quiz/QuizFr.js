@@ -16,7 +16,7 @@ function QuizFr(props) {
     if (props.propoCor === "1") SetCheck1(true);
     if (props.propoCor === "2") SetCheck2(true);
     if (props.propoCor === "3") SetCheck3(true);
-  }
+  };
 
   const handleSubmit = (e) => {
     SetDesact(true);
@@ -75,9 +75,7 @@ function QuizFr(props) {
               />
             </div>
 
-            <p className="md:text-lg lg:text-xl font-bold">
-             {props.QuizQuest}
-            </p>
+            <p className="md:text-lg lg:text-xl font-bold">{props.QuizQuest}</p>
           </div>
 
           <div className=" flex flex-col gap-5 justify-around items-start">
