@@ -136,7 +136,7 @@ function Form({SetCourses, Courses}) {
               Veuillez entrer les informations nécessaires pour ajouter le cours
           </p>
           <div className='h-[100%] w-2/3 pl-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around ml-32 rounded-xl'>
-            <label for="nomCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Le titre du cours : </label>
+            <label htmlFor="nomCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Le titre du cours : </label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
                    type="text" id="nomCours" name="titreCours" maxLength="59"
@@ -148,7 +148,7 @@ function Form({SetCourses, Courses}) {
                    onInvalid={handleInvalide}
                    
             />
-            <label for="nomCoursAr" className='block ml-5 text-sm lg:text-lg font-semibold'>Le titre du cours en arabe : </label>
+            <label htmlFor="nomCoursAr" className='block ml-5 text-sm lg:text-lg font-semibold'>Le titre du cours en arabe : </label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
                    type="text" id="nomCoursAr" name="titreCoursAr" maxLength="59"
@@ -161,7 +161,7 @@ function Form({SetCourses, Courses}) {
                    
             />
 
-            <label for="posCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Le numero du cours : </label>
+            <label htmlFor="posCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Le numero du cours : </label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3' 
                    type="text" id="posCours" name="positionCours" maxLength="59"
@@ -175,9 +175,9 @@ function Form({SetCourses, Courses}) {
             />
             <p className='block ml-5 text-sm lg:text-lg font-semibold'>Insérez une image descriptive du cours:</p>
             <FileInFr accept=".png" fileName="imgCours" genre="une" fileType="Image" onUploadFunction={onUploadCoursImageChange}/>
-            <label for="pdfCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Insérez le fichier du cours :</label>
+            <label htmlFor="pdfCours" className='block ml-5 text-sm lg:text-lg font-semibold'>Insérez le fichier du cours :</label>
             <FileInFr accept=".pdf" fileName="pdfCours" genre="un" fileType="fichier" onUploadFunction={onUploadFileChange} />
-            <label for="pdfCoursAr" className='block ml-5 text-sm lg:text-lg font-semibold'>Insérez la version arabe  du cours :</label>
+            <label htmlFor="pdfCoursAr" className='block ml-5 text-sm lg:text-lg font-semibold'>Insérez la version arabe  du cours :</label>
             <FileInFr accept=".pdf" fileName="pdfCours1" genre="un" fileType="fichier" onUploadFunction={onUploadFileArChange} />
           </div>
           <p className='ml-20 mb-5 mt-3 text-base lg:text-xl font-semibold text-[#283D93]'>
@@ -186,7 +186,7 @@ function Form({SetCourses, Courses}) {
           
           <div className=' h-[130%] w-2/3 pl-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around ml-32 rounded-xl'>
           <label className='block ml-5 text-sm lg:text-lg font-semibold'> Veuillez Insérer les propositions du quiz </label>
-            <label for="QuestQuizFr" className='block ml-5 text-sm lg:text-lg font-semibold'>La question du quiz : </label>
+            <label htmlFor="QuestQuizFr" className='block ml-5 text-sm lg:text-lg font-semibold'>La question du quiz : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.QuestQuizFr || ""}
@@ -198,7 +198,7 @@ function Form({SetCourses, Courses}) {
                     onInvalid={handleInvalide}
                     // pattern=""
             />
-            <label for="QuestQuizAr" className='block ml-5 text-sm lg:text-lg font-semibold'>La question du quiz en arabe : </label>
+            <label htmlFor="QuestQuizAr" className='block ml-5 text-sm lg:text-lg font-semibold'>La question du quiz en arabe : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.QuestQuizAr || ""}
@@ -210,7 +210,7 @@ function Form({SetCourses, Courses}) {
                     onInvalid={handleInvalide}
                     // pattern="\S+"
             />
-            <label for="Proposition1" className='block ml-5 text-sm lg:text-lg font-semibold'>Première proposition : </label>
+            <label htmlFor="Proposition1" className='block ml-5 text-sm lg:text-lg font-semibold'>Première proposition : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop1 || ""}
@@ -222,7 +222,7 @@ function Form({SetCourses, Courses}) {
                     onInvalid={handleInvalide}
                     // pattern="\S+"
             />
-            <label for="Proposition1Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrez la première proposition en arabe : </label>
+            <label htmlFor="Proposition1Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrez la première proposition en arabe : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop1Ar || ""}
@@ -234,7 +234,7 @@ function Form({SetCourses, Courses}) {
                     onInvalid={handleInvalide}
                     // pattern="\S+"
             />
-            <label for="Proposition2" className='block ml-5 text-sm lg:text-lg font-semibold'>Deuxième proposition : </label>
+            <label htmlFor="Proposition2" className='block ml-5 text-sm lg:text-lg font-semibold'>Deuxième proposition : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop2 || ""}
@@ -246,7 +246,7 @@ function Form({SetCourses, Courses}) {
                     onInvalid={handleInvalide}
                     
             />
-            <label for="Proposition2Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la euxième proposition en arabe : </label>
+            <label htmlFor="Proposition2Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la euxième proposition en arabe : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop2Ar || ""}
@@ -258,7 +258,7 @@ function Form({SetCourses, Courses}) {
                     onInvalid={handleInvalide}
                     
             />
-            <label for="Proposition3" className='block ml-5 text-sm lg:text-lg font-semibold'>Troisième proposition : </label>
+            <label htmlFor="Proposition3" className='block ml-5 text-sm lg:text-lg font-semibold'>Troisième proposition : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop3 || ""}
@@ -269,7 +269,7 @@ function Form({SetCourses, Courses}) {
                     onInput={handleInput}
                     onInvalid={handleInvalide}
             />
-            <label for="Proposition3Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la troisième proposition en arabe: </label>
+            <label htmlFor="Proposition3Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrer la troisième proposition en arabe: </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop3Ar || ""}
@@ -290,7 +290,7 @@ function Form({SetCourses, Courses}) {
             <FileInFr accept=".png" fileName="imgQuiz" genre="une" fileType="Image"  onUploadFunction={onUploadQuizImageChange}  />
           </div>
           <div className='flex flex-row justify-end w-[100%] h-fit'>
-            <label for="sub" className='w-fit h-10 lg:h-14 p-2 lg:p-3 mr-6 lg:mr-10 mt-2 lg:mt-4 mb-6 rounded-lg cursor-pointer bg-[#FFDFD9] hover:scale-110 hover:bg-[#FFC5C1] flex flex-row gap-3'>
+            <label htmlFor="sub" className='w-fit h-10 lg:h-14 p-2 lg:p-3 mr-6 lg:mr-10 mt-2 lg:mt-4 mb-6 rounded-lg cursor-pointer bg-[#FFDFD9] hover:scale-110 hover:bg-[#FFC5C1] flex flex-row gap-3'>
               <img className='h-[80%] lg:h-[80%] w-[90%] lg:w-[70%] my-auto' src="/Cours/Icons/Submit.svg" alt="icon"/>
               <div className='text-xs lg:text-lg my-auto font-semibold text-[#202253]'>
                 Terminer

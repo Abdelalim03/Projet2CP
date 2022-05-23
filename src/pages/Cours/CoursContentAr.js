@@ -56,7 +56,7 @@ export default function CoursContent() {
       .catch((err) => {
         console.log(err.message);
       });
-  }, []);
+  }, [coursId]);
 
   return (
     <div className=" flex flex-col lg:rounded-r-[50px] md:rounded-r-[30px] bg-white h-screen font-['Tajawal'] w-screen  ">
@@ -83,14 +83,7 @@ export default function CoursContent() {
             )}
           </div>
         </div>
-        {/* <label type="file">
-          <img
-            className="lg:w-12 md:w-8 hover:cursor-pointer hover:scale-110 hover:shadow-sm mr-8 "
-            src="/Cours/Icons/Upload.png"
-            alt=""
-          />
-          <input type="file" className="hidden" />
-        </label> */}
+
       </div>
 
       {isLoading && (

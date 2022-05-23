@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import GetCurrentUser from "../../Components/GetCurrentUser";
 import Absolute from "./Absolute";
 const axios = require("axios");
 

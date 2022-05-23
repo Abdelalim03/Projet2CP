@@ -42,11 +42,9 @@ function Cours() {
           setIsPending(false);
           console.log(err.message);
       })
-
     return () => abortControl.abort();
   }, [])
  
-
   const mode = GetMode();
    return (    
       <>

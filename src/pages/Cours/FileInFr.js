@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, {useState} from 'react'
 
 export default function FileInFr(props) {
     const [etatSel, setEtatSel] = useState(`Auc${props.genre} ${props.fileType} n'est choisi`);
@@ -21,7 +21,7 @@ export default function FileInFr(props) {
     };
     return (
         <div className="file-uploader flex flex-row">
-            <label for={`${props.fileName}`} className='h-fit w-fit p-1 border-2 bg-white border-blue-400 text-sm lg:text-lg font-semibold rounded-md'>Choisissez {`${props.genre}`} {`${props.fileType}`}</label>
+            <label htmlFor={`${props.fileName}`} className='h-fit w-fit p-1 border-2 bg-white border-blue-400 text-sm lg:text-lg font-semibold rounded-md'>Choisissez {`${props.genre}`} {`${props.fileType}`}</label>
             <input required type="file" onChange={handleFileInput} accept={`${props.accept}`} id={`${props.fileName}`} name={`${props.fileName}`} className='hidden'/>
             <p className={`h-fit w-fit p-[6px] ml-3 text-sm lg:text-lg font-medium ${textColor}`}>{etatSel}</p>
         </div>

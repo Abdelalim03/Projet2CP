@@ -1,5 +1,4 @@
 import React from 'react'
-import GetLanguage from '../../Components/GetLanguage'
 
 
 function Box(props) {

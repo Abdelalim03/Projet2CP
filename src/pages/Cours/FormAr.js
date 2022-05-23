@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import FileInAr from './FileInAr';
-import FileIn from './FileInFr';
+
 
 
 function FormAr(Courses, SetCourses) {
@@ -139,7 +139,7 @@ function FormAr(Courses, SetCourses) {
           </p>
           <div className='h-[100%] w-2/3 pr-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around mr-32 rounded-xl'>
 
-          <label for="nomCoursAr" className='block mr-5 text-sm lg:text-lg font-semibold'>عنوان الدرس :</label>
+          <label htmlFor="nomCoursAr" className='block mr-5 text-sm lg:text-lg font-semibold'>عنوان الدرس :</label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pr-3' 
                    type="text" id="nomCoursAr" name="titreCoursAr" maxLength="59"
@@ -151,7 +151,7 @@ function FormAr(Courses, SetCourses) {
                    onInvalid={handleInvalide}
                    
             />
-            <label for="nomCours" className='block mr-5 text-sm lg:text-lg font-semibold'>اعد إدخال عنوان الدرس بالفرنسية :</label>
+            <label htmlFor="nomCours" className='block mr-5 text-sm lg:text-lg font-semibold'>اعد إدخال عنوان الدرس بالفرنسية :</label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pr-3' 
                    type="text" id="nomCoursAr" name="titreCours" maxLength="59"
@@ -164,7 +164,7 @@ function FormAr(Courses, SetCourses) {
                    
             />
 
-<label for="posCours" className='block ml-5 text-sm lg:text-lg font-semibold'>الرجاء ادخال ترتيب الدرس : </label>
+<label htmlFor="posCours" className='block ml-5 text-sm lg:text-lg font-semibold'>الرجاء ادخال ترتيب الدرس : </label>
             <input  
                    className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pr-3' 
                    type="text" id="posCours" name="positionCours" maxLength="59"
@@ -178,9 +178,9 @@ function FormAr(Courses, SetCourses) {
             />
             <p className='block mr-5 text-sm lg:text-lg font-semibold'>صورة مرتبطة بالدرس :</p>
             <FileInAr accept=".png" fileName="imgCours" fileType="صورة" onUploadFunction={onUploadCoursImageChange}/>
-            <p for="pdfCours" className='block mr-5 text-sm lg:text-lg font-semibold'>أدخل ملف الدرس :</p>
+            <p htmlFor="pdfCours" className='block mr-5 text-sm lg:text-lg font-semibold'>أدخل ملف الدرس :</p>
             <FileInAr accept=".pdf" fileName="pdfCours" fileType="ملف" onUploadFunction={onUploadFileArChange}/>
-            <p for="pdfCoursFr" className='block mr-5 text-sm lg:text-lg font-semibold'> أعد إدخال ملف الدرس بالفرنسية:</p>
+            <p htmlFor="pdfCoursFr" className='block mr-5 text-sm lg:text-lg font-semibold'> أعد إدخال ملف الدرس بالفرنسية:</p>
             <FileInAr accept=".pdf" fileName="pdfCoursFr" fileType="ملف" onUploadFunction={onUploadFileChange}/>
             
 
@@ -189,7 +189,7 @@ function FormAr(Courses, SetCourses) {
             يرجى إدخال المعلومات اللازمة لإضافة الإستجواب
           </p>
           <div className='h-[130%] w-2/3 pr-4 mb-8 flex flex-col bg-[#90E0EF]/40 justify-around mr-32 rounded-xl'>
-          <label for="QuestQuizFr" className='block ml-5 text-sm lg:text-lg font-semibold'> سؤال الاستجواب : </label>
+          <label htmlFor="QuestQuizFr" className='block ml-5 text-sm lg:text-lg font-semibold'> سؤال الاستجواب : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.QuestQuizAr || ""}
@@ -201,7 +201,7 @@ function FormAr(Courses, SetCourses) {
                     onInvalid={handleInvalide}
                     pattern="\S+"
             />
-            <label for="QuestQuizAr" className='block ml-5 text-sm lg:text-lg font-semibold'> سؤال الاستجواب بالفرنسية :</label>
+            <label htmlFor="QuestQuizAr" className='block ml-5 text-sm lg:text-lg font-semibold'> سؤال الاستجواب بالفرنسية :</label>
             <input 
                     onChange={handleChange}
                     value={inputs.QuestQuizAr || ""}
@@ -213,7 +213,7 @@ function FormAr(Courses, SetCourses) {
                     onInvalid={handleInvalide}
                     pattern="\S+"
             />
-            <label for="Proposition1Ar" className='block mr-5 text-sm lg:text-lg font-semibold'>الإقتراح الأول : </label>
+            <label htmlFor="Proposition1Ar" className='block mr-5 text-sm lg:text-lg font-semibold'>الإقتراح الأول : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop1Ar || ""}
@@ -225,7 +225,7 @@ function FormAr(Courses, SetCourses) {
                    onInvalid={handleInvalide}
                     
             />
-            <label for="Proposition1" className='block mr-5 text-sm lg:text-lg font-semibold'>أعد إدخال الاقتراح بالفرنسية :  </label>
+            <label htmlFor="Proposition1" className='block mr-5 text-sm lg:text-lg font-semibold'>أعد إدخال الاقتراح بالفرنسية :  </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop1 || ""}
@@ -237,7 +237,7 @@ function FormAr(Courses, SetCourses) {
                    onInvalid={handleInvalide}
                     
             />
-            <label for="Proposition2Ar" className='block mr-5 text-sm lg:text-lg font-semibold'>الإقتراح الثاني : </label>
+            <label htmlFor="Proposition2Ar" className='block mr-5 text-sm lg:text-lg font-semibold'>الإقتراح الثاني : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop2Ar || ""}
@@ -248,7 +248,7 @@ function FormAr(Courses, SetCourses) {
                     onInput={handleInput}
                     onInvalid={handleInvalide}
             />
-            <label for="Proposition2" className='block mr-5 text-sm lg:text-lg font-semibold'>أعد إدخال الاقتراح بالفرنسية : </label>
+            <label htmlFor="Proposition2" className='block mr-5 text-sm lg:text-lg font-semibold'>أعد إدخال الاقتراح بالفرنسية : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop2 || ""}
@@ -259,7 +259,7 @@ function FormAr(Courses, SetCourses) {
                     onInput={handleInput}
                     onInvalid={handleInvalide}
             />
-            <label for="Proposition3Ar" className='block mr-5 text-sm lg:text-lg font-semibold'>الإقتراح الثالث : </label>
+            <label htmlFor="Proposition3Ar" className='block mr-5 text-sm lg:text-lg font-semibold'>الإقتراح الثالث : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop3Ar || ""}
@@ -271,7 +271,7 @@ function FormAr(Courses, SetCourses) {
                     onInvalid={handleInvalide}
                     
             />
-            <label for="Proposition3" className='block mr-5 text-sm lg:text-lg font-semibold'>أعد إدخال الاقتراح بالفرنسية : </label>
+            <label htmlFor="Proposition3" className='block mr-5 text-sm lg:text-lg font-semibold'>أعد إدخال الاقتراح بالفرنسية : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop3 || ""}
@@ -294,7 +294,7 @@ function FormAr(Courses, SetCourses) {
             <FileInAr accept=".png" fileName="imgQuiz" fileType="صورة" onUploadFunction={onUploadQuizImageChange} />
           </div>
           <div className='flex flex-row justify-end w-[100%] h-fit'>
-            <label for="sub" className='w-fit h-10 lg:h-14 p-2 lg:p-3 ml-6 lg:ml-10 mt-2 lg:mt-4 mb-6 rounded-lg cursor-pointer bg-[#FFDFD9] hover:scale-110 hover:bg-[#FFC5C1] flex flex-row-reverse gap-3'>
+            <label htmlFor="sub" className='w-fit h-10 lg:h-14 p-2 lg:p-3 ml-6 lg:ml-10 mt-2 lg:mt-4 mb-6 rounded-lg cursor-pointer bg-[#FFDFD9] hover:scale-110 hover:bg-[#FFC5C1] flex flex-row-reverse gap-3'>
               <img className='h-[80%] lg:h-[80%] w-[90%] lg:w-[70%] my-auto' src="/Cours/Icons/Submit.svg" alt="icon"/>
               <div className='text-xs lg:text-lg my-auto font-semibold text-[#202253]'>
                 إدخال
