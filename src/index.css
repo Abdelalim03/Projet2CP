@@ -68,6 +68,10 @@ code {
   display: none;
 }
 
+img{
+  user-select: none;
+}
+
 .container:hover .bigKey{
   display: flex;
   flex-direction: row;

@@ -33,9 +33,9 @@ function ExercicesFr({Max}) {
     <div className='symapp-container'>
       <div className=' relative bg-white rounded-l-2xl lg:rounded-l-3xl w-[92%] flex justify-center items-center flex-col '>
           <div className=' relative left-4 lg:left-7  flex flex-row'>
-            <img className='mt-5  lg:w-[120px] lg:h-[145px] w-[90px] h-[110px]' src='/Exercices/FlecheGif.gif' alt='FlecheB'/>
+            <img className='mt-5  lg:w-[120px] lg:h-[145px] w-[90px] h-[110px]' src='./Exercices/FlecheGif.gif' alt='FlecheB'/>
             <p className='mt-6 mr-6 lg:pl-24 pl-8 lg:pr-8 font-semibold text-[#194084] lg:text-[18px] text-[14px] '>Obtenez les clés en résolvant les exercices pour obtenir le cadeau !  </p>
-            <img className=' lg:h-[80px] h-[60px]' src='/Exercices/GiftGif.gif' alt='Gift'/>
+            <img className=' lg:h-[80px] h-[60px]' src='./Exercices/GiftGif.gif' alt='Gift'/>
           </div>
           
 
@@ -57,8 +57,8 @@ function ExercicesFr({Max}) {
                 
                 <Link to={"../ExercicesFr2/"+Max}>
                 <button className='Fleche'>
-                   <img className='absolute lg:h-[85px] lg:w-[150px] h-[45px] w-[110px] lg:left-[850px] lg:top-[485px] left-[590px] top-[360px]' src='/Exercices/FlecheD.svg' alt='FlecheB'/>
-                   <img className='FlechePleine absolute lg:h-[85px] lg:w-[150px] h-[45px] w-[110px] lg:left-[850px] lg:top-[485px] left-[590px] top-[360px]' src='/Exercices/FlecheDpleine.svg' alt='FlecheB'/>
+                   <img className='absolute lg:h-[85px] lg:w-[150px] h-[45px] w-[110px] lg:left-[850px] lg:top-[485px] left-[590px] top-[360px]' src='./Exercices/FlecheD.svg' alt='FlecheB'/>
+                   <img className='FlechePleine absolute lg:h-[85px] lg:w-[150px] h-[45px] w-[110px] lg:left-[850px] lg:top-[485px] left-[590px] top-[360px]' src='./Exercices/FlecheDpleine.svg' alt='FlecheB'/>
                 </button>
                 </Link>
             </div>

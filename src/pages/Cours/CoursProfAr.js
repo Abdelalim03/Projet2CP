@@ -40,7 +40,7 @@ function CoursProfAr(props) {
             onClick={showDiv}
             className="h-8 lg:h-10 w-8 lg:w-10 rounded-md text-lg lg:text-2xl font-semibold flex justify-center items-center bg-[#FAE0B2] hover:bg-[#fde8c4]"
           >
-            <img className=" h-4 w-4" src="/Cours/Icons/plus.png" />
+            <img className=" h-4 w-4" src="./Cours/Icons/plus.png" />
           </button>
         </div>
       </div>
@@ -59,7 +59,7 @@ function CoursProfAr(props) {
                   numExp={`${course.QuizExp}`}
                   image={`${course.ImageCours}`}
                   courseId={course.id}
-                  image2="/Cours/Archanges/flicha.svg"
+                  image2="./Cours/Archanges/flicha.svg"
                 />
               </div>
             );

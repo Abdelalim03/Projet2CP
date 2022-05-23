@@ -40,9 +40,9 @@ function ExercicesAr({Max}) {
     <div className='symapp-container-Ar'>
       <div className='rounded-l-2xl lg:rounded-l-3xl w-[92%] flex justify-center items-center flex-col '>
           <div className='relative left-14 lg:left-7 flex flex-row'>
-            <img className=' lg:h-[80px] h-[60px]' src='/Exercices/GiftGif.gif' alt='Gift'/>
+            <img className=' lg:h-[80px] h-[60px]' src='./Exercices/GiftGif.gif' alt='Gift'/>
             <p className="mt-6 pl-3 mx-14 lg:mx-20 font-semibold font-['Tajawal'] text-[#194084] lg:text-[18px] text-[14px]"> أحصل على المفاتيح بحل التمارين للوصول الى الهدية </p>
-            <img className='mt-5  lg:w-[120px] lg:h-[145px] w-[90px] h-[110px]' src='/Exercices/FlecheButtRight.gif' alt='FlecheB'/>
+            <img className='mt-5  lg:w-[120px] lg:h-[145px] w-[90px] h-[110px]' src='./Exercices/FlecheButtRight.gif' alt='FlecheB'/>
           </div>
           
 
@@ -62,8 +62,8 @@ function ExercicesAr({Max}) {
               ))}
                 <Link to={"../ExercicesAr2/"+Max}>
                 <button className='Fleche'>
-                   <img className='absolute lg:h-[85px] lg:w-[150px] h-[45px] w-[110px] lg:right-[850px] lg:top-[485px] right-[590px] top-[360px]' src='/Exercices/FlecheG.svg' alt='FlecheB'/>
-                   <img className='FlechePleine absolute lg:h-[85px] lg:w-[150px] h-[45px] w-[110px] lg:right-[850px] lg:top-[485px] right-[590px] top-[360px]' src='/Exercices/FlecheGpleine.svg' alt='FlecheB'/>
+                   <img className='absolute lg:h-[85px] lg:w-[150px] h-[45px] w-[110px] lg:right-[850px] lg:top-[485px] right-[590px] top-[360px]' src='./Exercices/FlecheG.svg' alt='FlecheB'/>
+                   <img className='FlechePleine absolute lg:h-[85px] lg:w-[150px] h-[45px] w-[110px] lg:right-[850px] lg:top-[485px] right-[590px] top-[360px]' src='./Exercices/FlecheGpleine.svg' alt='FlecheB'/>
                 </button>
                 </Link>
             </div>

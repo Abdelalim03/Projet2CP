@@ -45,7 +45,7 @@ export default function MenuAr({userName, userAvatar, Max, score}) {
               </div>
               <img
                 className="lg:h-72 lg:w-96 lg:mb-20 md:w-72  md:mb-14 "
-                src="/menu/FlippedImageCours.svg"
+                src="./menu/FlippedImageCours.svg"
               />
             </div>
           </div>
@@ -80,16 +80,16 @@ export default function MenuAr({userName, userAvatar, Max, score}) {
             messageMotivant="!تمرن "
             mainContent="تمارين"
             contentDescription="اختبر معارفك "
-            Image="/menu/FlippedImageExos.svg"
+            Image="./menu/FlippedImageExos.svg"
             imageProps="lg:h-40 lg:w-72  lg:mt-14 md:h-36 md:w-48 md:mt-10 "
           />
           <CustomCardAr
             path={"./dessiner/"+Max}
             bgcolor="bg-symapp-blue-light-second "
             messageMotivant="! استمتع"
-            mainContent="مود ليبر"
+            mainContent="رسم حر"
             contentDescription="طبق افكارك"
-            Image="/menu/ImageDessiner.svg"
+            Image="./menu/ImageDessiner.svg"
             imageProps=" ml-16 mt-3 mr-8 lg:h-48 md:h-32 "
           />
         </div>

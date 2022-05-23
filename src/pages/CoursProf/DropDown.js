@@ -35,7 +35,7 @@ const Dropdown = ({ color }) => {
           >
             <img
               className="w-4 lg:w-7 h-4 lg:h-7"
-              src="/Prof/3dots.svg"
+              src="./Prof/3dots.svg"
               alt="icon"
             />
           </button>
@@ -57,7 +57,7 @@ const Dropdown = ({ color }) => {
               onClick={(e) => e.preventDefault()}
             >
               <div className="flex items-center gap-7">
-                <img className="w-5" src="/Prof/3dots.svg" alt="icon" />
+                <img className="w-5" src="./Prof/3dots.svg" alt="icon" />
                 <span>Action</span>
               </div>
             </a>
@@ -71,7 +71,7 @@ const Dropdown = ({ color }) => {
               onClick={(e) => e.preventDefault()}
             >
               <div className="flex items-center gap-7">
-                <img className="w-5" src="/Prof/3dots.svg" alt="icon" />
+                <img className="w-5" src="./Prof/3dots.svg" alt="icon" />
                 <span>Another Action</span>
               </div>
             </a>

@@ -8,16 +8,16 @@ function Avatar() {
   let { id } = useParams();
 
   const paths = [
-    { name: "/avatar/Group-1.svg", id: 1 },
-    { name: "/avatar/Group-2.svg", id: 2 },
-    { name: "/avatar/Group-3.svg", id: 3 },
-    { name: "/avatar/Group-4.svg", id: 4 },
-    { name: "/avatar/Group-5.svg", id: 5 },
-    { name: "/avatar/Group-6.svg", id: 6 },
-    { name: "/avatar/Group-7.svg", id: 7 },
-    { name: "/avatar/Group-8.svg", id: 8 },
-    { name: "/avatar/Group-9.svg", id: 9 },
-    { name: "/avatar/Group.svg", id: 10 },
+    { name: "./avatar/Group-1.svg", id: 1 },
+    { name: "./avatar/Group-2.svg", id: 2 },
+    { name: "./avatar/Group-3.svg", id: 3 },
+    { name: "./avatar/Group-4.svg", id: 4 },
+    { name: "./avatar/Group-5.svg", id: 5 },
+    { name: "./avatar/Group-6.svg", id: 6 },
+    { name: "./avatar/Group-7.svg", id: 7 },
+    { name: "./avatar/Group-8.svg", id: 8 },
+    { name: "./avatar/Group-9.svg", id: 9 },
+    { name: "./avatar/Group.svg", id: 10 },
   ];
 
   const language = GetLanguage();

@@ -50,7 +50,7 @@ function QuizAr(props) {
               <div className="flex justify-center items-center md:w-10 lg:w-14 md:h-10 lg:h-14 bg-[#FAE0B2] rounded-lg hover:cursor-pointer hover:scale-110 hover:shadow-sm">
                 <img
                   className="scale-x-flip w-fit"
-                  src="/quiz/return.svg"
+                  src= "./quiz/return.svg"
                   alt=""
                 />
               </div>
@@ -64,7 +64,7 @@ function QuizAr(props) {
           <button onClick={handleReset}>
             <img
               className="md:w-10 lg:w-12 scale-x-flip hover:scale-x-flip hover:cursor-pointer hover:scale-110 hover:shadow-sm"
-              src="/quiz/reload.svg"
+              src= "./quiz/reload.svg"
               alt=""
             />
           </button>

@@ -9,7 +9,6 @@ function Logo() {
   return (
       <div className='flex flex-row justify-center items-center h-screen w-screen bg-[#FDFDFD]'>
          <img className='mb-14 lg:h-[400px] lg:w-[950px] h-[300px] w-[650px]' src='./Gif/logo.gif'/>
-         
       </div>
       
   )

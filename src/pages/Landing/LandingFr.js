@@ -9,7 +9,7 @@ function LandingFr() {
     <div className='relative w-screen h-screen selection:bg-fuchsia-300'>
         <div className='flex justify-start'>
             <div className='absolute left-3 top-4 lg:top-5 font-light text-2xl lg:text-4xl'>
-              <img className='h-16' src="/landing/logos.svg" alt="logo" />
+              <img className='h-16'  src="./landing/logos.svg" alt="logo" />
             </div>
             <div className='w-[40%] h-screen py-20 lg:py-32 flex flex-col '>
             <div className='flex flex-col h-[40%] mb-20 lg:mb-28 ml-[10%]'>

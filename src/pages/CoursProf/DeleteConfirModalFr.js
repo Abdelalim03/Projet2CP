@@ -18,7 +18,7 @@ export default function DeleteConfirModal({ CourseId, Courses, SetCourses }) {
   return (
     <>
       <button type="button" onClick={() => setShowModal(true)}>
-        <img className="w-10" src="/Prof/delete.png" alt="icon" />
+        <img className="w-10" src="./Prof/delete.png" alt="icon" />
       </button>
       {showModal ? (
         <>
@@ -28,7 +28,7 @@ export default function DeleteConfirModal({ CourseId, Courses, SetCourses }) {
               <div className="rounded-lg shadow-lg relative flex flex-col w-full px-20 py-10 bg-white outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex flex-col items-center gap-5 justify-center rounded-t">
-                  <img className="w-24" src="/Prof/Trash.svg" alt="icon" />
+                  <img className="w-24" src="./Prof/Trash.svg" alt="icon" />
 
                   <h3 className="mt-5 text-3xl text-center font-semibold">
                     Voulez vous vraiment <br></br>

@@ -133,7 +133,7 @@ function FormAr(Courses, SetCourses) {
 
   return (
         <form onSubmit={handleSubmit} className='h-3/4 w-4/5 bg-white overflow-auto'>
-          <img className='fixed h-10 w-6 lg:h-14 lg:w-10 left-[132px] lg:left-[230px] top-36 lg:top-52' src='/Cours/Icons/FormInv.svg' alt='form' />
+          <img className='fixed h-10 w-6 lg:h-14 lg:w-10 left-[132px] lg:left-[230px] top-36 lg:top-52' src='./Cours/Icons/FormInv.svg' alt='form' />
           <p className='mr-20 mb-5 mt-3 text-base lg:text-xl font-semibold text-[#283D93]'>
               يرجى إدخال المعلومات اللازمة لإضافة الدرس
           </p>
@@ -295,7 +295,7 @@ function FormAr(Courses, SetCourses) {
           </div>
           <div className='flex flex-row justify-end w-[100%] h-fit'>
             <label htmlFor="sub" className='w-fit h-10 lg:h-14 p-2 lg:p-3 ml-6 lg:ml-10 mt-2 lg:mt-4 mb-6 rounded-lg cursor-pointer bg-[#FFDFD9] hover:scale-110 hover:bg-[#FFC5C1] flex flex-row-reverse gap-3'>
-              <img className='h-[80%] lg:h-[80%] w-[90%] lg:w-[70%] my-auto' src="/Cours/Icons/Submit.svg" alt="icon"/>
+              <img className='h-[80%] lg:h-[80%] w-[90%] lg:w-[70%] my-auto' src="./Cours/Icons/Submit.svg" alt="icon"/>
               <div className='text-xs lg:text-lg my-auto font-semibold text-[#202253]'>
                 إدخال
               </div>

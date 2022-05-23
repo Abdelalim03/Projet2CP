@@ -46,7 +46,7 @@ function QuizFr(props) {
           <div className="flex items-center gap-10">
             <Link to="../cours">
               <div className="flex justify-center items-center md:w-10 md:h-10 lg:w-14 lg:h-14 bg-[#FAE0B2] rounded-lg hover:cursor-pointer hover:scale-110 hover:shadow-sm">
-                <img className="w-fit" src="/quiz/return.svg" alt="" />
+                <img className="w-fit" src= "./quiz/return.svg" alt="" />
               </div>
             </Link>
             <div className="flex flex-col gap-1 items-start">
@@ -58,7 +58,7 @@ function QuizFr(props) {
           <button onClick={handleReset}>
             <img
               className="md:w-10 lg:w-12 hover:cursor-pointer hover:scale-110 hover:shadow-sm"
-              src="/quiz/reload.svg"
+              src= "./quiz/reload.svg"
               alt=""
             />
           </button>

@@ -49,7 +49,7 @@ function EtesVousFr({ User, currentuserId }) {
         {currentuserId === 0 ? ( 
           <Link to="/nom">
             <div onClick={() => handleMode("eleve")}>
-              <Card path="/etesvous/Eleve.png" scale="scale-100" name="Elève" />
+              <Card path="./etesvous/Eleve.png" scale="scale-100" name="Elève" />
             </div>
           </Link>
         ) : (
@@ -58,12 +58,12 @@ function EtesVousFr({ User, currentuserId }) {
               setShowModal(true);
             }}
           >
-            <Card path="/etesvous/Eleve.png" scale="scale-100" name="Elève" />
+            <Card path="./etesvous/Eleve.png" scale="scale-100" name="Elève" />
           </div>
         )}
           <div onClick={showMdp}>
             <Card
-              path="/etesvous/Enseignant.png"
+              path="./etesvous/Enseignant.png"
               scale="scale-125"
               name="Enseignant"
             />

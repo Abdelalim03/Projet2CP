@@ -98,13 +98,13 @@ let solutionPoints= [];
 const Canvas = useRef();
 
   let tableOfpoly=[
-      {img:"/Editeur/Polygones/mothaleth.png",type:3,id:1,cotes:3},
-      {img:"/Editeur/Polygones/morabe3.svg",type:4,id:2,cotes:4},
-      {img:"/Editeur/Polygones/Rectangle.svg",type:2,id:3,cotes:4},
-      {img:"/Editeur/Polygones/mo3ayan.svg",type:12,id:4,cotes:4},
-      {img:"/Editeur/Polygones/khomassi.svg",type:5,id:5,cotes:5},
-      {img:"/Editeur/Polygones/sodassi.svg",type:6,id:6,cotes:6},
-      {img:"/Editeur/Polygones/Cercle.svg",type:1,id:7,cotes:"∞"}
+      {img:"./Editeur/Polygones/mothaleth.png",type:3,id:1,cotes:3},
+      {img:"./Editeur/Polygones/morabe3.svg",type:4,id:2,cotes:4},
+      {img:"./Editeur/Polygones/Rectangle.svg",type:2,id:3,cotes:4},
+      {img:"./Editeur/Polygones/mo3ayan.svg",type:12,id:4,cotes:4},
+      {img:"./Editeur/Polygones/khomassi.svg",type:5,id:5,cotes:5},
+      {img:"./Editeur/Polygones/sodassi.svg",type:6,id:6,cotes:6},
+      {img:"./Editeur/Polygones/Cercle.svg",type:1,id:7,cotes:"∞"}
   ]
 
 
@@ -1912,14 +1912,14 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
     return (    
       <>
  { ((!full || parseInt( Max)===48) && language==="français")&&
- <div className='symapp-container pl-10 overflow-auto'>
- <img onClick={showhelp} className='absolute cursor-pointer left-20 lg:left-28 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="/Editeur/helpIcon.jpg" alt="help"/>
+ <div className='symapp-container relative pl-10 overflow-auto'>
+ <img onClick={showhelp} className='absolute cursor-pointer left-20 lg:left-28 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="./Editeur/helpIcon.jpg" alt="help"/>
 
  <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!helpestOuvert && 'hidden'}`}>
             <div className='h-8 lg:h-12 w-[80%] flex flex-row justify-end bg-blue-200'>
                 <button onClick={showhelp} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
             </div>
-            <Help />
+            <Help language={language} />
  </div>
  <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!trueFrEstOuvert && 'hidden'}`}>
             <div className='h-8 lg:h-12 w-2/5 flex flex-row justify-end bg-blue-200'>
@@ -1954,7 +1954,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                 <div className='palButton h-16 flex items-center flex-row mt-0 lg:mt-3 w-fit'>
                     
                         <button className='h-11 lg:h-12 w-11 lg:w-12 flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                            <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 10.svg' alt='icon' />
+                            <img className='w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/Group 10.svg' alt='icon' />
                         </button>
                         <div className='palCol h-16  animate-[avatar_500ms_ease-in-out_1] w-[450px] lg:w-[500px] items-center  hidden flex-row gap-3'>
                             <div style={{backgroundColor:"black"}} className=' color-field ml-4 cursor-pointer h-[28px] w-[28px] rounded-sm hover:scale-125  '></div>
@@ -1973,21 +1973,21 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                     ((full)?<div className='flex'>
                     <div className='h-16 lg:h-20 w-16 lg:w-20 flex justify-center items-center'>
                     {(eff && cent) ? <button id="symcent" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-green-700 flex justify-center items-center border-2 border-[#6A5CF7] bg-green-500'>
-                        <img className='boutonImg w-full' src='/Editeur/EditorIcons/effects.png' alt='icon' />
+                        <img className='boutonImg w-full' src='./Editeur/EditorIcons/effects.png' alt='icon' />
                     </button>
                     :
                     <button id="symcent" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='boutonImg w-full' src='/Editeur/EditorIcons/symCent.svg' alt='icon' />
+                        <img className='boutonImg w-full' src='./Editeur/EditorIcons/symCent.svg' alt='icon' />
                     </button>
                     }
                     </div>
                     <div className='h-16 lg:h-20 w-16 lg:w-20 flex justify-center items-center'>
                     {(eff && !cent) ?<button id="symax" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-green-700 flex justify-center items-center border-2 border-[#6A5CF7] bg-green-500'>
-                        <img className='boutonImg w-full' src='/Editeur/EditorIcons/effects.png' alt='icon' />
+                        <img className='boutonImg w-full' src='./Editeur/EditorIcons/effects.png' alt='icon' />
                     </button>
                     :
                     <button id="symax" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='boutonImg w-full' src='/Editeur/EditorIcons/symAxe.svg' alt='icon' />
+                        <img className='boutonImg w-full' src='./Editeur/EditorIcons/symAxe.svg' alt='icon' />
                     </button>
                     }
                     </div>
@@ -2003,13 +2003,13 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
             <div className='mt-4 w-20 px-2  flex flex-col gap-2'>
                 <div id='deplacer' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button title='deplacer' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='boutonImg w-6 lg:w-8 h-6 lg:h-8' src='/Editeur/EditorIcons/Vector.png' alt='icon' />
+                        <img className='boutonImg w-6 lg:w-8 h-6 lg:h-8' src='./Editeur/EditorIcons/Vector.png' alt='icon' />
                     </button>
                 </div>
   
                 <button title='dessiner' disabled={(Check==="Shapes") && (parseInt(exoId)>2)} id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <div  className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 8.svg' alt='icon' />
+                        <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/Group 8.svg' alt='icon' />
                     </div>
                 </button>
                 <div id='point' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
@@ -2019,7 +2019,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                 </div>
                 <div  className='insPolygone relative h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button title='polygones' className='bouton relative h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/polygones.svg' alt='icon' />
+                        <img className='w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/polygones.svg' alt='icon' />
                     </button>
                     <div className='insPolygoneContent h-44 lg:h-56 w-28 pl-4 hidden absolute left-[50px] lg:left-[60px] -bottom-[100%] lg:-bottom-[110%]'>
                 <div className='z-10 w-20 lg:w-24 h-44 lg:h-56 px-1 border-2 flex flex-col justify-around border-[#6A5CF7] bg-[#FFDFD9]'>
@@ -2040,26 +2040,26 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                 </div>
                 <div id='fill' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button title='Colorer' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 14.svg' alt='icon' />
+                        <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/Group 14.svg' alt='icon' />
                     </button>
                 </div>
                 <div id='remove' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button title='gomme' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 12.svg' alt='icon' /> 
+                        <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/Group 12.svg' alt='icon' /> 
                     </button>
                 </div>
                 <div  className='rotate relative h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button title='rotation' className='bouton relative h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Arrow-33.svg' alt='icon' />
+                        <img className='w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/Arrow-33.svg' alt='icon' />
                     </button>
                     <div className='rotateContent hidden absolute pl-4 left-[50px] lg:left-[60px] bottom-[6px] h-[112px] lg:h-[128px] w-[73px] lg:w-20'>
                     <div className='h-[100%] w-14 lg:w-16 border-2 z-10 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <div data-rot={-90} className='rotateB1 cursor-pointer rotatos h-14 lg:h-16 w-[52px] lg:w-[60px] hover:bg-[#FFC5C1] flex justify-center items-center border-b-2 border-[#6A5CF7]'>
-                            <img className='rotateImg1 h-[60%] lg:h-[70%] w-[60%] lg:w-[70%]' src='/Editeur/EditorIcons/Arrow-gauche.png'/>
+                            <img className='rotateImg1 h-[60%] lg:h-[70%] w-[60%] lg:w-[70%]' src='./Editeur/EditorIcons/Arrow-gauche.png'/>
                         </div>
 
                         <div data-rot={90} className='rotateB2 cursor-pointer rotatos h-[52px] lg:h-[60px] w-[52px] lg:w-[60px] hover:bg-[#FFC5C1] flex justify-center items-center'>
-                            <img className='rotateImg2 h-[60%] lg:h-[70%] w-[60%] lg:w-[70%]' src='/Editeur/EditorIcons/Arrow-droite.png'/>
+                            <img className='rotateImg2 h-[60%] lg:h-[70%] w-[60%] lg:w-[70%]' src='./Editeur/EditorIcons/Arrow-droite.png'/>
                         </div>
                     </div>
                     </div>
@@ -2079,14 +2079,14 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
  
    }
  {(!full || parseInt( Max)===48) && (language==="arabe")&& 
- <div dir="rtl"  className='symapp-container-Ar pr-10 overflow-auto'>
-<img onClick={showhelp} className='absolute cursor-pointer right-20 lg:right-28 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="/Editeur/helpIcon.jpg" alt="help"/>
+ <div dir="rtl"  className='symapp-container-Ar relative pr-10 overflow-auto'>
+<img onClick={showhelp} className='absolute cursor-pointer right-20 lg:right-28 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="./Editeur/helpIcon.jpg" alt="help"/>
 
 <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!helpestOuvert && 'hidden'}`}>
            <div className='h-8 lg:h-12 w-[80%] flex flex-row justify-end bg-blue-200'>
                <button onClick={showhelp} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
            </div>
-           <Help />
+           <Help language={language} />
 </div>
      
  <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!trueFrEstOuvert && 'hidden'}`}>
@@ -2121,7 +2121,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                 <div className='flex justify-between items-center '>
                     <div className='palButton h-16 flex items-center flex-row mt-0 lg:mt-3 w-fit'>
                         <button className='h-11 lg:h-12 w-11 lg:w-12 flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                            <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 10.svg' alt='icon' />
+                            <img className='w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/Group 10.svg' alt='icon' />
                         </button>
                         <div className='palCol h-16 animate-[avatar_500ms_ease-in-out_1] lg:h-12 w-[450px] lg:w-[500px]  items-center hidden flex-row gap-3'>
                             <div style={{backgroundColor:"black"}} className=' color-field mr-4 cursor-pointer h-[28px] w-[28px] rounded-sm hover:scale-125 '></div>
@@ -2140,21 +2140,21 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                     ((full)?<div className='flex'>
                     <div className='h-16 lg:h-20 w-16 lg:w-20 flex justify-center items-center'>
                     {(eff && cent) ? <button id="symcent" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-green-700 flex justify-center items-center border-2 border-[#6A5CF7] bg-green-500'>
-                        <img className='boutonImg w-full' src='/Editeur/EditorIcons/effects.png' alt='icon' />
+                        <img className='boutonImg w-full' src='./Editeur/EditorIcons/effects.png' alt='icon' />
                     </button>
                     :
                     <button id="symcent" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='boutonImg w-full' src='/Editeur/EditorIcons/symCent.svg' alt='icon' />
+                        <img className='boutonImg w-full' src='./Editeur/EditorIcons/symCent.svg' alt='icon' />
                     </button>
                     }
                 </div>
                     <div className='h-16 lg:h-20 w-16 lg:w-20 flex justify-center items-center'>
                     {(eff && !cent) ?<button id="symax" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-green-700 flex justify-center items-center border-2 border-[#6A5CF7] bg-green-500'>
-                        <img className='boutonImg w-full' src='/Editeur/EditorIcons/effects.png' alt='icon' />
+                        <img className='boutonImg w-full' src='./Editeur/EditorIcons/effects.png' alt='icon' />
                     </button>
                     :
                     <button id="symax" className=' h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='boutonImg w-full' src='/Editeur/EditorIcons/symAxe.svg' alt='icon' />
+                        <img className='boutonImg w-full' src='./Editeur/EditorIcons/symAxe.svg' alt='icon' />
                     </button>
                     }
                 </div>
@@ -2169,12 +2169,12 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
             <div  className='mt-4 w-20 px-2  flex flex-col gap-2'>
                 <div id="deplacer" className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button title='تحريك' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='boutonImg w-6 lg:w-8 h-6 lg:h-8' src='/Editeur/EditorIcons/Vector.png' alt='icon' />
+                        <img className='boutonImg w-6 lg:w-8 h-6 lg:h-8' src='./Editeur/EditorIcons/Vector.png' alt='icon' />
                     </button>
                 </div>
                 <button title='رسم' disabled={(Check==="Shapes") && (parseInt(exoId)>2)} id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <div className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 8.svg' alt='icon' />
+                        <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/Group 8.svg' alt='icon' />
                     </div>
                 </button>
                 <div id='point' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
@@ -2184,7 +2184,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                 </div>
                 <div  className='insPolygone relative h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button title='الأشكال المنتظمة' className='bouton relative h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/polygones.svg' alt='icon' />
+                        <img className='w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/polygones.svg' alt='icon' />
                     </button>
                     <div className='insPolygoneContent h-44 lg:h-56 w-28 pr-4 hidden absolute right-[50px] lg:right-[60px] -bottom-[100%] lg:-bottom-[110%]'>
                         <div className='z-10 w-20 lg:w-24 h-44 lg:h-56 px-1 border-2 flex flex-col justify-around border-[#6A5CF7] bg-[#FFDFD9]'>
@@ -2207,26 +2207,26 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                 </div>
                 <div id='fill' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button title='تلوين' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 14.svg' alt='icon' />
+                        <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/Group 14.svg' alt='icon' />
                     </button>
                 </div>
                 <div id='remove' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button title='محو' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Group 12.svg' alt='icon' /> 
+                        <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/Group 12.svg' alt='icon' /> 
                     </button>
                 </div>
                 <div  className='rotate relative h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <button title='دوران' className='bouton relative h-[80%] w-[80%] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
-                        <img className='w-8 lg:w-10 h-8 lg:h-10' src='/Editeur/EditorIcons/Arrow-33.svg' alt='icon' />
+                        <img className='w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/Arrow-33.svg' alt='icon' />
                     </button>
                     <div className='rotateContent hidden absolute pr-4 right-[50px] lg:right-[60px] bottom-[6px] h-[112px] lg:h-[128px] w-[73px] lg:w-20'>
                         <div className='h-[100%] w-14 lg:w-16 border-2 z-10 border-[#6A5CF7] bg-[#FFDFD9]'>
                             <div data-rot={-90} className='rotateB1 rotatos cursor-pointer h-14 lg:h-16 w-[52px] lg:w-[60px] hover:bg-[#FFC5C1] flex justify-center items-center border-b-2 border-[#6A5CF7]'>
-                                <img className='rotateImg1 h-[60%] lg:h-[70%] w-[60%] lg:w-[70%]' src='/Editeur/EditorIcons/Arrow-gauche.png'/>
+                                <img className='rotateImg1 h-[60%] lg:h-[70%] w-[60%] lg:w-[70%]' src='./Editeur/EditorIcons/Arrow-gauche.png'/>
                             </div>
 
                             <div data-rot={90} className='rotateB2 rotatos cursor-pointer h-[52px] lg:h-[60px] w-[52px] lg:w-[60px] hover:bg-[#FFC5C1] flex justify-center items-center'>
-                                <img className='rotateImg2 h-[60%] lg:h-[70%] w-[60%] lg:w-[70%]' src='/Editeur/EditorIcons/Arrow-droite.png'/>
+                                <img className='rotateImg2 h-[60%] lg:h-[70%] w-[60%] lg:w-[70%]' src='./Editeur/EditorIcons/Arrow-droite.png'/>
                             </div>
                         </div>
                     </div>
@@ -2245,19 +2245,15 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
      {
          (full && parseInt( Max)<48 ) && (language==="français") &&
          <div className='symapp-container flex justify-center  items-center '>
-         
-                <img src="/Gif/cadeau.gif" alt="cad" />
+                <img src="./Gif/cadeau.gif" alt="cad" />
                  <div className='text-[50px] text-center mb-28 font-bold'>Pas encore! il faut d'abord finir les exercices 😉</div>
-                    
          </div>
      }
      {
          (full && parseInt( Max)<48 ) && (language==="arabe") &&
-         <div className='symapp-container-Ar flex justify-center items-center'>
-                 <div>
-                     <img src="/Gif/cadeau.gif" alt="cad" />
+         <div dir='rtl' className='symapp-container-Ar flex justify-center items-center'>
+                     <img src="./Gif/cadeau.gif" alt="cad" />
                      <div className='text-[50px] mb-28 text-center font-bold'>😉 حاول انهاء التمارين للحصول على الهدية</div>
-                 </div>
          </div>
      }
       </>

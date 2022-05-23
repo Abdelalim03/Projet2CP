@@ -6,7 +6,7 @@ import React from 'react'
 function BoxBloquee(props) {
     let indents = [];
     for (let i = 0; i < props.stars; i++) {
-    indents.push(<img key={i}  className={`coin lg:w-4 lg:h-4 w-[14px] h-[14px] px-[2px]`} src='/Exercices/coin.svg'/>);
+    indents.push(<img key={i}  className={`coin lg:w-4 lg:h-4 w-[14px] h-[14px] px-[2px]`} src='./Exercices/coin.svg'/>);
     }
 
   return (
@@ -16,7 +16,7 @@ function BoxBloquee(props) {
                 {indents}
             </div>
             <div className='lock1 w-[100%] lg:h-[52px] lg:mt-[6px] mt-[4px] h-[36px] flex flex-row justify-center'>
-                <img  className='w-[75%] h-[95%]' src='/Exercices/BLock.svg'/>
+                <img  className='w-[75%] h-[95%]' src='./Exercices/BLock.svg'/>
             </div>
             <div className='boxText toHide w-fit lg:h-[4px] h-[3px] m-auto lg:text-[18px] text-[14px] px-1 font-bold text-white flex flex-row justify-center'>
                  {props.numExoBloque}
@@ -26,7 +26,7 @@ function BoxBloquee(props) {
                 { (props.language==="arabe")&& <div className="toShow2 lg:mt-3 mt-2 hidden w-fit text-center lg:text-[21px] text-[14px] font-bold text-white m-auto lg:rounded-[20px] rounded-[15px] font-[Tajawal]">يجب الحصول على المفتاح  {props.numExoPrecedent}</div> }
             </div>
             <div className='lock2 hidden w-[100%] lg:h-14 h-[42px] lg:mt-2 mt-[8px]'>
-                <img  className='w-[75%] h-[95%]' src='/Exercices/BLock.svg'/>
+                <img  className='w-[75%] h-[95%]' src='./Exercices/BLock.svg'/>
             </div>
 
         </div>

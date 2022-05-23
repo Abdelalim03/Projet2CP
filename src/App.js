@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import NoPage from "./pages/NoPage/NoPage";
 import Menu from "./pages/Menu/Menu";
 import Avatar from "./pages/Avatar/Avatar";
@@ -20,6 +20,7 @@ import Logo from "./pages/Logo/Logo";
 
 
 function App() {
+  console.log( window.location.href);
   return (
     <Router>
       <Routes>

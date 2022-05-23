@@ -22,7 +22,7 @@ export default function DeleteConfirModalَAr({
   return (
     <>
       <button type="button" onClick={() => setShowModal(true)}>
-        <img className="w-32" src="/Prof/delete.png" alt="icon" />
+        <img className="w-32" src="./Prof/delete.png" alt="icon" />
       </button>
       {showModal ? (
         <>
@@ -32,7 +32,7 @@ export default function DeleteConfirModalَAr({
               <div className="rounded-lg shadow-lg relative flex flex-col px-20 py-10 w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex flex-col items-center gap-5 justify-center rounded-t">
-                  <img className="w-24" src="/Prof/Trash.svg" alt="icon" />
+                  <img className="w-24" src="./Prof/Trash.svg" alt="icon" />
 
                   <h3
                     dir="rtl"

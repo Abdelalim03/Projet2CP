@@ -1,14 +1,10 @@
 const path = require('path');
-const Store = require("electron-store");
 const { app, BrowserWindow } = require('electron');
 const isDev = require('electron-is-dev');
 
 // Conditionally include the dev tools installer to load React Dev Tools
 let installExtension, REACT_DEVELOPER_TOOLS;
 
-const store = new Store();
-
-store.set("users",{});
 
 if (isDev) {
   const devTools = require("electron-devtools-installer");
@@ -33,7 +29,7 @@ function createWindow() {
       preload: path.join(__dirname, "preload.js"),
     },
   });
-
+  win.setMenu(null)
   // and load the index.html of the app.
   // win.loadFile("index.html");
   win.once("ready-to-show", () => {
@@ -41,6 +37,7 @@ function createWindow() {
     win.show();
   });
   win.loadURL(
+    // "http://localhost:3000"
     isDev
       ? "http://localhost:3000"
       : `file://${path.join(__dirname, "../build/index.html")}`

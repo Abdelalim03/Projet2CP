@@ -64,7 +64,7 @@ export default function CoursContent() {
         <div className="flex items-center flex-row-reverse lg:gap-10 md:gap-2 pr-6 ">
           <Link to="../cours">
             <div className="flex justify-center items-center lg:w-14 lg:h-14 md:h-9 md:w-9 bg-[#FAE0B2] rounded-lg hover:cursor-pointer hover:scale-110 rotate-180 hover:shadow-sm">
-              <img className="w-fit" src="/quiz/return.svg" alt="" />
+              <img className="w-fit" src="./quiz/return.svg" alt="" />
             </div>
           </Link>
           <div className="flex flex-col gap-1 items-end">

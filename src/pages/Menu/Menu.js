@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import MenuAr from "./MenuAr";
 import MenuFr from "./MenuFr";
+import GetMode from "../../Components/GetMode";
 import { useOutletContext, useParams } from "react-router-dom";
 
 function Menu() {
@@ -20,6 +21,7 @@ function Menu() {
         console.log(err);
       });
   }, []);
+  const mode = GetMode();
 
   const [language, setlanguage] = useOutletContext();
   return (
@@ -28,7 +30,7 @@ function Menu() {
         <MenuFr userAvatar={User.avatar} userName={User.nom} Max={User.maxExo} score={User.score} />
       )}
       {language === "arabe" && (
-        <MenuAr userAvatar={User.avatar} userName={User.nomAr} Max={User.maxExo} score={User.score} />
+        <MenuAr userAvatar={User.avatar} userName={mode==="prof"? User.nomAr:User.nom} Max={User.maxExo} score={User.score} />
       )}
     </>
   );

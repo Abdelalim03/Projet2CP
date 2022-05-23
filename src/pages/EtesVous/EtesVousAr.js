@@ -54,7 +54,7 @@ function EtesVousAr({ User, currentuserId }) {
           <Link to="/nom">
             <div onClick={() => handleMode("eleve")}>
               <CardAr
-                path="/etesvous/Eleve.png"
+                path="./etesvous/Eleve.png"
                 scale="scale-100"
                 name="تلميـذ"
               />
@@ -67,7 +67,7 @@ function EtesVousAr({ User, currentuserId }) {
             }}
           >
             <CardAr
-              path="/etesvous/Eleve.png"
+              path="./etesvous/Eleve.png"
               scale="scale-100"
               name="تلميـذ"
             />
@@ -77,7 +77,7 @@ function EtesVousAr({ User, currentuserId }) {
             onClick={showMdp}
           >
             <CardAr
-              path="/etesvous/Enseignant.png"
+              path="./etesvous/Enseignant.png"
               scale="scale-125"
               name="أستـاذ"
             />

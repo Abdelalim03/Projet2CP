@@ -39,15 +39,15 @@ function ExercicesAr2() {
           <div className='absolute top-[44px] lg:right-8 right-4  lg:w-[1000px] w-[710px]'>
           <Link to="../exercices">
                 <button className='Fleche'>
-                   <img className='absolute right-0 lg:top-[495px] top-[355px] lg:h-[85px] lg:w-[150px] h-[45px] w-[110px]' src='/Exercices/FlecheD.svg' alt='FlecheB'/>
-                   <img className='FlechePleine absolute right-0 lg:top-[495px] top-[355px] lg:h-[85px] lg:w-[150px] h-[45px] w-[110px]' src='/Exercices/FlecheDpleine.svg' alt='FlecheB'/>
+                   <img className='absolute right-0 lg:top-[495px] top-[355px] lg:h-[85px] lg:w-[150px] h-[45px] w-[110px]' src='./Exercices/FlecheD.svg' alt='FlecheB'/>
+                   <img className='FlechePleine absolute right-0 lg:top-[495px] top-[355px] lg:h-[85px] lg:w-[150px] h-[45px] w-[110px]' src='./Exercices/FlecheDpleine.svg' alt='FlecheB'/>
                 </button>
                 </Link>
                 <div title='حاول انهاء التمارين للحصول على الهدية' onClick={()=>{(parseInt(Max)===48)&& navigate("../dessiner/"+Max)}}  className='LastGift absolute lg:right-[806px] right-[560px] top-[0px] lg:w-[130px] lg:h-[190px] w-[90px] h-[150px]'>
-                    <img className={`absolute top-0 right-0 lg:w-[120px] lg:h-[180px] w-[80px] h-[130px] ${(parseInt(Max)===48) && "cursor-pointer"}`} src='/Exercices/BigGiftGif.gif' alt='FlecheB'/>
+                    <img className={`absolute top-0 right-0 lg:w-[120px] lg:h-[180px] w-[80px] h-[130px] ${(parseInt(Max)===48) && "cursor-pointer"}`} src='./Exercices/BigGiftGif.gif' alt='FlecheB'/>
                     {(parseInt(Max)<48) && <>
                       <div className='back absolute top-0 right-0 lg:w-[120px] lg:h-[180px] w-[80px] h-[130px] select-none '></div>   
-                    <img  className='locked absolute lg:top-[110px] lg:right-10 top-[80px] right-[26px] lg:w-[40px] lg:h-[50px] w-[30px] h-[40px] ' src='/Exercices/YLock.svg'/>
+                    <img  className='locked absolute lg:top-[110px] lg:right-10 top-[80px] right-[26px] lg:w-[40px] lg:h-[50px] w-[30px] h-[40px] ' src='./Exercices/YLock.svg'/>
                     </>
                       }
 

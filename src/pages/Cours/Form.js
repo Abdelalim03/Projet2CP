@@ -131,7 +131,7 @@ function Form({SetCourses, Courses}) {
 
   return (
         <form onSubmit={handleSubmit} className='h-3/4 w-4/5 bg-white overflow-auto'>
-          <img className='fixed h-10 w-6 lg:h-14 lg:w-10 right-[132px] lg:right-[230px] top-36 lg:top-52' src='/Cours/Icons/Form.svg' alt='form' />
+          <img className='fixed h-10 w-6 lg:h-14 lg:w-10 right-[132px] lg:right-[230px] top-36 lg:top-52' src='./Cours/Icons/Form.svg' alt='form' />
           <p className='ml-20 mb-5 mt-3 text-base lg:text-xl font-semibold text-[#283D93]'>
               Veuillez entrer les informations nécessaires pour ajouter le cours
           </p>
@@ -291,7 +291,7 @@ function Form({SetCourses, Courses}) {
           </div>
           <div className='flex flex-row justify-end w-[100%] h-fit'>
             <label htmlFor="sub" className='w-fit h-10 lg:h-14 p-2 lg:p-3 mr-6 lg:mr-10 mt-2 lg:mt-4 mb-6 rounded-lg cursor-pointer bg-[#FFDFD9] hover:scale-110 hover:bg-[#FFC5C1] flex flex-row gap-3'>
-              <img className='h-[80%] lg:h-[80%] w-[90%] lg:w-[70%] my-auto' src="/Cours/Icons/Submit.svg" alt="icon"/>
+              <img className='h-[80%] lg:h-[80%] w-[90%] lg:w-[70%] my-auto' src="./Cours/Icons/Submit.svg" alt="icon"/>
               <div className='text-xs lg:text-lg my-auto font-semibold text-[#202253]'>
                 Terminer
               </div>

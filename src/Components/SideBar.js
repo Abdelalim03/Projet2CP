@@ -29,12 +29,12 @@ export default function SideBar(props) {
                     {isOpen ? (
                       <img
                         className=" lg:h-5 lg:w-[37px] md:h-4 md:w-7 lg:mr-2"
-                        src="/SideBar/Xicon.svg"
+                        src="./SideBar/Xicon.svg"
                       />
                     ) : (
                       <img
                         className=" lg:h-[37px] lg:w-[37px] md:h-7 md:w-7 "
-                        src="/SideBar/ToggleIcon.svg"
+                        src="./SideBar/ToggleIcon.svg"
                       />
                     )}
                   </>
@@ -51,7 +51,7 @@ export default function SideBar(props) {
                       >
                         <img
                           className="lg:h-20 lg:w-[75px] md:h-16 md:w-16 lg:ml-2"
-                          src="/SideBar/MenuIcon.svg"
+                          src="./SideBar/MenuIcon.svg"
                         />
                         <>
                           {!isOpen ? (
@@ -75,7 +75,7 @@ export default function SideBar(props) {
                       >
                         <img
                           className="lg:h-20 lg:w-[65px] md:h-16 md:w-14 lg:ml-3 md:pl-3"
-                          src="/SideBar/CoursIcon.svg"
+                          src="./SideBar/CoursIcon.svg"
                         />
                         <>
                           {!isOpen ? (
@@ -99,7 +99,7 @@ export default function SideBar(props) {
                       >
                         <img
                           className="lg:h-20 lg:w-20 md:h-16 md:w-16 lg:ml-2"
-                          src="/SideBar/ExoIcon.svg"
+                          src="./SideBar/ExoIcon.svg"
                         />
                         <>
                           {!isOpen ? (
@@ -122,7 +122,7 @@ export default function SideBar(props) {
                       >
                         <img
                           className="lg:h-20 lg:w-20 md:h-16 md:w-16 lg:ml-2 "
-                          src="/SideBar/OutilLibreIcon.svg"
+                          src="./SideBar/OutilLibreIcon.svg"
                         />
                         <>
                           {!isOpen ? (
@@ -145,7 +145,7 @@ export default function SideBar(props) {
                       >
                         <img
                           className=" lg:h-[80px] lg:w-20 md:h-16 md:w-16 lg:ml-2"
-                          src="/SideBar/ParametreIcon.svg"
+                          src="./SideBar/ParametreIcon.svg"
                         />
                         <>
                           {!isOpen ? (
@@ -182,12 +182,12 @@ export default function SideBar(props) {
                     {isOpen ? (
                       <img
                         className=" lg:h-5 lg:w-[37px] md:h-4 md:w-7  "
-                        src="/SideBar/Xicon.svg"
+                        src="./SideBar/Xicon.svg"
                       />
                     ) : (
                       <img
                         className=" lg:h-[37px] lg:w-[37px] md:h-7 md:w-7 "
-                        src="/SideBar/ToggleIcon.svg"
+                        src="./SideBar/ToggleIcon.svg"
                       />
                     )}
                   </>
@@ -204,7 +204,7 @@ export default function SideBar(props) {
                       >
                         <img
                           className="lg:h-20 lg:w-[75px] md:h-16 md:w-16 lg:mr-2"
-                          src="/SideBar/MenuIcon.svg"
+                          src="./SideBar/MenuIcon.svg"
                         />
                         <>
                           {!isOpen ? (
@@ -228,7 +228,7 @@ export default function SideBar(props) {
                       >
                         <img
                           className="lg:h-20 lg:w-[65px] md:h-14 md:w-12 lg:pr-2 lg:mr-1 md:pr-1 md:mr-1"
-                          src="/SideBar/CoursIcon.svg"
+                          src="./SideBar/CoursIcon.svg"
                         />
                         <>
                           {!isOpen ? (
@@ -252,7 +252,7 @@ export default function SideBar(props) {
                       >
                         <img
                           className="lg:h-20 lg:w-20 md:h-16 md:w-16 lg:mr-2 md:mr-[2px]"
-                          src="/SideBar/ExoIcon.svg"
+                          src="./SideBar/ExoIcon.svg"
                         />
                         <>
                           {!isOpen ? (
@@ -275,7 +275,7 @@ export default function SideBar(props) {
                       >
                         <img
                           className="lg:h-20 lg:w-20 md:h-16 md:w-16 lg:mr-1 "
-                          src="/SideBar/OutilLibreIcon.svg"
+                          src="./SideBar/OutilLibreIcon.svg"
                         />
                         <>
                           {!isOpen ? (
@@ -298,7 +298,7 @@ export default function SideBar(props) {
                       >
                         <img
                           className=" lg:h-[80px] lg:w-20 md:h-16 md:w-16 lg:mr-2"
-                          src="/SideBar/ParametreIcon.svg"
+                          src="./SideBar/ParametreIcon.svg"
                         />
                         <>
                           {!isOpen ? (

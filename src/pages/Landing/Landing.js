@@ -5,6 +5,7 @@ import LandingFr from "./LandingFr";
 
 function Landing() {
   const language = GetLanguage();
+  console.log(__dirname);
   return (
     <>
       {language === "français" && <LandingFr />}

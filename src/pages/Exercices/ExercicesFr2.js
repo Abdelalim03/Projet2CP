@@ -37,14 +37,14 @@ function ExercicesFr2() {
           <div className='absolute top-[44px] lg:left-8 left-4  lg:w-[1000px] w-[710px]'>
           <Link to="../exercices">
                 <button className='Fleche'>
-                   <img className='absolute left-0 lg:top-[495px] top-[355px] lg:h-[85px] lg:w-[150px] h-[45px] w-[110px]' src='/Exercices/FlecheG.svg' alt='FlecheB'/>
-                   <img className='FlechePleine absolute left-0 lg:top-[495px] top-[355px] lg:h-[85px] lg:w-[150px] h-[45px] w-[110px]' src='/Exercices/FlecheGpleine.svg' alt='FlecheB'/>
+                   <img className='absolute left-0 lg:top-[495px] top-[355px] lg:h-[85px] lg:w-[150px] h-[45px] w-[110px]' src='./Exercices/FlecheG.svg' alt='FlecheB'/>
+                   <img className='FlechePleine absolute left-0 lg:top-[495px] top-[355px] lg:h-[85px] lg:w-[150px] h-[45px] w-[110px]' src='./Exercices/FlecheGpleine.svg' alt='FlecheB'/>
                 </button>
                 </Link>
                 <div title='Essayer de compléter les exercercices pour débloquer le cadeau' onClick={()=>{(parseInt(Max)===48)&& navigate("../dessiner/"+Max)}} className='LastGift absolute lg:left-[806px] left-[560px] top-[0px] lg:w-[130px] lg:h-[190px] w-[90px] h-[150px]'>
-                    <img className={`absolute top-0 left-0 lg:w-[120px] lg:h-[180px] w-[80px] h-[130px] ${(parseInt(Max)===48) && "cursor-pointer"}`} src='/Exercices/BigGiftGif.gif' alt='FlecheB'/>
+                    <img className={`absolute top-0 left-0 lg:w-[120px] lg:h-[180px] w-[80px] h-[130px] ${(parseInt(Max)===48) && "cursor-pointer"}`} src='./Exercices/BigGiftGif.gif' alt='FlecheB'/>
                     {(parseInt(Max)<48) && <div className='back absolute top-0 left-0 lg:w-[120px] lg:h-[180px] w-[80px] h-[130px] select-none '></div>} 
-                    {(parseInt(Max)<48) && <img  className='locked absolute lg:top-[110px] lg:left-10 top-[80px] left-[26px] lg:w-[40px] lg:h-[50px] w-[30px] h-[40px] ' src='/Exercices/YLock.svg'/>}  
+                    {(parseInt(Max)<48) && <img  className='locked absolute lg:top-[110px] lg:left-10 top-[80px] left-[26px] lg:w-[40px] lg:h-[50px] w-[30px] h-[40px] ' src='./Exercices/YLock.svg'/>}  
                     
 
                 </div>

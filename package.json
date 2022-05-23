@@ -1,10 +1,10 @@
 {
-  "name": "symmetrio",
+  "name": "symetrio",
   "version": "0.1.0",
   "main": "public/electron.js",
-  "author": "meteors",
+  "author": "ARACAW",
   "description": "educatif app for symmetry drawing",
-  "homepage": "http://./",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -67,14 +67,16 @@
     ]
   },
   "build": {
-    "appId": "symmetrio",
-    "productName": "Symmetrio",
+    "appId": "Symetrio",
+    "productName": "Symetrio",
     "files": [
+      "dist/**/*",
       "build/**/*",
-      "node_modules/**/*"
+      "node_modules/**/*",
+      "package.json"
     ],
     "directories": {
-      "buildResources": "public"
+      "buildResources": "build"
     },
     "mac": {
       "target": "dmg"
