@@ -19,9 +19,9 @@ function Editeur({full}) {
     // const [typeOfCheck, settypeOfCheck] = useState(null);
     const { id , exoId , stars , Max } = useParams();
     const [language, setlanguage] = useOutletContext();
-    useEffect(async  () => {
+    useEffect(  () => {
         if (!full){
-            await axios.get('http://localhost:5000/exercices/'+exoId).then( resp => {
+             axios.get('http://localhost:5000/exercices/'+exoId).then( resp => {
              allowed_delta=resp.data.allowed_delta
              preLinesString=resp.data.preLinesString;
              setCheck(resp.data.typeOfCheck)
