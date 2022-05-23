@@ -1727,7 +1727,6 @@ function reset(){
     allshapes=[]
     polygons=[]
     points=[]
-    // Exercice.initiateExo();
     Exercice.help();
     
 }
@@ -1968,7 +1967,6 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                             <div style={{backgroundColor:"saddlebrown"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                             <div style={{backgroundColor:"orange"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                             <div style={{backgroundColor:"HotPink"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
-                            <div style={{backgroundColor:"DimGrey"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                     </div>
                 </div>
                 {
@@ -2136,7 +2134,6 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                             <div style={{backgroundColor:"saddlebrown"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                             <div style={{backgroundColor:"orange"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                             <div style={{backgroundColor:"HotPink"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
-                            <div style={{backgroundColor:"DimGrey"}} className='color-field h-[28px] cursor-pointer w-[28px] rounded-sm hover:scale-125  '></div>
                         </div>
                     </div>
                     {
