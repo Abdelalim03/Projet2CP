@@ -12,14 +12,14 @@ export default function MenuAr({userName, userAvatar, Max, score}) {
 
   setTimeout(() => {
     setScore(parseInt((score/149)*100));
-    setMaxx(parseInt((Max/48)*100));
+    setMaxx(parseInt(((Max-1)/47)*100));
   }, 100);
   return (
     // <div className=" bg-symapp-blue-light-second">
 
     <div className=" symapp-container-Ar items-end  ">
       <div dir="rtl" > 
-      <UserTitleAr message=" اهلا" userName={userName} userImage={userAvatar}  />
+      <UserTitleAr message=" أهلا" userName={userName} userImage={userAvatar}  />
 
       </div>
 
@@ -57,16 +57,16 @@ export default function MenuAr({userName, userAvatar, Max, score}) {
               className={`container flex bg-symapp-pink-light lg:rounded-[40px] md:rounded-[30px] lg:h-[210px] lg:w-[380px] md:h-40 md:w-[270px] items-center justify-around  `}
             >
             <div className="relative w-[40%] h-[60%] flex justify-center">
-              {Maxx && <ProgressProvider valueStart={0} valueEnd={Maxx}>
+               <ProgressProvider valueStart={0} valueEnd={Maxx}>
           {value => <CircularProgressbar value={value} text={`${value}%`} />}
-                </ProgressProvider>}
+                </ProgressProvider>
               <span className="absolute -bottom-7 font-semibold">التمارين</span>
             </div>
             <div className="relative w-[40%] h-[60%] flex justify-center">
             
-              {Score && <ProgressProvider valueStart={0} valueEnd={Score}>
+               <ProgressProvider valueStart={0} valueEnd={Score}>
           {value => <CircularProgressbar value={value} text={`${value}%`} />}
-                </ProgressProvider>}
+                </ProgressProvider>
               <span className="absolute -bottom-7 font-semibold ">مجموع النقاط</span>
             </div>
             </div>

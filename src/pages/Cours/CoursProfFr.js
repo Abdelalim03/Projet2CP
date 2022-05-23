@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import UserTitle from "../../Components/UserTitle";
 import Form from "./Form";
 import ChapitreProf from "../CoursProf/ChapitreProf";
@@ -24,8 +24,7 @@ function CoursProfFr(props) {
             x
           </button>
         </div>
-        <Form Courses={props.Courses}
-                SetCourses={props.SetCourses} />
+        <Form Courses={props.Courses} SetCourses={props.SetCourses} />
       </div>
       <div className="w-[80%] h-32">
         <UserTitle
@@ -46,15 +45,14 @@ function CoursProfFr(props) {
         </div>
       </div>
       <div className="shadow-lg p-3 pt-6 rounded-md h-[325px] lg:h-[450px] w-[600px] lg:w-[930px] overflow-auto ">
-        
         {props.Courses &&
           props.Courses.map((course) => {
             return (
               <div key={course.id}>
                 <ChapitreProf
-                Courses={props.Courses}
-                SetCourses={props.SetCourses}
-                position={course.position}
+                  Courses={props.Courses}
+                  SetCourses={props.SetCourses}
+                  position={course.position}
                   nomChapitre={`Chapitre ${course.position}`}
                   titreChapitre={`${course.titre}`}
                   nomQuiz={` Quiz ${course.position}`}

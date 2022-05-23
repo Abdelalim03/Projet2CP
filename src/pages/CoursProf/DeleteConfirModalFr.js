@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React from "react";
 export default function DeleteConfirModal({ CourseId, Courses, SetCourses }) {
   const [showModal, setShowModal] = React.useState(false);
 

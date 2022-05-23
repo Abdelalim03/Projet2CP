@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useOutletContext, useParams } from "react-router-dom";
 
@@ -28,6 +27,7 @@ function Cours() {
         return res.json();
       })
       .then(data => {
+        console.log(data);
         setUser(data);
         fetch("http://localhost:5000/courses?_sort=position")
       .then((res) => {
@@ -42,11 +42,9 @@ function Cours() {
           setIsPending(false);
           console.log(err.message);
       })
-
     return () => abortControl.abort();
-  }, [])
+  }, [id]) 
  
-
   const mode = GetMode();
    return (    
       <>
@@ -54,7 +52,7 @@ function Cours() {
  {  Courses && (language==="français")&&(mode ==="eleve") && <CoursFr userAvatar={User.avatar}  Courses={Courses} userName={User.nom} />  }
  { Courses && (language==="français")&&(mode ==="prof") && <CoursProfFr userAvatar={User.avatar} SetCourses={SetCourses} Courses={Courses} userName={User.nom} />  }
  {  Courses && (language==="arabe")&& (mode ==="eleve") &&<CoursAr userAvatar={User.avatar} Courses={Courses} userName={User.nom} /> }
- {  Courses && (language==="arabe")&& (mode ==="prof") &&<CoursProfAr userAvatar={User.avatar} SetCourses={SetCourses} Courses={Courses} userName={User.nom}/> }
+ {  Courses && (language==="arabe")&& (mode ==="prof") &&<CoursProfAr userAvatar={User.avatar} SetCourses={SetCourses} Courses={Courses} userName={User.nomAr}/> }
       </>
     
    )

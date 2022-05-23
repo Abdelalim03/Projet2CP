@@ -28,7 +28,7 @@ function Menu() {
         <MenuFr userAvatar={User.avatar} userName={User.nom} Max={User.maxExo} score={User.score} />
       )}
       {language === "arabe" && (
-        <MenuAr userAvatar={User.avatar} userName={User.nom} Max={User.maxExo} score={User.score} />
+        <MenuAr userAvatar={User.avatar} userName={User.nomAr} Max={User.maxExo} score={User.score} />
       )}
     </>
   );

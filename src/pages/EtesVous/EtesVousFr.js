@@ -4,7 +4,6 @@ import Absolute from "./Absolute";
 import Card from "./Card";
 import ContinueAsFr from "./ContinueAsFr";
 import MdpForm from "./MdpForm";
-import MdpInputCard from "./MdpInputCard";
 const axios = require("axios");
 
 function EtesVousFr({ User, currentuserId }) {
@@ -18,12 +17,9 @@ function EtesVousFr({ User, currentuserId }) {
         console.log(error);
       });
   };
-  const handleShow = (show) => {
-    setShowModal(show);
-  };
   useEffect(() => {
     if (currentuserId === 0) setShowModal(false);
-  });
+  },[currentuserId]);
 
   const [mdp, setMdp] = useState(false)
 

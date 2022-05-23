@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import UserTitleAr from "../../Components/UserTitleAr";
 import ChapitreProfAr from "../CoursProf/ChapitreProfAr";
 import FormAr from "./FormAr";
@@ -28,7 +28,7 @@ function CoursProfAr(props) {
       </div>
       <div className="w-[80%] h-32 mb-0 lg:mb-10">
         <UserTitleAr
-          message=" اهلا"
+          message=" أهلا"
           userName={props.userName}
           userImage={props.userAvatar}
         />
