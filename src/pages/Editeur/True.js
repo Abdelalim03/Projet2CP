@@ -6,7 +6,9 @@ function True(props) {
     <div className='h-[30%] lg:h-[32%] w-2/5 bg-white flex flex-col justify-between gap-0'>
         <div className='mx-auto   w-[70%]  flex justify-center'>
             <img className={` h-[80px] `} src={`./Gif/${props.stars}.gif`} alt='dmd' />
+            
         </div>
+       
         <div className={`h-10 lg:h-14 -mt-4 w-[100%] flex ${props.flex} justify-between `}>
             <div className='h-[100%] w-10 lg:w-14 '>
             <img src="./Editeur/EditorIcons/partyd.gif" alt="celb" />

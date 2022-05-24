@@ -7,6 +7,8 @@ import { faSquareCheck,faCircle,faTrashCan } from '@fortawesome/free-solid-svg-i
 import { useOutletContext, useParams } from 'react-router-dom';
 import Help from './Help';
 
+
+
 function Editeur({full}) {
     const [trueFrEstOuvert, SetTrueFrEstOuvert] = useState(false);
     const showtrueFr = () => {SetTrueFrEstOuvert(!trueFrEstOuvert);}
@@ -173,7 +175,8 @@ class SymetrieAxial{
                 y= 2*Y-y
             }
         }
-        
+             var audio = new Audio('./sound/effect.mp3');
+             audio.play();
             Polygone.polygone({x, y, u, type, filled, stroked})
             allshapes.push({x, y, u, type, filled, stroked});
             
@@ -1518,6 +1521,8 @@ function setUP(){
     if (!full){ 
         document.getElementById("submit").addEventListener("click", function () {
         if(Exercice.CompareSolution(typeOfCheck)){
+            var audio = new Audio('./sound/win.wav');
+            audio.play();
                 axios.get(`http://localhost:5000/users/${id}`)
                 .then(res=>{
                     if(res.data.maxExo === parseInt(exoId)){
@@ -1528,6 +1533,8 @@ function setUP(){
                 .catch(err=>console.log(err));
             showtrueFr();
         }else{
+            var audio2 = new Audio('./sound/lose.mp3');
+            audio2.play();
             showFalseFr();
         }
 
