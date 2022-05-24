@@ -2,8 +2,8 @@
   "name": "symetrio",
   "version": "0.1.0",
   "main": "public/electron.js",
-  "author": "ARACAW",
-  "description": "educatif app for symmetry drawing",
+  "author": "ARACAW <ka_atoui@esi.dz>",
+  "description": "Educative app for symmetry drawing",
   "homepage": "./",
   "private": true,
   "dependencies": {

@@ -70,7 +70,7 @@ function ChngMdpInputCard() {
                   .catch((error) => {
                     console.log(error);
                   });
-                  setMsg("Chnagement avec succés");
+                  setMsg("Changement avec succés");
                 }
             });
               

@@ -26,7 +26,7 @@ function LandingAr() {
               </div>
             </div>
             <Link  to="/choix" className=" mr-[10%] mt-16 lg:mt-24 font-['Tajawal'] flex items-center justify-center text-center text-white font-bold text-base md:text-xl lg:text-2xl bg-[#7EABFFB2] hover:bg-[#466EB6B2] w-fit py-3 px-10 lg:px-16 h-13 lg:h-14  rounded-2xl transition-transform hover:translate-y-[-3%]">
-               ! هيا بنا   
+            هيا بنا!
             </Link>
             </div>
         </div>

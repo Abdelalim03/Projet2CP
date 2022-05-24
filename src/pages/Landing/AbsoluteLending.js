@@ -10,7 +10,7 @@ function AbsoluteLending() {
          <img className='absolute right-[30%] top-[5%] h-[10%]' src='./landing/Group 46.png' alt='img'/>
          <img className='absolute left-[20%] lg:left-[23%] top-[30%] h-[10%] lg:h-[12%]' src='./landing/Ki-ykbr.png' alt='bg'/>
          <img className='absolute right-[20%] bottom-[20%] h-[10%]' src='./landing/kousssghir.png' alt='bg'/>
-         <img className='absolute right-[10%] bottom-[45%] h-[10%] lg:h-[12%]' src='./landing/Vtab.png' alt='bg'/>
+         <img className='absolute right-[10%] bottom-[45%] h-[10%] lg:h-[12%]' src='./landing/Ktab.png' alt='bg'/>
          <img className='absolute right-[7%] bottom-[33%] h-[6%]' src='./landing/monkasir.png' alt='bg'/>
          <img className='absolute right-[30%] bottom-[30%] w-[36%] lg:w-auto h-[25%] md:h-[28%] z-[-5]' src='./landing/MatrixBoy.png' alt='bg'/>
          <img className='absolute right-[10%] top-[30%] h-[6%] lg:h-[7%]' src='./landing/Min9alasghira.png' alt='bg'/>
