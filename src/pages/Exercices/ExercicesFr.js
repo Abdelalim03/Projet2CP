@@ -34,7 +34,7 @@ function ExercicesFr({Max}) {
       <div className=' relative bg-white rounded-l-2xl lg:rounded-l-3xl w-[92%] flex justify-center items-center flex-col '>
           <div className=' relative left-4 lg:left-7  flex flex-row'>
             <img className='mt-5  lg:w-[120px] lg:h-[145px] w-[90px] h-[110px]' src='./Exercices/FlecheGif.gif' alt='FlecheB'/>
-            <p className='mt-6 mr-6 lg:pl-24 pl-8 lg:pr-8 font-semibold text-[#194084] lg:text-[18px] text-[14px] '>Obtenez les clés en résolvant les exercices pour obtenir le cadeau !  </p>
+            <p className='mt-6 mr-6 lg:pl-24 pl-8 lg:pr-8 font-semibold text-[#194084] lg:text-[18px] text-[14px] '>Resolvez un exercice pour acceder au suivant, et enfin gagnez un cadeau!</p>
             <img className=' lg:h-[80px] h-[60px]' src='./Exercices/GiftGif.gif' alt='Gift'/>
           </div>
           
