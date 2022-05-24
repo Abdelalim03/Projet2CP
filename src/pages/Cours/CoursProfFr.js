@@ -33,7 +33,7 @@ function CoursProfFr(props) {
           userImage={props.userAvatar}
         />
         <p className="ml-2 lg:ml-3 lg:mt-5 md:mt-3 font-semibold md:text-sm lg:text-xl">
-          Apprenons quelque chose de nouveau aujourd'hui !
+          Gérez vos cours pour vos éleves!
         </p>
         <div className="w-[87%] h-14 flex flex-row justify-end">
           <button

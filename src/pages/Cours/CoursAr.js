@@ -13,7 +13,7 @@ function CoursAr({userName, userAvatar, Courses}) {
           userImage={userAvatar}
         />
         <p className="ml-2 lg:ml-3 lg:mt-5 md:mt-3 font-['Tajawal'] font-semibold md:text-sm lg:text-xl">
-          لنتعلم شيئا اليوم !
+        لنتعلم شيئا اليوم!
         </p>
       </div>
       <div className="shadow-lg p-3 pt-6 rounded-md font-['Tajawal'] h-[325px] lg:h-[450px] w-[600px] lg:w-[930px] overflow-auto  ">

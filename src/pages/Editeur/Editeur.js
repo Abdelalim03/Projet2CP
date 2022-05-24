@@ -1913,7 +1913,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
       <>
  { ((!full || parseInt( Max)===48) && language==="français")&&
  <div className='symapp-container relative pl-10 overflow-auto'>
- <img onClick={showhelp} className='absolute cursor-pointer left-20 lg:left-28 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="./Editeur/helpIcon.jpg" alt="help"/>
+ <img onClick={showhelp} className='absolute  cursor-pointer left-5 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="./Editeur/helpIcon.jpg" alt="help"/>
 
  <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!helpestOuvert && 'hidden'}`}>
             <div className='h-8 lg:h-12 w-[80%] flex flex-row justify-end bg-blue-200'>
@@ -1927,7 +1927,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
             </div>
             <True 
             stars={stars}
-            msg='Felicitation! votre reponse est juste'
+            msg='Felicitations! votre réponse est juste!'
             cont='Continuer' ret='Retour' flex='flex-row-reverse'
             showtrueFr={showtrueFr}
               />
@@ -1937,8 +1937,8 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                 <button onClick={showFalseFr} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
             </div>
             <False 
-            msg='Votre reponse est fausse, on sais que tu peut faire mieu ! essayer une autre fois '
-            ress='Reéssayer' ret='Retour'
+            msg='Réponse fausse! Vous pouvez surement faire mieux!'
+            ress='Réessayer' ret='Retour'
             showFalseFr={showFalseFr}
              />
             
@@ -2002,18 +2002,18 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
             
             <div className='mt-4 w-20 px-2  flex flex-col gap-2'>
                 <div id='deplacer' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button title='deplacer' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button title='Deplacer' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-6 lg:w-8 h-6 lg:h-8' src='./Editeur/EditorIcons/Vector.png' alt='icon' />
                     </button>
                 </div>
   
-                <button title='dessiner' disabled={(Check==="Shapes") && (parseInt(exoId)>2)} id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
+                <button title='Dessiner' disabled={(Check==="Shapes") && (parseInt(exoId)>2)} id='dessin' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
                     <div  className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/Group 8.svg' alt='icon' />
                     </div>
                 </button>
                 <div id='point' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button title='point' className='bouton relative text-5xl font-bold h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button title='Point' className='bouton relative text-5xl font-bold h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                     <FontAwesomeIcon icon={faCircle} className='text-black w-2  -mb-[1px] lg:-mb-[2px]'  />
                     </button>
                 </div>
@@ -2044,7 +2044,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                     </button>
                 </div>
                 <div id='remove' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button title='gomme' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button title='Effacer' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                         <img className='boutonImg w-8 lg:w-10 h-8 lg:h-10' src='./Editeur/EditorIcons/Group 12.svg' alt='icon' /> 
                     </button>
                 </div>
@@ -2065,7 +2065,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                     </div>
                 </div>
                 <div id='reset' className='h-14 lg:h-16 w-14 lg:w-16 flex justify-center items-center'>
-                    <button title='rénitialiser' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
+                    <button title='Rénitialiser' className='bouton relative h-[80%] w-[80%] hover:h-[100%] hover:w-[100%] hover:bg-[#FFC5C1] flex justify-center items-center border-2 border-[#6A5CF7] bg-[#FFDFD9]'>
                     <FontAwesomeIcon icon={faTrashCan} className='text-black  boutonImg w-7 -mb-[1px] lg:-mb-[2px]' />
                     </button>
                 </div>
@@ -2080,7 +2080,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
    }
  {(!full || parseInt( Max)===48) && (language==="arabe")&& 
  <div dir="rtl"  className='symapp-container-Ar relative pr-10 overflow-auto'>
-<img onClick={showhelp} className='absolute cursor-pointer right-20 lg:right-28 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="./Editeur/helpIcon.jpg" alt="help"/>
+<img onClick={showhelp} className='absolute cursor-pointer right-5 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="./Editeur/helpIcon.jpg" alt="help"/>
 
 <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!helpestOuvert && 'hidden'}`}>
            <div className='h-8 lg:h-12 w-[80%] flex flex-row justify-end bg-blue-200'>
@@ -2105,7 +2105,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
                     <button onClick={showFalseFr} className='h-8 lg:h-12 w-8 lg:w-12 text-lg lg:text-2xl font-semibold text-center hover:bg-[#FAE0B2] bg-white/0' >x</button>
                 </div>
                 <False 
-                msg='إجابتك خاطئة, يمكنك أن تكون أفضل ! حاول مرة أخرى '
+                msg='إجابتك خاطئة! حاول مرة أخرى '
                 ress='الإعادة' ret='الرجوع'
                 showFalseFr={showFalseFr}
                 />
@@ -2253,7 +2253,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
          (full && parseInt( Max)<48 ) && (language==="arabe") &&
          <div dir='rtl' className='symapp-container-Ar flex justify-center items-center'>
                      <img src="./Gif/cadeau.gif" alt="cad" />
-                     <div className='text-[50px] mb-28 text-center font-bold'>😉 حاول انهاء التمارين للحصول على الهدية</div>
+                     <div className='text-[50px] mb-28 text-center font-bold'>حاول انهاء التمارين للحصول على الهدية 😉 </div>
          </div>
      }
       </>

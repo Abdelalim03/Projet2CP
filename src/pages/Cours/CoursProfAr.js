@@ -32,8 +32,8 @@ function CoursProfAr(props) {
           userName={props.userName}
           userImage={props.userAvatar}
         />
-        <p className="ml-2 lg:ml-3 lg:mt-5 md:mt-3 font-['Tajawal'] font-semibold md:text-sm lg:text-xl">
-          لنتعلم شيئا اليوم !
+        <p dir="rtl" className="ml-2 lg:ml-3 lg:mt-5 md:mt-3 font-['Tajawal'] font-semibold md:text-sm lg:text-xl">
+        تحكم في نظام الدروس!
         </p>
         <div className="w-[89%] lg:w-[88%] h-14 flex flex-row justify-end">
           <button
