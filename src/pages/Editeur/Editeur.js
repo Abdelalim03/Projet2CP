@@ -1913,7 +1913,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
       <>
  { ((!full || parseInt( Max)===48) && language==="français")&&
  <div className='symapp-container relative pl-10 overflow-auto'>
- <img onClick={showhelp} className='absolute cursor-pointer left-20 lg:left-28 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="./Editeur/helpIcon.jpg" alt="help"/>
+ <img onClick={showhelp} className='absolute cursor-pointer left-5 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="./Editeur/helpIcon.jpg" alt="help"/>
 
  <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!helpestOuvert && 'hidden'}`}>
             <div className='h-8 lg:h-12 w-[80%] flex flex-row justify-end bg-blue-200'>
@@ -2080,7 +2080,7 @@ const showhelp = () => {SethelpEstOuvert(!helpestOuvert)};
    }
  {(!full || parseInt( Max)===48) && (language==="arabe")&& 
  <div dir="rtl"  className='symapp-container-Ar relative pr-10 overflow-auto'>
-<img onClick={showhelp} className='absolute cursor-pointer right-20 lg:right-28 top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="./Editeur/helpIcon.jpg" alt="help"/>
+<img onClick={showhelp} className='absolute cursor-pointer right-5  top-3 lg:top-5 h-9 lg:h-10 w-9 lg:w-10 hover:scale-110' src="./Editeur/helpIcon.jpg" alt="help"/>
 
 <div className={`absolute left-0 top-0 h-screen w-screen z-10 bg-slate-300/30 flex flex-col justify-center items-center ${!helpestOuvert && 'hidden'}`}>
            <div className='h-8 lg:h-12 w-[80%] flex flex-row justify-end bg-blue-200'>
