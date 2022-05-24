@@ -73,7 +73,8 @@
       "dist/**/*",
       "build/**/*",
       "node_modules/**/*",
-      "package.json"
+      "package.json",
+      "data/*"
     ],
     "directories": {
       "buildResources": "build"
