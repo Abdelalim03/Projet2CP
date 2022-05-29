@@ -13,9 +13,9 @@ function LandingFr() {
             </div>
             <div className='w-[40%] h-screen py-20 lg:py-32 flex flex-col '>
             <div className='flex flex-col h-[40%] mb-20 lg:mb-28 ml-[10%]'>
-              <div className='text-left font-normal text-4xl md:text-5xl lg:text-6xl mb-[10%]'>
+              <div className='text-left font-normal text-5xl  lg:text-6xl mb-[10%]'>
                 
-                <h1 className='inline text-[#18263f]'>Salut</h1>
+                <h1 className='inline text-[#18263f]'>Bienvenue !</h1>
           
               </div>
               

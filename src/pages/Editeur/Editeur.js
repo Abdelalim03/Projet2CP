@@ -175,8 +175,8 @@ class SymetrieAxial{
                 y= 2*Y-y
             }
         }
-             var audio = new Audio('./sound/effect.mp3');
-             audio.play();
+             let audio3 = new Audio('./sound/effect.mp3');
+             audio3.play();
             Polygone.polygone({x, y, u, type, filled, stroked})
             allshapes.push({x, y, u, type, filled, stroked});
             

@@ -59,7 +59,7 @@ function MdpInputCardAr() {
             if (!err){
              if (result){
               axios
-            .patch("http://localhost:5000/parametres", { mode: "prof" })
+            .patch("http://localhost:5000/parametres", { mode: "prof",currentUser:-1 })
             .catch((error) => {
               console.log(error);
             });

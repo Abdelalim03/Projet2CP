@@ -36,7 +36,9 @@ function InputCardAr() {
         .then(async resp=>{
           if (resp.data.length){
          await axios.patch('http://localhost:5000/parametres',{"currentUser":resp.data[0].id} ).then(async resp2 => {
-             navigate(`/home/${resp.data[0].id}`);
+          if (resp.data[0].id!==-1)
+          navigate(`/home/${resp.data[0].id}`);
+          else console.log("لا تستطيع الدخول على أساس أنك أستاذ ");
           }).catch(errorr => {
               console.log(errorr);
           });

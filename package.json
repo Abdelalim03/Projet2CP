@@ -36,8 +36,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "  react-scripts start ",
-    "server": "json-server --watch data/db.json --port 5000",
+    "start": "react-scripts start",
+    "server": "json-server --watch extraResources/db.json --port 5000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -69,12 +69,10 @@
   "build": {
     "appId": "Symetrio",
     "productName": "Symetrio",
+    "extraResources": ["./extraResources/*"],
     "files": [
-      "dist/**/*",
       "build/**/*",
-      "node_modules/**/*",
-      "package.json",
-      "data/*"
+      "package.json"
     ],
     "directories": {
       "buildResources": "build"
@@ -83,7 +81,8 @@
       "target": "dmg"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "requestedExecutionLevel": "requireAdministrator"
     },
     "linux": {
       "target": "deb"
@@ -91,7 +90,8 @@
     "nsis": {
       "oneClick": false,
       "license": "license.md",
-      "allowToChangeInstallationDirectory": true
+      "allowToChangeInstallationDirectory": false,
+      "perMachine": true
     }
   },
   "devDependencies": {
@@ -102,6 +102,7 @@
     "electron-builder": "^22.14.13",
     "electron-devtools-installer": "^3.2.0",
     "electronmon": "^2.0.2",
+    "json-server": "^0.17.0",
     "postcss": "^8.4.12",
     "react-router-dom": "^6.3.0",
     "tailwindcss": "^3.0.23",

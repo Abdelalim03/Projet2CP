@@ -40,7 +40,9 @@ function InputCard() {
         .then(async resp=>{
           if (resp.data.length){
          await axios.patch('http://localhost:5000/parametres',{"currentUser":resp.data[0].id} ).then(async resp2 => {
+           if (resp.data[0].id!==-1)
              navigate(`/home/${resp.data[0].id}`);
+             else console.log("tu peux pas entrer en tant que prof ");
           }).catch(errorr => {
               console.log(errorr);
           });

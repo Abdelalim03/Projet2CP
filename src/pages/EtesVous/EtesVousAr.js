@@ -50,7 +50,7 @@ function EtesVousAr({ User, currentuserId }) {
             Modal={showModal}
           />
         </>
-        {currentuserId === 0 ? ( 
+        {currentuserId === 0 || currentuserId === -1 ? ( 
           <Link to="/nom">
             <div onClick={() => handleMode("eleve")}>
               <CardAr

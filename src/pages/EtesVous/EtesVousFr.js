@@ -18,7 +18,7 @@ function EtesVousFr({ User, currentuserId }) {
       });
   };
   useEffect(() => {
-    if (currentuserId === 0) setShowModal(false);
+    if (currentuserId === 0  ) setShowModal(false);
   },[currentuserId]);
 
   const [mdp, setMdp] = useState(false)
@@ -46,7 +46,7 @@ function EtesVousFr({ User, currentuserId }) {
             Modal={showModal}
           />
         </>
-        {currentuserId === 0 ? ( 
+        {currentuserId === 0 || currentuserId === -1 ? ( 
           <Link to="/nom">
             <div onClick={() => handleMode("eleve")}>
               <Card path="./etesvous/Eleve.png" scale="scale-100" name="Elève" />

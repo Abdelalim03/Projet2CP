@@ -36,7 +36,7 @@ function Avatar() {
       <div className="h-[52%] w-[100%] flex justify-center">
         <img
           className="absolute h-4 lg:h-6 w-4 lg:w-6 left-[20%] top-[42%] select-none"
-          src="/Avatar/Vector.svg"
+          src="./avatar/Vector.svg"
           alt="vector"
         />
         <div className="pt-10">
