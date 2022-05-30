@@ -14,7 +14,7 @@ function Help({language}) {
     {titre:"Pour dessiner des lignes/multiligne colorées :",titreAr:"لرسم خطوط ملونة :",gif:"./Editeur/7.gif",id:7},
     {titre:"Pour effacer des figures : ",titreAr:"لاٍزالة الأشكال :",gif:"./Editeur/8.gif",id:8},
     {titre:"Pour appliquer des rotations au figures :",titreAr:"لتدوير الأشكال :",gif:"./Editeur/9.gif",id:9},
-    {titre:"Pour rénitialiser toute la grille:",titreAr:"لاٍعادة تهيئة محرر الرسم :",gif:"./Editeur/10.gif",id:10},
+    {titre:"Pour réinitialiser toute la grille:",titreAr:"لاٍعادة تهيئة محرر الرسم :",gif:"./Editeur/10.gif",id:10},
     ]
   return (
     <div className='h-full w-[80%] bg-white overflow-auto flex flex-col gap-3'>

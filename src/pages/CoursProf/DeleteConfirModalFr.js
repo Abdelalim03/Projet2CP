@@ -35,7 +35,7 @@ export default function DeleteConfirModal({ CourseId, Courses, SetCourses }) {
                     supprimer ce cours ?
                   </h3>
                   <p className="my-3 text-slate-500 text-center text-lg leading-relaxed">
-                    Son quiz va etre supprimmer <br></br>
+                    Le quiz va etre supprimer <br></br>
                     eventuellemet!
                   </p>
                 </div>

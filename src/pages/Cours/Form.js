@@ -205,7 +205,7 @@ function Form({SetCourses, Courses}) {
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="QuestQuizAr" name="QuestQuizAr"
                     required
-                    placeholder="Rentrez la question du quiz ( arabe )  "
+                    placeholder="Réentrez la question du quiz ( arabe )  "
                     onInput={handleInput}
                     onInvalid={handleInvalide}
                     // pattern="\S+"
@@ -222,14 +222,14 @@ function Form({SetCourses, Courses}) {
                     onInvalid={handleInvalide}
                     // pattern="\S+"
             />
-            <label htmlFor="Proposition1Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Rentrez la première proposition en arabe : </label>
+            <label htmlFor="Proposition1Ar" className='block ml-5 text-sm lg:text-lg font-semibold'>Réentrez la première proposition en arabe : </label>
             <input 
                     onChange={handleChange}
                     value={inputs.prop1Ar || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="proposition1Ar" name="prop1Ar"
                     required
-                    placeholder="Rentrez la proposition 01 ( arabe ) "
+                    placeholder="Réentrez la proposition 01 ( arabe ) "
                     onInput={handleInput}
                     onInvalid={handleInvalide}
                     // pattern="\S+"
@@ -252,7 +252,7 @@ function Form({SetCourses, Courses}) {
                     value={inputs.prop2Ar || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="proposition2" name="prop2Ar"
-                    placeholder="Rentrez la proposition 02 ( arabe )"
+                    placeholder="Réentrez la proposition 02 ( arabe )"
                     required
                     onInput={handleInput}
                     onInvalid={handleInvalide}
@@ -275,7 +275,7 @@ function Form({SetCourses, Courses}) {
                     value={inputs.prop3Ar || ""}
                     className='block border-2 rounded-[5px] text-sm lg:text-lg w-[300px] lg:w-[600px] pl-3'
                     type="text" id="proposition3Ar" name="prop3Ar"
-                    placeholder="Rentrez la proposition 03 ( arabe ) "
+                    placeholder="Réentrez la proposition 03 ( arabe ) "
                     required
                     onInput={handleInput}
                     onInvalid={handleInvalide}
