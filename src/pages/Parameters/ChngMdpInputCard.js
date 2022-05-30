@@ -100,7 +100,7 @@ function ChngMdpInputCard() {
                 </div>
                 <div className='h-fit w-[75%]'>
                   <p className='flex flex-row gap-1 lg:gap-3 ml-7 lg:ml-14 mt-3 lg:mt-5 text-xs lg:text-sm font-semibold'>
-                        <img src= './Parameters/exclamation.png' className={`${(msg === "")&&"hidden"} ${(msg === "Chnagement avec succés")&&"hidden"} h-3 lg:h-4 w-3 lg:w-4`} />
+                        <img src= './Parameters/exclamation.png' className={`${(msg === "")&&"hidden"} ${(msg === "Changement avec succés")&&"hidden"} h-3 lg:h-4 w-3 lg:w-4`} />
                         <img src= './Parameters/validation.png'  className={`${(msg === "")&&"hidden"} ${(msg === "Ceci est le mot de passe courant")&&"hidden"} h-3 lg:h-4 w-3 lg:w-4`}/>
                         {msg}
                   </p>

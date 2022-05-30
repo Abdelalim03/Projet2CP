@@ -43,8 +43,8 @@ export default function SideBar(props) {
 
               <div className=" flex flex-col  md:gap-4 md:mt-16 lg:mt-28 font-bold  ">
                 <nav>
-                  <ul className={`flex flex-col  gap-6  `}>
-                    <li>
+                  <ul  className={`flex flex-col  gap-6  `}>
+                    <li title="Menu">
                       <Link
                         to="./"
                         className="flex items-center hover:bg-symapp-pink  "
@@ -68,7 +68,7 @@ export default function SideBar(props) {
                       </Link>
                     </li>
 
-                    <li>
+                    <li title="Cours">
                       <Link
                         to="./cours"
                         className="flex items-center hover:bg-symapp-pink  "
@@ -92,7 +92,7 @@ export default function SideBar(props) {
                       </Link>
                     </li>
 
-                    <li>
+                    <li title="Exercices">
                       <Link
                         to="./exercices"
                         className="flex items-center hover:bg-symapp-pink    "
@@ -115,7 +115,7 @@ export default function SideBar(props) {
                         </>
                       </Link>
                     </li>
-                    <li>
+                    <li title="Mode libre">
                       <Link
                         to={"./dessiner/"+Max}
                         className="flex items-center hover:bg-symapp-pink   "
@@ -138,7 +138,7 @@ export default function SideBar(props) {
                         </>
                       </Link>
                     </li>
-                    <li className="lg:mt-20">
+                    <li title="Parametres" className="lg:mt-16">
                       <Link
                         to="./parametres"
                         className="flex items-center hover:bg-symapp-pink   "
@@ -197,7 +197,7 @@ export default function SideBar(props) {
               <div className=" flex flex-col  md:gap-4 md:mt-16 lg:mt-28 font-bold font-['Tajawal'] ">
                 <nav>
                   <ul className={`flex flex-col  gap-6  `}>
-                    <li>
+                    <li title="قائمة">
                       <Link
                         to="./"
                         className="flex items-center hover:bg-symapp-pink flex-row-reverse "
@@ -221,7 +221,7 @@ export default function SideBar(props) {
                       </Link>
                     </li>
 
-                    <li>
+                    <li title="دروس">
                       <Link
                         to="./cours"
                         className="flex items-center hover:bg-symapp-pink  flex-row-reverse"
@@ -245,7 +245,7 @@ export default function SideBar(props) {
                       </Link>
                     </li>
 
-                    <li>
+                    <li title="تمارين">
                       <Link
                         to="./exercices"
                         className="flex items-center hover:bg-symapp-pink flex-row-reverse    "
@@ -268,7 +268,7 @@ export default function SideBar(props) {
                         </>
                       </Link>
                     </li>
-                    <li>
+                    <li title="الرسم الحر">
                       <Link
                         to={"./dessiner/"+Max}
                         className="flex items-center hover:bg-symapp-pink flex-row-reverse  "
@@ -291,7 +291,7 @@ export default function SideBar(props) {
                         </>
                       </Link>
                     </li>
-                    <li className="lg:mt-20">
+                    <li title="اعدادات" className="lg:mt-16">
                       <Link
                         to="./parametres"
                         className="flex items-center hover:bg-symapp-pink  flex-row-reverse "

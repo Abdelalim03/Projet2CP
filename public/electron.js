@@ -32,7 +32,7 @@ function createWindow() {
 
 }
 
-app.whenReady().then(async () => {
+app.whenReady().then( () => {
   if (!isDev){const jsonServer = require('json-server')
 const server = jsonServer.create()
 const router = jsonServer.router(path.join(__dirname, '../../extraResources/db.json'));
